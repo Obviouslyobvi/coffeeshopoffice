@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop Office - Printable Systems for an Organized Life</title>
+<meta name="description" content="54 digital products. Planners, toolkits, and interactive apps. Print them. Use them. Get organized.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['DM Serif Display', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        cream: '#FEFCF8',
+        charcoal: '#1F2937',
+        warmgray: '#6B7280',
+        terracotta: '#C67B5C',
+        darkbg: '#111318',
+        darkcard: '#1C1E26',
+        darktext: '#E8E6E1',
+        darksecondary: '#9CA3AF',
+        warmgold: '#D4A843',
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #FEFCF8; color: #1F2937; }
+  .dark body, body.dark-mode { background: #111318; color: #E8E6E1; }
+  html.dark { background: #111318; }
+  html.dark body { background: #111318; color: #E8E6E1; }
+  .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+  .pills-scroll::-webkit-scrollbar { height: 0; }
+  .pills-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .product-card {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .product-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cat-pill {
+    transition: all 0.15s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .search-input:focus { outline: none; }
+  .store-link { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .store-link:hover { text-decoration: underline; }
+  .brand-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+  /* Header theming */
+  #site-header { background: rgba(254,252,248,0.92); border-bottom: 1px solid rgba(0,0,0,0.08); }
+  html.dark #site-header { background: rgba(17,19,24,0.92); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-link { color: #6B7280; }
+  html.dark .nav-link { color: #9CA3AF; }
+
+  /* Dark mode overrides for inline-styled elements */
+  html.dark [style*="color:#6B7280"] { color: #9CA3AF !important; }
+  html.dark [style*="color:#1F2937"] { color: #E8E6E1 !important; }
+  html.dark [style*="background:#FEFCF8"] { background: #111318 !important; }
+  html.dark [style*="background: #FEFCF8"] { background: #111318 !important; }
+  html.dark [style*="background:#fff"] { background: #1C1E26 !important; }
+  html.dark [style*="background: #fff"] { background: #1C1E26 !important; }
+  html.dark [style*="background:#FFFFFF"] { background: #1C1E26 !important; }
+  html.dark [style*="background: #FFFFFF"] { background: #1C1E26 !important; }
+  html.dark [style*="background:white"] { background: #1C1E26 !important; }
+  html.dark [style*="background: white"] { background: #1C1E26 !important; }
+  html.dark [style*="border-color:#e5e7eb"] { border-color: #2A2B2E !important; }
+  html.dark [style*="border:1px solid #e5e7eb"] { border-color: #2A2B2E !important; }
+  html.dark [style*="border-bottom:1px solid #eee"] { border-bottom-color: #2A2B2E !important; }
+  html.dark input, html.dark select { background: #1C1E26 !important; color: #E8E6E1 !important; border-color: #2A2B2E !important; }
+  html.dark footer { border-top-color: #2A2B2E !important; }
+</style>
+</head>
+<body class="min-h-screen transition-colors duration-200">
+
+<script>
+// ============================================================
+// PRODUCT DATA - Edit this array to add/remove products
+// ============================================================
+const PRODUCTS = [
+  {
+    id: 1,
+    name: "The Complete Home Maintenance Planner",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Seasonal checklists, maintenance tracker, service contacts, and annual calendar.",
+    hasApp: true,
+    folder: "01-home-maintenance-planner"
+  },
+  {
+    id: 2,
+    name: "The Freelancer's Survival Toolkit",
+    brand: "Steady Work Co.",
+    brandColor: "#5B7FA5",
+    category: "Business & Career",
+    pdfCount: 6,
+    priceEtsy: "$9.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Client tracker, invoice log, project pipeline, and income dashboard.",
+    hasApp: true,
+    folder: "02-freelancer-toolkit"
+  },
+  {
+    id: 3,
+    name: "The Business Launch Toolkit",
+    brand: "LaunchReady Co.",
+    brandColor: "#E07A5F",
+    category: "Business & Career",
+    pdfCount: 6,
+    priceEtsy: "$9.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Business plan worksheets, launch checklist, brand identity planner, and milestone tracker.",
+    hasApp: true,
+    folder: "03-business-launch-toolkit"
+  },
+  {
+    id: 4,
+    name: "The Emergency Documents Binder",
+    brand: "Prepared Life Co.",
+    brandColor: "#9B2C2C",
+    category: "Health & Wellness",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Medical contacts, insurance info, emergency procedures, and important documents organizer.",
+    hasApp: true,
+    folder: "04-emergency-documents-binder"
+  },
+  {
+    id: 5,
+    name: "The Pet Owner's Complete Binder",
+    brand: "Good Pet Life Co.",
+    brandColor: "#B8860B",
+    category: "Health & Wellness",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$8.99",
+    priceGumroad: null,
+    tagline: "Vet records, feeding schedules, medication tracker, and pet-sitter info sheets.",
+    hasApp: true,
+    folder: "05-pet-owners-binder"
+  },
+  {
+    id: 6,
+    name: "The Pricing Workbook",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 7,
+    priceEtsy: "$9.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Material cost calculator, pricing formulas, profit margin tracker, and competitive analysis.",
+    hasApp: true,
+    folder: "06-pricing-workbook"
+  },
+  {
+    id: 7,
+    name: "The Custom Order Command Center",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$9.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Order intake forms, production timeline, client communication log, and delivery tracker.",
+    hasApp: true,
+    folder: "07-custom-order-command-center"
+  },
+  {
+    id: 8,
+    name: "The Resin/Candle/Bath Bomb Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Recipe cards, batch tracker, supply inventory, and cure time calculator.",
+    hasApp: true,
+    folder: "08-resin-candle-bath-planner"
+  },
+  {
+    id: 9,
+    name: "The Social Media Content Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$11.99",
+    priceGumroad: null,
+    tagline: "Content calendar, caption templates, hashtag tracker, and analytics log.",
+    hasApp: true,
+    folder: "09-social-media-planner"
+  },
+  {
+    id: 10,
+    name: "The Design Idea Journal",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 7,
+    priceEtsy: "$5.99",
+    priceLemon: "$8.99",
+    priceGumroad: null,
+    tagline: "Sketch pages, inspiration collector, color palette planner, and design iteration tracker.",
+    hasApp: true,
+    folder: "10-design-idea-journal"
+  },
+  {
+    id: 11,
+    name: "The Skill Builder Workbook",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 7,
+    priceEtsy: "$8.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Technique tracker, practice log, skill assessment, and learning roadmap.",
+    hasApp: true,
+    folder: "11-skill-builder-workbook"
+  },
+  {
+    id: 12,
+    name: "The Craft Business Starter Kit",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$12.99",
+    priceLemon: "$18.99",
+    priceGumroad: null,
+    tagline: "Everything to launch your craft business: business plan, pricing, branding, and first-sale checklist.",
+    hasApp: true,
+    folder: "12-craft-business-starter-kit"
+  },
+  {
+    id: 13,
+    name: "The Weekly Reset Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Productivity",
+    pdfCount: 6,
+    priceEtsy: "$4.99",
+    priceLemon: "$6.99",
+    priceGumroad: null,
+    tagline: "Weekly review prompts, goal check-in, priority reset, and habit tracker.",
+    hasApp: true,
+    folder: "13-weekly-reset-planner"
+  },
+  {
+    id: 14,
+    name: "The Reorder Tracker",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 5,
+    priceEtsy: "$3.99",
+    priceLemon: "$5.99",
+    priceGumroad: null,
+    tagline: "Supply reorder points, vendor contacts, price comparison, and order history log.",
+    hasApp: true,
+    folder: "14-reorder-tracker"
+  },
+  {
+    id: 15,
+    name: "The Jewelry Maker's Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Design catalog, bead/wire inventory, pricing per piece, and collection planner.",
+    hasApp: true,
+    folder: "15-jewelry-makers-planner"
+  },
+  {
+    id: 16,
+    name: "The Yarn Crafter's Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$5.99",
+    priceLemon: "$8.99",
+    priceGumroad: null,
+    tagline: "Pattern tracker, yarn stash inventory, project timeline, and gauge reference.",
+    hasApp: true,
+    folder: "16-yarn-crafters-planner"
+  },
+  {
+    id: 17,
+    name: "The Craft Show Command Center",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$5.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Show checklist, booth layout planner, inventory packing list, and sales tracker.",
+    hasApp: true,
+    folder: "17-craft-show-command-center"
+  },
+  {
+    id: 18,
+    name: "The Sewing & Quilting Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$5.99",
+    priceLemon: "$7.99",
+    priceGumroad: null,
+    tagline: "Pattern library, fabric inventory, project tracker, and measurement reference.",
+    hasApp: true,
+    folder: "18-sewing-quilting-planner"
+  },
+  {
+    id: 19,
+    name: "The Paper Crafts & Cricut Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 8,
+    priceEtsy: "$5.99",
+    priceLemon: "$8.99",
+    priceGumroad: null,
+    tagline: "Material tracker, blade/mat log, design file organizer, and project planner.",
+    hasApp: true,
+    folder: "19-paper-crafts-cricut-planner"
+  },
+  {
+    id: 20,
+    name: "The Etsy Fee Tracker",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 6,
+    priceEtsy: "$4.99",
+    priceLemon: "$7.99",
+    priceGumroad: null,
+    tagline: "Fee breakdown, profit-after-fees calculator, monthly fee summary, and tax prep helper.",
+    hasApp: true,
+    folder: "20-etsy-fee-tracker"
+  },
+  {
+    id: 21,
+    name: "The General Project Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 6,
+    priceEtsy: "$3.99",
+    priceLemon: "$5.99",
+    priceGumroad: null,
+    tagline: "Universal project tracker, timeline, task breakdown, and completion checklist.",
+    hasApp: true,
+    folder: "21-general-project-planner"
+  },
+  {
+    id: 22,
+    name: "The Woodworker's Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 7,
+    priceEtsy: "$5.99",
+    priceLemon: "$8.99",
+    priceGumroad: null,
+    tagline: "Cut list calculator, lumber inventory, project plans, and finish/stain tracker.",
+    hasApp: true,
+    folder: "22-woodworkers-planner"
+  },
+  {
+    id: 23,
+    name: "The Craft Room Zone Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 4,
+    priceEtsy: "$3.99",
+    priceLemon: "$5.99",
+    priceGumroad: null,
+    tagline: "Zone layout planner, storage inventory, declutter checklist, and organization system.",
+    hasApp: true,
+    folder: "23-craft-room-zone-planner"
+  },
+  {
+    id: 24,
+    name: "The Craft Show Season Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 5,
+    priceEtsy: "$4.99",
+    priceLemon: "$6.99",
+    priceGumroad: null,
+    tagline: "Season calendar, show comparison worksheet, revenue goals, and post-show review.",
+    hasApp: true,
+    folder: "24-craft-show-season-planner"
+  },
+  {
+    id: 25,
+    name: "The Label + Product Catalog System",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 4,
+    priceEtsy: "$3.99",
+    priceLemon: "$5.99",
+    priceGumroad: null,
+    tagline: "Label templates, product catalog builder, SKU system, and photography shot list.",
+    hasApp: true,
+    folder: "25-label-catalog-system"
+  },
+  {
+    id: 26,
+    name: "The Maker's Reflection Journal",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 5,
+    priceEtsy: "$4.99",
+    priceLemon: "$6.99",
+    priceGumroad: null,
+    tagline: "Monthly reflection prompts, wins tracker, lessons learned, and creative energy log.",
+    hasApp: true,
+    folder: "26-makers-reflection-journal"
+  },
+  {
+    id: 27,
+    name: "The Wholesale & Consignment Kit",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 6,
+    priceEtsy: "$7.99",
+    priceLemon: "$11.99",
+    priceGumroad: null,
+    tagline: "Wholesale pricing worksheet, consignment agreement, retailer tracker, and terms template.",
+    hasApp: true,
+    folder: "27-wholesale-consignment-kit"
+  },
+  {
+    id: 28,
+    name: "The Etsy Shop Management Planner",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 7,
+    priceEtsy: "$5.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Listing optimizer, SEO tracker, review response templates, and shop stats dashboard.",
+    hasApp: true,
+    folder: "28-etsy-shop-management-planner"
+  },
+  {
+    id: 29,
+    name: "The Starter Bundle",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 3,
+    priceEtsy: "$14.99",
+    priceLemon: "$19.99",
+    priceGumroad: null,
+    tagline: "Three essential planners bundled together to launch your craft business the right way.",
+    hasApp: true,
+    folder: "29-starter-bundle"
+  },
+  {
+    id: 30,
+    name: "The Craft Show Bundle",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 2,
+    priceEtsy: "$12.99",
+    priceLemon: "$17.99",
+    priceGumroad: null,
+    tagline: "Everything you need for craft show success: command center + season planner.",
+    hasApp: true,
+    folder: "30-craft-show-bundle"
+  },
+  {
+    id: 31,
+    name: "The Annual Dated Planner 2026",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 4,
+    priceEtsy: "$4.99",
+    priceLemon: "$7.99",
+    priceGumroad: null,
+    tagline: "Full 2026 dated planner with monthly and weekly spreads designed for craft sellers.",
+    hasApp: true,
+    folder: "31-annual-dated-planner-2026"
+  },
+  {
+    id: 32,
+    name: "The Growth Bundle",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 2,
+    priceEtsy: "$17.99",
+    priceLemon: "$24.99",
+    priceGumroad: null,
+    tagline: "Scale your craft business with advanced pricing and wholesale/consignment tools.",
+    hasApp: true,
+    folder: "32-growth-bundle"
+  },
+  {
+    id: 33,
+    name: "The Complete System Bundle",
+    brand: "Craft Profit Co.",
+    brandColor: "#8B6F47",
+    category: "Craft Business",
+    pdfCount: 3,
+    priceEtsy: "$34.99",
+    priceLemon: "$49.99",
+    priceGumroad: null,
+    tagline: "The entire Craft Profit Co. system in one bundle. Every planner, every tool, every template.",
+    hasApp: true,
+    folder: "33-complete-system-bundle"
+  },
+  {
+    id: 34,
+    name: "The 90-Minute Focus Matrix",
+    brand: "Focus Matrix Co.",
+    brandColor: "#6366F1",
+    category: "Productivity",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Time-blocking system, focus session tracker, distraction log, and energy mapping tool.",
+    hasApp: true,
+    folder: "34-90-minute-focus-matrix"
+  },
+  {
+    id: 35,
+    name: "The Decision Matrix Toolkit",
+    brand: "Clear Mind Co.",
+    brandColor: "#0EA5E9",
+    category: "Thinking Tools",
+    pdfCount: 7,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Weighted decision matrix, pros/cons framework, risk assessment, and outcome tracker.",
+    hasApp: true,
+    folder: "35-decision-matrix-toolkit"
+  },
+  {
+    id: 36,
+    name: "The Caregiver Command Center",
+    brand: "Prepared Life Co.",
+    brandColor: "#9B2C2C",
+    category: "Health & Wellness",
+    pdfCount: 10,
+    priceEtsy: "$9.99",
+    priceLemon: "$14.99",
+    priceGumroad: null,
+    tagline: "Care schedule, medication tracker, appointment log, provider directory, and daily notes.",
+    hasApp: true,
+    folder: "36-caregiver-command-center"
+  },
+  {
+    id: 37,
+    name: "The AI Side Hustle Kit",
+    brand: "LaunchReady Co.",
+    brandColor: "#E07A5F",
+    category: "Business & Career",
+    pdfCount: 8,
+    priceEtsy: "$9.99",
+    priceLemon: "$14.99",
+    priceGumroad: null,
+    tagline: "AI tool directory, prompt templates, monetization planner, and side hustle roadmap.",
+    hasApp: true,
+    folder: "37-ai-side-hustle-kit"
+  },
+  {
+    id: 38,
+    name: "The Household Deep Clean System",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Room-by-room deep clean checklists, supply inventory, schedule builder, and progress tracker.",
+    hasApp: true,
+    folder: "38-household-deep-clean-system"
+  },
+  {
+    id: 39,
+    name: "The Chronic Illness Management Binder",
+    brand: "Prepared Life Co.",
+    brandColor: "#9B2C2C",
+    category: "Health & Wellness",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$11.99",
+    priceGumroad: null,
+    tagline: "Symptom tracker, medication log, appointment prep sheets, and flare-up action plan.",
+    hasApp: true,
+    folder: "39-chronic-illness-binder"
+  },
+  {
+    id: 40,
+    name: "The Landlord Property Management Binder",
+    brand: "LaunchReady Co.",
+    brandColor: "#E07A5F",
+    category: "Finance",
+    pdfCount: 8,
+    priceEtsy: "$9.99",
+    priceLemon: "$14.99",
+    priceGumroad: null,
+    tagline: "Tenant tracker, rent roll, maintenance log, lease summary, and expense tracker.",
+    hasApp: true,
+    folder: "40-landlord-binder"
+  },
+  {
+    id: 41,
+    name: "The Meal Planning System",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$11.99",
+    priceGumroad: null,
+    tagline: "Weekly meal planner, grocery list builder, recipe cards, and pantry inventory tracker.",
+    hasApp: true,
+    folder: "41-meal-planning-system"
+  },
+  {
+    id: 42,
+    name: "The New Homeowner's Binder",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$8.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Move-in checklist, warranty tracker, contractor contacts, and home improvement planner.",
+    hasApp: true,
+    folder: "42-new-homeowner-binder"
+  },
+  {
+    id: 43,
+    name: "The Retirement Readiness System",
+    brand: "Prepared Life Co.",
+    brandColor: "#9B2C2C",
+    category: "Professional Development",
+    pdfCount: 10,
+    priceEtsy: "$9.99",
+    priceLemon: "$14.99",
+    priceGumroad: null,
+    tagline: "Retirement timeline, benefits checklist, budget planner, and lifestyle transition guide.",
+    hasApp: true,
+    folder: "43-retirement-readiness-system"
+  },
+  {
+    id: 44,
+    name: "The Service Professional's System",
+    brand: "LaunchReady Co.",
+    brandColor: "#E07A5F",
+    category: "Business & Career",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Client intake forms, job scheduling, invoice tracker, and service agreement templates.",
+    hasApp: true,
+    folder: "44-service-pro-system"
+  },
+  {
+    id: 45,
+    name: "The Family Heritage Recipe Binder",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$9.99",
+    priceLemon: "$14.99",
+    priceGumroad: null,
+    tagline: "Recipe cards, family story pages, conversion charts, and heritage cookbook builder.",
+    hasApp: true,
+    folder: "45-family-heritage-recipe-binder"
+  },
+  {
+    id: 46,
+    name: "The Garden Command Center",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$11.99",
+    priceGumroad: null,
+    tagline: "Planting calendar, garden layout planner, seed inventory, and harvest tracker.",
+    hasApp: true,
+    folder: "46-garden-command-center"
+  },
+  {
+    id: 47,
+    name: "The Debt Payoff Command Center",
+    brand: "Clear Mind Co.",
+    brandColor: "#0EA5E9",
+    category: "Finance",
+    pdfCount: 8,
+    priceEtsy: "$8.99",
+    priceLemon: "$12.99",
+    priceGumroad: null,
+    tagline: "Debt snowball/avalanche tracker, payment calendar, progress charts, and payoff timeline.",
+    hasApp: true,
+    folder: "47-debt-payoff-command-center"
+  },
+  {
+    id: 48,
+    name: "The Moving & Relocation Binder",
+    brand: "Homestead Planning Co.",
+    brandColor: "#7C9473",
+    category: "Home & Life",
+    pdfCount: 8,
+    priceEtsy: "$7.99",
+    priceLemon: "$10.99",
+    priceGumroad: null,
+    tagline: "Moving timeline, box inventory, address change checklist, and new home setup guide.",
+    hasApp: true,
+    folder: "48-moving-relocation-binder"
+  },
+  {
+    id: 49,
+    name: "The Student Success Toolkit",
+    brand: "Focus Matrix Co.",
+    brandColor: "#6366F1",
+    category: "Productivity",
+    pdfCount: 8,
+    priceEtsy: "$6.99",
+    priceLemon: "$9.99",
+    priceGumroad: null,
+    tagline: "Study planner, assignment tracker, exam prep system, and GPA calculator.",
+    hasApp: true,
+    folder: "49-student-success-toolkit"
+  },
+  {
+    id: 50,
+    name: "The Digital Declutter Kit",
+    brand: "Focus Matrix Co.",
+    brandColor: "#6366F1",
+    category: "Productivity",
+    pdfCount: 5,
+    priceEtsy: "$5.99",
+    priceLemon: "$7.99",
+    priceGumroad: "$7.99",
+    tagline: "App audit checklist, digital file organizer, subscription tracker, and inbox zero system.",
+    hasApp: true,
+    folder: "50-digital-declutter-kit"
+  },
+  {
+    id: 51,
+    name: "The Voice & Confidence Builder",
+    brand: "Focus Matrix Co.",
+    brandColor: "#6366F1",
+    category: "Productivity",
+    pdfCount: 6,
+    priceEtsy: "$6.99",
+    priceLemon: "$8.99",
+    priceGumroad: "$8.99",
+    tagline: "Speaking exercises, confidence journal, presentation prep, and self-advocacy scripts.",
+    hasApp: true,
+    folder: "51-voice-confidence-builder"
+  },
+  {
+    id: 52,
+    name: "The Second Brain Starter Kit",
+    brand: "Clear Mind Co.",
+    brandColor: "#0EA5E9",
+    category: "Thinking Tools",
+    pdfCount: 6,
+    priceEtsy: "$7.99",
+    priceLemon: "$9.99",
+    priceGumroad: "$9.99",
+    tagline: "Capture system, reference organizer, project notes template, and knowledge garden guide.",
+    hasApp: true,
+    folder: "52-second-brain-starter-kit"
+  },
+  {
+    id: 53,
+    name: "The Difficult Conversations Toolkit",
+    brand: "Clear Mind Co.",
+    brandColor: "#0EA5E9",
+    category: "Thinking Tools",
+    pdfCount: 6,
+    priceEtsy: "$5.99",
+    priceLemon: "$7.99",
+    priceGumroad: "$7.99",
+    tagline: "Conversation prep worksheet, script templates, de-escalation guide, and follow-up tracker.",
+    hasApp: true,
+    folder: "53-difficult-conversations-toolkit"
+  },
+  {
+    id: 54,
+    name: "The Authority Positioning Workbook",
+    brand: "LaunchReady Co.",
+    brandColor: "#E07A5F",
+    category: "Business & Career",
+    pdfCount: 6,
+    priceEtsy: "$6.99",
+    priceLemon: "$8.99",
+    priceGumroad: "$8.99",
+    tagline: "Personal brand audit, content strategy planner, visibility tracker, and authority roadmap.",
+    hasApp: true,
+    folder: "54-authority-positioning-workbook"
+  }
+];
+
+// ============================================================
+// CATEGORIES & BRAND DATA
+// ============================================================
+const CATEGORIES = ["All", "Craft Business", "Home & Life", "Productivity", "Business & Career", "Health & Wellness", "Finance", "Thinking Tools", "Professional Development"];
+
+const CATEGORY_COLORS = {
+  "Craft Business":           { light: "bg-amber-100 text-amber-800", dark: "dark:bg-amber-900/40 dark:text-amber-300" },
+  "Home & Life":              { light: "bg-emerald-100 text-emerald-800", dark: "dark:bg-emerald-900/40 dark:text-emerald-300" },
+  "Productivity":             { light: "bg-violet-100 text-violet-800", dark: "dark:bg-violet-900/40 dark:text-violet-300" },
+  "Business & Career":        { light: "bg-orange-100 text-orange-800", dark: "dark:bg-orange-900/40 dark:text-orange-300" },
+  "Health & Wellness":        { light: "bg-red-100 text-red-800", dark: "dark:bg-red-900/40 dark:text-red-300" },
+  "Finance":                  { light: "bg-sky-100 text-sky-800", dark: "dark:bg-sky-900/40 dark:text-sky-300" },
+  "Thinking Tools":           { light: "bg-cyan-100 text-cyan-800", dark: "dark:bg-cyan-900/40 dark:text-cyan-300" },
+  "Professional Development": { light: "bg-rose-100 text-rose-800", dark: "dark:bg-rose-900/40 dark:text-rose-300" },
+};
+
+const BRANDS = [
+  { name: "Craft Profit Co.", color: "#8B6F47" },
+  { name: "Homestead Planning Co.", color: "#7C9473" },
+  { name: "Focus Matrix Co.", color: "#6366F1" },
+  { name: "Clear Mind Co.", color: "#0EA5E9" },
+  { name: "Prepared Life Co.", color: "#9B2C2C" },
+  { name: "LaunchReady Co.", color: "#E07A5F" },
+  { name: "Steady Work Co.", color: "#5B7FA5" },
+  { name: "Good Pet Life Co.", color: "#B8860B" },
+];
+
+// ============================================================
+// APP STATE
+// ============================================================
+let activeCategory = "All";
+let searchQuery = "";
+let isDark = false;
+
+// ============================================================
+// THEME
+// ============================================================
+function toggleTheme() {
+  isDark = !isDark;
+  document.documentElement.classList.toggle('dark', isDark);
+  document.body.classList.toggle('dark-mode', isDark);
+  document.body.style.background = isDark ? '#111318' : '#FEFCF8';
+  document.body.style.color = isDark ? '#E8E6E1' : '#1F2937';
+  const icon = document.getElementById('theme-icon');
+  icon.innerHTML = isDark ? sunSVG : moonSVG;
+  renderPills();
+  renderProducts();
+  try { localStorage.setItem('cso-theme', isDark ? 'dark' : 'light'); } catch(e) {}
+}
+
+const moonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+const sunSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+
+// ============================================================
+// FILTERING
+// ============================================================
+function getFilteredProducts() {
+  return PRODUCTS.filter(p => {
+    const matchCat = activeCategory === "All" || p.category === activeCategory;
+    const q = searchQuery.toLowerCase();
+    const matchSearch = q === "" ||
+      p.name.toLowerCase().includes(q) ||
+      p.brand.toLowerCase().includes(q) ||
+      p.tagline.toLowerCase().includes(q) ||
+      p.category.toLowerCase().includes(q);
+    return matchCat && matchSearch;
+  });
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+  renderPills();
+  renderProducts();
+  updateCounter();
+}
+
+function handleSearch(e) {
+  searchQuery = e.target.value;
+  renderProducts();
+  updateCounter();
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function updateCounter() {
+  const filtered = getFilteredProducts();
+  const counter = document.getElementById('product-counter');
+  if (counter) counter.textContent = `Showing ${filtered.length} of ${PRODUCTS.length} products`;
+}
+
+function renderPills() {
+  const container = document.getElementById('category-pills');
+  if (!container) return;
+  container.innerHTML = CATEGORIES.map(cat => {
+    const isActive = cat === activeCategory;
+    let classes;
+    if (isActive) {
+      classes = isDark
+        ? 'background:#D4A843;color:#111318;'
+        : 'background:#C67B5C;color:#fff;';
+    } else {
+      classes = isDark
+        ? 'background:#1C1E26;color:#E8E6E1;border:1px solid #333;'
+        : 'background:#fff;color:#1F2937;border:1px solid #e5e7eb;';
+    }
+    const count = cat !== 'All' ? ` (${PRODUCTS.filter(p=>p.category===cat).length})` : '';
+    return `<button onclick="setCategory('${cat}')" class="cat-pill px-3 py-1.5 rounded-full text-sm font-medium" style="${classes}">${cat}${count}</button>`;
+  }).join('');
+}
+
+function renderProducts() {
+  const grid = document.getElementById('product-grid');
+  if (!grid) return;
+  const filtered = getFilteredProducts();
+  updateCounter();
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="col-span-full text-center py-16">
+        <p class="text-lg" style="color:${isDark?'#9CA3AF':'#6B7280'}">No products match your search.</p>
+        <button onclick="searchQuery='';document.getElementById('search-input').value='';setCategory('All');"
+          class="mt-4 underline" style="color:${isDark?'#D4A843':'#C67B5C'}">Clear filters</button>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const catColors = CATEGORY_COLORS[p.category] || { light: "bg-gray-100 text-gray-800", dark: "dark:bg-gray-800 dark:text-gray-300" };
+    const appLabel = p.hasApp ? ' + Interactive App' : '';
+    const pdfLabel = p.pdfCount === 1 ? '1 PDF' : `${p.pdfCount} PDFs`;
+    const accent = isDark ? '#D4A843' : '#C67B5C';
+    const cardBg = isDark ? '#1C1E26' : '#FFFFFF';
+    const cardBorder = isDark ? '#2a2d37' : '#f3f4f6';
+    const textMain = isDark ? '#E8E6E1' : '#1F2937';
+    const textSec = isDark ? '#9CA3AF' : '#6B7280';
+    const brandTextColor = isDark ? '#9CA3AF' : '#6B7280';
+
+    let priceLinks = [];
+    if (p.priceEtsy) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">Etsy ${p.priceEtsy}</a>`);
+    if (p.priceLemon) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">LemonSqueezy ${p.priceLemon}</a>`);
+    if (p.priceGumroad) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">Gumroad ${p.priceGumroad}</a>`);
+
+    // Category badge inline style
+    const catBadgeColors = {
+      "Craft Business": isDark ? "background:rgba(180,140,60,0.2);color:#fbbf24" : "background:#fef3c7;color:#92400e",
+      "Home & Life": isDark ? "background:rgba(74,150,100,0.2);color:#6ee7b7" : "background:#d1fae5;color:#065f46",
+      "Productivity": isDark ? "background:rgba(100,80,200,0.2);color:#a78bfa" : "background:#ede9fe;color:#5b21b6",
+      "Business & Career": isDark ? "background:rgba(220,120,60,0.2);color:#fb923c" : "background:#ffedd5;color:#9a3412",
+      "Health & Wellness": isDark ? "background:rgba(180,60,60,0.2);color:#fca5a5" : "background:#fee2e2;color:#991b1b",
+      "Finance": isDark ? "background:rgba(40,140,220,0.2);color:#7dd3fc" : "background:#e0f2fe;color:#075985",
+      "Thinking Tools": isDark ? "background:rgba(20,160,200,0.2);color:#67e8f9" : "background:#cffafe;color:#155e75",
+      "Professional Development": isDark ? "background:rgba(200,80,100,0.2);color:#fda4af" : "background:#ffe4e6;color:#9f1239",
+    };
+    const badgeStyle = catBadgeColors[p.category] || (isDark ? "background:#333;color:#ccc" : "background:#f3f4f6;color:#374151");
+
+    return `
+      <div class="product-card rounded-lg overflow-hidden" style="background:${cardBg};border:1px solid ${cardBorder};box-shadow:0 1px 3px rgba(0,0,0,${isDark?'0.3':'0.08'})">
+        <div style="height:3px;background:${p.brandColor}"></div>
+        <div style="padding:20px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <span class="brand-dot" style="background:${p.brandColor}"></span>
+            <span class="font-mono" style="font-size:11px;color:${brandTextColor};letter-spacing:0.05em;text-transform:uppercase">${p.brand}</span>
+          </div>
+          <h3 class="font-serif" style="font-size:1.125rem;color:${textMain};line-height:1.3;margin-bottom:8px">${p.name}</h3>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px">
+            <span style="font-size:11px;padding:2px 8px;border-radius:9999px;font-weight:500;${badgeStyle}">${p.category}</span>
+            <span style="font-size:12px;color:${textSec}">${pdfLabel}${appLabel}</span>
+          </div>
+          <p style="font-size:14px;color:${textSec};line-height:1.6;margin-bottom:16px">${p.tagline}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 16px;font-size:14px">
+            ${priceLinks.join('')}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  requestAnimationFrame(() => {
+    const cards = grid.querySelectorAll('.product-card');
+    cards.forEach((card, i) => {
+      setTimeout(() => card.classList.add('visible'), Math.min(i * 25, 600));
+    });
+  });
+}
+
+function renderBrands() {
+  const container = document.getElementById('brands-grid');
+  if (!container) return;
+  container.innerHTML = BRANDS.map(b => `
+    <div style="display:flex;align-items:center;gap:12px;padding:12px 0">
+      <span class="brand-dot" style="background:${b.color};width:12px;height:12px"></span>
+      <span class="font-serif" style="font-size:1rem">${b.name}</span>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function initPage() {
+  try {
+    const saved = localStorage.getItem('cso-theme');
+    if (saved === 'dark') {
+      isDark = true;
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark-mode');
+      document.body.style.background = '#111318';
+      document.body.style.color = '#E8E6E1';
+    }
+  } catch(e) {}
+
+  const countEl = document.getElementById('product-count');
+  if (countEl) countEl.textContent = PRODUCTS.length;
+
+  const icon = document.getElementById('theme-icon');
+  if (icon) icon.innerHTML = isDark ? sunSVG : moonSVG;
+
+  renderPills();
+  renderProducts();
+  updateCounter();
+  renderBrands();
+}
+
+document.addEventListener('DOMContentLoaded', initPage);
+</script>
+
+<!-- ============================================================ -->
+<!-- HEADER -->
+<!-- ============================================================ -->
+<header id="site-header" style="position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background 0.2s,border-color 0.2s">
+  <div style="max-width:80rem;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between">
+    <a href="#" class="font-serif" style="font-size:1.25rem;text-decoration:none;color:inherit;letter-spacing:-0.01em">Coffee Shop Office</a>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="#products" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">Products</a>
+      <a href="#about" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">About</a>
+      <button onclick="toggleTheme()" style="padding:8px;border-radius:8px;border:none;background:transparent;cursor:pointer;color:inherit;display:flex;align-items:center" aria-label="Toggle theme">
+        <span id="theme-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section style="padding-top:80px;padding-bottom:24px;padding-left:1.5rem;padding-right:1.5rem">
+  <div style="max-width:80rem;margin:0 auto">
+    <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2;margin-bottom:12px">
+      Printable systems for an organized life.
+    </h1>
+    <p style="font-size:clamp(1rem,2vw,1.125rem);color:#6B7280;max-width:42rem;line-height:1.6;margin-bottom:24px">
+      <strong id="product-count" style="color:inherit;font-weight:600"></strong> digital products. Planners, toolkits, and interactive apps. Print them. Use them. Get organized.
+    </p>
+
+    <!-- Search -->
+    <div style="position:relative;max-width:28rem;margin-bottom:16px">
+      <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#6B7280" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search products..."
+        oninput="handleSearch(event)"
+        class="search-input"
+        style="width:100%;padding:10px 16px 10px 40px;border-radius:8px;border:1px solid #e5e7eb;font-size:14px;font-family:Inter,system-ui,sans-serif;background:inherit;color:inherit"
+      >
+    </div>
+
+    <!-- Category Pills -->
+    <div id="category-pills" class="pills-scroll" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PRODUCT GRID -->
+<!-- ============================================================ -->
+<section id="products" style="padding:0 1.5rem 4rem">
+  <div style="max-width:80rem;margin:0 auto">
+    <p id="product-counter" style="font-size:14px;color:#6B7280;margin-bottom:16px"></p>
+    <div id="product-grid" style="display:grid;grid-template-columns:repeat(1,1fr);gap:20px">
+    </div>
+  </div>
+</section>
+
+<!-- Responsive grid via media queries -->
+<style>
+  @media (min-width: 768px) {
+    #product-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (min-width: 1024px) {
+    #product-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  }
+  .hidden { display: none; }
+  @media (min-width: 640px) {
+    .sm\:inline { display: inline !important; }
+  }
+</style>
+
+<!-- ============================================================ -->
+<!-- ABOUT -->
+<!-- ============================================================ -->
+<section id="about" style="padding:3rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
+  <div style="max-width:48rem;margin:0 auto;text-align:center">
+    <h2 class="font-serif" style="font-size:1.5rem;margin-bottom:16px">About Coffee Shop Office</h2>
+    <p style="color:#6B7280;line-height:1.7">
+      Coffee Shop Office builds printable organizational systems and digital tools for people who want structure without complexity. Every product is a complete, ready-to-print PDF bundle you can use today. Interactive app versions are available on request. Built in Santa Barbara, CA.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BRANDS -->
+<!-- ============================================================ -->
+<section style="padding:3rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
+  <div style="max-width:48rem;margin:0 auto">
+    <h2 class="font-serif" style="font-size:1.25rem;margin-bottom:24px;text-align:center">Our Brands</h2>
+    <div id="brands-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:4px 24px">
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 640px) {
+    #brands-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  }
+</style>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer style="padding:2.5rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
+  <div style="max-width:80rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:#6B7280">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
+      <span class="font-serif" style="color:inherit">Coffee Shop Office</span>
+      <span style="opacity:0.4">&middot;</span>
+      <span>Santa Barbara, CA</span>
+      <span style="opacity:0.4">&middot;</span>
+      <a href="mailto:palmer@coffeeshopoffice.com" style="color:inherit;text-decoration:none">palmer@coffeeshopoffice.com</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="#" style="color:inherit;text-decoration:none">Etsy Shop</a>
+      <a href="#" style="color:inherit;text-decoration:none">LemonSqueezy</a>
+      <a href="#" style="color:inherit;text-decoration:none">Gumroad</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
