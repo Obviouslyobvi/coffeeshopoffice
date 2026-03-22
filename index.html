@@ -66,7 +66,6 @@ tailwind.config = {
   .search-input:focus { outline: none; }
   .store-link { text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .store-link:hover { text-decoration: underline; }
-  .brand-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
 
   /* Header theming */
   #site-header { background: rgba(254,252,248,0.92); border-bottom: 1px solid rgba(0,0,0,0.08); }
@@ -102,8 +101,6 @@ const PRODUCTS = [
   {
     id: 1,
     name: "The Complete Home Maintenance Planner",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -116,8 +113,6 @@ const PRODUCTS = [
   {
     id: 2,
     name: "The Freelancer's Survival Toolkit",
-    brand: "Steady Work Co.",
-    brandColor: "#5B7FA5",
     category: "Business & Career",
     pdfCount: 6,
     priceEtsy: "$9.99",
@@ -130,8 +125,6 @@ const PRODUCTS = [
   {
     id: 3,
     name: "The Business Launch Toolkit",
-    brand: "LaunchReady Co.",
-    brandColor: "#E07A5F",
     category: "Business & Career",
     pdfCount: 6,
     priceEtsy: "$9.99",
@@ -144,8 +137,6 @@ const PRODUCTS = [
   {
     id: 4,
     name: "The Emergency Documents Binder",
-    brand: "Prepared Life Co.",
-    brandColor: "#9B2C2C",
     category: "Health & Wellness",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -158,8 +149,6 @@ const PRODUCTS = [
   {
     id: 5,
     name: "The Pet Owner's Complete Binder",
-    brand: "Good Pet Life Co.",
-    brandColor: "#B8860B",
     category: "Health & Wellness",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -172,8 +161,6 @@ const PRODUCTS = [
   {
     id: 6,
     name: "The Pricing Workbook",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 7,
     priceEtsy: "$9.99",
@@ -186,8 +173,6 @@ const PRODUCTS = [
   {
     id: 7,
     name: "The Custom Order Command Center",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$9.99",
@@ -200,8 +185,6 @@ const PRODUCTS = [
   {
     id: 8,
     name: "The Resin/Candle/Bath Bomb Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -214,8 +197,6 @@ const PRODUCTS = [
   {
     id: 9,
     name: "The Social Media Content Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -228,8 +209,6 @@ const PRODUCTS = [
   {
     id: 10,
     name: "The Design Idea Journal",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 7,
     priceEtsy: "$5.99",
@@ -242,8 +221,6 @@ const PRODUCTS = [
   {
     id: 11,
     name: "The Skill Builder Workbook",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 7,
     priceEtsy: "$8.99",
@@ -256,8 +233,6 @@ const PRODUCTS = [
   {
     id: 12,
     name: "The Craft Business Starter Kit",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$12.99",
@@ -270,8 +245,6 @@ const PRODUCTS = [
   {
     id: 13,
     name: "The Weekly Reset Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Productivity",
     pdfCount: 6,
     priceEtsy: "$4.99",
@@ -284,8 +257,6 @@ const PRODUCTS = [
   {
     id: 14,
     name: "The Reorder Tracker",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 5,
     priceEtsy: "$3.99",
@@ -298,8 +269,6 @@ const PRODUCTS = [
   {
     id: 15,
     name: "The Jewelry Maker's Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -312,8 +281,6 @@ const PRODUCTS = [
   {
     id: 16,
     name: "The Yarn Crafter's Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$5.99",
@@ -326,8 +293,6 @@ const PRODUCTS = [
   {
     id: 17,
     name: "The Craft Show Command Center",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$5.99",
@@ -340,8 +305,6 @@ const PRODUCTS = [
   {
     id: 18,
     name: "The Sewing & Quilting Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$5.99",
@@ -354,8 +317,6 @@ const PRODUCTS = [
   {
     id: 19,
     name: "The Paper Crafts & Cricut Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 8,
     priceEtsy: "$5.99",
@@ -368,8 +329,6 @@ const PRODUCTS = [
   {
     id: 20,
     name: "The Etsy Fee Tracker",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 6,
     priceEtsy: "$4.99",
@@ -382,8 +341,6 @@ const PRODUCTS = [
   {
     id: 21,
     name: "The General Project Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 6,
     priceEtsy: "$3.99",
@@ -396,8 +353,6 @@ const PRODUCTS = [
   {
     id: 22,
     name: "The Woodworker's Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 7,
     priceEtsy: "$5.99",
@@ -410,8 +365,6 @@ const PRODUCTS = [
   {
     id: 23,
     name: "The Craft Room Zone Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 4,
     priceEtsy: "$3.99",
@@ -424,8 +377,6 @@ const PRODUCTS = [
   {
     id: 24,
     name: "The Craft Show Season Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 5,
     priceEtsy: "$4.99",
@@ -438,8 +389,6 @@ const PRODUCTS = [
   {
     id: 25,
     name: "The Label + Product Catalog System",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 4,
     priceEtsy: "$3.99",
@@ -452,8 +401,6 @@ const PRODUCTS = [
   {
     id: 26,
     name: "The Maker's Reflection Journal",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 5,
     priceEtsy: "$4.99",
@@ -466,8 +413,6 @@ const PRODUCTS = [
   {
     id: 27,
     name: "The Wholesale & Consignment Kit",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 6,
     priceEtsy: "$7.99",
@@ -480,8 +425,6 @@ const PRODUCTS = [
   {
     id: 28,
     name: "The Etsy Shop Management Planner",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 7,
     priceEtsy: "$5.99",
@@ -494,8 +437,6 @@ const PRODUCTS = [
   {
     id: 29,
     name: "The Starter Bundle",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 3,
     priceEtsy: "$14.99",
@@ -508,8 +449,6 @@ const PRODUCTS = [
   {
     id: 30,
     name: "The Craft Show Bundle",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 2,
     priceEtsy: "$12.99",
@@ -522,8 +461,6 @@ const PRODUCTS = [
   {
     id: 31,
     name: "The Annual Dated Planner 2026",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 4,
     priceEtsy: "$4.99",
@@ -536,8 +473,6 @@ const PRODUCTS = [
   {
     id: 32,
     name: "The Growth Bundle",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 2,
     priceEtsy: "$17.99",
@@ -550,22 +485,18 @@ const PRODUCTS = [
   {
     id: 33,
     name: "The Complete System Bundle",
-    brand: "Craft Profit Co.",
-    brandColor: "#8B6F47",
     category: "Craft Business",
     pdfCount: 3,
     priceEtsy: "$34.99",
     priceLemon: "$49.99",
     priceGumroad: null,
-    tagline: "The entire Craft Profit Co. system in one bundle. Every planner, every tool, every template.",
+    tagline: "The entire Coffee Shop Office craft system in one bundle. Every planner, every tool, every template.",
     hasApp: true,
     folder: "33-complete-system-bundle"
   },
   {
     id: 34,
     name: "The 90-Minute Focus Matrix",
-    brand: "Focus Matrix Co.",
-    brandColor: "#6366F1",
     category: "Productivity",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -578,8 +509,6 @@ const PRODUCTS = [
   {
     id: 35,
     name: "The Decision Matrix Toolkit",
-    brand: "Clear Mind Co.",
-    brandColor: "#0EA5E9",
     category: "Thinking Tools",
     pdfCount: 7,
     priceEtsy: "$6.99",
@@ -592,8 +521,6 @@ const PRODUCTS = [
   {
     id: 36,
     name: "The Caregiver Command Center",
-    brand: "Prepared Life Co.",
-    brandColor: "#9B2C2C",
     category: "Health & Wellness",
     pdfCount: 10,
     priceEtsy: "$9.99",
@@ -606,8 +533,6 @@ const PRODUCTS = [
   {
     id: 37,
     name: "The AI Side Hustle Kit",
-    brand: "LaunchReady Co.",
-    brandColor: "#E07A5F",
     category: "Business & Career",
     pdfCount: 8,
     priceEtsy: "$9.99",
@@ -620,8 +545,6 @@ const PRODUCTS = [
   {
     id: 38,
     name: "The Household Deep Clean System",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -634,8 +557,6 @@ const PRODUCTS = [
   {
     id: 39,
     name: "The Chronic Illness Management Binder",
-    brand: "Prepared Life Co.",
-    brandColor: "#9B2C2C",
     category: "Health & Wellness",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -648,8 +569,6 @@ const PRODUCTS = [
   {
     id: 40,
     name: "The Landlord Property Management Binder",
-    brand: "LaunchReady Co.",
-    brandColor: "#E07A5F",
     category: "Finance",
     pdfCount: 8,
     priceEtsy: "$9.99",
@@ -662,8 +581,6 @@ const PRODUCTS = [
   {
     id: 41,
     name: "The Meal Planning System",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -676,8 +593,6 @@ const PRODUCTS = [
   {
     id: 42,
     name: "The New Homeowner's Binder",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$8.99",
@@ -690,8 +605,6 @@ const PRODUCTS = [
   {
     id: 43,
     name: "The Retirement Readiness System",
-    brand: "Prepared Life Co.",
-    brandColor: "#9B2C2C",
     category: "Professional Development",
     pdfCount: 10,
     priceEtsy: "$9.99",
@@ -704,8 +617,6 @@ const PRODUCTS = [
   {
     id: 44,
     name: "The Service Professional's System",
-    brand: "LaunchReady Co.",
-    brandColor: "#E07A5F",
     category: "Business & Career",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -718,8 +629,6 @@ const PRODUCTS = [
   {
     id: 45,
     name: "The Family Heritage Recipe Binder",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$9.99",
@@ -732,8 +641,6 @@ const PRODUCTS = [
   {
     id: 46,
     name: "The Garden Command Center",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -746,8 +653,6 @@ const PRODUCTS = [
   {
     id: 47,
     name: "The Debt Payoff Command Center",
-    brand: "Clear Mind Co.",
-    brandColor: "#0EA5E9",
     category: "Finance",
     pdfCount: 8,
     priceEtsy: "$8.99",
@@ -760,8 +665,6 @@ const PRODUCTS = [
   {
     id: 48,
     name: "The Moving & Relocation Binder",
-    brand: "Homestead Planning Co.",
-    brandColor: "#7C9473",
     category: "Home & Life",
     pdfCount: 8,
     priceEtsy: "$7.99",
@@ -774,8 +677,6 @@ const PRODUCTS = [
   {
     id: 49,
     name: "The Student Success Toolkit",
-    brand: "Focus Matrix Co.",
-    brandColor: "#6366F1",
     category: "Productivity",
     pdfCount: 8,
     priceEtsy: "$6.99",
@@ -788,8 +689,6 @@ const PRODUCTS = [
   {
     id: 50,
     name: "The Digital Declutter Kit",
-    brand: "Focus Matrix Co.",
-    brandColor: "#6366F1",
     category: "Productivity",
     pdfCount: 5,
     priceEtsy: "$5.99",
@@ -802,8 +701,6 @@ const PRODUCTS = [
   {
     id: 51,
     name: "The Voice & Confidence Builder",
-    brand: "Focus Matrix Co.",
-    brandColor: "#6366F1",
     category: "Productivity",
     pdfCount: 6,
     priceEtsy: "$6.99",
@@ -816,8 +713,6 @@ const PRODUCTS = [
   {
     id: 52,
     name: "The Second Brain Starter Kit",
-    brand: "Clear Mind Co.",
-    brandColor: "#0EA5E9",
     category: "Thinking Tools",
     pdfCount: 6,
     priceEtsy: "$7.99",
@@ -830,8 +725,6 @@ const PRODUCTS = [
   {
     id: 53,
     name: "The Difficult Conversations Toolkit",
-    brand: "Clear Mind Co.",
-    brandColor: "#0EA5E9",
     category: "Thinking Tools",
     pdfCount: 6,
     priceEtsy: "$5.99",
@@ -844,8 +737,6 @@ const PRODUCTS = [
   {
     id: 54,
     name: "The Authority Positioning Workbook",
-    brand: "LaunchReady Co.",
-    brandColor: "#E07A5F",
     category: "Business & Career",
     pdfCount: 6,
     priceEtsy: "$6.99",
@@ -873,16 +764,6 @@ const CATEGORY_COLORS = {
   "Professional Development": { light: "bg-rose-100 text-rose-800", dark: "dark:bg-rose-900/40 dark:text-rose-300" },
 };
 
-const BRANDS = [
-  { name: "Craft Profit Co.", color: "#8B6F47" },
-  { name: "Homestead Planning Co.", color: "#7C9473" },
-  { name: "Focus Matrix Co.", color: "#6366F1" },
-  { name: "Clear Mind Co.", color: "#0EA5E9" },
-  { name: "Prepared Life Co.", color: "#9B2C2C" },
-  { name: "LaunchReady Co.", color: "#E07A5F" },
-  { name: "Steady Work Co.", color: "#5B7FA5" },
-  { name: "Good Pet Life Co.", color: "#B8860B" },
-];
 
 // ============================================================
 // APP STATE
@@ -919,7 +800,6 @@ function getFilteredProducts() {
     const q = searchQuery.toLowerCase();
     const matchSearch = q === "" ||
       p.name.toLowerCase().includes(q) ||
-      p.brand.toLowerCase().includes(q) ||
       p.tagline.toLowerCase().includes(q) ||
       p.category.toLowerCase().includes(q);
     return matchCat && matchSearch;
@@ -993,7 +873,6 @@ function renderProducts() {
     const cardBorder = isDark ? '#2a2d37' : '#f3f4f6';
     const textMain = isDark ? '#E8E6E1' : '#1F2937';
     const textSec = isDark ? '#9CA3AF' : '#6B7280';
-    const brandTextColor = isDark ? '#9CA3AF' : '#6B7280';
 
     let priceLinks = [];
     if (p.priceEtsy) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">Etsy ${p.priceEtsy}</a>`);
@@ -1015,12 +894,7 @@ function renderProducts() {
 
     return `
       <div class="product-card rounded-lg overflow-hidden" style="background:${cardBg};border:1px solid ${cardBorder};box-shadow:0 1px 3px rgba(0,0,0,${isDark?'0.3':'0.08'})">
-        <div style="height:3px;background:${p.brandColor}"></div>
         <div style="padding:20px">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-            <span class="brand-dot" style="background:${p.brandColor}"></span>
-            <span class="font-mono" style="font-size:11px;color:${brandTextColor};letter-spacing:0.05em;text-transform:uppercase">${p.brand}</span>
-          </div>
           <h3 class="font-serif" style="font-size:1.125rem;color:${textMain};line-height:1.3;margin-bottom:8px">${p.name}</h3>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px">
             <span style="font-size:11px;padding:2px 8px;border-radius:9999px;font-weight:500;${badgeStyle}">${p.category}</span>
@@ -1042,16 +916,6 @@ function renderProducts() {
   });
 }
 
-function renderBrands() {
-  const container = document.getElementById('brands-grid');
-  if (!container) return;
-  container.innerHTML = BRANDS.map(b => `
-    <div style="display:flex;align-items:center;gap:12px;padding:12px 0">
-      <span class="brand-dot" style="background:${b.color};width:12px;height:12px"></span>
-      <span class="font-serif" style="font-size:1rem">${b.name}</span>
-    </div>
-  `).join('');
-}
 
 // ============================================================
 // INIT
@@ -1077,7 +941,6 @@ function initPage() {
   renderPills();
   renderProducts();
   updateCounter();
-  renderBrands();
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
@@ -1166,22 +1029,6 @@ document.addEventListener('DOMContentLoaded', initPage);
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- BRANDS -->
-<!-- ============================================================ -->
-<section style="padding:3rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
-  <div style="max-width:48rem;margin:0 auto">
-    <h2 class="font-serif" style="font-size:1.25rem;margin-bottom:24px;text-align:center">Our Brands</h2>
-    <div id="brands-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:4px 24px">
-    </div>
-  </div>
-</section>
-
-<style>
-  @media (min-width: 640px) {
-    #brands-grid { grid-template-columns: repeat(4, 1fr) !important; }
-  }
-</style>
 
 <!-- ============================================================ -->
 <!-- FOOTER -->
