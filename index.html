@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coffee Shop Office - Printable Systems for an Organized Life</title>
-<meta name="description" content="64 digital products. Planners, toolkits, and interactive apps. Print them. Use them. Get organized.">
+<meta name="description" content="70 printable organizational systems. Planners, toolkits, and binders. Print them. Use them. Get organized.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -988,7 +988,7 @@ function renderProducts() {
 
   grid.innerHTML = filtered.map(p => {
     const catColors = CATEGORY_COLORS[p.category] || { light: "bg-gray-100 text-gray-800", dark: "dark:bg-gray-800 dark:text-gray-300" };
-    const appLabel = p.hasApp ? ' + Interactive App' : '';
+    const appLabel = '';
     const pdfLabel = p.pdfCount === 1 ? '1 PDF' : `${p.pdfCount} PDFs`;
     const accent = isDark ? '#D4A843' : '#C67B5C';
     const cardBg = isDark ? '#1C1E26' : '#FFFFFF';
@@ -1092,7 +1092,7 @@ document.addEventListener('DOMContentLoaded', initPage);
       Printable systems for an organized life.
     </h1>
     <p style="font-size:clamp(1rem,2vw,1.125rem);color:#6B7280;max-width:42rem;line-height:1.6;margin-bottom:24px">
-      <strong id="product-count" style="color:inherit;font-weight:600"></strong> digital products. Planners, toolkits, and interactive apps. Print them. Use them. Get organized.
+      <strong id="product-count" style="color:inherit;font-weight:600"></strong> printable organizational systems. Planners, toolkits, and binders. Print them. Use them. Get organized.
     </p>
 
     <!-- Search -->
