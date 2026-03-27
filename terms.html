@@ -41,13 +41,16 @@ tailwind.config = {
   html.dark { background: #111318; }
   html.dark body { background: #111318; color: #E8E6E1; }
   .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+
   #site-header { background: rgba(254,252,248,0.92); border-bottom: 1px solid rgba(0,0,0,0.08); }
   html.dark #site-header { background: rgba(17,19,24,0.92); border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-link { color: #6B7280; }
   html.dark .nav-link { color: #9CA3AF; }
+
   html.dark [style*="color:#6B7280"] { color: #9CA3AF !important; }
   html.dark [style*="color:#1F2937"] { color: #E8E6E1 !important; }
   html.dark footer { border-top-color: #2A2B2E !important; }
+
   .legal-content h2 { font-size: 1.25rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 0.75rem; }
   .legal-content h3 { font-size: 1.05rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
   .legal-content p { color: #6B7280; line-height: 1.8; margin-bottom: 1rem; }
@@ -58,6 +61,8 @@ tailwind.config = {
 </style>
 </head>
 <body class="min-h-screen transition-colors duration-200">
+
+<!-- HEADER -->
 <header id="site-header" style="position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background 0.2s,border-color 0.2s">
   <div style="max-width:80rem;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between">
     <a href="index.html" class="font-serif" style="font-size:1.25rem;text-decoration:none;color:inherit;letter-spacing:-0.01em">Coffee Shop Office</a>
@@ -70,73 +75,103 @@ tailwind.config = {
     </div>
   </div>
 </header>
+
+<!-- CONTENT -->
 <section style="padding-top:80px;padding-bottom:4rem;padding-left:1.5rem;padding-right:1.5rem">
   <div class="legal-content" style="max-width:48rem;margin:0 auto">
-    <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.25rem);line-height:1.2;margin-bottom:8px">Terms of Service</h1>
+
+    <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.25rem);line-height:1.2;margin-bottom:8px">
+      Terms of Service
+    </h1>
     <p style="font-size:14px;color:#6B7280;margin-bottom:2rem">Effective Date: March 27, 2026</p>
-    <p>Welcome to Coffee Shop Office ("we," "us," or "our"). By purchasing or downloading any digital product from our store on Etsy, LemonSqueezy, or coffeeshopoffice.com, you agree to the following Terms of Service. Please read them carefully before completing your purchase.</p>
-    <h2>1. Products</h2>
-    <p>Coffee Shop Office sells digital products, including printable PDF bundles, planners, toolkits, binders, and interactive web-based app versions. All products are delivered digitally. No physical items are shipped.</p>
-    <h2>2. License and Permitted Use</h2>
-    <p>When you purchase a product, you receive a personal, non-transferable, non-exclusive license to use the product for your own personal or internal business use. You may:</p>
-    <ul>
-      <li>Print copies for your own use</li>
-      <li>Use the product on your personal devices</li>
-      <li>Use printed copies within your own household or business</li>
-    </ul>
-    <p>You may not:</p>
+
+    <h2>1. Overview</h2>
+    <p>These Terms of Service ("Terms") govern your purchase and use of digital products sold by Coffee Shop Office. By purchasing any product from our store on Etsy, LemonSqueezy, or Amazon, you agree to be bound by these Terms. If you do not agree, please do not complete your purchase.</p>
+
+    <h2>2. Products</h2>
+    <p>Coffee Shop Office sells digital products including printable planners, binders, trackers, worksheets, and interactive tools (HTML/JSX applications). All products are delivered digitally. No physical items are shipped.</p>
+
+    <h2>3. Delivery</h2>
+    <p>Upon completed payment, you will receive immediate access to download your purchased files. Etsy delivers files through its built-in download system. LemonSqueezy delivers files via email and your account dashboard. Amazon delivers files through the Kindle or digital delivery system. If you experience any issues accessing your files, contact us and we will ensure you receive your purchase.</p>
+
+    <h2>4. License and Usage Rights</h2>
+    <p>When you purchase a product, you receive a personal, non-exclusive, non-transferable license to use that product for your own personal or household use. You may print unlimited copies for yourself and your immediate household.</p>
+    <p><strong>You may NOT:</strong></p>
     <ul>
       <li>Resell, redistribute, or share the digital files with others</li>
-      <li>Upload the files to any public or shared drive accessible by non-purchasers</li>
-      <li>Claim the product as your own creation</li>
-      <li>Use the product in any commercial product intended for resale</li>
+      <li>Upload the files to any file-sharing service or website</li>
+      <li>Claim the designs as your own or remove branding</li>
+      <li>Use the products for commercial purposes (selling printed copies, including in products you sell, etc.)</li>
+      <li>Modify the files and redistribute or sell the modified versions</li>
     </ul>
-    <h2>3. Delivery</h2>
-    <p>All products are delivered instantly via digital download after purchase. On Etsy, files are available through your Etsy purchases page. On LemonSqueezy, a download link is provided immediately and sent via email. On coffeeshopoffice.com, downloads are delivered through the checkout platform used at the time of purchase.</p>
-    <h2>4. Pricing</h2>
-    <p>Prices may vary slightly between platforms (Etsy, LemonSqueezy, coffeeshopoffice.com) due to platform fees and regional pricing. All prices are listed in USD unless otherwise noted.</p>
+    <p>Violation of these terms may result in revocation of your license and legal action.</p>
+
     <h2>5. Intellectual Property</h2>
-    <p>All products, designs, layouts, text, and branding are the intellectual property of Coffee Shop Office and CS Ventures LLC. Purchasing a product does not transfer ownership of the intellectual property. All rights not explicitly granted in these terms are reserved.</p>
-    <h2>6. Disclaimer</h2>
-    <p>Products are provided "as is." While we make every effort to ensure accuracy and quality, we do not guarantee that every product will meet your specific needs. Coffee Shop Office is not liable for any damages resulting from the use or inability to use our products.</p>
-    <h2>7. Changes to These Terms</h2>
-    <p>We may update these Terms of Service at any time. Changes will be posted on this page with an updated effective date. Continued use of our products after changes are posted constitutes acceptance of the revised terms.</p>
-    <h2>8. Contact</h2>
-    <p>If you have questions about these Terms of Service, contact us at <a href="mailto:hello@coffeeshopoffice.com" style="color:#C67B5C;text-decoration:underline">hello@coffeeshopoffice.com</a>.</p>
+    <p>All products, designs, layouts, text, and interactive tools are the intellectual property of Coffee Shop Office. Purchase of a product does not transfer ownership of the intellectual property. All rights not explicitly granted in these Terms are reserved.</p>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>Coffee Shop Office products are informational and organizational tools. They are not substitutes for professional medical, legal, financial, or therapeutic advice. Coffee Shop Office is not liable for any decisions, actions, or outcomes resulting from use of our products. Products are provided "as is" without warranty of any kind, express or implied. Our total liability for any claim related to a product shall not exceed the purchase price of that product.</p>
+
+    <h2>7. Privacy</h2>
+    <p>We collect only the information necessary to fulfill your order. We do not sell or share your personal information with third parties for marketing purposes. Payment processing is handled securely by the respective platforms (Etsy, LemonSqueezy, Amazon). Coffee Shop Office does not store your payment details.</p>
+
+    <h2>8. Changes to Terms</h2>
+    <p>We reserve the right to update these Terms at any time. Changes take effect immediately upon posting. Continued use of our products after changes constitutes acceptance of the updated Terms.</p>
+
+    <h2>9. Contact</h2>
+    <p>If you have questions about these Terms, contact Coffee Shop Office through your purchase platform's messaging system or at our store page.</p>
+
+    <!-- REFUND POLICY -->
     <div style="margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(0,0,0,0.08)">
-      <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.25rem);line-height:1.2;margin-bottom:8px">Refund Policy</h1>
+      <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.25rem);line-height:1.2;margin-bottom:8px">
+        Refund Policy
+      </h1>
       <p style="font-size:14px;color:#6B7280;margin-bottom:2rem">Effective Date: March 27, 2026</p>
-      <p>Because all Coffee Shop Office products are delivered as instant digital downloads, we generally do not offer refunds once a file has been downloaded. This is standard practice for digital goods, as the product cannot be "returned" after delivery.</p>
-      <h2>When We Will Issue a Refund</h2>
-      <p>We want you to be happy with your purchase. We will issue a full refund if:</p>
-      <ul>
-        <li>You received a corrupted or unreadable file and we are unable to resolve the issue</li>
-        <li>The product was materially different from its description</li>
-        <li>You were charged more than once for the same product (duplicate charge)</li>
-        <li>You accidentally purchased the same product twice</li>
-      </ul>
-      <h2>How to Request a Refund</h2>
-      <p>Email us at <a href="mailto:hello@coffeeshopoffice.com" style="color:#C67B5C;text-decoration:underline">hello@coffeeshopoffice.com</a> with your order number and a brief description of the issue. We aim to respond within 24-48 hours.</p>
-      <h2>Platform-Specific Notes</h2>
+
+      <h2>General Policy</h2>
+      <p>Due to the digital nature of our products, all sales are final. Once a digital file has been downloaded or accessed, we cannot offer a refund. This is standard practice for digital goods because the product cannot be "returned" after delivery.</p>
+
+      <h2>Platform-Specific Policies</h2>
+
       <h3>Etsy</h3>
-      <p>Etsy's standard policy states that digital items are non-refundable. However, we will work with you directly if you have a qualifying issue listed above. If you open a case through Etsy, please also email us so we can resolve it quickly.</p>
+      <p>Etsy's own policy states that sellers are not required to accept returns or provide refunds on digital download items. Per Etsy's Terms of Use, digital items are non-refundable once the file has been downloaded. If you have not yet downloaded the file and would like a refund, contact us within 24 hours of purchase and we will work with you.</p>
+      <p>If you experience a technical issue (corrupted file, missing pages, wrong file delivered), contact us immediately. We will replace the file or troubleshoot the issue at no additional cost.</p>
+
       <h3>LemonSqueezy</h3>
-      <p>Refunds for purchases made through LemonSqueezy are processed through the LemonSqueezy platform. Contact us at the email above and we will initiate the refund on our end.</p>
-      <h3>coffeeshopoffice.com</h3>
-      <p>Refunds for purchases made directly on our website are processed through the payment provider used at the time of checkout. Contact us and we will handle it from there.</p>
-      <h2>Non-Refundable Situations</h2>
-      <p>We are unable to offer refunds in the following cases:</p>
+      <p>Per LemonSqueezy's merchant terms, refund policies are set by the seller. Our policy for LemonSqueezy purchases: all sales of digital products are final. No refunds will be issued after the product has been delivered to your email or made available in your account dashboard.</p>
+      <p>If you experience a technical issue with your purchase, contact us and we will provide a replacement file or resolve the issue promptly.</p>
+
+      <h3>Amazon</h3>
+      <p>Amazon digital purchases are subject to Amazon's digital return policies. In most cases, digital content is non-refundable once accessed. If you have an issue with an Amazon purchase, contact Amazon customer service directly or reach out to us through the platform.</p>
+
+      <h2>When We Will Make Exceptions</h2>
+      <p>We want every customer to be satisfied. While our general policy is no refunds on digital products, we will consider exceptions in these cases:</p>
       <ul>
-        <li>You changed your mind after downloading the product</li>
-        <li>You did not read the product description before purchasing</li>
-        <li>You are unable to print the files due to your own printer or software limitations</li>
-        <li>You purchased the wrong product (but contact us and we may be able to offer a credit or exchange)</li>
+        <li>You were charged twice for the same product (duplicate charge)</li>
+        <li>The file delivered is materially different from what was described in the listing</li>
+        <li>A technical error on our end prevents you from accessing the product after multiple troubleshooting attempts</li>
       </ul>
-      <h2>Contact</h2>
-      <p>For all refund requests or questions, reach us at <a href="mailto:hello@coffeeshopoffice.com" style="color:#C67B5C;text-decoration:underline">hello@coffeeshopoffice.com</a>. We are a small business and we genuinely want every customer to have a good experience.</p>
+      <p>To request an exception, contact us within 7 days of purchase with your order details and a description of the issue.</p>
+
+      <h2>What We Cannot Refund</h2>
+      <ul>
+        <li>Change of mind after downloading the product</li>
+        <li>Failure to read the product description before purchasing</li>
+        <li>Incompatibility with your device (system requirements, if any, are listed in product descriptions)</li>
+        <li>Products purchased more than 30 days ago</li>
+      </ul>
+
+      <h2>Disputes</h2>
+      <p>If you open a payment dispute or chargeback without first contacting us, we will provide the platform with proof of digital delivery. We strongly encourage you to contact us first so we can resolve any issues directly and quickly.</p>
+
+      <p style="margin-top:2rem;font-style:italic;font-size:14px">Coffee Shop Office | March 27, 2026</p>
+      <p style="font-style:italic;font-size:14px">This document may be adapted for use on your Etsy shop policies, LemonSqueezy checkout page, and Amazon listings.</p>
     </div>
+
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer style="padding:2.5rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
   <div style="max-width:80rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:#6B7280">
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
@@ -148,14 +183,17 @@ tailwind.config = {
     </div>
     <div style="display:flex;align-items:center;gap:16px">
       <a href="index.html" style="color:inherit;text-decoration:none">Home</a>
-      <a href="terms.html" style="color:inherit;text-decoration:none">Terms &amp; Refund Policy</a>
+      <a href="terms.html" style="color:inherit;text-decoration:none">Terms & Refund Policy</a>
     </div>
   </div>
 </footer>
+
 <script>
 let isDark = false;
+
 const moonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
 const sunSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+
 function toggleTheme() {
   isDark = !isDark;
   document.documentElement.classList.toggle('dark', isDark);
@@ -166,6 +204,8 @@ function toggleTheme() {
   icon.innerHTML = isDark ? sunSVG : moonSVG;
   try { localStorage.setItem('cso-theme', isDark ? 'dark' : 'light'); } catch(e) {}
 }
+
+// Init theme
 (function() {
   try {
     const saved = localStorage.getItem('cso-theme');
@@ -181,5 +221,6 @@ function toggleTheme() {
   icon.innerHTML = isDark ? sunSVG : moonSVG;
 })();
 </script>
+
 </body>
 </html>
