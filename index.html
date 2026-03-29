@@ -468,6 +468,7 @@ const PRODUCTS = [
     pdfCount: 8,
     priceEtsy: "$9.99",
     priceLemon: "$9.99",
+    urlEtsy: "https://www.etsy.com/listing/4479488124/the-90-minute-focus-matrix-printable",
     tagline: "Time-blocking system, focus session tracker, distraction log, and energy mapping tool.",
     hasApp: true,
     folder: "34-90-minute-focus-matrix"
@@ -1151,8 +1152,8 @@ function renderProducts() {
     const textSec = isDark ? '#9CA3AF' : '#6B7280';
 
     let priceLinks = [];
-    if (p.priceEtsy) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">Etsy ${p.priceEtsy}</a>`);
-    if (p.priceLemon) priceLinks.push(`<a href="#" class="store-link" style="color:${accent};font-weight:500">LemonSqueezy ${p.priceLemon}</a>`);
+    if (p.priceEtsy) priceLinks.push(`<a href="${p.urlEtsy||'#'}" ${p.urlEtsy?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500">Etsy ${p.priceEtsy}</a>`);
+    if (p.priceLemon) priceLinks.push(`<a href="${p.urlLemon||'#'}" ${p.urlLemon?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500">LemonSqueezy ${p.priceLemon}</a>`);
 
     // Category badge inline style
     const catBadgeColors = {
