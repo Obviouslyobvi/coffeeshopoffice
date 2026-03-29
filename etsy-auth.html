@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Etsy Authorization</title></head>
+<body>
+<p id="status">Processing...</p>
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var code = params.get('code');
+  var error = params.get('error');
+  if (code) {
+    document.getElementById('status').textContent = 'AUTH_CODE:' + code;
+  } else if (error) {
+    document.getElementById('status').textContent = 'AUTH_ERROR:' + error;
+  } else {
+    document.getElementById('status').textContent = 'AUTH_WAITING';
+  }
+</script>
+</body>
+</html>
