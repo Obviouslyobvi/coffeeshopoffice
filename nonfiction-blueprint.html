@@ -13,6 +13,24 @@
   gtag('js', new Date());
   gtag('config', 'AW-18102818036');
 </script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Georgia, 'Times New Roman', serif; color: #444444; background: #FAF7F2; line-height: 1.7; }
@@ -263,6 +281,11 @@
           'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
           'value': 59.99,
           'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 29.50,
+          currency: 'USD',
+          content_name: '21-Day Nonfiction Blueprint'
         });
       });
     });
