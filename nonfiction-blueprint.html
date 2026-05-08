@@ -48,6 +48,11 @@ src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
     margin: 0 auto 20px;
     line-height: 1.2;
   }
+  .hero-title-mobile { display: none; }
+  @media (max-width: 600px) {
+    .hero-title-desktop { display: none; }
+    .hero-title-mobile { display: block; }
+  }
   .hero .subtitle {
     font-size: 1.25em;
     color: rgba(240, 230, 211, 0.85);
@@ -127,7 +132,25 @@ src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
     gap: 24px;
     margin: 32px 0;
   }
-  @media (max-width: 600px) { .phase-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .hero { padding: 36px 16px; }
+    .hero h1 { font-size: 1.6em; margin-bottom: 12px; }
+    .hero .subtitle { font-size: 1em; margin-bottom: 20px; }
+    .hero .cta-btn { padding: 14px 32px; font-size: 1em; }
+    .sale-badge { display: block; margin: 10px auto 0; width: fit-content; }
+    .hero .price { font-size: 0.85em; margin-top: 10px; }
+    .scene { padding: 20px 16px; font-size: 1em; margin: 24px auto; }
+    .section { padding: 36px 16px; }
+    .section h2 { font-size: 1.4em; }
+    .mid-cta { padding: 32px 16px; }
+    .mid-cta .cta-btn { padding: 14px 32px; font-size: 1em; }
+    .includes { padding: 36px 16px; }
+    .who { padding: 36px 16px; }
+    .final-cta { padding: 48px 16px; }
+    .final-cta h2 { font-size: 1.5em; }
+    .final-cta .cta-btn { padding: 14px 32px; font-size: 1em; }
+    .phase-grid { grid-template-columns: 1fr; }
+  }
 
   .phase-card {
     background: white;
@@ -213,7 +236,8 @@ src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
 <body>
 
 <div class="hero">
-  <h1>The Nonfiction Blueprint System: Write Your Nonfiction Book in 21 Days</h1>
+  <h1 class="hero-title-desktop">The Nonfiction Blueprint System: Write Your Nonfiction Book in 21 Days</h1>
+  <h1 class="hero-title-mobile">Write Your Nonfiction Book in 21 Days</h1>
   <p class="subtitle">Not with AI. Not with templates. With YOUR ideas, YOUR voice, YOUR book.</p>
   <a href="https://coffeeshopoffice.lemonsqueezy.com/checkout/buy/3504d822-4867-429a-9da3-66ea20f642ba?checkout[discount_code]=SPRINGSALE" class="cta-btn">Get Instant Access - <span class="price-old">$59.99</span> <span class="price-new">$29.50</span></a><span class="sale-badge">50% OFF</span>
   <p class="price">Code SPRINGSALE applied at checkout. <span class="deadline">Sale ends May 31.</span> Instant download. 4 print sizes included.</p>
