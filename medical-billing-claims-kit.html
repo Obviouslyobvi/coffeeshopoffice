@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bill Defense System: Medical Billing &amp; Claims Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .teal { color: #008080; }
+        .text-center { text-align: center; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #008080 0%, #005555 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #f5f5f5;
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 8px;
+            border-left: 5px solid #008080;
+        }
+
+        .problem h3 {
+            font-size: 24px;
+            color: #008080;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .problem p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #008080;
+            box-shadow: 0 5px 15px rgba(0, 128, 128, 0.1);
+        }
+
+        .feature-card h4 {
+            font-size: 18px;
+            color: #008080;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* What's Inside */
+        .whats-inside {
+            background: #f5f5f5;
+            padding: 60px 20px;
+            margin: 60px 0;
+            border-radius: 8px;
+        }
+
+        .whats-inside h2 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .tool-item {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #008080;
+        }
+
+        .tool-item h4 {
+            font-size: 16px;
+            color: #008080;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .tool-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Results */
+        .results {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .results h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .result-stat {
+            background: linear-gradient(135deg, #008080 0%, #005555 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Social Proof */
+        .testimonials {
+            padding: 60px 20px;
+            background: #f5f5f5;
+            margin: 60px 0;
+            border-radius: 8px;
+        }
+
+        .testimonials h2 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #008080;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #008080;
+            font-size: 14px;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #008080 0%, #005555 100%);
+            color: white;
+            padding: 18px 50px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq h2 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 25px;
+        }
+
+        .faq-item h4 {
+            color: #008080;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 32px; }
+            header p { font-size: 16px; }
+            .hero h2 { font-size: 28px; }
+            .features h2 { font-size: 28px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .tools-list { grid-template-columns: 1fr; }
+            .whats-inside h2 { font-size: 28px; }
+            .results h2 { font-size: 28px; }
+            .cta h2 { font-size: 24px; }
+            .cta-button { padding: 14px 40px; font-size: 16px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<header>
+    <h1>The Bill Defense System</h1>
+    <p>Master Your Medical Billing with 9 Professional PDF Tools</p>
+</header>
+
+<div class="container">
+
+<section class="hero">
+    <h2>Medical Bills Don't Have to Defeat You</h2>
+    <p>You open a medical bill and immediately feel overwhelmed. The charges don't make sense. Insurance supposedly covered part of it, but the numbers don't match. And you have no idea what to do next.
+
+    Studies show up to 80% of medical bills contain errors. Most people never catch them. But you can.</p>
+</section>
+
+<section class="problem">
+    <h3>The Real Cost of Medical Billing Confusion</h3>
+    <p>Between complex insurance rules, confusing medical terminology, and mountains of paperwork, hospitals know most people will just pay what's owed. Billing departments count on you giving up. They build mistakes into their system because they know the vast majority won't fight back.
+
+    And that costs you thousands.</p>
+</section>
+
+<section class="features">
+    <h2>What You'll Master</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>✓ Catch Billing Errors</h4>
+            <p>Learn exactly what to look for on every medical bill. Duplicate charges, unbundling, overbilling—we show you how to spot them before you pay.</p>
+        </div>
+        <div class="feature-card">
+            <h4>✓ Monitor Insurance Claims</h4>
+            <p>Track every claim from submission to payment. Know the status, follow-up dates, and amount approved. Never lose track again.</p>
+        </div>
+        <div class="feature-card">
+            <h4>✓ Decode Insurance EOBs</h4>
+            <p>Explanations of Benefits are confusing by design. We break down every section so you understand exactly what your insurance paid and what you owe.</p>
+        </div>
+        <div class="feature-card">
+            <h4>✓ Appeal Denied Claims</h4>
+            <p>Denied claims are often reversible. Use our templates and timeline to appeal with confidence. Get decisions overturned.</p>
+        </div>
+        <div class="feature-card">
+            <h4>✓ Document Everything</h4>
+            <p>Every call with insurance or a billing department gets logged. We provide scripts you can use word-for-word. Create proof of what was promised.</p>
+        </div>
+        <div class="feature-card">
+            <h4>✓ Challenge Medical Debt</h4>
+            <p>Learn your rights under the Fair Debt Collection Practices Act. Dispute invalid debt with confidence. Know exactly what collectors can and can't do.</p>
+        </div>
+    </div>
+</section>
+
+<section class="whats-inside">
+    <h2>What's Inside (9 Complete Tools)</h2>
+    <div class="tools-list">
+        <div class="tool-item">
+            <h4>1. Getting Started Guide</h4>
+            <p>System overview and how to use each tool. Best practices for managing medical costs.</p>
+        </div>
+        <div class="tool-item">
+            <h4>2. Bill Audit Checklist</h4>
+            <p>Line-by-line audit guide with 7 common error types. Catch mistakes before you pay.</p>
+        </div>
+        <div class="tool-item">
+            <h4>3. Claim Tracker</h4>
+            <p>Monitor all claims across five statuses. Track dates, amounts, and follow-up requirements.</p>
+        </div>
+        <div class="tool-item">
+            <h4>4. EOB Organizer</h4>
+            <p>Detailed breakdown of every EOB section. Comparison worksheets to verify charges.</p>
+        </div>
+        <div class="tool-item">
+            <h4>5. Appeal Preparation Kit</h4>
+            <p>Appeal templates, deadline tracker, documentation checklist, and step-by-step process.</p>
+        </div>
+        <div class="tool-item">
+            <h4>6. Provider Call Log</h4>
+            <p>Track communications with insurance. Includes negotiation scripts and talking points.</p>
+        </div>
+        <div class="tool-item">
+            <h4>7. Payment Plan Worksheet</h4>
+            <p>Compare payment options side-by-side. Calculate interest and budget impact.</p>
+        </div>
+        <div class="tool-item">
+            <h4>8. Medical Debt Dispute Guide</h4>
+            <p>Know your FDCPA rights. Includes dispute letter template and validation requests.</p>
+        </div>
+        <div class="tool-item">
+            <h4>9. Annual Healthcare Summary</h4>
+            <p>Track year-end expenses by provider and type. Identify tax deductions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="results">
+    <h2>Real Results</h2>
+    <div class="result-stat">Most users save $500+ by catching a single billing error</div>
+    <div class="result-stat">Average appeal success rate: 45% (many win on first try)</div>
+    <div class="result-stat">Complete system pays for itself in less than 1 hour of negotiating</div>
+</section>
+
+<section class="testimonials">
+    <h2>What Users Are Saying</h2>
+
+    <div class="testimonial">
+        <p>"I found $3,200 in duplicate charges using the Bill Audit Checklist. I would never have caught that on my own. Best $10 I've ever spent."</p>
+        <div class="testimonial-author">— Patient, Healthcare Customer</div>
+    </div>
+
+    <div class="testimonial">
+        <p>"The Appeal Preparation Kit showed me exactly what to include. My denied claim was overturned on the first appeal. I didn't think that was possible."</p>
+        <div class="testimonial-author">— Insurance Claim Filer</div>
+    </div>
+
+    <div class="testimonial">
+        <p>"Understanding my EOB finally made sense. The EOB Organizer broke it down step-by-step. Now I can verify what my insurance actually paid versus what the bill says."</p>
+        <div class="testimonial-author">— Self-Employed Healthcare Consumer</div>
+    </div>
+
+    <div class="testimonial">
+        <p>"Negotiated a payment plan that cut my monthly payment in half using the Payment Plan Worksheet. I knew exactly what questions to ask."</p>
+        <div class="testimonial-author">— Patient Advocate</div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Get The Bill Defense System Today</h2>
+    <p>Immediate PDF download. Lifetime access. No subscriptions or hidden fees.</p>
+    <a href="#" class="cta-button">Get Instant Access - $9.99</a>
+</section>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h4>What format is this in?</h4>
+        <p>All 9 tools are PDF files. Download immediately and use on any device. Print them or keep them digital—whatever works for you.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Do I need any special experience?</h4>
+        <p>No. These tools are designed for people with zero experience. Step-by-step instructions, real examples, and ready-to-use templates guide you through everything.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>How long will this take to use?</h4>
+        <p>Depends on your situation. Auditing a single bill: 30-60 minutes. Using the appeal kit: 1-2 hours. Most people use these tools over weeks or months as bills arrive.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Can I use this for family members?</h4>
+        <p>Absolutely. Once you purchase, use these tools for yourself and anyone else you want to help. That could be parents, siblings, or friends.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>What if medical billing changes?</h4>
+        <p>The core principles of medical billing and insurance don't change. These tools will remain relevant and useful for years.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Is there a guarantee?</h4>
+        <p>We stand behind our work. If you're not satisfied, reach out. We want you to succeed.</p>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p><strong>The Bill Defense System</strong> | Medical Billing Navigation Kit</p>
+    <p>© 2026 Coffee Shop Office. All rights reserved.</p>
+    <p>$9.99 | Instant PDF Download | Lifetime Access</p>
+</footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Bill Defense System: Medical Billing & Claims Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

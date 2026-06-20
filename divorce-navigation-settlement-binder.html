@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divorce Navigation &amp; Settlement Binder | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #008080;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #008080;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #006666;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #008080;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #008080;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #008080;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .problem-statement {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-left: 5px solid #008080;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #008080;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .benefit-card {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 5px;
+            border-top: 4px solid #008080;
+        }
+
+        .benefit-card h4 {
+            color: #008080;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .testimonial {
+            background-color: #f5f5f5;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #008080;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #008080;
+            font-style: normal;
+        }
+
+        .pricing-section {
+            background-color: #008080;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 40px 0;
+        }
+
+        .pricing-section h2 {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        .price {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price-description {
+            font-size: 1.1em;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            padding: 30px 20px;
+            text-align: center;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .email-confirmation {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+            text-align: center;
+            color: #2e7d32;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 2.5em;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header -->
+    <header>
+        <h1>Divorce Navigation & Settlement Binder</h1>
+        <p>Turn Divorce Chaos Into Organized Clarity</p>
+        <a href="#purchase" class="cta-button">Get The System Now - $9.99</a>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- The Problem -->
+        <div class="section">
+            <h2>You're Drowning In Divorce Chaos</h2>
+            <div class="problem-statement">
+                <p>Your attorney is asking for documents you can't find. Court deadlines are approaching and you're losing track. You have no idea what your real financial situation is. Settlement proposals keep changing. And underneath it all, you're emotionally exhausted trying to keep everything together.</p>
+            </div>
+            <p>You need everything—legal, financial, logistical—organized in one place. Not scattered across emails, papers, and sticky notes. Not lost in your overwhelmed head.</p>
+        </div>
+
+        <!-- The Solution -->
+        <div class="section">
+            <h2>The Solution: The Divorce Navigation System™</h2>
+            <p>A complete 14+ page planning binder that organizes every critical element of your divorce journey. From the moment you start the process to settlement day, this system keeps you organized, prepared, and in control.</p>
+
+            <h3>What's Inside (8 Essential Sections)</h3>
+            <ul class="feature-list">
+                <li><strong>Getting Started Guide</strong> — Your divorce roadmap: understand the process, timeline your steps</li>
+                <li><strong>Asset & Property Inventory</strong> — Complete list of real estate, vehicles, bank accounts, investments, debts</li>
+                <li><strong>Attorney & Legal Team Contact Sheet</strong> — All your lawyers, mediators, and court contacts organized</li>
+                <li><strong>Court Dates & Filing Deadline Tracker</strong> — Never miss a hearing or filing deadline again</li>
+                <li><strong>Financial Separation Planner</strong> — Plan your post-divorce budget, split accounts, manage credit and insurance</li>
+                <li><strong>Document Collection Checklist</strong> — Every tax return, pay stub, mortgage doc, retirement statement</li>
+                <li><strong>Negotiation & Settlement Tracker</strong> — Record proposals, counteroffers, agreed items, disputed items</li>
+                <li><strong>Emotional Support & Decision Journal</strong> — Process major decisions, document your reasoning</li>
+            </ul>
+        </div>
+
+        <!-- Why It Works -->
+        <div class="section">
+            <h2>Why This System Works</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Complete Organization</h4>
+                    <p>Legal, financial, and logistical elements all covered in one system. Nothing falls through the cracks.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Reduces Legal Costs</h4>
+                    <p>Come prepared to attorney meetings with organized documents. Cut legal fees by reducing attorney time on admin work.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Never Miss Deadlines</h4>
+                    <p>Court dates and filing deadlines tracked in one place. Missed deadlines become a non-issue.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Financial Clarity</h4>
+                    <p>Understand your complete asset and debt picture. Make better decisions from a place of full information.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Negotiation Transparency</h4>
+                    <p>Track every proposal and agreement. Ensure fairness; spot inconsistencies and reversals.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Decision Confidence</h4>
+                    <p>Process major decisions with your support network documented. Make choices you feel good about.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="section">
+            <h2>How to Use This System</h2>
+            <ol style="padding-left: 30px; font-size: 1.05em; line-height: 2;">
+                <li><strong>Download & Print</strong> — Instant PDF download; print as many copies as you need</li>
+                <li><strong>Fill In Your Details</strong> — Add your attorney, court info, assets, and legal timeline</li>
+                <li><strong>Track Your Process</strong> — Document every court date, deadline, proposal, and decision</li>
+                <li><strong>Stay Prepared</strong> — Have every document organized and accessible for your attorney</li>
+                <li><strong>Move Forward Confidently</strong> — Understand your situation completely; make informed decisions</li>
+            </ol>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="section">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"I printed this out and organized it into a binder. My attorney said I was the most organized client she'd ever worked with. It saved me thousands in legal fees because I was so organized."</p>
+                <div class="testimonial-author">— Sarah M., California</div>
+            </div>
+            <div class="testimonial">
+                <p>"The financial section helped me understand for the first time what our real situation was. I could make better decisions."</p>
+                <div class="testimonial-author">— Jennifer T., Texas</div>
+            </div>
+            <div class="testimonial">
+                <p>"I felt completely overwhelmed until I started using this. Once everything was organized, I felt so much more in control."</p>
+                <div class="testimonial-author">— Michael D., New York</div>
+            </div>
+        </div>
+
+        <!-- Pricing & CTA -->
+        <div class="pricing-section">
+            <h2>Ready to Get Organized?</h2>
+            <p class="price-description">The Divorce Navigation System</p>
+            <div class="price">$9.99</div>
+            <p class="price-description">Instant PDF Download • Unlimited Printing • Lifetime Access</p>
+            <a href="#purchase" class="cta-button">Get The System Now</a>
+        </div>
+
+        <!-- Who It's For -->
+        <div class="section">
+            <h2>Perfect For</h2>
+            <ul class="feature-list">
+                <li>Anyone starting a divorce who feels overwhelmed</li>
+                <li>People with significant assets to divide</li>
+                <li>Parents navigating custody and child support decisions</li>
+                <li>Anyone who wants to reduce legal costs through preparation</li>
+                <li>People seeking to maintain control and understanding throughout their divorce</li>
+            </ul>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="section">
+            <h2>What Comes Next?</h2>
+            <p>Your divorce doesn't end when the papers are signed. If you have children, it evolves into parenting coordination.</p>
+            <p>We also created another planning system for managing custody schedules, communication, expenses, and major parenting decisions after divorce (Product #65).</p>
+            <p>Many customers use both: The Divorce Navigation System to organize the legal proceedings, plus our parenting planning product to set up success for the years ahead.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Coffee Shop Office™</strong></p>
+        <p>We create planning systems for life's biggest transitions.</p>
+        <p style="margin-top: 20px; font-size: 0.9em;">© 2026 Coffee Shop Office. All rights reserved.</p>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Divorce Navigation & Settlement Binder'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

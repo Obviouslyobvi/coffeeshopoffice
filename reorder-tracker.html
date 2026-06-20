@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maker&#x27;s Reorder Tracker | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        /* === RESET & BASE === */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --mustard: #D4A843;
+            --mustard-light: #E8C76A;
+            --mustard-dark: #B8912E;
+            --charcoal: #2D2D2D;
+            --charcoal-light: #404040;
+            --cream: #FAF7F0;
+            --cream-dark: #F0EBE0;
+            --forest: #2E5E3F;
+            --forest-light: #3A7A50;
+            --forest-dark: #1E4A2E;
+            --white: #FFFFFF;
+            --text-primary: #2D2D2D;
+            --text-secondary: #5A5A5A;
+            --text-light: #8A8A8A;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--cream);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* === HEADER / NAV === */
+        .site-header {
+            background: var(--charcoal);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            color: var(--mustard);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-cta {
+            background: var(--mustard);
+            color: var(--charcoal);
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover { background: var(--mustard-light); }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-light) 100%);
+            padding: 80px 0 64px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--forest);
+            color: var(--cream);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            color: var(--cream);
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span { color: var(--mustard); }
+
+        .hero-sub {
+            color: var(--text-light);
+            font-size: 18px;
+            max-width: 540px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--mustard);
+            color: var(--charcoal);
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(212, 168, 67, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: var(--mustard-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 168, 67, 0.4);
+        }
+
+        .hero-price {
+            color: var(--text-light);
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .hero-price strong { color: var(--mustard); font-size: 16px; }
+
+        /* === PAIN SECTION === */
+        .pain {
+            padding: 72px 0;
+            background: var(--cream);
+        }
+
+        .pain h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--charcoal);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .pain-card {
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            border-radius: 10px;
+            padding: 28px;
+            border-left: 4px solid var(--mustard-dark);
+        }
+
+        .pain-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .pain-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--charcoal);
+        }
+
+        .pain-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* === WHAT'S INSIDE === */
+        .whats-inside {
+            padding: 72px 0;
+            background: var(--white);
+        }
+
+        .whats-inside h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+        }
+
+        .whats-inside .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 48px;
+        }
+
+        .tracker-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .tracker-item {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 28px;
+            background: var(--cream);
+            border-radius: 10px;
+            border: 1px solid var(--cream-dark);
+        }
+
+        .tracker-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--forest);
+            color: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .tracker-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--charcoal);
+        }
+
+        .tracker-item .tag {
+            display: inline-block;
+            background: var(--mustard);
+            color: var(--charcoal);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+
+        .tracker-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* === WHO IT'S FOR === */
+        .who-for {
+            padding: 72px 0;
+            background: var(--forest);
+            color: var(--cream);
+        }
+
+        .who-for h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .who-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .who-item .check {
+            color: var(--mustard);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* === HOW IT WORKS === */
+        .how-it-works {
+            padding: 72px 0;
+            background: var(--cream);
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: var(--charcoal);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-num {
+            width: 56px;
+            height: 56px;
+            background: var(--charcoal);
+            color: var(--mustard);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+
+        .step h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* === COMPARISON === */
+        .comparison {
+            padding: 72px 0;
+            background: var(--white);
+        }
+
+        .comparison h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--charcoal);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .comp-table th {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comp-table th:first-child { border-radius: 8px 0 0 0; }
+        .comp-table th:last-child { border-radius: 0 8px 0 0; }
+
+        .comp-table th.highlight {
+            background: var(--forest);
+            color: var(--mustard);
+        }
+
+        .comp-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .comp-table tr:last-child td { border-bottom: none; }
+
+        .comp-table td.highlight {
+            background: rgba(46, 94, 63, 0.05);
+            font-weight: 600;
+        }
+
+        /* === FAQ === */
+        .faq {
+            padding: 72px 0;
+            background: var(--cream);
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--charcoal);
+        }
+
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 24px;
+            border: 1px solid var(--cream-dark);
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--charcoal);
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* === FINAL CTA === */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-light) 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--cream);
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .final-cta h2 span { color: var(--mustard); }
+
+        .final-cta p {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 32px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .hero-cta { margin-bottom: 12px; }
+
+        /* === FOOTER === */
+        .site-footer {
+            background: var(--charcoal);
+            border-top: 1px solid var(--charcoal-light);
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        .site-footer p {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .site-footer a {
+            color: var(--mustard);
+            text-decoration: underline;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 640px) {
+            .hero { padding: 56px 0 48px; }
+            .tracker-item { flex-direction: column; gap: 16px; }
+            .pain-grid, .steps { grid-template-columns: 1fr; }
+            .comp-table { font-size: 12px; }
+            .comp-table th, .comp-table td { padding: 10px 8px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">Coffee Shop Office.</div>
+            <a href="#buy" class="nav-cta lemonsqueezy-button">Get It Now - $9.99</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">For Craft Sellers & Makers</div>
+            <h1>Never Run Out of Supplies <span>Mid-Order</span> Again</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Reorder Tracking System</p>
+
+            <p class="hero-sub">6 printable PDF trackers that keep your craft supplies organized, your reorders on time, and your costs visible. Simple enough to actually use.</p>
+            <a href="#buy" class="hero-cta lemonsqueezy-button">Download the Tracker Bundle</a>
+            <p class="hero-price">Instant download &middot; <strong>$9.99</strong> &middot; 6 PDF sheets</p>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="pain">
+        <div class="container">
+            <h2>Sound Familiar?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="icon">&#128531;</div>
+                    <h3>Emergency Supply Runs</h3>
+                    <p>You're mid-project with a deadline, and you just realized you're out of something critical. Now you're making a frantic trip to the craft store instead of filling orders.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="icon">&#128176;</div>
+                    <h3>No Idea Where the Money Goes</h3>
+                    <p>You buy supplies constantly but never track what you spend. At tax time, you're guessing. When pricing products, you're hoping your margins are right.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="icon">&#128269;</div>
+                    <h3>Supplier Info Scattered Everywhere</h3>
+                    <p>That one supplier with the good prices? Their website is buried in your browser history. Their account number is in an email from six months ago. Somewhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INSIDE -->
+    <section class="whats-inside">
+        <div class="container">
+            <h2>What's Inside the Bundle</h2>
+            <p class="subtitle">5 printable sheets. Each one solves a specific supply management problem.</p>
+            <div class="tracker-list">
+                <div class="tracker-item">
+                    <div class="tracker-number">1</div>
+                    <div>
+                        <span class="tag">Core Tracker</span>
+                        <h3>Supply Inventory Master</h3>
+                        <p>Room for 50+ items. Track item name, current stock, reorder point, supplier, and unit cost. This is your single source of truth for what you have and what you're running low on.</p>
+                    </div>
+                </div>
+                <div class="tracker-item">
+                    <div class="tracker-number">2</div>
+                    <div>
+                        <span class="tag">Action Sheet</span>
+                        <h3>Reorder Alert Sheet</h3>
+                        <p>Your focused "buy this now" list. When a supply drops to your reorder point, it goes here. Includes quantity needed, supplier, estimated cost, and date ordered. No more forgotten restocks.</p>
+                    </div>
+                </div>
+                <div class="tracker-item">
+                    <div class="tracker-number">3</div>
+                    <div>
+                        <span class="tag">Reference</span>
+                        <h3>Supplier Directory</h3>
+                        <p>One page for all your supplier details. Name, website, account number, shipping cost, lead time, and notes. Stop digging through emails and bookmarks every time you reorder.</p>
+                    </div>
+                </div>
+                <div class="tracker-item">
+                    <div class="tracker-number">4</div>
+                    <div>
+                        <span class="tag">Financial</span>
+                        <h3>Cost Tracking Log</h3>
+                        <p>Record every purchase: date, supplier, items, quantity, unit cost, total, and payment method. Know exactly where your money goes. Invaluable for pricing and taxes.</p>
+                    </div>
+                </div>
+                <div class="tracker-item">
+                    <div class="tracker-number">5</div>
+                    <div>
+                        <span class="tag">Overview</span>
+                        <h3>Monthly Spending Summary</h3>
+                        <p>See total supply costs by category across 12 months. Spot trends, set budgets, and stop the slow bleed of untracked spending before it eats your profit margins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="who-for">
+        <div class="container">
+            <h2>Built for Makers Who Actually Make Things</h2>
+            <div class="who-grid">
+                <div class="who-item"><span class="check">&#10003;</span> Resin artists</div>
+                <div class="who-item"><span class="check">&#10003;</span> Candlemakers</div>
+                <div class="who-item"><span class="check">&#10003;</span> Soap makers</div>
+                <div class="who-item"><span class="check">&#10003;</span> Jewelers</div>
+                <div class="who-item"><span class="check">&#10003;</span> Knitters & sewists</div>
+                <div class="who-item"><span class="check">&#10003;</span> Woodworkers</div>
+                <div class="who-item"><span class="check">&#10003;</span> Paper crafters</div>
+                <div class="who-item"><span class="check">&#10003;</span> Etsy sellers</div>
+                <div class="who-item"><span class="check">&#10003;</span> Craft fair vendors</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Three Steps to Supply Sanity</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Download & Print</h3>
+                    <p>Get your 6 PDF sheets instantly. Print on standard 8.5x11 paper, or load onto your tablet for digital use.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Log Your Supplies</h3>
+                    <p>Fill in the Supply Inventory Master with everything you use. Set reorder points for each item.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Check & Reorder</h3>
+                    <p>Quick weekly check. Move low items to the Reorder Alert Sheet. Order before you run out. Done.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="comparison">
+        <div class="container">
+            <h2>Why This Beats the Alternatives</h2>
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="highlight">Reorder Tracker</th>
+                        <th>Spreadsheets</th>
+                        <th>Inventory Apps</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Setup time</td>
+                        <td class="highlight">5 minutes</td>
+                        <td>1-2 hours</td>
+                        <td>30+ minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Learning curve</td>
+                        <td class="highlight">None</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly cost</td>
+                        <td class="highlight">$0 (one-time)</td>
+                        <td>$9.99</td>
+                        <td>$5-20/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Works offline</td>
+                        <td class="highlight">Always</td>
+                        <td>Sometimes</td>
+                        <td>Rarely</td>
+                    </tr>
+                    <tr>
+                        <td>Designed for makers</td>
+                        <td class="highlight">Yes</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Craft-specific columns</td>
+                        <td class="highlight">Yes</td>
+                        <td>DIY</td>
+                        <td>Generic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions & Answers</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What file format do I get?</h3>
+                    <p>6 PDF files, each sized for US Letter paper (8.5" x 11"). They print fine in black and white, and you can also fill them in digitally on a tablet using apps like GoodNotes, Notability, or Adobe Acrobat.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this a physical product?</h3>
+                    <p>No. This is a digital download. You'll get immediate access to 6 PDF files after purchase. Nothing is shipped.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>I'm not great with spreadsheets. Is this complicated?</h3>
+                    <p>Not at all. These are fill-in-the-blank sheets. If you can write on a form, you can use these trackers. No formulas, no software, no learning curve.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I have more than 50 supplies?</h3>
+                    <p>Print extra copies of the Supply Inventory Master sheet. It's designed to be reprinted as many times as you need.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I use this for my craft fair booth too?</h3>
+                    <p>Absolutely. The trackers work for any supply purchasing situation, whether you sell on Etsy, at markets, through your own site, or wholesale.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I get free updates?</h3>
+                    <p>Yes. If we update the tracker sheets, you'll get access to the new versions at no extra charge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="buy">
+        <div class="container">
+            <h2>Stop the <span>Last-Minute Scramble</span></h2>
+            <p>One purchase. Five trackers. A supply system that actually works. The next time you check your inventory, you'll reorder before you run out.</p>
+            <a href="#checkout-pending" data-product-num="33" class="hero-cta lemonsqueezy-button">Get the Tracker Bundle - $9.99</a>
+            <p class="hero-price">Instant PDF download &middot; No subscription &middot; Print unlimited copies</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. &middot; All rights reserved &middot; <a href="mailto:hello@craftprofitco.com">Contact</a></p>
+        </div>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Maker\'s Reorder Tracker'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

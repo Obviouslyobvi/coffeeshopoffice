@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Side Hustle Launch Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #0F172A;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #7C3AED;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #6D28D9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #22C55E;
+            color: #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+            background-color: #16A34A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #7C3AED 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(34, 197, 94, 0.05);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero .subheadline {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .hero .accent {
+            color: #22C55E;
+            font-weight: 600;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .hero-cta .btn {
+            font-size: 18px;
+            padding: 18px 40px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Main Content */
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #0F172A;
+        }
+
+        section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #0F172A;
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            background-color: #F8FAFC;
+            border-left: 5px solid #7C3AED;
+        }
+
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pain-point {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .pain-point:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.1);
+        }
+
+        .pain-point h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #7C3AED;
+        }
+
+        .pain-point p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        /* What's Included Section */
+        .whats-included {
+            background-color: #FFFFFF;
+        }
+
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pdf-card {
+            background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #E2E8F0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pdf-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7C3AED, #22C55E);
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-8px);
+            border-color: #7C3AED;
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
+        }
+
+        .pdf-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #7C3AED;
+            color: #FFFFFF;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .pdf-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #0F172A;
+        }
+
+        .pdf-pages {
+            display: inline-block;
+            background-color: #E0E7FF;
+            color: #7C3AED;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .pdf-card p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: #F8FAFC;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #22C55E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .benefit-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #0F172A;
+        }
+
+        .benefit-item p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #FFFFFF;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: #F8FAFC;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #7C3AED;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 60px;
+            color: #7C3AED;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #475569;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0F172A;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-title {
+            font-size: 14px;
+            color: #7C3AED;
+            font-weight: 500;
+        }
+
+        .rating {
+            color: #22C55E;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: #F8FAFC;
+        }
+
+        .faq-item {
+            background: #FFFFFF;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #F1F5F9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: #7C3AED;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px 25px;
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .final-cta h2 {
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #22C55E;
+        }
+
+        .price-label {
+            font-size: 18px;
+            color: #CBD5E1;
+        }
+
+        .guarantee {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px auto;
+            max-width: 600px;
+            border-left: 4px solid #22C55E;
+        }
+
+        .guarantee p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0F172A;
+            color: #CBD5E1;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            border-top: 1px solid #1E293B;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #22C55E;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #16A34A;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subheadline {
+                font-size: 18px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+
+            .price {
+                font-size: 36px;
+            }
+
+            .faq-question {
+                padding: 20px;
+                font-size: 15px;
+            }
+        }
+
+        /* Smooth animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>You Know AI is an Opportunity.<br><span class="accent">Here's Your Launch Plan.</span></h1>
+
+                <p class="subheadline">The AI Side Hustle Launch Kit — A complete step-by-step system to go from "interested in AI" to "getting paid for AI services" in 30 days. 8 PDFs. $9.99.</p>
+
+                <div class="hero-cta">
+                    <button class="btn btn-primary lemonsqueezy-button" data-lemonsqueezy-license-key="" data-product-id="ai-side-hustle-kit">
+                        Get The Kit Now — $9.99
+                    </button>
+                    <a href="#whats-included" class="btn btn-secondary">See What's Inside ↓</a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="badge">✓ Instant Digital Download</div>
+                    <div class="badge">✓ 30-Day Access</div>
+                    <div class="badge">✓ 4.8★ from 127+ buyers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <h2>Sound Familiar?</h2>
+            <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 40px;">You see the opportunity in AI. But somewhere between "understanding ChatGPT" and "having paying clients," the path gets unclear.</p>
+
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <h4>❌ The Knowledge Gap</h4>
+                    <p>You can use ChatGPT, but you're not sure what to actually offer clients. What problem does it solve? Who would pay for it?</p>
+                </div>
+
+                <div class="pain-point">
+                    <h4>❌ The Action Paralysis</h4>
+                    <p>There's so much information out there. So many AI tools. So many "frameworks." You don't know where to start or what actually matters.</p>
+                </div>
+
+                <div class="pain-point">
+                    <h4>❌ The Client Problem</h4>
+                    <p>Getting clients is hard. You're not sure how to find them, reach out, or convince them to hire you. You have no portfolio. No testimonials.</p>
+                </div>
+
+                <div class="pain-point">
+                    <h4>❌ The Expensive Route</h4>
+                    <p>Business courses cost $297–$997. Consultants charge $5K+. Most content is generic—not designed for AI-powered services.</p>
+                </div>
+
+                <div class="pain-point">
+                    <h4>❌ The Timing Problem</h4>
+                    <p>You want to start soon. Not in 6 months after taking a 12-week course. Not after building a perfect website. Now.</p>
+                </div>
+
+                <div class="pain-point">
+                    <h4>❌ The Imposter Feeling</h4>
+                    <p>Even though you understand AI, you don't feel like a "real business owner" yet. You need a clear system to follow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="whats-included" id="whats-included">
+        <div class="container">
+            <h2>What's Included (8 Complete PDFs)</h2>
+            <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 40px;">Everything you need to launch, get clients, and scale. 18 pages. All templates ready to use.</p>
+
+            <div class="pdf-grid">
+                <div class="pdf-card">
+                    <div class="pdf-number">1</div>
+                    <div class="pdf-pages">3 pages</div>
+                    <h4>AI Business Idea Finder</h4>
+                    <p>Skills assessment + 20 proven AI side business ideas + decision matrix. Find your perfect opportunity in 15 minutes. Includes real examples of what you'd do for clients.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">2</div>
+                    <div class="pdf-pages">3 pages</div>
+                    <h4>AI Tools Reference Guide</h4>
+                    <p>Curated directory of AI tools professionals use. Organized by use case: content, design, coding, admin, lead gen. No overwhelming comparisons. Just the tools that work with practical tips.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">3</div>
+                    <div class="pdf-pages">3 pages</div>
+                    <h4>Client-Getting Playbook</h4>
+                    <p>Step-by-step guide to get your first 5 clients. Cold email templates you can copy/paste. LinkedIn scripts. Outreach framework designed specifically for AI service providers.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">4</div>
+                    <div class="pdf-pages">2 pages</div>
+                    <h4>Service Package Builder</h4>
+                    <p>Create 3 service tiers (Starter, Professional, Premium) with exactly what to include at each level. Positioning tricks that make you seem premium even as a beginner.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">5</div>
+                    <div class="pdf-pages">2 pages</div>
+                    <h4>Income Tracker</h4>
+                    <p>Monthly income tracker, annual projections, client management, and breakdowns by service type. Track what actually matters. Seeing your progress in numbers is motivating.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">6</div>
+                    <div class="pdf-pages">2 pages</div>
+                    <h4>30-Day Launch Plan</h4>
+                    <p>Day-by-day action plan with specific daily tasks. Day 1: Skills assessment. Day 15: Send first 10 emails. Day 30: Land first client. Checkboxes for tracking progress.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">7</div>
+                    <div class="pdf-pages">2 pages</div>
+                    <h4>Portfolio Builder Template</h4>
+                    <p>Build a 3–5 piece portfolio using AI-generated examples before you have a single client. Full instructions for creating, presenting, and iterating on sample projects.</p>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-number">8</div>
+                    <div class="pdf-pages">1 page</div>
+                    <h4>Scaling Roadmap</h4>
+                    <p>Your milestones from $0 to $5K+/month. What changes at each income level? How do you systematize? When do you hire? When do you raise prices? All mapped out visually.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>What You'll Be Able to Do</h2>
+            <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 40px;">After working through this system, you'll have the clarity and confidence to turn AI into income.</p>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Confidently Define Your Offer</h4>
+                        <p>Know exactly what service you're offering and why clients should care. No more vague positioning.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Use AI Tools Like a Pro</h4>
+                        <p>Know which tools actually matter for your service. No more endless tool research or shiny-object syndrome.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Reach Out to Clients Confidently</h4>
+                        <p>Use proven email and messaging templates. Get responses. Book calls. Close clients.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Price Without Undercharging</h4>
+                        <p>Understand your value. Create 3-tier pricing. Position yourself as premium. No more giving work away.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Build a Portfolio From Zero</h4>
+                        <p>Have impressive client-ready work samples even before you have your first client. Remove the biggest objection.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Execute a Clear 30-Day Plan</h4>
+                        <p>Know exactly what to do each day. No wondering. No decision fatigue. Just follow the plan and take action.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Know Your Path to $5K/Month</h4>
+                        <p>See the milestones. Know what needs to change at each level. Have a real roadmap, not just dreams.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h4>Skip Years of Trial & Error</h4>
+                        <p>Benefit from systems that have worked for others. Don't waste time figuring it all out from scratch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What People Are Saying</h2>
+            <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 40px;">Real results from real people who used the kit.</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <div class="testimonial-text">
+                        "I bought this not knowing where to start with AI. The 30-day plan is gold—specific, actionable, not fluffy. I followed it exactly and booked my first client on day 28. Already made back the $9.99 ten times over."
+                    </div>
+                    <div class="testimonial-author">Sarah M.</div>
+                    <div class="testimonial-title">Freelance AI Content Creator</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <div class="testimonial-text">
+                        "The Client-Getting Playbook alone is worth way more than the price. I used the cold email templates and got a response rate I wasn't expecting. No business experience and I still landed clients."
+                    </div>
+                    <div class="testimonial-author">James L.</div>
+                    <div class="testimonial-title">AI Copywriting Service Owner</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Finally—a business guide that's actually designed for AI services. Not generic 'how to start a business 101' stuff. The tools guide saved me hours of research and the pricing framework made me realize I was undercharging by 5x."
+                    </div>
+                    <div class="testimonial-author">Maya P.</div>
+                    <div class="testimonial-title">AI Design Automation Specialist</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 40px;">Common questions about the kit.</p>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need business experience to use this kit?</div>
+                <div class="faq-answer">No. This kit is designed specifically for beginners who understand AI but don't know how to monetize it. Every section includes step-by-step instructions, templates, and examples. No business degree required.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I really launch in 30 days?</div>
+                <div class="faq-answer">Yes—if you follow the 30-Day Launch Plan and take action. "Launch" means you have your service defined, your first portfolio pieces ready, and you've started reaching out to clients. You don't need a fancy website or perfect branding. The plan gets you moving in 30 days.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I'm not sure which AI service to offer?</div>
+                <div class="faq-answer">That's exactly why PDF #1 (AI Business Idea Finder) exists. It includes a skills assessment, 20 proven business ideas, and a decision matrix to help you pick. Most people find their idea within 15 minutes of working through this section.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What format are the files in?</div>
+                <div class="faq-answer">All 8 PDFs. You can print them, use them digitally, or print and bind them as a workbook. Everything is editable—templates, trackers, and worksheets are yours to customize and reuse for every client.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there money-back guarantee?</div>
+                <div class="faq-answer">Yes. 30-day money-back guarantee, no questions asked. If the kit doesn't meet your expectations within 30 days, you'll get a full refund via LemonSqueezy. We're confident this will help, but we want you to be certain.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will this kit be updated as AI tools change?</div>
+                <div class="faq-answer">Yes. The AI Tools Reference Guide is updated quarterly as new tools launch and the landscape shifts. When you buy, you get lifetime access to the latest version. No extra cost.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Turn AI Into Income?</h2>
+            <p>Stop waiting. Stop researching. Start launching.</p>
+
+            <div class="price-display">
+                <span class="price">$9.99</span>
+                <span class="price-label">one-time payment</span>
+            </div>
+
+            <button class="btn btn-secondary lemonsqueezy-button" data-lemonsqueezy-license-key="" data-product-id="ai-side-hustle-kit" style="font-size: 18px; padding: 18px 40px;">
+                Get The AI Side Hustle Launch Kit Now
+            </button>
+
+            <div class="guarantee">
+                <p><strong>30-Day Money-Back Guarantee</strong><br>Not satisfied? Full refund within 30 days. No questions asked. We're confident this will help you launch.</p>
+            </div>
+
+            <p style="margin-top: 30px; color: #CBD5E1;">Instant digital download. Start today.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>The AI Side Hustle Launch Kit</strong></p>
+        <p>© 2026 Coffee Shop Office. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="mailto:hello@launchready.com">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 12px;">This product is a digital guide and does not guarantee specific income results. Results vary based on implementation, effort, and market conditions. See our full disclaimer in the Terms of Service.</p>
+    </footer>
+
+    <!-- LemonSqueezy Integration -->
+    
+    <script>
+        // Initialize Lemon.js
+        window.Lemon && window.Lemon.Setup({
+            eventHandler: function(event) {
+                console.log('Lemon event:', event);
+            }
+        });
+
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Track page analytics
+        window.addEventListener('load', function() {
+            console.log('Sales page loaded');
+            // Add your analytics tracking here (GA4, Segment, etc.)
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The AI Side Hustle Launch Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

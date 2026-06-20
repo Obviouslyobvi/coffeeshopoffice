@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Payoff Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1A1A2E;
+            background: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Navigation */
+        header {
+            background: #1A1A2E;
+            color: #FFFFFF;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(26, 26, 46, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+        }
+
+        .nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #06D6A0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D2D4A 100%);
+            color: #FFFFFF;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .tagline {
+            font-size: 16px;
+            color: #06D6A0;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #06D6A0;
+            color: #1A1A2E;
+        }
+
+        .btn-primary:hover {
+            background: #00C491;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(6, 214, 160, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+            background: #FFFFFF;
+            color: #1A1A2E;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #FFB627;
+            color: #1A1A2E;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #FFFFFF;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1A1A2E;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: #F8F9FA;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #06D6A0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(26, 26, 46, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1A1A2E;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* What's Included Section */
+        .whats-included {
+            padding: 80px 20px;
+            background: #F8F9FA;
+        }
+
+        .included-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .included-item {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 3px solid #06D6A0;
+        }
+
+        .included-item h4 {
+            color: #1A1A2E;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .included-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .file-count {
+            display: inline-block;
+            background: #06D6A0;
+            color: #FFFFFF;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 20px;
+            background: #FFFFFF;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #06D6A0;
+            color: #FFFFFF;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #1A1A2E;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background: #1A1A2E;
+            color: #FFFFFF;
+        }
+
+        .testimonials .section-title {
+            color: #FFFFFF;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(6, 214, 160, 0.2);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stars {
+            color: #FFB627;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background: #FFFFFF;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 30px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A2E;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #06D6A0;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            font-size: 15px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D2D4A 100%);
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1A1A2E;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid rgba(6, 214, 160, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #06D6A0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .nav {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .features, .whats-included, .how-it-works, .testimonials, .faq, .cta-section {
+                padding: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* Utility Classes */
+        .accent-green {
+            color: #06D6A0;
+        }
+
+        .accent-amber {
+            color: #FFB627;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Coffee Shop Office.</div>
+                <nav class="nav">
+                    <a href="#features">Features</a>
+                    <a href="#included">What's Inside</a>
+                    <a href="#how">How It Works</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="price-badge">Save Your Future Today</div>
+            <h1>Debt Payoff Command Center</h1>
+            <p class="subtitle">The complete behavioral system to eliminate debt, build momentum, and stay motivated every step of the way.</p>
+            <p class="tagline">Not just worksheets. A proven system.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.location.hash='#buy'">Get It Now – $9.99</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('features').scrollIntoView()">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why This System Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Behavioral Foundation</h3>
+                    <p>Addresses the psychology of debt payoff—motivation, accountability, and progress tracking matter as much as math.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Coordinated System</h3>
+                    <p>8 PDFs work together as one complete system, not random worksheets. Each tool builds on the previous one.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>3-Year Timeline</h3>
+                    <p>Most debt payoff goals fit within 3 years. Built-in monthly tracker covers the full journey with visual momentum.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Milestone Rewards</h3>
+                    <p>Built-in milestone tracking keeps motivation high during the long payoff journey—celebrate every win.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Real-World Templates</h3>
+                    <p>Includes debt settlement letters, hardship requests, and paid-in-full confirmations you can actually use.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Any Strategy Works</h3>
+                    <p>Snowball, Avalanche, or your custom hybrid approach—the system flexes to your chosen strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="whats-included" id="included">
+        <div class="container">
+            <h2 class="section-title">What's Inside: 8 Coordinated PDFs</h2>
+            <div class="included-list">
+                <div class="included-item">
+                    <span class="file-count">2 PAGES</span>
+                    <h4>📋 Debt Inventory</h4>
+                    <p>Consolidate all your debts in one place with running totals, interest rates, minimum payments, and a clear overview of your debt landscape.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">2 PAGES</span>
+                    <h4>⚙️ Payoff Strategy Planner</h4>
+                    <p>Side-by-side Snowball vs. Avalanche comparison with fill-in fields so you can test both methods and choose what works best.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">1 PAGE</span>
+                    <h4>🎯 Debt-Free Date Calculator</h4>
+                    <p>Work backward from your target freedom date. See exactly what monthly payment is needed to hit your goal and stay motivated.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">3 PAGES</span>
+                    <h4>📈 Monthly Payment Tracker</h4>
+                    <p>3-year grid tracking actual payments vs. minimum payments month-by-month with visual progress indicators and momentum tracking.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">1 PAGE</span>
+                    <h4>🏅 Motivation & Milestones</h4>
+                    <p>Visual progress tracker with built-in milestone rewards. Celebrate 25%, 50%, 75%, and 100% payoff to keep energy high.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">1 PAGE</span>
+                    <h4>🔍 Spending Audit Worksheet</h4>
+                    <p>Uncover hidden money in subscriptions, variable spending, and bill negotiations. Find an extra $100-500+ monthly for debt payoff.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">1 PAGE</span>
+                    <h4>✉️ Debt Payoff Letter Templates</h4>
+                    <p>3 ready-to-use templates: hardship requests, settlement negotiations, and paid-in-full confirmations. Real communication tools.</p>
+                </div>
+                <div class="included-item">
+                    <span class="file-count">1 PAGE</span>
+                    <h4>🚀 Emergency Fund Quick-Start</h4>
+                    <p>Build a $1K safety net while paying debt so unexpected expenses don't derail your entire payoff plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title">Your 8-Step Journey</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Map Your Debts</h3>
+                    <p>Fill out the Debt Inventory to see the complete picture of what you owe and to whom.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Your Strategy</h3>
+                    <p>Use the Payoff Strategy Planner to test Snowball vs. Avalanche. See which feels right for you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Set Your Target Date</h3>
+                    <p>Calculate your debt-free date and see the finish line. Motivation builds when you see the end.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Find Extra Money</h3>
+                    <p>Audit your spending. Most people find $100-500+ monthly in subscriptions and bill negotiations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Build Your Buffer</h3>
+                    <p>Start the $1K emergency fund so surprise expenses don't tank your entire payoff plan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Start Tracking</h3>
+                    <p>Use the 3-year Monthly Tracker to log actual payments and watch momentum build month after month.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <h3>Celebrate Milestones</h3>
+                    <p>Hit 25%, 50%, 75% payoff milestones. Celebrate wins to keep motivation high during the long journey.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">8</div>
+                    <h3>Communicate When Needed</h3>
+                    <p>Use the letter templates to request hardship consideration, negotiate settlements, or confirm paid accounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">People Are Getting Results</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"This isn't just a spreadsheet. The milestone tracker keeps me motivated when payoff feels slow. Seeing that progress bar fill up actually makes a difference."</p>
+                    <div class="testimonial-author">— Jennifer M.</div>
+                    <div class="testimonial-role">Debt-free in 24 months</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"My spouse and I were completely lost. The debt inventory showed us what we actually owed. The strategy planner helped us agree on a plan. This saved our sanity."</p>
+                    <div class="testimonial-author">— Michael & Sarah</div>
+                    <div class="testimonial-role">Paid off $38K together</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The spending audit found me $300 monthly I didn't know I was losing. Combined with the tracker, I can see exactly how those finds accelerate my payoff date."</p>
+                    <div class="testimonial-author">— David P.</div>
+                    <div class="testimonial-role">Payment automation expert</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I tried other systems but gave up. This one worked because it addresses why I fail—motivation and accountability. The monthly tracker keeps me engaged."</p>
+                    <div class="testimonial-author">— Amanda T.</div>
+                    <div class="testimonial-role">Started over and succeeded</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The debt payoff letters were crucial. I negotiated a settlement on my oldest card. The template made it professional and taken seriously."</p>
+                    <div class="testimonial-author">— Robert L.</div>
+                    <div class="testimonial-role">Saved $8,000 in settlements</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The emergency fund section is genius. I stopped derailing my payoff plan when surprises came up. This system thinks ahead."</p>
+                    <div class="testimonial-author">— Lisa K.</div>
+                    <div class="testimonial-role">Finally stable and debt-free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What file format are these PDFs? Can I edit them?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        All 8 files are in PDF format. You can print them as-is, or fill them digitally using any PDF reader (Adobe Acrobat, Preview on Mac, or any free PDF app). Form fields are editable so you can fill in your numbers digitally and save your progress.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need specific software to use these?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        No. Just a PDF reader—which every computer, tablet, and phone has built-in. You don't need Excel, Word, or any special software. Works on Windows, Mac, iPad, Android, or any device.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does the system cover?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        The Monthly Payment Tracker covers 36 months (3 years), which is realistic for most debt payoff timelines. The other tools (inventory, strategy planner, debt-free calculator) work with any timeline—if your payoff is longer or shorter, adjust the numbers and it works perfectly.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will this system work for my specific debts?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. The system works with any type of debt: credit cards, student loans, personal loans, medical debt, car loans, or a mix. The inventory, tracker, and letter templates are debt-agnostic. The strategy planner applies to any payoff approach (Snowball, Avalanche, or hybrid).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this system for couples or individuals?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Both. Individual users love the accountability and structure. Couples love that the system creates a shared plan and shared milestones—it reduces conflict by making payoff collaborative. Print two copies if you want separate trackers, or share one and fill it together.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use this with my spouse?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. Many couples buy the system and use it together. Fill out the inventory as a team, discuss the strategy planner options together, set a shared debt-free date, and track progress together. The shared accountability often keeps couples more motivated.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if my payoff takes longer or shorter than 3 years?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        The 3-year tracker fits most cases. If your payoff is shorter, you'll finish before the tracker ends (which is great!). If longer, the tracker shows your pattern and you can extend it using the same monthly format. The Debt-Free Date Calculator helps you figure out the real timeline upfront.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>When will I get my files?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Immediately after purchase. You'll receive an email with a download link. Download and save the files to your computer or access them in your LemonSqueezy library anytime. The files are yours forever—no subscription, no expiration.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I print these or must I use them digitally?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Both. Print them if you prefer paper, use them digitally if that's easier, or do both—some people print the tracker to post on the fridge for daily motivation, and use the spreadsheet version on their computer. It's your system; use it however works best.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a refund policy?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Digital products are non-refundable per LemonSqueezy policy. Review all the details and previews carefully before purchasing to make sure this system is right for you. If you have questions before buying, reach out—we're happy to help you decide.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Command Your Debt Payoff?</h2>
+            <p>Get the complete 8-PDF behavioral system. Immediate download. Yours forever. No subscriptions.</p>
+            <button class="btn btn-primary" onclick="window.location.href='https://clearmindco.lemonsqueezy.com/checkout/buy/debt-payoff-command-center'" style="font-size: 18px; padding: 18px 45px;">Get It Now – $9.99</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://clearmindco.com/privacy">Privacy Policy</a>
+                <a href="https://clearmindco.com/terms">Terms of Service</a>
+                <a href="https://clearmindco.com/contact">Contact Us</a>
+            </div>
+            <p>&copy; 2026 Coffee Shop Office. | Behavioral Systems for Financial Freedom</p>
+        </div>
+    </footer>
+
+    <!-- LemonSqueezy Integration Script -->
+    
+
+    <!-- FAQ Accordion Functionality -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Debt Payoff Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

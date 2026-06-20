@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Application Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #008080 0%, #005f5f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .brand {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: white;
+            color: #008080;
+            padding: 16px 40px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        section {
+            background: white;
+            margin: 40px auto;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #008080;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #008080;
+            padding-bottom: 15px;
+        }
+
+        .pain-point {
+            background: #f0f8f8;
+            border-left: 4px solid #008080;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .pain-point strong {
+            color: #008080;
+        }
+
+        .included-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .included-item {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-top: 3px solid #008080;
+        }
+
+        .included-item h4 {
+            color: #008080;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .included-item p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .features {
+            background: #f0f8f8;
+            padding: 30px;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+
+        .features h3 {
+            color: #008080;
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #d0e8e8;
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: #008080;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .social-proof {
+            background: #f0f8f8;
+            padding: 30px;
+            border-radius: 6px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .social-proof strong {
+            color: #008080;
+            font-size: 1.3em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #008080 0%, #005f5f 100%);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin: 20px 0;
+            opacity: 0.95;
+        }
+
+        .price {
+            font-size: 2em;
+            color: white;
+            margin: 30px 0;
+            font-weight: 700;
+        }
+
+        .main-cta {
+            display: inline-block;
+            background: white;
+            color: #008080;
+            padding: 18px 50px;
+            border-radius: 6px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .main-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            background: #f0f0f0;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .formats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .format-item {
+            background: white;
+            border: 2px solid #008080;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: #008080;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .included-list {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header / Hero -->
+    <header>
+        <div class="container">
+            <h1>College Application & Admissions Command Center</h1>
+            <p class="tagline">The College Launch System - Master the chaos of 8-15 applications in one organized system</p>
+            <button class="hero-cta">Get Access - $9.99</button>
+            <p class="brand">By Coffee Shop Office</p>
+        </div>
+    </header>
+
+    <!-- Pain Points Section -->
+    <section class="container">
+        <h2>The Problem Parents Face</h2>
+        <p>Your high school student is applying to 8-15 colleges. That means:</p>
+
+        <div class="pain-point">
+            <strong>8-15 different application portals</strong> with different deadlines (Early Decision, Early Action, Regular Decision, Rolling Admissions)
+        </div>
+
+        <div class="pain-point">
+            <strong>Multiple essay requirements</strong>—Common App personal essay, supplemental essays for each school, sometimes 3-5 essays per application
+        </div>
+
+        <div class="pain-point">
+            <strong>Recommendation letters</strong> from teachers and counselors, each school with different requirements and submission deadlines
+        </div>
+
+        <div class="pain-point">
+            <strong>Financial aid chaos</strong>—FAFSA forms, CSS Profiles, scholarship deadlines, financial aid award comparisons
+        </div>
+
+        <div class="pain-point">
+            <strong>Test scores</strong>—SAT/ACT dates, score reporting to each school, test-optional decisions
+        </div>
+
+        <div class="pain-point">
+            <strong>Campus visits</strong> to organize, research forms to fill out, visit reflection notes to track
+        </div>
+
+        <p style="margin-top: 30px; font-size: 1.1em;"><strong>Without a system, deadlines slip. Requirements get forgotten. Financial aid decisions become impossible to compare. And you're left playing coordinator with your phone and 47 sticky notes.</strong></p>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="container">
+        <h2>Introducing The College Launch System</h2>
+        <p>A complete organizational framework—10 fillable PDFs (28 pages total)—designed specifically for parents managing the college application process from start to finish.</p>
+
+        <p style="margin-top: 20px; font-weight: 500; color: #008080;">Stop juggling. Start organizing.</p>
+    </section>
+
+    <!-- What's Included -->
+    <section class="container">
+        <h2>What's Included</h2>
+
+        <div class="included-list">
+            <div class="included-item">
+                <h4>Getting Started Guide</h4>
+                <p>2-page timeline overview and binder setup instructions to launch your system</p>
+            </div>
+
+            <div class="included-item">
+                <h4>School Comparison Dashboard</h4>
+                <p>3-page side-by-side comparison for up to 12 schools—academics, costs, location, culture</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Application Deadline Tracker</h4>
+                <p>3-page master calendar for ED, EA, RD, and Rolling deadlines across all schools</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Essay Brainstorm & Tracker</h4>
+                <p>4-page system with Common App prompts, supplemental essay tracker, and revision log</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Recommendation Letter Manager</h4>
+                <p>2-page tracker for recommenders and prep sheets to help teachers write strong letters</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Financial Aid Command Center</h4>
+                <p>4 pages: FAFSA checklist, CSS Profile, scholarship tracker, and award comparison matrix</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Campus Visit Organizer</h4>
+                <p>3-page system with pre-visit research, schedule, and reflection journal</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Test Prep & Scores</h4>
+                <p>2-page tracker for test dates, score log, and score-send tracking</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Extracurricular & Activities Log</h4>
+                <p>2-page Common App activity builder and awards documentation</p>
+            </div>
+
+            <div class="included-item">
+                <h4>Decision Day Matrix</h4>
+                <p>3-page comparison of accepted schools, deposit tracker, and enrollment checklist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <h2>Why This System Works</h2>
+
+        <div class="features">
+            <h3>Design for Real Life</h3>
+            <ul>
+                <li>Eliminates dropped deadlines and forgotten requirements</li>
+                <li>Keeps financial aid information in one place for easy comparison</li>
+                <li>Reduces stress by organizing chaos into clarity</li>
+                <li>Helps you support your student without micromanaging</li>
+                <li>Makes decision day conversations data-driven and informed</li>
+            </ul>
+        </div>
+
+        <div class="features">
+            <h3>Multiple Formats Included</h3>
+            <ul>
+                <li>Letter size (standard 8.5" x 11")</li>
+                <li>A4 size (international standard)</li>
+                <li>A5 size (compact and portable)</li>
+                <li>Half-letter size (easier on paper)</li>
+                <li>GoodNotes version with table of contents for digital planning</li>
+            </ul>
+        </div>
+
+        <div class="social-proof">
+            <p><strong>Designed by Coffee Shop Office</strong>—creators of planning systems trusted by thousands of families managing complex projects. The College Launch System brings our signature clarity and organization to one of the biggest decisions your family will make.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container">
+        <h2>How It Works</h2>
+        <p><strong>Step 1: Download</strong> - Get your 10 PDFs and choose your preferred format</p>
+        <p><strong>Step 2: Set Up</strong> - Print, bind, or use digitally. The Getting Started Guide walks you through setup</p>
+        <p><strong>Step 3: Track</strong> - Start filling in deadlines, requirements, and information as applications come in</p>
+        <p><strong>Step 4: Compare</strong> - Use the financial aid and decision matrices to make informed family conversations</p>
+        <p><strong>Step 5: Enroll</strong> - Follow the Decision Day Matrix through enrollment confirmation</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section container">
+        <h2>Ready to Get Organized?</h2>
+        <p>Stop managing this alone. Get The College Launch System and move through this year with clarity, confidence, and peace of mind.</p>
+
+        <div class="price">$9.99</div>
+
+        <p style="font-size: 0.95em;">10 PDFs (28 pages) | Multiple formats | GoodNotes compatible | Instant download</p>
+
+        <button class="main-cta">Get The College Launch System Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Coffee Shop Office. All rights reserved.</p>
+        <p>The College Application & Admissions Command Center is a collection of fillable PDF templates and organizational tools.</p>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'College Application Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

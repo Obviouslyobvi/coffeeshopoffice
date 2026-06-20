@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Caregiver &amp; Elder Care Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #2A3D66;
+            --cream: #FFF8F0;
+            --charcoal: #2D2D2D;
+            --rose: #D4727A;
+            --light-gray: #F5F5F5;
+            --text-dark: #333;
+            --border-color: #E8E8E8;
+        }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        /* Navigation */
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, rgba(42, 61, 102, 0.95) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--rose);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .hero-cta:hover {
+            background: #c25a65;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(212, 114, 122, 0.3);
+        }
+
+        .hero-subtext {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+            text-align: center;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* What's Inside Section */
+        .whats-inside {
+            background: var(--cream);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .worksheets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .worksheet-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--rose);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .worksheet-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .worksheet-card h3 {
+            color: var(--navy);
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+        }
+
+        .worksheet-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .card-category {
+            display: inline-block;
+            background: var(--rose);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Who This Is For */
+        .who-this-is-for {
+            background: white;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .who-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .who-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .who-item h3 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .who-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Social Proof / Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(42, 61, 102, 0.05) 0%, rgba(212, 114, 122, 0.05) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .stars {
+            color: var(--rose);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 0.25rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--rose);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: #666;
+            margin-top: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .final-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--rose);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #c25a65;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(212, 114, 122, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-copyright {
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subheadline {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .worksheets-grid, .testimonials-grid, .who-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
+
+        /* Print Optimization */
+        @media print {
+            header, footer, .final-cta {
+                display: none;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header/Navigation -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Coffee Shop Office</div>
+            <nav class="nav-links">
+                <li><a href="#whats-inside">What's Inside</a></li>
+                <li><a href="#who-this-is">Who This Is For</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Caregiver & Elder Care Command Center</h1>
+            <p class="hero-subheadline">You're taking care of everyone else.<br>This takes care of the details.</p>
+            <button class="hero-cta" onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})">Get Instant Access</button>
+            <p class="hero-subtext">10 printable worksheets • Instant download • No apps required</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Problem/Solution -->
+        <section>
+            <h2>Stop Drowning in Details</h2>
+            <p class="section-intro">Managing your aging parent's care is overwhelming—not because you don't care, but because the logistics are scattered everywhere. Medical information in your notes. Appointments on multiple calendars. Insurance details you can never find. Medications you're terrified of forgetting.</p>
+
+            <div style="max-width: 800px; margin: 2rem auto; background: var(--cream); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--rose);">
+                <p style="margin-bottom: 1rem;"><strong>The real problem:</strong> You're holding all of this in your head while simultaneously working, managing your own family, and trying to take care of yourself. That's not sustainable.</p>
+                <p><strong>The solution:</strong> A simple, comprehensive, printable system designed specifically for family caregivers. Everything you need in one place. Nothing you don't.</p>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="whats-inside" id="whats-inside">
+            <h2>What's Inside (10 Worksheets)</h2>
+            <p class="section-intro">Each worksheet tackles a specific part of parent care, so nothing falls through the cracks.</p>
+
+            <div class="worksheets-grid">
+                <!-- Medical Category -->
+                <div class="worksheet-card">
+                    <span class="card-category">Medical</span>
+                    <h3>Medical Info Master</h3>
+                    <p>One-page summary of your parent's health conditions, surgeries, allergies, current medications, and healthcare providers. Take it to every appointment.</p>
+                </div>
+
+                <div class="worksheet-card">
+                    <span class="card-category">Medical</span>
+                    <h3>Medication Management Tracker</h3>
+                    <p>Log all medications, dosages, frequencies, side effects, pharmacy info, and refill dates. No more "is it once or twice a day?" confusion.</p>
+                </div>
+
+                <!-- Appointments & Scheduling -->
+                <div class="worksheet-card">
+                    <span class="card-category">Appointments</span>
+                    <h3>Appointment Tracker</h3>
+                    <p>Organize all healthcare visits, tests, procedures, and follow-ups. Never miss a detail or overlook follow-up care.</p>
+                </div>
+
+                <div class="worksheet-card">
+                    <span class="card-category">Scheduling</span>
+                    <h3>Caregiver Schedule Coordinator</h3>
+                    <p>Master schedule for who's providing care when. Essential when multiple family members are sharing caregiver responsibilities.</p>
+                </div>
+
+                <div class="worksheet-card">
+                    <span class="card-category">Daily Care</span>
+                    <h3>Daily Care Log</h3>
+                    <p>Record daily health observations, mood changes, appetite, sleep quality, and concerns. Helps you spot patterns and report accurately to healthcare providers.</p>
+                </div>
+
+                <!-- Essential Information -->
+                <div class="worksheet-card">
+                    <span class="card-category">Contacts</span>
+                    <h3>Important Contacts Sheet</h3>
+                    <p>Master list of all doctors, pharmacies, emergency contacts, insurance companies, and family members. Print it, post it, share it.</p>
+                </div>
+
+                <div class="worksheet-card">
+                    <span class="card-category">Safety</span>
+                    <h3>Home Safety Assessment</h3>
+                    <p>Systematic checklist for identifying fall risks, hazards, accessibility issues, and safety modifications in your parent's home.</p>
+                </div>
+
+                <!-- Legal & Financial -->
+                <div class="worksheet-card">
+                    <span class="card-category">Legal & Financial</span>
+                    <h3>Legal & Financial Checklist</h3>
+                    <p>Guided checklist for gathering critical documents—Power of Attorney, living will, insurance policies, financial accounts, property info. Reduces anxiety about what you might be missing.</p>
+                </div>
+
+                <div class="worksheet-card">
+                    <span class="card-category">Transitions</span>
+                    <h3>Care Transition Planner</h3>
+                    <p>Detailed planning tool for moves to new care settings—assisted living, nursing care, or home care. Nothing falls through the cracks during transitions.</p>
+                </div>
+
+                <!-- Self-Care -->
+                <div class="worksheet-card">
+                    <span class="card-category">Self-Care</span>
+                    <h3>Respite & Self-Care Tracker</h3>
+                    <p>Track respite care dates, your own health appointments, and self-care commitments. A reminder that your wellbeing matters too.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who This Is For -->
+        <section class="who-this-is-for" id="who-this-is">
+            <h2>Who This Is For</h2>
+            <p class="section-intro">This workbook is designed for you if:</p>
+
+            <div class="who-grid">
+                <div class="who-item">
+                    <div class="who-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Sandwich Generation</h3>
+                    <p>Balancing parent care with work and raising your own family</p>
+                </div>
+
+                <div class="who-item">
+                    <div class="who-icon">🤝</div>
+                    <h3>Coordinating Siblings</h3>
+                    <p>Need to share information and schedules with other family members</p>
+                </div>
+
+                <div class="who-item">
+                    <div class="who-icon">🎯</div>
+                    <h3>Recently Started</h3>
+                    <p>New to caregiving and need to get organized immediately</p>
+                </div>
+
+                <div class="who-item">
+                    <div class="who-icon">📋</div>
+                    <h3>Overwhelmed by Details</h3>
+                    <p>Drowning in scattered medical info, appointments, and finances</p>
+                </div>
+
+                <div class="who-item">
+                    <div class="who-icon">🏥</div>
+                    <h3>Medical Complexity</h3>
+                    <p>Managing multiple conditions, medications, and healthcare providers</p>
+                </div>
+
+                <div class="who-item">
+                    <div class="who-icon">🏠</div>
+                    <h3>Care Transitions</h3>
+                    <p>Moving a parent to assisted living or a new care setting</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Caregivers Are Saying</h2>
+            <p class="section-intro">Real families using the Command Center</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was keeping everything in my head and constantly worried I was forgetting something. This system gave me peace of mind. I printed the contacts sheet and keep it in my wallet. My sister and I both use the caregiver schedule now."</p>
+                    <div class="testimonial-author">Sarah M.</div>
+                    <div class="testimonial-role">Caring for mom with Alzheimer's</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Mom's doctor visit was so much smoother once I brought the medication tracker. He said it was the clearest list of medications he'd ever seen. This is worth it just for that."</p>
+                    <div class="testimonial-author">James T.</div>
+                    <div class="testimonial-role">Managing dad's diabetes and heart condition</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"When we moved Mom to assisted living, the transition planner kept us organized and made sure we didn't miss anything. The staff complimented how prepared we were."</p>
+                    <div class="testimonial-author">Michelle & David L.</div>
+                    <div class="testimonial-role">Relocated parent to senior community</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"My brother and I finally have one shared reference for Dad's care. We're not texting each other asking for the same information anymore. The caregiver schedule is a lifesaver."</p>
+                    <div class="testimonial-author">Lisa K.</div>
+                    <div class="testimonial-role">Sharing caregiving with sibling</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item active">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>How do I access the files after purchase?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You'll receive instant access to download all 11 PDF worksheets immediately after purchase. No waiting, no email delays. Download them to your computer, print as many copies as you need, and start using them right away.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Do I need any special software or apps?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. The worksheets are standard PDFs. You can open them with any PDF reader (included free with all computers), print them on a regular printer, and fill them out by hand or digitally. No apps, no logins, no learning curve.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Can I share these with my siblings or healthcare team?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. You can print multiple copies and share with family members or healthcare providers. Many families print a set for each caregiver so everyone has the information they need. The worksheets are designed for exactly this kind of sharing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>What if I only need a few of the worksheets?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You get all 10 worksheets, but you only need to use what's relevant for your situation. Some families use all of them; others focus on medical tracking and scheduling. Print what you need, ignore the rest. The system is flexible.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Is this printable on a regular home printer?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. The worksheets are optimized for standard printers and letter-size paper (8.5" x 11"). They look great in black and white or color. You can print as many copies as you need whenever you need fresh worksheets.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>What if I'm not a family caregiver yet but think I might need this soon?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>This is actually a great time to get the system in place. Having it ready means you can organize information as it comes, rather than scrambling to catch up later. Many people get it as a "just in case" resource and find it incredibly valuable when caregiving responsibilities do begin.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Is there a money-back guarantee?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We stand behind our product. If the worksheets don't meet your needs, contact us within 30 days for a full refund. But we're confident you'll find them valuable—thousands of caregivers already have.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="checkout">
+        <h2>Ready to Stop Juggling Details?</h2>
+        <p>Get the Caregiver & Elder Care Command Center today and start organizing your parent's care in the next 5 minutes.</p>
+
+        <div class="cta-buttons">
+            <button class="btn-primary" onclick="window.location.href='https://checkout.lemonsqueezy.com/buy/your-product-id'">
+                Get Instant Access • $9.99
+            </button>
+            <button class="btn-secondary" onclick="document.getElementById('faq').scrollIntoView({behavior: 'smooth'})">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 Coffee Shop Office All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- LemonSqueezy Checkout -->
+    
+
+    <!-- FAQ Interactivity -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Caregiver & Elder Care Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

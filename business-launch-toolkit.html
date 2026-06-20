@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Small Business Launch Toolkit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal: #0D9488;
+            --teal-dark: #0A7A70;
+            --teal-light: #CCFBF1;
+            --teal-50: #F0FDFA;
+            --charcoal: #1E293B;
+            --charcoal-light: #334155;
+            --charcoal-muted: #64748B;
+            --orange: #F97316;
+            --orange-dark: #EA580C;
+            --orange-light: #FFF7ED;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --radius: 8px;
+            --radius-lg: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 17px;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--teal); text-decoration: none; }
+        a:hover { color: var(--teal-dark); }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-wide {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 640px) {
+            section { padding: 56px 0; }
+            body { font-size: 16px; }
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            color: var(--charcoal);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.6rem, 4vw, 2.25rem); margin-bottom: 20px; }
+        h3 { font-size: 1.25rem; margin-bottom: 12px; }
+
+        p { margin-bottom: 16px; }
+        p:last-child { margin-bottom: 0; }
+
+        .eyebrow {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--charcoal-muted);
+            line-height: 1.6;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: var(--radius);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            color: var(--white);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--teal);
+            border: 2px solid var(--teal);
+        }
+
+        .btn-secondary:hover {
+            background: var(--teal-50);
+            color: var(--teal-dark);
+        }
+
+        .btn-large {
+            padding: 20px 48px;
+            font-size: 1.15rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .price-tag {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: block;
+            margin-top: 6px;
+            font-weight: 400;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #0F172A 100%);
+            color: var(--white);
+            padding: 100px 0 90px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(13, 148, 136, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(249, 115, 22, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero .container { position: relative; z-index: 1; }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .hero .subtitle {
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero .eyebrow { color: var(--teal-light); }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 36px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===== PROBLEM ===== */
+        .problem {
+            background: var(--gray-50);
+        }
+
+        .problem-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+
+        .problem-list li {
+            padding: 16px 0 16px 32px;
+            position: relative;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--charcoal-light);
+        }
+
+        .problem-list li:last-child { border-bottom: none; }
+
+        .problem-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* ===== SOLUTION ===== */
+        .solution-intro {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        /* ===== INCLUDED GRID ===== */
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .included-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            transition: all 0.2s ease;
+        }
+
+        .included-card:hover {
+            border-color: var(--teal);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .card-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .included-card h3 { color: var(--charcoal); }
+
+        .included-card p {
+            color: var(--charcoal-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ===== MID CTA ===== */
+        .mid-cta {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 64px 0;
+        }
+
+        .mid-cta h2 { color: var(--white); }
+        .mid-cta p { color: rgba(255,255,255,0.85); }
+
+        .mid-cta .btn-primary {
+            background: var(--orange);
+            margin-top: 24px;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps {
+            counter-reset: step-counter;
+            margin-top: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 24px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--gray-200);
+            align-items: flex-start;
+        }
+
+        .step:last-child { border-bottom: none; }
+
+        .step-num {
+            counter-increment: step-counter;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .step-content h3 { margin-bottom: 6px; }
+
+        .step-content p {
+            color: var(--charcoal-muted);
+            margin: 0;
+        }
+
+        /* ===== WHO IT'S FOR ===== */
+        .who {
+            background: var(--gray-50);
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        .who-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px;
+            border-left: 4px solid var(--teal);
+            box-shadow: var(--shadow);
+        }
+
+        .who-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .who-card p {
+            color: var(--charcoal-muted);
+            font-size: 0.92rem;
+            margin: 0;
+        }
+
+        /* ===== GUARANTEE ===== */
+        .guarantee {
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--teal-50);
+            border: 2px solid var(--teal);
+            border-radius: var(--radius-lg);
+            padding: 40px 36px;
+        }
+
+        .guarantee-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 700px;
+            margin: 40px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 24px 40px 24px 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            cursor: pointer;
+            position: relative;
+            font-family: inherit;
+            line-height: 1.4;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--teal);
+            font-weight: 300;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            color: var(--charcoal-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #0F172A 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(13, 148, 136, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .final-cta .container { position: relative; z-index: 1; }
+        .final-cta h2 { color: var(--white); margin-bottom: 16px; }
+        .final-cta p { color: rgba(255,255,255,0.75); max-width: 540px; margin: 0 auto 36px; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .hero { padding: 72px 0 64px; }
+            .hero-meta { gap: 16px; }
+            .step { flex-direction: column; gap: 12px; }
+            .btn-large { padding: 16px 32px; font-size: 1.05rem; width: 100%; }
+            .btn { width: 100%; }
+            .guarantee-box { padding: 28px 20px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- ===== HERO + CTA ===== -->
+    <section class="hero">
+        <div class="container">
+            <p class="eyebrow">Coffee Shop Office.</p>
+            <h1>Stop Planning.<br>Start Launching.</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Business Launch System</p>
+
+            <p class="subtitle">7 printable PDF templates that take you from business idea to open-for-business in 12 weeks. No fluff. No filler. Just the tools you need to go live.</p>
+            <a href="#" class="btn btn-primary btn-large lemonsqueezy-button" data-product="small-business-launch-toolkit">
+                Get the Toolkit Now
+                <span class="price-tag">$9.99 &mdash; Instant Download</span>
+            </a>
+            <div class="hero-meta">
+                <span>&#10003; 7 PDF Templates</span>
+                <span>&#10003; Instant Download</span>
+                <span>&#10003; Print at Home</span>
+                <span>&#10003; Fill-in-the-Blank</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="problem">
+        <div class="container">
+            <p class="eyebrow">The Problem</p>
+            <h2>Starting a business shouldn't require a 200-page plan nobody reads.</h2>
+            <p>You've bookmarked the blog posts. Watched the YouTube videos. Opened 47 browser tabs. And you still don't have a launch date, a business plan, or a clue what permits you need.</p>
+            <p>The problem isn't you. The problem is that most startup resources are:</p>
+            <ul class="problem-list">
+                <li>Oversimplified fluff that says "just start" without telling you what to do first</li>
+                <li>Overwhelming 100-page templates built for VC pitches you'll never give</li>
+                <li>Overpriced PLR junk that looks like it was written by a bot in 2014</li>
+                <li>Scattered across 15 different websites with conflicting advice</li>
+            </ul>
+            <p style="margin-top: 24px;">You don't need more information. You need a system.</p>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION / WHAT'S INCLUDED ===== -->
+    <section class="solution">
+        <div class="container-wide">
+            <div class="solution-intro">
+                <p class="eyebrow">The Solution</p>
+                <h2>6 focused PDFs. Zero filler.<br>Everything you need to launch.</h2>
+                <p class="subtitle">Each template is designed to force clarity and drive action. Print them, fill them in, and move forward.</p>
+            </div>
+
+            <div class="included-grid">
+                <div class="included-card">
+                    <div class="card-number">1</div>
+                    <h3>Business Plan One-Pager</h3>
+                    <p>Your idea, audience, revenue model, and competitive edge. On one page. Because nobody reads a 50-page plan.</p>
+                </div>
+                <div class="included-card">
+                    <div class="card-number">2</div>
+                    <h3>Startup Cost Calculator</h3>
+                    <p>Map every expense before you spend a dollar. Equipment, software, licenses, marketing, and a buffer for surprises.</p>
+                </div>
+                <div class="included-card">
+                    <div class="card-number">3</div>
+                    <h3>Competitor Analysis Template</h3>
+                    <p>Research your top 5 competitors on pricing, positioning, strengths, and weaknesses. Find the gap you'll fill.</p>
+                </div>
+                <div class="included-card">
+                    <div class="card-number">4</div>
+                    <h3>Brand Identity Worksheet</h3>
+                    <p>Name, tagline, voice, colors, fonts, and messaging. Everything a designer would ask before starting your logo.</p>
+                </div>
+                <div class="included-card">
+                    <div class="card-number">5</div>
+                    <h3>12-Week Launch Timeline</h3>
+                    <p>Week-by-week action plan from "I have an idea" to "I'm open for business." Research, setup, branding, launch.</p>
+                </div>
+                <div class="included-card">
+                    <div class="card-number">6</div>
+                    <h3>Legal Checklist</h3>
+                    <p>Business registration, EIN, licenses, permits, insurance, contracts, and tax setup. Your safety net before you go live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MID-PAGE CTA ===== -->
+    <section class="mid-cta">
+        <div class="container">
+            <h2>Ready to stop researching and start building?</h2>
+            <p>For less than the cost of two lattes, you get a complete launch system.</p>
+            <a href="#" class="btn btn-primary btn-large lemonsqueezy-button" data-product="small-business-launch-toolkit">
+                Get the Toolkit &mdash; $9.99
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section>
+        <div class="container">
+            <div style="text-align:center;">
+                <p class="eyebrow">How It Works</p>
+                <h2>From download to launch in 4 simple steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Download your 7 PDFs</h3>
+                        <p>Instant delivery after purchase. No waiting, no drip-feed, no course login.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Print or fill in digitally</h3>
+                        <p>Print at home on any printer, or fill them in on your tablet. US Letter size (8.5 x 11").</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Work through each template</h3>
+                        <p>Start with the Business Plan One-Pager. Each template takes 30-60 minutes. You can finish the whole toolkit in a weekend.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h3>Follow the 12-Week Timeline and launch</h3>
+                        <p>The timeline gives you a week-by-week action plan. Check off the Legal Checklist as you go. Open for business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHO IT'S FOR ===== -->
+    <section class="who">
+        <div class="container-wide">
+            <div style="text-align:center;">
+                <p class="eyebrow">Who It's For</p>
+                <h2>Built for people who learn by doing</h2>
+            </div>
+            <div class="who-grid">
+                <div class="who-card">
+                    <h3>First-Time Entrepreneurs</h3>
+                    <p>You have the idea but feel overwhelmed by where to start. This gives you the structure.</p>
+                </div>
+                <div class="who-card">
+                    <h3>Side Hustlers Going Full-Time</h3>
+                    <p>You've been doing this on the side. Now you're ready to make it official and do it right.</p>
+                </div>
+                <div class="who-card">
+                    <h3>Freelancers Building a Business</h3>
+                    <p>You have the skills. Now you need the brand, the plan, and the legal basics to be a real business.</p>
+                </div>
+                <div class="who-card">
+                    <h3>Small Business Owners Filling Gaps</h3>
+                    <p>You skipped the planning phase and jumped in. Time to backfill the foundation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUARANTEE ===== -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">&#128170;</div>
+                <h2>Our Promise</h2>
+                <p>Due to the digital nature of this product, all sales are final. But we stand behind our work. If you're not satisfied, reach out to us directly and we'll make it right. We want this toolkit to be the thing that actually helps you launch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section style="background: var(--gray-50);">
+        <div class="container">
+            <div style="text-align:center;">
+                <p class="eyebrow">FAQ</p>
+                <h2>Common questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Is this a digital download or physical product?</button>
+                    <div class="faq-answer">
+                        <p>Digital download. You'll receive 7 PDF files instantly after purchase. Print them at home or fill them in on your tablet. Nothing gets shipped.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need special software?</button>
+                    <div class="faq-answer">
+                        <p>No. Just a free PDF reader (built into every phone, tablet, and computer) and a printer if you want hard copies.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What type of business is this for?</button>
+                    <div class="faq-answer">
+                        <p>Any small business. Service-based, product-based, e-commerce, freelance, local, or online. The templates are industry-agnostic and designed to work whether you're opening a bakery or launching a consulting practice.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Isn't this just another generic template?</button>
+                    <div class="faq-answer">
+                        <p>No. Every template is designed to force clarity and action. The business plan is one page because nobody reads a 50-page plan. The timeline is 12 weeks because that's enough time to launch without overthinking it. These are opinionated tools, not blank canvases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I use this for a business I've already started?</button>
+                    <div class="faq-answer">
+                        <p>Absolutely. The competitor analysis, brand identity worksheet, and legal checklist are useful at any stage. Think of it as a foundation audit for your existing business.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does it take to complete?</button>
+                    <div class="faq-answer">
+                        <p>Each template takes 30-60 minutes. You could complete the entire toolkit in a single focused weekend, or spread it out over a couple of weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="final-cta">
+        <div class="container">
+            <p class="eyebrow" style="color: var(--teal-light);">Your business isn't going to launch itself.</p>
+            <h2>Get the toolkit. Do the work. Launch the thing.</h2>
+            <p>7 PDFs. 12 weeks. One focused system to take you from idea to open-for-business.</p>
+            <a href="#" class="btn btn-primary btn-large lemonsqueezy-button" data-product="small-business-launch-toolkit">
+                Get the Toolkit Now &mdash; $9.99
+                <span class="price-tag">Instant Download &bull; Lifetime Access</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Terms</a> | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <!-- ===== LEMON SQUEEZY JS ===== -->
+    
+
+    <!-- ===== FAQ TOGGLE ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-question').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var item = this.parentElement;
+                    var isOpen = item.classList.contains('open');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(function(el) {
+                        el.classList.remove('open');
+                    });
+
+                    // Toggle current item
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                });
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Small Business Launch Toolkit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Service Intake Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6F4E37 0%, #8B6F47 100%);
+            color: #F5E6D3;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #F5E6D3;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #6F4E37;
+        }
+
+        .hero h2 {
+            font-size: 2.2em;
+            color: #2C1810;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero .subheadline {
+            font-size: 1.1em;
+            color: #6F4E37;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #6F4E37;
+            color: #F5E6D3;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #2C1810;
+            transform: translateY(-2px);
+        }
+
+        /* What's Inside Section */
+        .whats-inside {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .whats-inside h2 {
+            font-size: 2em;
+            color: #2C1810;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #6F4E37;
+            padding-bottom: 15px;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .template-card {
+            background-color: #F5E6D3;
+            border-left: 5px solid #6F4E37;
+            padding: 25px;
+            border-radius: 3px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .template-card:hover {
+            box-shadow: 0 5px 20px rgba(111, 78, 55, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .template-card h3 {
+            color: #6F4E37;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+
+        .template-card p {
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #2C1810;
+            color: #F5E6D3;
+            padding: 60px 20px;
+        }
+
+        .features h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #6F4E37;
+            padding-bottom: 15px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .features-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            color: #6F4E37;
+            font-size: 1.5em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .feature-item p {
+            font-size: 0.95em;
+        }
+
+        /* Who It's For Section */
+        .who-for {
+            background-color: #F5E6D3;
+            padding: 60px 20px;
+        }
+
+        .who-for h2 {
+            font-size: 2em;
+            color: #2C1810;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #6F4E37;
+            padding-bottom: 15px;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .audience-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .audience-item {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 3px;
+            border-top: 4px solid #6F4E37;
+        }
+
+        .audience-item h3 {
+            color: #6F4E37;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .audience-item p {
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .faq h2 {
+            font-size: 2em;
+            color: #2C1810;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #6F4E37;
+            padding-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #E8D5C4;
+            padding-bottom: 25px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.1em;
+            color: #6F4E37;
+            font-weight: 600;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #2C1810;
+            color: #F5E6D3;
+            padding: 60px 20px;
+        }
+
+        .testimonials h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #6F4E37;
+            padding-bottom: 15px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .testimonial-card {
+            background-color: rgba(111, 78, 55, 0.2);
+            padding: 25px;
+            border-left: 4px solid #6F4E37;
+            border-radius: 3px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #6F4E37;
+            font-size: 0.9em;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #6F4E37 0%, #8B6F47 100%);
+            color: #F5E6D3;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C1810;
+            color: #F5E6D3;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #6F4E37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .hero h2 {
+                font-size: 1.6em;
+            }
+
+            .whats-inside h2,
+            .features h2,
+            .who-for h2,
+            .faq h2,
+            .testimonials h2,
+            .final-cta h2 {
+                font-size: 1.6em;
+            }
+
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1em;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header -->
+    <header>
+        <h1>Coffee Shop Office</h1>
+        <p>Professional Tools for Service Businesses</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Professional Service Intake Templates</h2>
+            <p class="subheadline">Complete Client Management System with 8 Ready-to-Use PDF Templates for Coaches, Therapists, Consultants & Freelancers</p>
+            <p class="subheadline"><strong>The Complete Client Lifecycle Management System</strong></p>
+            <a href="{{checkout_url}}" class="cta-button">Get Templates Now</a>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="whats-inside">
+        <div class="container">
+            <h2>What's Inside Your Complete Package</h2>
+            <div class="templates-grid">
+                <div class="template-card">
+                    <h3>Client Intake Form</h3>
+                    <p>Comprehensive intake questionnaire capturing essential client information, background history, presenting concerns, goals, and consent. Establishes professionalism from the first interaction and ensures you gather all critical details for service delivery.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Session Notes Template</h3>
+                    <p>Structured documentation for every client interaction. Track session topics, client responses, observations, action items assigned, and focus for next meeting. Creates a complete audit trail of your work and provides clients with documented session summaries.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Treatment/Coaching Plan</h3>
+                    <p>Convert client goals into detailed action plans. Includes presenting concerns, specific objectives, interventions you'll use, timeline expectations, and measurable success criteria. Shows clients exactly how you'll help them achieve their goals.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Progress Tracking Worksheets</h3>
+                    <p>Visual worksheets for monitoring client advancement. Features goal progress checkpoints, weekly assessment scales, behavioral tracking grids, and outcome measurement sections. Document real progress and adjust your approach based on concrete data.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Contact & Scheduling Log</h3>
+                    <p>Comprehensive system for tracking client communication. Log contact attempts, response times, scheduled appointments, cancellations, no-shows, rescheduling notes, and follow-up reminders. Maintains accountability and reveals communication patterns.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Fee Schedule & Payment Tracking</h3>
+                    <p>Professional templates for managing your pricing and cash flow. Displays your service rates, payment terms, accepted payment methods, invoice tracking by client, and payment history. Reduces payment confusion and protects your revenue.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Cancellation Policy & Client Agreement</h3>
+                    <p>Professional legal templates protecting your business. Covers cancellation policy, payment terms, confidentiality agreements, service limitations, and client responsibilities. Sets clear expectations from day one and provides legal protection.</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Goal Setting & Feedback Survey</h3>
+                    <p>Capture client satisfaction and improve your services. Includes goal-setting worksheets and feedback surveys measuring client outcomes, satisfaction levels, and suggestions for improvement. Build client accountability and gather testimonials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Service Professionals Choose These Templates</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <p><strong>Professional Appearance:</strong> Branded templates establish instant credibility and show clients you run a legitimate business. Your intake process becomes marketing.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Time Savings:</strong> Stop recreating forms from memory. Every document you need is ready to customize and use immediately. Save hours every month on administrative tasks.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Complete System:</strong> This isn't just an intake form—it's a full client lifecycle management system from initial contact through feedback and follow-up.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Legal Protection:</strong> Professional language around cancellation, confidentiality, and agreements protects your business and sets crystal clear expectations.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Scalable Solution:</strong> As your practice grows, these templates grow with you. Serve 10 clients or 100 without losing organization or professionalism.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Universal Format:</strong> PDF files work on any device with any software. Print them, fill them digitally, email them to clients. Complete flexibility.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>Real-World Tested:</strong> Designed by service professionals and refined through feedback from coaches, therapists, consultants, and freelancers actively using them.</p>
+                </div>
+                <div class="feature-item">
+                    <p><strong>No Subscriptions:</strong> One-time purchase. No recurring fees. No proprietary software. Your templates work forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="who-for">
+        <div class="container">
+            <h2>Who Benefits From These Templates?</h2>
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <h3>Life Coaches</h3>
+                    <p>Building your practice and attracting premium clients who expect professional systems. Present yourself as the polished professional you are.</p>
+                </div>
+
+                <div class="audience-item">
+                    <h3>Therapists & Counselors</h3>
+                    <p>Managing complex client cases with thorough documentation that satisfies licensing requirements. Comprehensive templates designed with clinical practices in mind.</p>
+                </div>
+
+                <div class="audience-item">
+                    <h3>Business Consultants</h3>
+                    <p>Juggling multiple client projects and engagements. Consistent tracking systems ensure no client slips through the cracks or loses documentation.</p>
+                </div>
+
+                <div class="audience-item">
+                    <h3>Health & Wellness Coaches</h3>
+                    <p>Documenting client progress and creating accountability for behavior change. Visual progress tracking keeps clients motivated and engaged.</p>
+                </div>
+
+                <div class="audience-item">
+                    <h3>Career Coaches</h3>
+                    <p>Detailed goal tracking and outcome measurement. Document successes and build case studies of transformed careers.</p>
+                </div>
+
+                <div class="audience-item">
+                    <h3>Freelancers & Independent Professionals</h3>
+                    <p>Scaling beyond solo operations and needing professional client management. These templates help you operate like an established firm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What file format are these templates in?</div>
+                <div class="faq-answer">All templates are in PDF format. PDFs work on any computer, tablet, or phone without special software. You can print them, fill them by hand, or fill them digitally. You can also import them into design software to customize further.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I customize these templates with my business name and logo?</div>
+                <div class="faq-answer">Absolutely! PDFs can be customized in Adobe Acrobat, Preview (Mac), or any PDF editor. Add your business name, logo, phone number, website, and any other information you need. These templates are yours to customize completely.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need special software to use these?</div>
+                <div class="faq-answer">No special software required. PDFs open in any browser and any standard PDF reader. To customize them, you can use free tools like Preview (Mac), free online PDF editors, or upgrade to Adobe Acrobat Pro if you need advanced editing capabilities.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I share these with my team or assistant?</div>
+                <div class="faq-answer">The personal license is for your individual use. If you need to share with team members or use in a larger organization, please contact us about a team or commercial license option.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are these templates legally sufficient for my practice?</div>
+                <div class="faq-answer">These templates provide professional documentation templates for common service business needs. However, every practice has unique legal requirements based on your field, location, and specific services. We recommend consulting with a legal professional in your area to ensure your client agreements meet local requirements and professional standards in your field.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I don't like the templates?</div>
+                <div class="faq-answer">We're confident these templates will transform how you manage clients. However, if you're not satisfied within 30 days, we offer a full refund. Your success matters to us.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Service Professionals Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"These templates immediately professionalized my practice. Clients now see that I take my business seriously, and I spend half the time on paperwork."</div>
+                    <div class="testimonial-author">— Sarah M., Life Coach</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The session notes template saves me so much time. I'm actually documenting sessions instead of doing it from memory weeks later. My licensing board is happy too."</div>
+                    <div class="testimonial-author">— Dr. Jennifer R., Therapist</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"As my consulting practice grew, these templates kept me organized. Now I have clear records for every client across multiple projects."</div>
+                    <div class="testimonial-author">— Michael T., Business Consultant</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The fee schedule and payment tracking templates cleared up so much confusion. No more payment disputes. My business is running more smoothly."</div>
+                    <div class="testimonial-author">— Amanda K., Freelance Coach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Professionalize Your Client Management?</h2>
+            <p>Get instant access to all 8 templates. Download, customize, and start using today. Your clients deserve professional documentation. Your business deserves professional systems.</p>
+            <a href="{{checkout_url}}" class="cta-button">Purchase Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a></p>
+        </div>
+    </footer>
+    <p style="font-size:24px;font-weight:bold">$9.99</p>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Professional Service Intake Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

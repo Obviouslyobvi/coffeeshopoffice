@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Complete Home Maintenance Planner | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --sage: #7D8E6E;
+            --sage-light: #A3B18A;
+            --sage-pale: #DAD7CD;
+            --sage-bg: #F5F3EE;
+            --warm-gray: #4A4A48;
+            --warm-gray-light: #6B6B69;
+            --warm-white: #FAFAF7;
+            --accent: #5E7A50;
+            --accent-hover: #4D6642;
+            --border: #E0DDD6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--warm-gray);
+            background: var(--warm-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        /* ---- CTA Button ---- */
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .cta-btn span.price { font-weight: 400; opacity: 0.9; margin-left: 6px; }
+
+        /* ---- Hero ---- */
+        .hero {
+            text-align: center;
+            padding: 80px 24px 64px;
+            background: linear-gradient(170deg, var(--sage-bg) 0%, var(--warm-white) 100%);
+        }
+        .hero .brand {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            line-height: 1.2;
+            color: var(--warm-gray);
+            margin-bottom: 20px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .subheadline {
+            font-size: 1.15rem;
+            color: var(--warm-gray-light);
+            max-width: 560px;
+            margin: 0 auto 36px;
+        }
+
+        /* ---- Sections ---- */
+        section { padding: 64px 0; }
+        section.alt-bg { background: var(--sage-bg); }
+
+        h2 {
+            font-size: 1.65rem;
+            margin-bottom: 12px;
+            color: var(--warm-gray);
+            line-height: 1.3;
+        }
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--warm-gray-light);
+            margin-bottom: 40px;
+            max-width: 620px;
+        }
+        .center { text-align: center; }
+        .center .section-intro { margin-left: auto; margin-right: auto; }
+
+        /* ---- Problem ---- */
+        .problem-list {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        .problem-list li {
+            padding: 16px 20px;
+            background: #fff;
+            border-left: 4px solid #C7A67B;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        /* ---- What's Included ---- */
+        .bundle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .bundle-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+        }
+        .bundle-card .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--sage-pale);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        .bundle-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: var(--warm-gray);
+        }
+        .bundle-card p {
+            font-size: 0.92rem;
+            color: var(--warm-gray-light);
+            line-height: 1.55;
+        }
+
+        /* ---- Steps ---- */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .step-num {
+            width: 44px; height: 44px;
+            background: var(--sage-light);
+            color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+        .steps h3 { font-size: 1rem; margin-bottom: 6px; }
+        .steps p { font-size: 0.92rem; color: var(--warm-gray-light); }
+
+        /* ---- Who It's For ---- */
+        .audience-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        .audience-list li {
+            font-size: 1.02rem;
+            padding-left: 28px;
+            position: relative;
+        }
+        .audience-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: 700;
+        }
+
+        /* ---- Guarantee ---- */
+        .guarantee-box {
+            background: #fff;
+            border: 2px solid var(--sage-light);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .guarantee-box .shield { font-size: 2.5rem; margin-bottom: 12px; }
+        .guarantee-box h2 { font-size: 1.4rem; margin-bottom: 10px; }
+        .guarantee-box p { font-size: 0.97rem; color: var(--warm-gray-light); max-width: 460px; margin: 0 auto; }
+
+        /* ---- FAQ ---- */
+        .faq-list { max-width: 640px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            color: var(--warm-gray);
+            line-height: 1.4;
+        }
+        .faq-q::after {
+            content: "+";
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-q::after { content: "−"; }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            font-size: 0.95rem;
+            color: var(--warm-gray-light);
+            line-height: 1.65;
+        }
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding-top: 12px;
+        }
+
+        /* ---- Final CTA ---- */
+        .final-cta {
+            text-align: center;
+            padding: 72px 24px;
+            background: linear-gradient(170deg, var(--sage-bg) 0%, var(--warm-white) 100%);
+        }
+        .final-cta h2 { font-size: 1.8rem; margin-bottom: 14px; }
+        .final-cta p { font-size: 1.05rem; color: var(--warm-gray-light); max-width: 500px; margin: 0 auto 32px; }
+
+        /* ---- Footer ---- */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.85rem;
+            color: var(--warm-gray-light);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ---- Mid CTA ---- */
+        .mid-cta { text-align: center; padding: 48px 0; }
+
+        @media (max-width: 600px) {
+            .hero { padding: 56px 20px 48px; }
+            section { padding: 48px 0; }
+            .guarantee-box { padding: 28px 20px; }
+            .cta-btn { width: 100%; text-align: center; padding: 16px 24px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+    <p class="brand">Coffee Shop Office.</p>
+    <h1>The Complete Home Maintenance Planner</h1>
+    <p class="subheadline">9 printable PDFs that tell you exactly what your home needs — and when. Seasonal checklists, trackers, and logs so nothing falls through the cracks.</p>
+    <a href="#checkout-pending" data-product-num="1" class="lemonsqueezy-button cta-btn">
+        Get the Planner Bundle<span class="price">— $9.99</span>
+    </a>
+</header>
+
+<!-- ===================== PROBLEM ===================== -->
+<section>
+    <div class="container center">
+        <h2>Skipping Maintenance Gets Expensive Fast</h2>
+        <p class="section-intro">Most homeowners don't ignore maintenance on purpose. They just don't have a system. Here's what that costs:</p>
+        <ul class="problem-list">
+            <li>A missed HVAC filter swap leads to a $400 repair bill</li>
+            <li>Uncleaned gutters cause water damage you don't notice until it's a $3,000 problem</li>
+            <li>Expired warranties go unused because nobody tracked the dates</li>
+            <li>You call a plumber in a panic because you can't find the one you used last time</li>
+            <li>Every season feels like starting from scratch — what was I supposed to do again?</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ===================== SOLUTION ===================== -->
+<section class="alt-bg">
+    <div class="container center">
+        <h2>A Simple System That Keeps Your Home on Track</h2>
+        <p class="section-intro">The Complete Home Maintenance Planner gives you a clear, printable framework for every season of the year. No apps to learn. No subscriptions. Just print it, put it in a binder, and follow along.</p>
+        <p style="font-size: 1rem; color: var(--warm-gray-light); max-width: 560px; margin: 0 auto;">You'll know what to do each month, where to find your warranty info, and who to call when you need help. It's the kind of system that saves you real money — and a lot of stress.</p>
+    </div>
+</section>
+
+<!-- ===================== WHAT'S INCLUDED ===================== -->
+<section>
+    <div class="container center">
+        <h2>What's Inside the Bundle</h2>
+        <p class="section-intro">9 printable PDFs designed to work together or on their own.</p>
+        <div class="bundle-grid">
+            <div class="bundle-card">
+                <div class="icon">🌱</div>
+                <h3>Spring Maintenance Checklist</h3>
+                <p>Roof inspection, gutter cleaning, AC prep, exterior paint check, lawn care startup, and more.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">☀️</div>
+                <h3>Summer Maintenance Checklist</h3>
+                <p>Deck and patio care, pest prevention, irrigation checks, window seals, and seasonal deep-cleaning tasks.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">🍂</div>
+                <h3>Fall Maintenance Checklist</h3>
+                <p>Heating system prep, chimney inspection, weatherstripping, pipe insulation, and yard winterization.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">❄️</div>
+                <h3>Winter Maintenance Checklist</h3>
+                <p>Furnace filter schedule, ice dam prevention, indoor air quality, emergency kit review, and mid-winter checkups.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">📅</div>
+                <h3>Monthly Task Tracker</h3>
+                <p>A single-page tracker for recurring monthly tasks. Check them off as you go so nothing gets forgotten.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">🔧</div>
+                <h3>Appliance &amp; Warranty Log</h3>
+                <p>Track every appliance: purchase date, model number, warranty expiration, and service history in one place.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">📇</div>
+                <h3>Service Provider Contact Sheet</h3>
+                <p>Your go-to list for plumbers, electricians, HVAC techs, and every other pro you might need in a hurry.</p>
+            </div>
+            <div class="bundle-card">
+                <div class="icon">📆</div>
+                <h3>Annual Maintenance Calendar</h3>
+                <p>A year-at-a-glance view so you can see what's coming up and plan ahead with confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MID CTA ===================== -->
+<div class="mid-cta alt-bg">
+    <a href="#checkout-pending" data-product-num="1" class="lemonsqueezy-button cta-btn">
+        Get Instant Access — $9.99
+    </a>
+</div>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section>
+    <div class="container center">
+        <h2>How It Works</h2>
+        <p class="section-intro">Up and running in about five minutes.</p>
+        <div class="steps">
+            <div>
+                <div class="step-num">1</div>
+                <h3>Purchase &amp; Download</h3>
+                <p>Complete your order and get instant access to all 9 PDFs. They arrive in a single zip file.</p>
+            </div>
+            <div>
+                <div class="step-num">2</div>
+                <h3>Print What You Need</h3>
+                <p>Print the pages that matter most to you right now. They're designed for standard letter-size paper.</p>
+            </div>
+            <div>
+                <div class="step-num">3</div>
+                <h3>Start Using It Today</h3>
+                <p>Stick them in a binder, pin them on the fridge, or keep them in a drawer. Follow along season by season.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== WHO IT'S FOR ===================== -->
+<section class="alt-bg">
+    <div class="container center">
+        <h2>Who This Is For</h2>
+        <p class="section-intro">If any of these sound like you, this planner was built with you in mind.</p>
+        <ul class="audience-list">
+            <li>First-time homeowners who want to do things right from the start</li>
+            <li>Busy families who need a simple system — not another app</li>
+            <li>Homeowners tired of expensive surprise repairs</li>
+            <li>Anyone who's ever thought "I should probably check on that" and then didn't</li>
+            <li>People who like paper planners, checklists, and binders (no judgment, it works)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ===================== GUARANTEE ===================== -->
+<section>
+    <div class="container">
+        <div class="guarantee-box">
+            <div class="shield">🛡️</div>
+            <h2>100% Money-Back Guarantee</h2>
+            <p>If the planner doesn't work for you, just reach out within 30 days and you'll get a full refund. No forms, no hoops, no hard feelings.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="alt-bg">
+    <div class="container">
+        <h2 class="center" style="margin-bottom: 32px;">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">What file format are the planners in?</button>
+                <div class="faq-a">All 8 planners are standard PDF files. You can open them on any computer, tablet, or phone, and print them on any home printer using regular letter-size paper.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">Can I print the pages more than once?</button>
+                <div class="faq-a">Absolutely. Once you download the bundle, it's yours to keep and reprint as many times as you need — year after year. One purchase, unlimited prints for personal use.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">Is this specific to a certain climate or region?</button>
+                <div class="faq-a">The checklists cover the most common maintenance tasks for homes in temperate climates. If you live somewhere with extreme weather (very hot, very cold, or very humid), most items will still apply — you may just adjust timing. The tracker and log sheets work for any home, anywhere.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">Will this work if I rent instead of own?</button>
+                <div class="faq-a">Some of the seasonal checklists include tasks that are typically the landlord's responsibility (like roof or HVAC servicing). But the monthly tracker, contact sheet, and appliance log are useful for renters too — especially if you want to stay on top of the things that are your responsibility.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">How do I get my files after I buy?</button>
+                <div class="faq-a">Right after checkout, you'll get a download link on-screen and a confirmation email with the same link. Click it, download the zip file, unzip it, and you'll have all 9 PDFs ready to print.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Your Home Deserves a Plan</h2>
+        <p>Get the full 8-PDF bundle and start taking care of your home with a system that actually works.</p>
+        <a href="#checkout-pending" data-product-num="1" class="lemonsqueezy-button cta-btn">
+            Download the Planner Bundle<span class="price">— $9.99</span>
+        </a>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+</footer>
+
+<script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            // close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+</script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Complete Home Maintenance Planner'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

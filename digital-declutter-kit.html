@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Declutter Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #0F172A;
+            background-color: #FFFFFF;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #0F172A;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #008080;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #008080;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1a2942 100%);
+            color: #FFFFFF;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero .highlight {
+            color: #008080;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #B0E0DE;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            background-color: #008080;
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #006666;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+        }
+
+        /* Content Sections */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #008080;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: #F8FAFB;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #008080;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 128, 128, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .feature-card h4 {
+            color: #008080;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            color: #4B5563;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Numbered List */
+        .numbered-list {
+            list-style: none;
+            counter-reset: item;
+        }
+
+        .numbered-list li {
+            counter-increment: item;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .numbered-list li:before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: -5px;
+            background: #008080;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .numbered-list li strong {
+            color: #0F172A;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .numbered-list li p {
+            color: #4B5563;
+            margin: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .testimonial {
+            background: #F8FAFB;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .testimonial p {
+            color: #4B5563;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            color: #008080;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: #008080;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            color: #4B5563;
+            line-height: 1.8;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: linear-gradient(135deg, #0F172A 0%, #1a2942 100%);
+            color: #FFFFFF;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links a {
+                margin-left: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .highlight-box {
+            background: #F0FFFE;
+            border-left: 4px solid #008080;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Coffee Shop Office</div>
+            <div class="nav-links">
+                <a href="#whats-included">What's Inside</a>
+                <a href="#why-it-works">Why It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Reclaim Your <span class="highlight">Attention</span></h1>
+        <p class="hero-subtitle">The Digital Reset Method</p>
+        <p>A systematic approach to audit, declutter, and redesign your entire digital life—with 12 worksheets and proven frameworks.</p>
+        <button class="cta-button">Get the Kit Now - $9.99</button>
+    </section>
+
+    <!-- Why It Works -->
+    <section class="section" id="why-it-works">
+        <h2 class="section-title">Why The Digital Reset Method Works</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>⭐ Systematic</h4>
+                <p>Audit first, then clean up one area at a time. Not everything at once. This creates sustainable change, not overwhelm.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>📊 Data-Driven</h4>
+                <p>See actual numbers about what you're managing and what you're spending. Numbers don't lie. They inspire action.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>✨ Practical</h4>
+                <p>Every worksheet is designed for immediate, real-world application. Not theory. Not motivation. Actionable frameworks.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>🔄 Sustainable</h4>
+                <p>You're building systems and habits, not relying on willpower. Your improvements stick because they're intentional.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>💰 Money-Saving</h4>
+                <p>Most people find 3-6 unused subscriptions. This kit often pays for itself many times over in the first month.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>🎯 Flexible</h4>
+                <p>Work digitally or print. Go fast or slow. Customize to your life. There are no rigid rules—only frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="section" id="whats-included">
+        <h2 class="section-title">12 PDF Worksheets Included</h2>
+
+        <div class="highlight-box">
+            <p><strong>The 8-Step Digital Reset Framework + 4 Bonus Tracking Tools</strong></p>
+        </div>
+
+        <ol class="numbered-list">
+            <li>
+                <strong>Getting Started Guide</strong>
+                <p>Your roadmap showing which worksheets to use in order and why. Explains the entire system and the recommended reading sequence.</p>
+            </li>
+
+            <li>
+                <strong>Device Audit Worksheet</strong>
+                <p>Inventory all your devices and apps. See your complete digital landscape on paper. This clarity changes everything.</p>
+            </li>
+
+            <li>
+                <strong>Email Inbox Zero System</strong>
+                <p>Master the proven 4-folder method to reach and maintain inbox zero. No more drowning in unread messages.</p>
+            </li>
+
+            <li>
+                <strong>Password & Account Inventory</strong>
+                <p>Document all your accounts. Decide which ones actually serve you. Find orphaned accounts you've forgotten about.</p>
+            </li>
+
+            <li>
+                <strong>Subscription Audit Tracker</strong>
+                <p>Discover hidden subscriptions. Calculate your monthly waste. See exactly where your money is going.</p>
+            </li>
+
+            <li>
+                <strong>Social Media Cleanup Checklist</strong>
+                <p>Systematically audit and clean up each platform. Remove yourself from the ones that don't serve you.</p>
+            </li>
+
+            <li>
+                <strong>Cloud Storage Organizer</strong>
+                <p>Consolidate files across services. Eliminate digital clutter. Create a sustainable folder structure.</p>
+            </li>
+
+            <li>
+                <strong>Notification Audit Tracker</strong>
+                <p>Identify every notification source. Decide what deserves your focus. Disable the rest. Reclaim your attention.</p>
+            </li>
+
+            <li>
+                <strong>Attention Budget Planner</strong>
+                <p>Allocate your attention like a financial budget. See where your focus is going. Reclaim agency over your time.</p>
+            </li>
+
+            <li>
+                <strong>Digital Declutter Audit</strong>
+                <p>A comprehensive assessment of your entire digital ecosystem. The full picture before and after your reset.</p>
+            </li>
+
+            <li>
+                <strong>Monthly Digital Wellness Tracker</strong>
+                <p>Track progress. Celebrate wins. Maintain improvements long-term. Reflection prompts and adjustment strategies.</p>
+            </li>
+
+            <li>
+                <strong>7-Day Digital Detox Challenge</strong>
+                <p>A structured reset with daily challenges. 15-20 minutes per day. Cement your new habits with guided reflection prompts.</p>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="section">
+        <h2 class="section-title">Who This Is For</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>🏢 Professionals</h4>
+                <p>Drowning in notifications and emails? This kit helps you reach and maintain inbox zero and reclaim focus.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>👨‍👩‍👧 Parents</h4>
+                <p>Want to understand your own digital habits before talking to your kids? Start here. Then model healthy behavior.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>⏰ Time-Strapped Professionals</h4>
+                <p>Whose focus keeps slipping throughout the day? This method returns your attention to you.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>💰 Budget-Conscious People</h4>
+                <p>Paying for services you forgot you had? The Subscription Audit alone saves most people $50-200/month.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>🌍 Remote Workers</h4>
+                <p>Struggling with digital boundaries at home? This kit helps you design an intentional digital environment.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>🔄 Habit Builders</h4>
+                <p>Ready to build sustainable change? This is for people who want to redesign their digital life intentionally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <h2 class="section-title">What Users Say</h2>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"I found 8 unused subscriptions on my first pass. That alone saved me $180/month. The worksheets are practical and actually useful. Real change happened."</p>
+                <div class="testimonial-author">— Sarah M., Project Manager</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"The Email Inbox Zero System changed my work life. I don't constantly drown in unread messages anymore. This kit just keeps paying dividends."</p>
+                <div class="testimonial-author">— James T., Software Developer</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"As a parent, I wanted to understand my own digital habits first. This kit gave me clarity and frameworks I can actually explain to my kids."</p>
+                <div class="testimonial-author">— Emma K., Parent</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"Surprised by how thorough this is. The Device Audit showed me I had apps I completely forgot about. Exactly what I needed."</p>
+                <div class="testimonial-author">— Michael R., Entrepreneur</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Is this just another digital detox guide?</div>
+            <div class="faq-answer">No. The Digital Reset Method is a systematic framework with 12 specific worksheets designed to audit, declutter, and redesign your entire digital life. You're getting a complete system with proven frameworks, not motivation or generic advice.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How long does this take?</div>
+            <div class="faq-answer">The core audits take 2-3 weeks at a relaxed pace. The 7-Day Challenge is 15-20 minutes daily. Work at your own speed. There's no race. Many people complete the full kit over a month while others finish in 2 weeks.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I print these?</div>
+            <div class="faq-answer">Yes! All PDFs are optimized for 8.5" x 11" paper. Many people prefer pen and paper. You choose what works for you—digital or printed.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will this really save me money?</div>
+            <div class="faq-answer">Most people find 3-6 unused subscriptions. That typically saves $50-200+ monthly. This kit often pays for itself many times over in the first month.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What if the challenge is too hard?</div>
+            <div class="faq-answer">That's exactly why you have the Monthly Tracker. It's designed to help you reflect, adjust, and build sustainable habits—not chase perfection or rigid rules.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What's the guarantee?</div>
+            <div class="faq-answer">We're confident you'll find value. If you're not satisfied within 30 days, we'll refund your purchase. No questions asked. Your satisfaction matters.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Who is behind this?</div>
+            <div class="faq-answer">Coffee Shop Office—digital wellness tools designed for modern professionals. We focus on practical frameworks that work in real life, not theory.</div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <h2>Your Attention Is Your Most Valuable Resource</h2>
+        <p>Don't let it be controlled by notifications and algorithms.</p>
+        <p>Start your digital reset today.</p>
+        <button class="cta-button">Get the Digital Declutter Kit - $9.99</button>
+        <p style="margin-top: 2rem; opacity: 0.85; font-size: 0.95rem;">✓ 12 PDF Worksheets | ✓ Instant Download | ✓ 30-Day Guarantee | ✓ Lifetime Access</p>
+    </section>
+
+    <script>
+        function scrollToCheckout() {
+            // This would typically link to your checkout flow
+            alert('Redirect to checkout coming soon!');
+        }
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Digital Declutter Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

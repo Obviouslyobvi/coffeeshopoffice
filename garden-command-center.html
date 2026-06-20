@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garden Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Color Palette */
+        :root {
+            --garden-green: #2D6A4F;
+            --warm-cream: #FFF8F0;
+            --rich-brown: #5C4033;
+            --sunflower: #F4B942;
+            --light-green: #E8F3ED;
+            --text-dark: #2C3E2F;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, var(--garden-green) 0%, #1f4d34 100%);
+            color: var(--warm-cream);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .header-subtext {
+            font-size: 1.1em;
+            color: var(--sunflower);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: var(--sunflower);
+            color: var(--rich-brown);
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(244, 185, 66, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #f0a820;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 185, 66, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--warm-cream);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.2em;
+            color: var(--garden-green);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Feature Grid */
+        .features {
+            background-color: #ffffff;
+            padding: 60px 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: var(--garden-green);
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--light-green);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--sunflower);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(45, 106, 79, 0.15);
+        }
+
+        .feature-card h3 {
+            color: var(--garden-green);
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: var(--text-dark);
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        /* What's Included Section */
+        .whats-included {
+            background-color: var(--warm-cream);
+            padding: 60px 20px;
+        }
+
+        .whats-included h2 {
+            text-align: center;
+            color: var(--garden-green);
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .pdf-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .pdf-item {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .pdf-item h4 {
+            color: var(--garden-green);
+            margin-bottom: 10px;
+            font-size: 1.15em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pdf-icon {
+            color: var(--sunflower);
+            font-size: 1.3em;
+        }
+
+        .pdf-pages {
+            color: var(--rich-brown);
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pdf-item p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--light-green) 0%, #ffffff 100%);
+            padding: 60px 20px;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            color: var(--garden-green);
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(45, 106, 79, 0.1);
+            border-top: 4px solid var(--sunflower);
+        }
+
+        .stars {
+            color: var(--sunflower);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        .testimonial p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            color: var(--garden-green);
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #ffffff;
+            padding: 60px 20px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            color: var(--garden-green);
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: var(--light-green);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--garden-green);
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #dce9e0;
+        }
+
+        .faq-toggle {
+            font-size: 1.5em;
+            color: var(--sunflower);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: var(--warm-cream);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            color: var(--garden-green);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .pricing-box {
+            background: #ffffff;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.15);
+            border: 2px solid var(--garden-green);
+        }
+
+        .price {
+            font-size: 3em;
+            color: var(--sunflower);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .price-note {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .price-features li {
+            list-style: none;
+            padding: 10px 0;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-features li:before {
+            content: "✓";
+            color: var(--sunflower);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Footer Section */
+        footer {
+            background: var(--garden-green);
+            color: var(--warm-cream);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95em;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .footer-links {
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: var(--sunflower);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .hero h2,
+            .features h2,
+            .whats-included h2,
+            .testimonials h2,
+            .faq h2,
+            .pricing h2 {
+                font-size: 1.6em;
+            }
+
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1em;
+            }
+
+            .price {
+                font-size: 2.2em;
+            }
+
+            .feature-grid,
+            .pdf-list,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header/Hero Section -->
+    <header>
+        <div class="container">
+            <p class="header-subtext">Spring Planting Season Is Here</p>
+            <h1>Garden Command Center</h1>
+<p><strong>The Organized Garden Management System:</strong> A 9-template garden planning and tracking system for seed inventory, planting schedules, harvest logs, and seasonal expenses.</p>
+
+            <p>Master Your Garden with 8 Complete Planning & Tracking PDFs</p>
+            <button class="cta-button">Get Garden Command Center - $9.99</button>
+        </div>
+    </header>
+
+    <!-- Hero Benefits -->
+    <section class="hero">
+        <div class="container">
+            <h2>Plan Better, Grow Better, Harvest More</h2>
+            <p>Stop guessing. Start organizing. The Garden Command Center gives you 14 pages of planning tools, tracking sheets, and reference guides to control every aspect of your vegetable, herb, and flower garden.</p>
+            <p style="color: var(--sunflower); font-weight: 600; font-size: 1.05em; margin-top: 20px;">Perfect timing: Spring planting searches are peaking now—get organized before the rush.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Gardeners Choose Garden Command Center</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Plan Your Entire Season</h3>
+                    <p>Seasonal vegetable, herb, and flower planning guide. Know exactly what to plant, when to plant it, and succession planting windows for continuous harvests.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📐 Design Before You Dig</h3>
+                    <p>Grid-based layout templates for raised beds and in-ground gardens. Visualize spacing, layout, and plant placement before buying a single seed.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌱 Never Waste Seeds Again</h3>
+                    <p>Track 40+ seed varieties with germination dates, storage notes, and variety information. Know exactly what you have before buying duplicates.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Monitor Every Plant</h3>
+                    <p>Track up to 15 individual plants with watering schedules, fertilizing notes, pruning records, and pest observations. Know exactly what each plant needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🥬 Track Harvests & Yields</h3>
+                    <p>Log every harvest with dates and quantities. Seasonal summary helps you plan rotations, identify your most productive plants, and measure success year-over-year.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Measure Your Garden's ROI</h3>
+                    <p>Track all garden expenses monthly and calculate profitability. See exactly how much your garden is saving you—and plan your budget for next season.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included">
+        <div class="container">
+            <h2>Complete 14-Page System (9 PDFs)</h2>
+            <div class="pdf-list">
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">📅</span> Garden Planner</h4>
+                    <p class="pdf-pages">3 Pages</p>
+                    <p>Seasonal vegetable, herb, and flower planning guide with succession planting schedules and frost date considerations for your growing zone.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">📐</span> Garden Layout Template</h4>
+                    <p class="pdf-pages">2 Pages</p>
+                    <p>Grid-based design tools for both raised beds and in-ground gardens. Plan spacing, visualize your layout, and design before you plant.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">🌱</span> Seed Inventory Tracker</h4>
+                    <p class="pdf-pages">2 Pages</p>
+                    <p>Manage up to 40+ seed varieties with tracking for germination dates, storage conditions, germination rates, and variety notes.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">🌿</span> Plant Care Log</h4>
+                    <p class="pdf-pages">3 Pages</p>
+                    <p>Monitor up to 15 individual plants with detailed tracking for watering, fertilizing, pruning, and pest observations throughout the season.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">🥬</span> Harvest Tracker</h4>
+                    <p class="pdf-pages">1 Page</p>
+                    <p>Log every harvest with dates, quantities, and crop variety. Includes seasonal summary to measure productivity and plan rotations.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">🪲</span> Pest & Disease Reference</h4>
+                    <p class="pdf-pages">1 Page</p>
+                    <p>Quick-access guide to common garden pests and diseases with organic solutions. Keep it handy for fast problem-solving without chemicals.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">💰</span> Garden Expense Tracker</h4>
+                    <p class="pdf-pages">1 Page</p>
+                    <p>Track all garden costs monthly (seeds, soil, tools, amendments, water). Built-in ROI calculator measures garden profitability year-over-year.</p>
+                </div>
+                <div class="pdf-item">
+                    <h4><span class="pdf-icon">📓</span> Garden Journal Pages</h4>
+                    <p class="pdf-pages">2 Pages</p>
+                    <p>Weekly observation journal with 8 pre-structured entries for weather notes, growth observations, successes, and lessons learned from each week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Trusted by Home Gardeners</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"I've been gardening for 5 years and never been this organized. The layout template saved me so much space by planning before planting. Already planning next season with the harvest data I collected!"</p>
+                    <div class="testimonial-author">— Jennifer M., Pennsylvania</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"As a beginner, I was overwhelmed with what to plant and when. This system walked me through everything step-by-step. I went from killing plants to a 90% success rate. Worth every penny!"</p>
+                    <div class="testimonial-author">— Marcus T., California</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"The seed tracker alone has saved me money. I stopped buying seeds I already had. Plus the ROI calculator showed my garden is saving our family $400+ per year on produce. Game changer!"</p>
+                    <div class="testimonial-author">— Sarah L., Michigan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What format do I receive the files in?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All files are in PDF format. You'll receive 8 separate PDFs (14 pages total) that you can download immediately after purchase. PDFs are editable and printable, so you can fill them in digitally on your computer or tablet, or print them and fill in by hand.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I print these and use them in my garden?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! These are designed to be used on screen or on paper. Many gardeners print the tracking sheets and keep them in a garden notebook or binder. The PDFs are fully printable and optimized to look great on paper.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need any special software to open them?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. PDFs open with any free PDF reader (Adobe Reader, Preview on Mac, built-in PDF viewers on phones and tablets). No special software required. If you want to edit them digitally, you can use any PDF editor or even many word processors.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will these work for my growing zone?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The Garden Planner includes guidance for adjusting planting dates based on your frost dates and growing zone. You'll fill in your specific zone information and use that to plan your seasonal timeline. Works for USDA zones 2-11.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many plants/seeds can I track?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Plant Care Log tracks up to 15 individual plants with detailed notes. The Seed Inventory Tracker handles 40+ seed varieties. The system is designed for home gardeners managing single or multiple beds. If you have a very large operation, you might print and repeat the tracking pages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this for vegetable gardening only?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. While the system emphasizes vegetables for maximum yield, it includes sections for herbs and flowers. You can use it for any combination of vegetables, herbs, flowers, and ornamental plants. The tracking sheets work for any plant type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use this system year after year?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The system is designed as an evergreen resource. You buy it once and have it forever. Each year you can reuse the planners and create new tracking sheets, or save your digital files and start fresh annually. Many gardeners use it year after year to build a complete growing history.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm a complete beginner?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Perfect! This system is designed with beginners in mind. The Garden Planner walks you through everything step-by-step, including what to plant when based on your zone. All the PDFs have clear instructions and are beginner-friendly. Many of our users bought this for their first garden and had great success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <div class="pricing-box">
+                <p style="font-size: 0.95em; color: #666; margin-bottom: 10px;">Garden Command Center</p>
+                <div class="price">$9.99</div>
+                <p class="price-note">One-time purchase. Download forever. No subscriptions.</p>
+
+                <ul class="price-features">
+                    <li>8 Complete PDFs (14 pages)</li>
+                    <li>Instant digital download</li>
+                    <li>Use on screen or print</li>
+                    <li>Works on any device</li>
+                    <li>Lifetime access</li>
+                    <li>Spring planting checklist included</li>
+                </ul>
+
+                <button class="cta-button" style="width: 100%; margin-top: 20px;">Purchase Garden Command Center</button>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #999;">30-day satisfaction guarantee • Instant delivery • No questions asked</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1em; margin-bottom: 15px;">© 2026 Coffee Shop Office.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>Garden Command Center is a digital product by Coffee Shop Office.</p>
+            <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9em;">Questions? Contact support@homesteadplanning.co</p>
+        </div>
+    </footer>
+
+    <!-- Lemon.js Script Reference for LemonSqueezy Integration -->
+    
+
+    <!-- FAQ Functionality -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // This would integrate with LemonSqueezy checkout
+                window.location.href = 'https://your-store.lemonsqueezy.com/checkout/products/garden-command-center';
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Garden Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

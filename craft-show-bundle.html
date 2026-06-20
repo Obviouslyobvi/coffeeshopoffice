@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Craft Show Bundle | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --orange: #E76F51;
+            --orange-light: #EE8B72;
+            --orange-glow: #F5A48D;
+            --navy: #264653;
+            --navy-light: #2A5566;
+            --cream: #FDF8EE;
+            --cream-dark: #F5EDE0;
+            --white: #FFFFFF;
+            --text-dark: #264653;
+            --text-body: #3D5A68;
+            --text-light: #6B8A98;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-body);
+            background: var(--cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1E4050 100%);
+            padding: 80px 24px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(231, 111, 81, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(231, 111, 81, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(231, 111, 81, 0.15);
+            border: 1px solid rgba(231, 111, 81, 0.3);
+            color: var(--orange-glow);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .hero h1 span { color: var(--orange-light); }
+
+        .hero-tagline {
+            color: var(--orange-glow);
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            font-weight: 600;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .hero-sub {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            max-width: 580px;
+            margin: 0 auto 36px;
+            position: relative;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 18px 48px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(231, 111, 81, 0.35);
+            position: relative;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(231, 111, 81, 0.5);
+        }
+
+        .hero-price {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-top: 16px;
+            position: relative;
+        }
+
+        .hero-price strong { color: var(--white); font-size: 1.1rem; }
+
+        .problem { background: var(--white); padding: 72px 24px; }
+        .problem .container { max-width: 720px; }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+        }
+
+        .problem h2 {
+            color: var(--navy);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+
+        .problem p { font-size: 1.05rem; margin-bottom: 16px; }
+
+        .pain-list { list-style: none; margin: 28px 0; padding: 0; }
+
+        .pain-list li {
+            padding: 12px 0 12px 36px;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .pain-list li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: #D94040;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .included { background: var(--cream); padding: 72px 24px; }
+
+        .included h2 {
+            color: var(--navy);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px 28px;
+            border: 1px solid rgba(38, 70, 83, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(38, 70, 83, 0.08);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+
+        .tag-core { background: rgba(38, 70, 83, 0.08); color: var(--navy); }
+        .tag-bonus { background: rgba(231, 111, 81, 0.15); color: #B8503A; }
+
+        .product-card h3 { color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+        .product-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
+
+        .countdown {
+            background: var(--navy);
+            padding: 72px 24px;
+            text-align: center;
+        }
+
+        .countdown h2 {
+            color: var(--white);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px 16px;
+        }
+
+        .countdown-time {
+            color: var(--orange-glow);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .countdown-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+
+        .difference {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            padding: 72px 24px;
+        }
+
+        .difference .container { max-width: 720px; }
+
+        .difference h2 {
+            color: var(--navy);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 28px;
+        }
+
+        .check-list { list-style: none; padding: 0; }
+
+        .check-list li {
+            padding: 14px 0 14px 40px;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid rgba(38, 70, 83, 0.06);
+        }
+
+        .check-list li:last-child { border-bottom: none; }
+
+        .check-list li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .final-cta h2 { color: var(--white); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+        .final-cta p { color: rgba(255, 255, 255, 0.7); font-size: 1.1rem; max-width: 520px; margin: 0 auto 36px; }
+        .final-cta .hero-cta { font-size: 1.2rem; padding: 20px 56px; }
+        .final-price { color: var(--orange-glow); font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; }
+        .final-price-note { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; margin-bottom: 32px; }
+
+        footer {
+            background: #0F2028;
+            padding: 40px 24px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 56px 20px 44px; }
+            .hero-cta { padding: 16px 36px; font-size: 1.05rem; }
+            .product-grid { grid-template-columns: 1fr; }
+            .countdown-grid { grid-template-columns: 1fr 1fr; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<section class="hero">
+        <div class="container">
+            <div class="hero-badge">Bundle &amp; Save</div>
+            <h1>The Craft Show<br><span>Bundle</span></h1>
+            <p class="hero-tagline">Every Show. Prepared. Profitable. Handled.</p>
+            <p class="hero-sub">3 essential show-day tools plus exclusive countdown checklist and welcome guide. Your complete vendor toolkit in one download.</p>
+            <a href="#" class="hero-cta lemonsqueezy-button">Get the Show Bundle</a>
+            <p class="hero-price"><strong>$9.99</strong> — Instant PDF Download</p>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <p class="section-label">Sound Familiar?</p>
+            <h2>Every show is the same scramble. It doesn't have to be.</h2>
+            <p>You've done craft shows before. Maybe a lot of them. But the prep is always chaotic, you always forget something, and you never feel fully ready when the morning comes.</p>
+            <ul class="pain-list">
+                <li>No system for tracking which shows to apply to and when</li>
+                <li>Packing is a frantic last-minute sprint every single time</li>
+                <li>No clear picture of which shows actually make you money</li>
+                <li>Can't remember what worked (or didn't) at the last event</li>
+                <li>No seasonal strategy for picking shows or planning inventory</li>
+            </ul>
+            <p><strong>The Craft Show Bundle gives you one system for your entire show season.</strong></p>
+        </div>
+    </section>
+
+    <section class="included">
+        <div class="container">
+            <p class="section-label" style="text-align:center;">What's Inside</p>
+            <h2>3 Core Tools + 2 Bundle-Exclusive Extras</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="card-tag tag-core">Core Product</span>
+                    <h3>Craft Show Command Center</h3>
+                    <p>8 worksheets covering applications, booth setup, inventory packing, real-time sales tracking, profit calculation, post-show review, email capture, and season calendar.</p>
+                </div>
+                <div class="product-card">
+                    <span class="card-tag tag-core">Core Product</span>
+                    <h3>Craft Show Season Planner</h3>
+                    <p>Map your full season: show selection, prep timelines, seasonal inventory, revenue goals, and strategic planning for which shows to prioritize.</p>
+                </div>
+                <div class="product-card">
+                    <span class="card-tag tag-core">Core Product</span>
+                    <h3>The Pricing Workbook</h3>
+                    <p>Calculate real costs and set profitable prices. Make sure every product at every show earns what it should.</p>
+                </div>
+                <div class="product-card">
+                    <span class="card-tag tag-bonus">Bundle Exclusive</span>
+                    <h3>Welcome Guide</h3>
+                    <p>How each tool works together, what to use when, and a seasonal show planning timeline for your year.</p>
+                </div>
+                <div class="product-card">
+                    <span class="card-tag tag-bonus">Bundle Exclusive</span>
+                    <h3>Pre-Show Countdown Checklist</h3>
+                    <p>The master checklist: 4 weeks out, 2 weeks, 1 week, day before, and morning of. Combines the best prep from all bundled products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <div class="container">
+            <p class="section-label" style="color: var(--orange-glow);">Exclusive Countdown Checklist</p>
+            <h2>Every Show. Every Step. Covered.</h2>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-time">4 Weeks Out</div>
+                    <div class="countdown-desc">Confirm booth, plan inventory, check pricing</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-time">2 Weeks Out</div>
+                    <div class="countdown-desc">Finalize products, prep signage, test equipment</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-time">1 Week Out</div>
+                    <div class="countdown-desc">Start packing, print trackers, prep cash</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-time">Day Before</div>
+                    <div class="countdown-desc">Load car, charge devices, set alarm</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-time">Morning Of</div>
+                    <div class="countdown-desc">Final check, grab the essentials, go sell</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="difference">
+        <div class="container">
+            <p class="section-label">Why a Bundle?</p>
+            <h2>Why This Beats Buying Separately</h2>
+            <ul class="check-list">
+                <li>Save money compared to buying the Command Center, Season Planner, and Pricing Workbook individually</li>
+                <li>The welcome guide shows how all three tools work as one integrated system</li>
+                <li>The countdown checklist is exclusive to this bundle and pulls the best from all three products</li>
+                <li>Covers the full show lifecycle: season strategy, show prep, show day, and post-show analysis</li>
+                <li>One download, one system, every show for the rest of the year</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <p class="section-label" style="color: var(--orange-glow);">Ready?</p>
+            <h2>Show Season Starts Here</h2>
+            <div class="final-price">$9.99</div>
+            <p class="final-price-note">One-time purchase. Instant download. Print forever.</p>
+            <p>3 essential tools. 2 exclusive extras. Every show, handled.</p>
+            <a href="#" class="hero-cta lemonsqueezy-button">Get the Show Bundle</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+            <p style="margin-top: 8px;">Questions? Reach out at hello@craftprofitco.com</p>
+        </div>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Craft Show Bundle'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

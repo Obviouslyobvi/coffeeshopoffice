@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Etsy Shop Management Planner | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            background-color: #FDF8EE;
+        }
+
+        a {
+            color: #F56400;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #F56400 0%, #1A535C 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .brand {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 18px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FDF8EE;
+            color: #F56400;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: #1A535C;
+            border-bottom: 3px solid #F56400;
+            padding-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #1A535C;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* What's Inside Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-left: 4px solid #F56400;
+            padding: 24px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h4 {
+            color: #1A535C;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            color: #555;
+        }
+
+        /* Benefits Section */
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .benefit-item {
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .benefit-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #F56400;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            background: #FDF8EE;
+            padding: 18px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1A535C;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f0ede5;
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 24px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            transition: transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1A535C 0%, #2D4D56 100%);
+            color: white;
+            padding: 48px 24px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-color: #F56400;
+            margin-top: 0;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            background-color: #F56400;
+            color: white;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-secondary:hover {
+            background-color: #e05200;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2D2D2D;
+            color: #FDF8EE;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+            color: #FDF8EE;
+        }
+
+        .footer-links {
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            color: #F56400;
+            margin: 0 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .price {
+                font-size: 28px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header / Hero -->
+    <header>
+        <div class="container">
+            <div class="brand">Coffee Shop Office.</div>
+            <h1>Etsy Shop Management Planner</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Etsy Shop Planning System</p>
+
+            <p class="tagline">Run your shop like a business, not a hobby.</p>
+            <div class="price">$9.99</div>
+            <a href="#purchase" class="cta-button">Get the Planner</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- The Problem -->
+            <section>
+                <h2>You Know Your Shop Has Potential</h2>
+                <p>You're listing products, responding to buyers, and shipping orders. But between Etsy's dashboard, spreadsheets, and sticky notes scattered across your desk, where are you tracking the numbers that actually move the needle?</p>
+                <p>You know your conversion rate matters. You know which listings are dead weight. You know competitors are eating your lunch. But without a clear system, you're guessing instead of knowing.</p>
+                <p>What if you had everything in one place? Not another app. Not another subscription. Just a comprehensive, pen-and-paper system built specifically for Etsy sellers who want to think like a business owner.</p>
+            </section>
+
+            <!-- What's Inside -->
+            <section>
+                <h2>What's Inside</h2>
+                <p>Seven carefully designed printable PDFs covering every angle of shop management:</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4>Shop Dashboard</h4>
+                        <p>Track 12 months of key metrics: sales, revenue, conversion rate, average order value, star rating, views, and more. One page per month.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Listing Optimization Tracker</h4>
+                        <p>Monitor up to 30 listings. Track views, favorites, sales, conversion rates, tags, and last update date. Spot your winners instantly.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Review & Feedback Log</h4>
+                        <p>Keep organized notes on reviews: ratings, buyer names, what they said, whether you responded, and follow-up actions needed.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Shop Update Calendar</h4>
+                        <p>Plan 6 months ahead. Schedule new listings, renewals, photo updates, seasonal promotions, and sales. Stop reacting. Start planning.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Keyword Research Tracker</h4>
+                        <p>Research keywords with search volume and competition data. Track which keywords you're using and how they're performing across your listings.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Competitor Watch List</h4>
+                        <p>Track 10 competitors side-by-side. Monitor price ranges, review counts, what they do well, and—most importantly—what YOU do better.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits -->
+            <section>
+                <h2>Why This Actually Works</h2>
+
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <strong>No More Apps</strong> — Everything in one printable workbook. No logins. No notifications. No subscriptions.
+                    </div>
+
+                    <div class="benefit-item">
+                        <strong>Pen & Paper Power</strong> — Writing things down helps you remember them. And you can see everything at a glance without refreshing a dashboard.
+                    </div>
+
+                    <div class="benefit-item">
+                        <strong>Built for Etsy Sellers</strong> — Every section is designed around how Etsy actually works—not generic business metrics.
+                    </div>
+
+                    <div class="benefit-item">
+                        <strong>See Patterns Faster</strong> — Tracking data on paper forces you to review it monthly. You spot trends that spreadsheets hide.
+                    </div>
+
+                    <div class="benefit-item">
+                        <strong>Make Better Decisions</strong> — Data becomes decisions. You'll know exactly which listings to optimize, which competitors to monitor, and when to launch promos.
+                    </div>
+
+                    <div class="benefit-item">
+                        <strong>Print Once, Use All Year</strong> — Monthly pages mean you can plan your entire year in advance and print as needed.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Who It's For -->
+            <section>
+                <h2>Who This Is For</h2>
+                <ul>
+                    <li><strong>Etsy sellers who love analog tools</strong> — You prefer pen, paper, and highlighters to screens and spreadsheets.</li>
+                    <li><strong>Shop owners ready to scale</strong> — You're past the hobby phase and want to run things like a real business.</li>
+                    <li><strong>People tired of "seller tools"</strong> — You've tried the apps. They're just spreadsheets with prettier names. You want something designed specifically for you.</li>
+                    <li><strong>Planners who actually use their planners</strong> — You print things. You fill them out. You review them. You make changes based on what you learn.</li>
+                </ul>
+            </section>
+
+            <!-- FAQ -->
+            <section>
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I print this in black and white?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. The design works beautifully in both color and black & white. The Etsy orange and teal accents are nice in color, but the planner is fully functional without them.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many pages is this?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Across 8 PDFs, you get approximately 30+ pages including the shop dashboard (12 monthly pages), listing optimizer (2 pages with room for 30 listings), review log, shop update calendar (6 months), keyword tracker, competitor watch list, and shop policies planner.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this a digital download or physical product?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Digital download. You'll receive all 8 PDF files immediately after purchase. Print them whenever and as many times as you need throughout the year.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I share this with my shop partner?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This is a single-license product. If you have a shop partner, they'd need their own copy. We offer a discount code for bulk purchases—contact us for details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I don't fill it out perfectly?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Perfect is the enemy of progress. Fill it out as completely as you can each month. The goal is to build a system you'll actually use, not to achieve perfection. Even partial tracking is better than no tracking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Stop Guessing. Start Tracking.</h2>
+                <p>Your Etsy shop deserves a system as thoughtful as your products.</p>
+                <a href="#purchase" class="cta-button-secondary">Get the Planner — $9.99</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+            <p>Made for sellers who treat their craft like a business.</p>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lemon Squeezy
+        window.LemonSqueezy && window.LemonSqueezy.Setup({
+            eventHandler: (event) => {
+                if (event.event === 'checkout_completed') {
+                    console.log('Purchase completed:', event.data);
+                }
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Etsy Shop Management Planner'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

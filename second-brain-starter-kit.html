@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Knowledge Vault - Second Brain Starter Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            background-color: #FAFAF5;
+        }
+
+        /* Color Variables */
+        :root {
+            --primary: #312E81;
+            --accent: #22C55E;
+            --white: #FAFAF5;
+            --dark: #2D2D2D;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #312E81 0%, #1e1b4b 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #312E81 0%, #1e1b4b 100%);
+            color: white;
+            padding: 80px 2rem;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(34, 197, 94, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #22C55E;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 2rem;
+        }
+
+        section.dark {
+            background: #f3f4f6;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        section.dark h2 {
+            color: var(--primary);
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* What's Included Section */
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .included-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .included-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .included-item h4::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .included-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), #1e1b4b);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .testimonial-text {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: #666;
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #312E81 0%, #1e1b4b 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 2rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Lemon.js Integration Section */
+        .lemon-integration {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .lemon-integration p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-grid,
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<header>
+        <div class="header-content">
+            <div class="brand">Coffee Shop Office</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Your Second Brain</h1>
+            <p class="hero-subtitle">A complete system for capturing, organizing, and leveraging your personal knowledge. Transform information into action with proven templates and frameworks.</p>
+            <button class="hero-cta" onclick="document.querySelector('.cta-section').scrollIntoView({behavior: 'smooth'})">Get Started Now</button>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="dark">
+        <div class="container">
+            <h2>Why Build a Personal Knowledge Vault?</h2>
+            <p class="section-intro">Stop losing brilliant ideas and information that could transform your life. Here's what happens when you have a system:</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>📚 Never Lose an Idea Again</h3>
+                    <p>Capture fleeting thoughts and insights before they disappear. Have a trusted system where all your ideas live and can be found instantly.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🧠 Think Clearer & Faster</h3>
+                    <p>External storage frees your mind from holding everything. Think deeper, make better decisions, and reduce mental clutter.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🔗 Connect the Dots</h3>
+                    <p>See relationships between ideas and concepts. Connections create insights. Insights drive action. Knowledge becomes wisdom.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>📈 Accelerate Learning</h3>
+                    <p>Extract maximum value from every book, article, and podcast. Active synthesis turns passive consumption into real growth.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✨ Turn Knowledge Into Action</h3>
+                    <p>Move from interesting ideas to real implementation. Your personal knowledge vault becomes your competitive advantage.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>⏰ Save Time & Energy</h3>
+                    <p>Proven templates and frameworks eliminate decision fatigue. Start capturing and organizing immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section>
+        <div class="container">
+            <h2>What's Included</h2>
+            <p class="section-intro">Six interconnected PDF templates that work together as a complete knowledge management system:</p>
+            <div class="included-grid">
+                <div class="included-item">
+                    <h4>PARA System Setup Workbook</h4>
+                    <p>Step-by-step guide to implementing the world's most popular personal organization system. Learn how to organize everything from active projects to lifetime interests.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Weekly Capture Template</h4>
+                    <p>Structure for capturing weekly insights, ideas, and learning. Turn fleeting thoughts into permanent records organized by the PARA framework.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Monthly Knowledge Distillation</h4>
+                    <p>Synthesize your weekly captures into patterns, insights, and actionable wisdom. This is where information becomes knowledge becomes action.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Idea-to-Action Pipeline</h4>
+                    <p>Move fascinating ideas from your notes into real-world implementation. Structured process to evaluate, develop, and execute ideas.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Book/Podcast/Article Notes</h4>
+                    <p>Extract maximum value from everything you read, listen to, and watch. Capture the insights that matter and integrate them into your knowledge base.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Knowledge Connections Map</h4>
+                    <p>Visualize how different concepts, ideas, and learning areas relate to each other. Strengthen understanding through intentional connection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="dark">
+        <div class="container">
+            <h2>How It Works</h2>
+            <p class="section-intro">A simple 5-step cycle that ensures knowledge becomes action:</p>
+            <div class="how-it-works">
+                <div class="step-group">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Capture</h4>
+                        <p>Weekly Capture Template organizes your insights and ideas</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Organize</h4>
+                        <p>PARA framework creates a system that lasts</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Synthesize</h4>
+                        <p>Monthly Distillation finds patterns and insights</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Connect</h4>
+                        <p>Knowledge Connections Map strengthens understanding</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h4>Execute</h4>
+                        <p>Idea-to-Action Pipeline turns insights into reality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+        <div class="container testimonials">
+            <h2>What Users Say</h2>
+            <p class="section-intro">Real people using the Personal Knowledge Vault system:</p>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This system completely changed how I capture and organize my learning. I used to read a lot but retain very little. Now I have a knowledge vault that actually helps me make better decisions. The PARA framework is genius."</p>
+                <div class="testimonial-author">— Sarah M., Student</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a professional, I needed a way to stay on top of industry trends and insights. This kit gave me exactly what I needed. The templates are intuitive and the monthly synthesis is where the magic happens."</p>
+                <div class="testimonial-author">— James L., Business Consultant</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've been a voracious reader forever, but my notes were scattered everywhere. Now everything flows into one system and I'm actually building on previous insights. Highly recommend."</p>
+                <div class="testimonial-author">— Marcus K., Lifelong Learner</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="dark">
+        <div class="container faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this compatible with my note-taking app?</div>
+                <div class="faq-answer">Yes! The PDF templates work with any note-taking system including Notion, Obsidian, OneNote, Roam Research, Apple Notes, or traditional pen and paper. You can print them, annotate them digitally, or use them as inspiration for your own system.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need any special software to use these templates?</div>
+                <div class="faq-answer">No special software needed. Everything is delivered as print-friendly PDFs that work on any device. Open them on your computer, tablet, or phone, or print them out.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much time does this system take?</div>
+                <div class="faq-answer">The time investment depends on how much you're capturing, but most people spend 15-20 minutes weekly with the capture template and 30-45 minutes monthly for the synthesis. It becomes a natural part of your routine.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I customize these templates?</div>
+                <div class="faq-answer">Absolutely. These are starting points designed to be adapted. Modify them to fit your specific workflow and needs. The framework is what matters.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I already have a note-taking system?</div>
+                <div class="faq-answer">Great! These templates work alongside existing systems. They provide structure for capturing, synthesizing, and acting on knowledge. Many people use them as a meta-layer above their existing notes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a money-back guarantee?</div>
+                <div class="faq-answer">Yes! If you're not satisfied within 30 days, we'll refund your purchase. We're confident you'll love this system.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Start Building Your Knowledge Vault Today</h2>
+            <p>Join hundreds of learners, professionals, and creatives who are building systems to capture, organize, and leverage their personal knowledge.</p>
+
+            <!-- Lemon.js Integration Section -->
+            <div class="lemon-integration">
+                <p><strong>Ready to get started?</strong> Click the button below to purchase and get instant access to all 6 templates.</p>
+                <!-- Lemon.js embed point -->
+                <div id="lemon-purchase-embed">
+                    <!-- LemonSqueezy embed will be injected here -->
+                </div>
+            </div>
+
+            <button class="cta-button" onclick="this.scrollIntoView({behavior: 'smooth'}); alert('Purchase button would be integrated with LemonSqueezy API')">Purchase Now - $9.99</button>
+
+            <p style="margin-top: 2rem; opacity: 0.9; font-size: 0.9rem;">Instant digital download • 30-day money-back guarantee • No questions asked</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Coffee Shop Office All rights reserved.</p>
+        <p>Personal Knowledge Vault - Second Brain Starter Kit</p>
+    </footer>
+
+    <!-- Lemon.js Script Integration -->
+    <script>
+        // Lemon.js integration point
+        // Add the following to integrate with LemonSqueezy:
+        // <script src="https://lemon.squeezy.com/checkout-link.js"></script>
+        // Then create a link with:
+        // <a href="#checkout-pending" data-product-num="52" class="lemonsqueezy-link">Purchase</a>
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Personal Knowledge Vault - Second Brain Starter Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

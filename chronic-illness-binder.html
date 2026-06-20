@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chronic Illness Management Binder | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teal: #0D9488;
+            --cream: #FFF8F0;
+            --charcoal: #2D2D2D;
+            --coral: #F97066;
+            --light-teal: #D1FAE5;
+            --dark-charcoal: #1A1A1A;
+            --text-gray: #5A5A5A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: #FFFFFF;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--teal);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--cream) 0%, #F9FAFB 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background-color: var(--teal);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--teal);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--charcoal);
+            border-color: var(--charcoal);
+            box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            background-color: #FFFFFF;
+            padding: 4rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .pain-card {
+            background-color: var(--cream);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--coral);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .pain-card h3 {
+            color: var(--charcoal);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .pain-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* What's Included Section */
+        .whats-included {
+            background-color: var(--light-teal);
+            padding: 4rem 2rem;
+        }
+
+        .whats-included .section-title {
+            color: var(--charcoal);
+        }
+
+        .binder-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .binder-item {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .binder-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .binder-item h4 {
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .binder-item .pages {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .binder-item p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #FFFFFF;
+            padding: 4rem 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: var(--cream);
+            text-align: center;
+        }
+
+        .feature-check {
+            color: var(--teal);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature h3 {
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .feature p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--teal) 0%, #0F766E 100%);
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .testimonials .section-title {
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-4px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .stars {
+            color: #FCD34D;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--cream);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .pricing .section-title {
+            color: var(--charcoal);
+        }
+
+        .pricing-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .price-display {
+            font-size: 3.5rem;
+            color: var(--teal);
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .price-note {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-details {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .price-details li {
+            list-style: none;
+            padding: 0.5rem 0;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .price-details li:before {
+            content: "✓ ";
+            color: var(--teal);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: #FFFFFF;
+            padding: 4rem 2rem;
+        }
+
+        .faq .section-title {
+            color: var(--charcoal);
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--charcoal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--teal);
+        }
+
+        .faq-toggle {
+            font-size: 1.3rem;
+            color: var(--teal);
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1A1A1A 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background-color: var(--coral);
+            color: white;
+            padding: 1.1rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--coral);
+            cursor: pointer;
+        }
+
+        .cta-secondary:hover {
+            background-color: #E85A50;
+            border-color: #E85A50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(249, 112, 102, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .price-display {
+                font-size: 2.8rem;
+            }
+
+            .pain-grid,
+            .binder-items,
+            .features-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+
+            .pain-points,
+            .whats-included,
+            .features,
+            .testimonials,
+            .pricing,
+            .faq,
+            .final-cta {
+                padding: 2.5rem 1rem;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header -->
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="logo">Coffee Shop Office</div>
+                <div class="logo-sub">Digital Tools for Real Life</div>
+            </div>
+            <nav>
+                <a href="#whats-included">What's Included</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Health Command Center</h1>
+            <p class="tagline">Track. Prepare. Protect. Manage your condition, not the other way around.</p>
+            <p class="hero-subtitle">9 printable PDFs. The only chronic illness organizer built on the Three-Layer Control System. Track your symptoms, prepare for every appointment, protect your energy.</p>
+            <a href="#pricing" class="cta-primary">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="section-container">
+            <h2 class="section-title">Living with Chronic Illness is Overwhelming</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>You're Managing Multiple Medications</h3>
+                    <p>Remembering dosages, frequencies, side effects, and interactions across multiple medications. Did you take it today? When was the last dose?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Your Doctors Don't See the Full Picture</h3>
+                    <p>Each provider only knows about the appointment they see you for. Your complete medical history, symptom patterns, and daily struggles fall through the cracks.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Tracking Symptoms is Exhausting</h3>
+                    <p>You're living with the condition 24/7, but you only see your doctor every few months. Keeping track of patterns, triggers, and flare-ups requires serious effort.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Your Energy is Limited</h3>
+                    <p>You have finite energy to spend each day. Managing your illness shouldn't consume all of it. You're exhausted from the condition, not the managing.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Insurance and Costs Are Confusing</h3>
+                    <p>Tracking deductibles, out-of-pocket costs, and medical billing errors takes mental energy you don't have. Did you meet your deductible? How much is that test?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Information Lives in Different Places</h3>
+                    <p>Your insurance card is in your email, your lab results are on your portal, medication lists are scattered across provider offices, and you're the only one holding it together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="whats-included" id="whats-included">
+        <div class="section-container">
+            <h2 class="section-title">9 Printable Templates Inside</h2>
+            <div class="binder-items">
+                <div class="binder-item">
+                    <div class="item-icon">📊</div>
+                    <h4>Daily Symptom Tracker</h4>
+                    <div class="pages">3 pages</div>
+                    <p>Log your symptoms, severity levels, triggers, mood, energy, and sleep quality every day. Identify patterns that inform your treatment plan.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">💊</div>
+                    <h4>Medication Master List</h4>
+                    <div class="pages">2 pages</div>
+                    <p>One comprehensive list of every medication with dosages, frequencies, and side effects. Includes daily checkbox grid to track if you took each dose.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">🩺</div>
+                    <h4>Doctor Visit Prep Sheet</h4>
+                    <div class="pages">2 pages</div>
+                    <p>Pre-visit forms to organize questions and concerns, plus post-visit forms to capture diagnosis notes, new medications, and follow-ups. Set up for 10 visits.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">📋</div>
+                    <h4>Medical Team Directory</h4>
+                    <div class="pages">1 page</div>
+                    <p>All your providers, phone numbers, addresses, pharmacy details, and insurance info on one quick-reference page. No more digging through emails.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">🚨</div>
+                    <h4>Flare-Up Action Plan</h4>
+                    <div class="pages">1 page</div>
+                    <p>Emergency reference guide for crisis moments. Steps to take, who to contact, red flags to watch. Print and post on your fridge or share with caregivers.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">🔬</div>
+                    <h4>Lab Results Tracker</h4>
+                    <div class="pages">2 pages</div>
+                    <p>Monitor 12 different lab tests across 6 testing dates. Track progress over time and catch concerning changes at a glance.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">💰</div>
+                    <h4>Insurance & Costs Tracker</h4>
+                    <div class="pages">2 pages</div>
+                    <p>Log every medical expense, track deductible progress toward your annual limit, and maintain annual summaries for taxes or insurance claims.</p>
+                </div>
+
+                <div class="binder-item">
+                    <div class="item-icon">⚡</div>
+                    <h4>Self-Care & Energy Planner</h4>
+                    <div class="pages">1 page</div>
+                    <p>Weekly energy budget using spoon theory. Allocate your limited energy intentionally to avoid boom/bust cycles and protect your mental health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-container">
+            <h2 class="section-title">Why The Chronic Illness Management Binder</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Reduce Brain Fog</h3>
+                    <p>Stop trying to remember details. Everything is organized in one place.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Better Doctor Conversations</h3>
+                    <p>Show up prepared with organized notes and data your doctors actually need.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Catch Medical Errors</h3>
+                    <p>Track medications, dosages, and costs to spot problems early.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Save Time Every Week</h3>
+                    <p>No more digging through email for insurance IDs or provider numbers.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Control Your Narrative</h3>
+                    <p>You own your medical records and share exactly what you want with providers.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-check">✓</div>
+                    <h3>Ease Caregiver Burden</h3>
+                    <p>Family members and caregivers have everything they need in a crisis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <h2 class="section-title">What People Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I've lived with type 2 diabetes for 8 years, and this binder transformed how I manage my care. My doctor was amazed at how organized my information was. Finally, my condition doesn't manage me—I manage it."</p>
+                    <div class="testimonial-author">Sarah M.</div>
+                    <div class="testimonial-role">Type 2 Diabetes</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"As a caregiver for my mom with lupus, this binder was a lifesaver. Everything is in one place. I can actually help her instead of scrambling for information during a flare-up."</p>
+                    <div class="testimonial-author">James K.</div>
+                    <div class="testimonial-role">Caregiver</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Living with fibromyalgia meant I had zero mental energy left for organizing my health. The energy planner helped me understand my spoons and actually protect my time. I'm not healing faster, but I'm stressed less."</p>
+                    <div class="testimonial-author">Maria L.</div>
+                    <div class="testimonial-role">Fibromyalgia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-content">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="price-display">$9.99</div>
+            <p class="price-note">One-time digital download. Use forever, update anytime.</p>
+            <div class="price-details">
+                <ul>
+                    <li>9 comprehensive PDF templates</li>
+                    <li>Fillable PDFs—type or print and write</li>
+                    <li>Instant digital access (no shipping)</li>
+                    <li>Works on phone, tablet, or computer</li>
+                    <li>Lifetime access to your purchase</li>
+                    <li>Free future updates included</li>
+                </ul>
+            </div>
+            <a href="#" class="cta-primary">Purchase Now</a>
+            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 1rem;">Instant digital download. No shipping, no waiting.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What format do I get?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        You receive 8 PDF files immediately after purchase. Each PDF is fillable—you can type directly into the forms using Adobe Reader, Preview, or any PDF reader app. You can also print them and fill them out by hand, or use a hybrid approach. The files are yours to keep and use forever.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I edit these files?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. You can save edited versions of the PDFs for your personal use. You can customize them with your doctor names, add or remove fields, change colors—whatever works for your specific situation. You just can't redistribute or resell them.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will this work on my phone/tablet?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. PDFs work on any device. For the best experience on mobile, try apps like GoodNotes, Notability, or the free Adobe Reader app. Many people also keep their favorite templates printed at home and carry a copy when traveling.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this a digital download or physical product?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Digital download for $9.99. You get instant access via email. Download, print at home or use on any device. No physical items are shipped.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>I'm not tech-savvy. Can I still use this?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. PDFs are simple to use. If you're not comfortable typing on your computer, just print the pages and fill them out by hand. That's it. No software required, no fancy tech skills needed. The system works exactly the same way.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <h2>You Deserve a System That Works for You</h2>
+        <p>Stop letting your condition manage you. Invest $9.99 in the tools that put you back in control.</p>
+        <a href="#" class="cta-secondary">Get The Chronic Illness Management Binder</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Coffee Shop Office All rights reserved.</p>
+        <p>Tools and resources for people navigating life's biggest challenges.</p>
+    </footer>
+
+    <!-- Lemon Squeezy Script -->
+    
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.closest('.faq-item');
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Chronic Illness Management Binder'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

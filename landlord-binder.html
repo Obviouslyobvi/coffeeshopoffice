@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Landlord Property Management System | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --charcoal: #1F2937;
+            --white: #FFFFFF;
+            --blue: #3B82F6;
+            --amber: #F59E0B;
+            --light-gray: #F3F4F6;
+            --text-gray: #6B7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--amber);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #2D3E50 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 22px;
+            color: var(--amber);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #D1D5DB;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--amber);
+            color: var(--charcoal);
+        }
+
+        .btn-primary:hover {
+            background-color: #E59E0B;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .problem-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--blue);
+        }
+
+        .problem-card h3 {
+            color: var(--charcoal);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .problem-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .solution-text h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--charcoal);
+        }
+
+        .solution-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .solution-benefits {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .solution-benefits li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        .solution-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .solution-image {
+            background: linear-gradient(135deg, var(--light-gray) 0%, #E5E7EB 100%);
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            color: var(--text-gray);
+            font-style: italic;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Features Grid */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--blue);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* What's Included */
+        .included-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .form-item {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 3px solid var(--amber);
+        }
+
+        .form-item h4 {
+            color: var(--charcoal);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .form-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Social Proof */
+        .social-proof-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #2D3E50 100%);
+            color: var(--white);
+        }
+
+        .social-proof-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 3px solid var(--amber);
+        }
+
+        .testimonial-stars {
+            color: var(--amber);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .testimonial-title {
+            color: #D1D5DB;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: var(--white);
+            padding: 50px 40px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--blue);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .pricing-badge {
+            background-color: var(--amber);
+            color: var(--charcoal);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 20px 0;
+        }
+
+        .price-period {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            color: var(--text-gray);
+            font-size: 14px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--charcoal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            color: var(--blue);
+        }
+
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            display: none;
+            padding-bottom: 15px;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #D1D5DB;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--amber);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .tagline {
+                font-size: 18px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .solution-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Coffee Shop Office.</div>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Manage Your Rental Properties Like a Pro</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Rental Property System</p>
+
+            <p class="tagline">No software subscription required.</p>
+            <p>Complete forms and templates designed for self-managing landlords. Organize, track, and manage 1-10 properties with confidence.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Get Digital ($9.99)</button>
+                <button class="btn btn-secondary">Get Printed Binder ($9.99)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Why Most Landlords Struggle</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Scattered Information</h3>
+                    <p>Tenant details in email, rent records in a spreadsheet, maintenance info on paper. Finding anything takes forever.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Expensive Software</h3>
+                    <p>Property management software costs $20-50/month per property. That's $240-600 per year you're paying just to stay organized.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Tax Filing Chaos</h3>
+                    <p>When tax time arrives, you're scrambling to gather receipts and expenses. Nothing is organized or documented properly.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>No Legal Documentation</h3>
+                    <p>Property issues, tenant complaints, move-out damages—without proper records, you're vulnerable to disputes and liability.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Time Drain</h3>
+                    <p>You spend hours creating spreadsheets, hunting for information, and manually tracking everything about your properties.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Inconsistent Systems</h3>
+                    <p>No standardized approach means you miss important details, forget to track maintenance, and lose critical tenant information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>The Solution: Professional Organization in One Binder</h2>
+                    <p>The Rental Property Management Binder is a complete collection of 8 professionally designed PDF forms that give you everything you need to organize, track, and manage your rental business—without expensive software subscriptions.</p>
+                    <p>Stop piecing together different tools. Stop paying monthly fees. Stop scrambling at tax time. Everything you need is in one comprehensive binder.</p>
+                    <ul class="solution-benefits">
+                        <li>8 professional PDF forms for every aspect of property management</li>
+                        <li>One-time purchase, lifetime access—no monthly subscriptions</li>
+                        <li>Works digitally on any device or print for your desk</li>
+                        <li>Organized data ready for tax preparation and accounting</li>
+                        <li>Professional documentation to protect you legally</li>
+                        <li>Designed specifically for self-managing landlords</li>
+                    </ul>
+                </div>
+                <div class="solution-image">
+                    <p>Professional Binder Interface Mockup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (All 8 Forms) -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">All 8 Forms Included</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Property Overview Sheet</h3>
+                    <p>Create detailed profiles for each property with address, purchase price, mortgage details, insurance, utilities, and maintenance contacts. Keep all property details in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Tenant Tracker</h3>
+                    <p>Maintain comprehensive tenant information including move-in dates, lease terms, emergency contacts, and rental history. Never lose track of tenant details again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Rent Collection Log</h3>
+                    <p>A full 12-month grid to track rent payments, late fees, and collection status at a glance. Catch late payments immediately.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Maintenance Request Log</h3>
+                    <p>Document and manage up to 25 maintenance requests per property with priority, cost, and contractor information. Never miss a repair again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Expense Tracker</h3>
+                    <p>Organize expenses by category (repairs, utilities, insurance, property management) with monthly totals for tax preparation. Simplify tax filing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Lease Renewal Planner</h3>
+                    <p>Track lease expiration dates and renewal terms for up to 10 leases with renewal history. Plan ahead for lease renewals and adjustments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Move-In/Move-Out Inspection</h3>
+                    <p>Room-by-room inspection checklist with condition notes to document property state and identify damages. Protect yourself with proper documentation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Annual Property Review</h3>
+                    <p>Comprehensive year-end summary combining financial performance, occupancy rates, and planning for the next year. Make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Detail -->
+    <section class="included-section">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+            <div class="included-grid">
+                <div class="form-item">
+                    <h4>✓ Digital PDF Files</h4>
+                    <p>All 8 forms as editable PDF files. Use on your computer, tablet, or phone. No special software needed.</p>
+                </div>
+                <div class="form-item">
+                    <h4>✓ Instant Download</h4>
+                    <p>Get your complete binder immediately after purchase. Start organizing your properties right away.</p>
+                </div>
+                <div class="form-item">
+                    <h4>✓ Print Ready</h4>
+                    <p>Print forms and organize them in a physical binder for your desk or office. Fully formatted for printing.</p>
+                </div>
+                <div class="form-item">
+                    <h4>✓ Lifetime Access</h4>
+                    <p>One purchase, lifetime access. No monthly subscriptions, no recurring fees, no surprise charges.</p>
+                </div>
+                <div class="form-item">
+                    <h4>✓ Fully Editable</h4>
+                    <p>Edit all text fields in your PDF reader. Customize forms to match your property names and needs.</p>
+                </div>
+                <div class="form-item">
+                    <h4>✓ Quick-Start Guide</h4>
+                    <p>Included guide shows you how to use each form and set up your property management system quickly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 class="social-proof-title">Loved by Self-Managing Landlords</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a system that makes sense. I was using three different spreadsheets and couldn't find anything. This binder has everything organized and ready to go. Saved me hours on tax prep."</p>
+                    <p class="testimonial-author">Jennifer M.</p>
+                    <p class="testimonial-title">Landlord, 6 Properties</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I was paying $40/month for property management software. This binder does everything I need for $9.99. The move-in/move-out inspection form alone is worth it."</p>
+                    <p class="testimonial-author">Marcus T.</p>
+                    <p class="testimonial-title">Landlord, 4 Properties</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"As a new landlord, this gave me confidence that I'm managing my property professionally. I printed it all out and I'm using it every day. Highly recommend."</p>
+                    <p class="testimonial-author">Sarah L.</p>
+                    <p class="testimonial-title">First-Time Landlord, 1 Property</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3>Digital PDF</h3>
+                    <div class="price">$9.99</div>
+                    <p class="price-period">One-time purchase</p>
+                    <ul class="pricing-features">
+                        <li>All 9 PDF forms</li>
+                        <li>Instant download</li>
+                        <li>Editable & printable</li>
+                        <li>Lifetime access</li>
+                        <li>No subscriptions</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Buy Digital Now</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Printed Binder</h3>
+                    <div class="price">$9.99</div>
+                    <p class="price-period">One-time purchase</p>
+                    <ul class="pricing-features">
+                        <li>All 9 PDF forms</li>
+                        <li>Professionally printed</li>
+                        <li>Pre-assembled binder</li>
+                        <li>Lifetime access</li>
+                        <li>Ships within 5 days</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Buy Printed Binder</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Can I edit the PDF forms?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! All forms are fully editable in Adobe Reader (free) or any modern PDF viewer. You can type in all fields, customize text, and save your completed forms.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Will this work for digital or printed?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Both! The digital version is perfect for using on your computer, tablet, or phone. You can also print the forms and organize them in a physical binder for your desk.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>How many properties can I manage with this?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The binder is designed for 1-10 properties. If you have more properties, you can simply create multiple copies of the forms for each property.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Is there customer support?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! If you have any questions about using the forms or need clarification, our support team is here to help. Email us anytime and we'll respond within 24 hours.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Can I use this for commercial properties?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The binder is optimized for residential rental properties. Some forms may need customization for commercial use, but the core structure works well for both.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What if I'm not satisfied?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We offer a 30-day money-back guarantee. If you're not happy with the binder for any reason, we'll refund your purchase in full.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Do you offer updates?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We regularly update the forms based on landlord feedback and legal changes. All customers get free updates to their purchase.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What format are the files?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        All files are in PDF format. You'll receive a ZIP file containing all 8 forms plus a quick-start guide. Works on Windows, Mac, and Linux.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Coffee Shop Office.</h4>
+                    <p style="color: #D1D5DB; font-size: 14px; line-height: 1.6;">Creating tools that help small landlords manage properties professionally without expensive software.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help & Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Coffee Shop Office. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://lemon.js"></script>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            // Close other answers
+            document.querySelectorAll('.faq-answer').forEach(a => {
+                if (a !== answer) {
+                    a.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.faq-toggle').forEach(t => {
+                if (t !== toggle) {
+                    t.textContent = '+';
+                }
+            });
+
+            // Toggle current answer
+            answer.classList.toggle('active');
+            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Landlord Property Management System'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

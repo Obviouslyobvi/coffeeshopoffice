@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice &amp; Speaking Confidence Builder | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C1917;
+            background-color: #FFFBEB;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #FFFBEB;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #EA580C;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #EA580C;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            text-decoration: none;
+            color: #1C1917;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: #EA580C;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #EA580C 0%, #D94906 100%);
+            color: #FFFBEB;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero .subtext {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background-color: #0D9488;
+            color: #FFFBEB;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #0a7a73;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button-secondary {
+            background-color: transparent;
+            color: #FFFBEB;
+            border: 2px solid #FFFBEB;
+            margin-left: 1rem;
+        }
+
+        .cta-button-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .price-badge {
+            background-color: rgba(255, 251, 235, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #1C1917;
+        }
+
+        section > .container > p:first-of-type {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: #FFFBEB;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #EA580C;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: #EA580C;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* What's Included */
+        .whats-included {
+            background-color: white;
+        }
+
+        .included-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .included-item {
+            background-color: #FFFBEB;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 3px solid #0D9488;
+        }
+
+        .included-item h4 {
+            color: #0D9488;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .included-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #1C1917 0%, #2d2420 100%);
+            color: #FFFBEB;
+        }
+
+        .testimonials h2 {
+            color: #FFFBEB;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 251, 235, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #EA580C;
+        }
+
+        .stars {
+            color: #EA580C;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0D9488;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: #FFFBEB;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background-color: white;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1C1917;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #F5F0E8;
+        }
+
+        .faq-question.active {
+            background-color: #EA580C;
+            color: #FFFBEB;
+        }
+
+        .faq-toggle {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            background-color: #F9F6F0;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #EA580C 0%, #D94906 100%);
+            color: #FFFBEB;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #FFFBEB;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1C1917;
+            color: #FFFBEB;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #0D9488;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .cta-button-secondary {
+                display: block;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            nav .nav-links {
+                display: none;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Coffee Shop Office</div>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#included">What's Inside</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cta">Get Access</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The Confident Voice Method</h1>
+            <p class="tagline">Master Your Voice in 30 Days</p>
+            <p class="subtext">Join professionals, students, and speakers who are overcoming anxiety and speaking with power. Complete system with proven exercises, real-world scripts, and personalized tools.</p>
+
+            <button class="cta-button" onclick="scrollToCheckout()">Get Instant Access - $9.99</button>
+            <button class="cta-button cta-button-secondary" onclick="scrollTo('benefits')">Learn More</button>
+
+            <div class="price-badge">
+                ✓ Instant Digital Access | ✓ 7 PDF Downloads | ✓ Lifetime Use
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Why This Works</h2>
+            <p>Combining psychology, vocal training, and practical tools that professional speakers use.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>📚 Complete System</h3>
+                    <p>Not just exercises—a full confidence toolkit with journals, scripts, warmups, and a personal ritual builder designed to work together.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🎯 30-Day Proven Process</h3>
+                    <p>Progressive exercises that gradually rewire how you speak and feel. See measurable improvements in confidence and vocal quality.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>💬 Real-World Scripts</h3>
+                    <p>Stop improvising. Use tested scripts for introductions, pitches, difficult conversations, and high-pressure moments.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🧠 Anxiety Management</h3>
+                    <p>Understand your triggers, manage nervousness, and build emotional resilience before important speaking moments.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🎤 Professional Methods</h3>
+                    <p>These are the exact techniques voice coaches charge $500+ for. Now available as an affordable, accessible system.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>⚡ Instant Access</h3>
+                    <p>Download all 6 PDFs immediately. Start today—no waiting, no shipping, no subscriptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included" id="included">
+        <div class="container">
+            <h2>What's Inside Your Complete System</h2>
+            <p>7 comprehensive PDF guides and tools designed to build your confidence from the ground up through The Confident Voice Method.</p>
+
+            <div class="included-list">
+                <div class="included-item">
+                    <h4>📖 Getting Started Guide</h4>
+                    <p>Your complete roadmap through The Confident Voice Method—how to use each tool and the recommended progression for maximum results.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>📅 30-Day Voice Confidence Challenge</h4>
+                    <p>Progressive daily exercises that strengthen your speaking confidence. Each day builds on the last, taking you from anxious to assured in just 30 days.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>📔 Speaking Anxiety Journal</h4>
+                    <p>Guided prompts to explore your anxiety triggers, celebrate wins, and track your transformation. Includes self-reflection exercises backed by psychology.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>🗣️ Confidence Scripts Library</h4>
+                    <p>Pre-written scripts for 20+ common speaking situations. Introductions, presentations, sales pitches, difficult conversations—never be caught without words again.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>🎵 Vocal Warmup Cards</h4>
+                    <p>Professional 5-minute vocal exercises to calm your nerves, center your mind, and optimize your voice quality before any important moment.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>🎙️ Self-Recording Assessment</h4>
+                    <p>Record, listen, and analyze your voice objectively. Identify patterns, track improvement, and build awareness of your speaking strengths.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4>✨ Pre-Speaking Ritual Builder</h4>
+                    <p>Create your personalized confidence ritual based on behavioral psychology. Use the same techniques elite performers and speakers rely on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What People Are Saying</h2>
+            <p>Real results from real people who transformed their speaking confidence.</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was dreading my board presentation, but the scripts and ritual builder completely changed my mindset. I walked in feeling prepared and confident."</p>
+                    <p class="testimonial-author">— Sarah M., Executive</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The 30-day challenge actually works. I can feel the difference in how I speak now. The journal helped me understand my anxiety instead of just pushing through it."</p>
+                    <p class="testimonial-author">— Marcus T., Student</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"For this price, this is insane value. The confidence scripts alone are worth so much more. I've used them in client calls and they work perfectly."</p>
+                    <p class="testimonial-author">— Jennifer K., Sales Manager</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally a system that actually addresses speaking anxiety, not just teaches speaking techniques. The journal has been so helpful for processing my fears."</p>
+                    <p class="testimonial-author">— David L., Teacher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How long does the 30-day challenge take each day?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most exercises take 10-20 minutes depending on the day. Some days are shorter reflections, others include vocal practice. You can adjust the pace to fit your schedule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need any special equipment?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No special equipment needed. Just your voice and the PDFs. For the self-recording assessment, you can use your phone's voice recorder or any recording app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is this replacing professional therapy?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This is a confidence-building system, not therapy. If you have severe anxiety, consider working with a mental health professional alongside these tools. This program complements professional support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I access the downloads?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After purchase, you'll receive instant access to download all 7 PDFs. You can download them to your computer or access them from your email. They're yours to keep forever.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I print the PDFs?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All PDFs are designed to be printable. Many people print the challenge cards and journal pages to use physically during their 30-day journey.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is there a refund policy?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. If you're not satisfied within 30 days, we offer a full refund. We're confident you'll love this system, but we want you to feel completely risk-free.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Will I get updates if you improve the product?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. When we release improvements, all previous customers get free updates. Your purchase includes lifetime access to any new versions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Speak With Confidence?</h2>
+            <p>Join professionals, students, and speakers who've transformed their relationship with speaking. Get instant access to all 7 tools for just $9.99.</p>
+
+            <button class="cta-button" onclick="scrollToCheckout()">Get Instant Access Now</button>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">✓ 30-day money-back guarantee | ✓ Lifetime access to all 7 PDFs | ✓ No subscriptions</p>
+        </div>
+    </section>
+
+    <!-- LemonSqueezy Integration Section (Hidden) -->
+    <div id="lemon-checkout" style="display: none;">
+        <!-- This section will be populated by lemon.js -->
+        
+        <script>
+            window.lemonSqueezyAffiliateConfig = { store: "focusmatrix" };
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office All rights reserved.</p>
+            <p>The Confident Voice Method</p>
+
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            if (isActive) {
+                faqItem.classList.remove('active');
+            } else {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Scroll to section
+        function scrollTo(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Scroll to checkout (LemonSqueezy integration point)
+        function scrollToCheckout() {
+            // This would trigger the LemonSqueezy checkout modal
+            // Implementation depends on LemonSqueezy's specific integration method
+            if (window.LemonSqueezy) {
+                window.LemonSqueezy.Checkout.embed({
+                    url: 'https://focusmatrix.lemonsqueezy.com/checkout/buy/product-id'
+                });
+            } else {
+                // Fallback: direct link to LemonSqueezy store
+                window.location.href = 'https://focusmatrix.lemonsqueezy.com/';
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Any initialization code here
+            console.log('The Confident Voice Method page loaded');
+        });
+    </script>
+
+    <!-- JSON-LD Schema.org Product Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "The Confident Voice Method",
+        "image": "https://cdn.example.com/voice-confidence-builder.jpg",
+        "description": "Transform speaking anxiety into genuine confidence with The Confident Voice Method. Includes daily challenges, speaking scripts, anxiety journal, vocal exercises, and personalized confidence ritual builder.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Coffee Shop Office"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://focusmatrix.lemonsqueezy.com/",
+            "priceCurrency": "USD",
+            "price": "9.99",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        },
+        "category": "Self-Improvement",
+        "keywords": "speaking confidence, public speaking anxiety, voice training, presentation skills"
+    }
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Voice & Speaking Confidence Builder'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

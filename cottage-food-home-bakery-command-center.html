@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cottage Food &amp; Home Bakery Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #008080 0%, #006666 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background: white;
+            color: #008080;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #008080;
+            font-size: 28px;
+            margin: 40px 0 20px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #008080;
+            font-size: 18px;
+            margin: 25px 0 12px;
+        }
+
+        .section {
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: #f5f5f5;
+            padding: 20px;
+            border-left: 4px solid #008080;
+            border-radius: 4px;
+        }
+
+        .feature h4 {
+            color: #008080;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .pdf-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .pdf-item {
+            margin: 12px 0;
+            padding-left: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .pdf-item:last-child {
+            border-bottom: none;
+        }
+
+        .pdf-item strong {
+            color: #008080;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #008080 0%, #006666 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .price-box .price {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .price-box p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .guarantee {
+            background: #e0f7fa;
+            border-left: 4px solid #008080;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 30px 0;
+        }
+
+        .guarantee h4 {
+            color: #008080;
+            margin-bottom: 8px;
+        }
+
+        .faq {
+            margin: 30px 0;
+        }
+
+        .faq-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .faq-item strong {
+            color: #008080;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 30px 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<div class="hero">
+        <h1>The Home Kitchen Business System</h1>
+        <p>Everything you need to run a compliant, profitable cottage food business from your home kitchen.</p>
+        <button class="cta-button">Get Instant Access for $9.99</button>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>The Problem Most Home Bakers Face</h2>
+            <p>You're legally allowed to bake from your home kitchen and sell directly under cottage food laws in 48 states. But here's what nobody tells you:</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>Each state has completely different rules about what you can make</li>
+                <li>You could be breaking the law without knowing it</li>
+                <li>Most home bakers have no idea what their actual profit margins are</li>
+                <li>Your labels might be missing required information</li>
+                <li>One wrong move could cost you your exemption and force you to get an expensive commercial license</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Your Complete Solution</h2>
+            <p>The Home Kitchen Business System is a 10-PDF integrated binder system designed specifically for home bakers and cottage food entrepreneurs. It handles everything you need in one place:</p>
+
+            <div class="pdf-list">
+                <div class="pdf-item">
+                    <strong>01 – Getting Started Guide (2 pages)</strong>
+                    How to use the system, cottage food law basics, and a state law lookup guide
+                </div>
+                <div class="pdf-item">
+                    <strong>02 – Licensing & Compliance Tracker (3 pages)</strong>
+                    State requirements, permits, and the critical sales cap monitor
+                </div>
+                <div class="pdf-item">
+                    <strong>03 – Recipe Costing Worksheets (3 pages)</strong>
+                    Know exactly what each product costs you to make
+                </div>
+                <div class="pdf-item">
+                    <strong>04 – Order Management System (3 pages)</strong>
+                    Customer order forms, order pipeline, delivery schedule
+                </div>
+                <div class="pdf-item">
+                    <strong>05 – Ingredient Inventory Tracker (2 pages)</strong>
+                    Pantry inventory, bulk purchases, supplier contacts
+                </div>
+                <div class="pdf-item">
+                    <strong>06 – Labeling Compliance Guide (2 pages)</strong>
+                    State-specific labeling requirements and templates
+                </div>
+                <div class="pdf-item">
+                    <strong>07 – Production Schedule Planner (2 pages)</strong>
+                    Weekly calendar and batch planning for farmers markets
+                </div>
+                <div class="pdf-item">
+                    <strong>08 – Customer & Sales Log (3 pages)</strong>
+                    Track customers, sales, and revenue by product
+                </div>
+                <div class="pdf-item">
+                    <strong>09 – Food Safety Documentation (2 pages)</strong>
+                    Sanitation checklists and temperature logs
+                </div>
+                <div class="pdf-item">
+                    <strong>10 – Annual Business Review (2 pages)</strong>
+                    Year-end summary and next-year planning
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What Makes This Different</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>Built for Cottage Food Laws</h4>
+                    <p>Not a generic business planner. Designed specifically for the regulatory complexity of home food operations.</p>
+                </div>
+                <div class="feature">
+                    <h4>Sales Cap Monitor</h4>
+                    <p>The most important tool. Prevents the catastrophic mistake of exceeding your state's annual limit.</p>
+                </div>
+                <div class="feature">
+                    <h4>Recipe Costing</h4>
+                    <p>Ingredient-level tracking so you finally know your true profit margins instead of guessing.</p>
+                </div>
+                <div class="feature">
+                    <h4>Multiple Format Options</h4>
+                    <p>Letter, A4, A5 (tablet), half-letter. Fillable PDFs. GoodNotes-compatible digital planner.</p>
+                </div>
+                <div class="feature">
+                    <h4>Labeling Compliance</h4>
+                    <p>State-specific checklists so you never miss a required disclosure.</p>
+                </div>
+                <div class="feature">
+                    <h4>Complete System</h4>
+                    <p>Compliance, costing, inventory, orders, sales, production, safety, and planning—all integrated.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-box">
+            <p>Get Everything Today for</p>
+            <div class="price">$9.99</div>
+            <p>Instant Digital Download. Print Unlimited Copies. No Subscriptions.</p>
+            <button class="cta-button" style="background: white; color: #008080; margin-top: 20px;">Order Now</button>
+        </div>
+
+        <div class="section">
+            <h2>Who This Is For</h2>
+            <ul style="margin-left: 20px;">
+                <li>Home bakers selling cookies, cakes, bread, or pastries</li>
+                <li>Jam and jelly makers</li>
+                <li>Candy makers</li>
+                <li>Anyone making non-potentially hazardous foods from home</li>
+                <li>Farmers market vendors</li>
+                <li>Direct-to-consumer sellers</li>
+                <li>Anyone confused by cottage food laws</li>
+                <li>Anyone who's lost money from not knowing their costs</li>
+            </ul>
+        </div>
+
+        <div class="guarantee">
+            <h4>100% Money-Back Guarantee</h4>
+            <p>Use this system for 30 days. If it doesn't clarify your state's rules, help you understand your costs, or make managing your business easier, send me a message and I'll refund your money. No questions asked. You have nothing to lose.</p>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <div class="faq-item">
+                    <strong>What file formats do I get?</strong>
+                    <p>PDFs. Instant download after purchase. You can print them, fill them out by hand, or use the fillable PDF versions for digital entry. A5 size PDFs work great on tablets with apps like GoodNotes.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Will this work for my state?</strong>
+                    <p>Yes. The Getting Started Guide includes a state law lookup guide that helps you find your specific state's rules. The compliance tracker is designed to work for any state with a cottage food exemption.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Can I print multiple copies?</strong>
+                    <p>Absolutely. You can print as many copies as you need for personal use. No restrictions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Do you offer refunds?</strong>
+                    <p>Yes. 30-day money-back guarantee. If it doesn't help your business, I'll refund your money.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Is there a digital version for iPad?</strong>
+                    <p>Yes. Use the A5 size PDFs with GoodNotes, Notability, or Apple Notes. We also include a GoodNotes-optimized version with hyperlinks and a clickable table of contents.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>What if I'm not sure I'm a "cottage food" business?</strong>
+                    <p>The Getting Started Guide explains what cottage food laws are and how to find your state's specific rules. Start there. You'll know within minutes if this applies to you.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-box">
+            <button class="cta-button" style="background: white; color: #008080;">Buy Now for $9.99</button>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Coffee Shop Office. The Home Kitchen Business System.
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Cottage Food & Home Bakery Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Craft Business Starter Kit | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        /* ========================================
+           COLOR PALETTE
+           Burgundy: #6B1D2A / #8B2F3F
+           Cream:    #FDF6EC / #FAF0E0
+           Gold:     #C9A84C / #B8943F
+           Dark:     #2C1810 / #1A0F0A
+           ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2C1810;
+            background-color: #FDF6EC;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* -- Typography -- */
+
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .sans {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+
+        /* -- Layout -- */
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-wide {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 72px 0;
+        }
+
+        /* ========================================
+           HERO
+           ======================================== */
+
+        .hero {
+            background: linear-gradient(170deg, #6B1D2A 0%, #8B2F3F 40%, #6B1D2A 100%);
+            color: #FDF6EC;
+            padding: 80px 0 88px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #C9A84C;
+            border: 1px solid rgba(201,168,76,0.4);
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            margin-bottom: 20px;
+            color: #FDF6EC;
+        }
+
+        .hero h1 span {
+            color: #C9A84C;
+        }
+
+        .hero-sub {
+            font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+            color: rgba(253,246,236,0.85);
+            max-width: 560px;
+            margin: 0 auto 36px;
+            font-style: italic;
+        }
+
+        .hero-price {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 1.1rem;
+            color: rgba(253,246,236,0.7);
+            margin-bottom: 32px;
+        }
+
+        .hero-price strong {
+            font-size: 1.6rem;
+            color: #FDF6EC;
+        }
+
+        /* -- Buttons -- */
+
+        .btn {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #C9A84C 0%, #B8943F 100%);
+            color: #1A0F0A;
+            box-shadow: 0 4px 14px rgba(201,168,76,0.35);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201,168,76,0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #C9A84C;
+            border: 2px solid #C9A84C;
+        }
+
+        .btn-outline:hover {
+            background: rgba(201,168,76,0.1);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========================================
+           PROBLEM SECTION
+           ======================================== */
+
+        .problem {
+            background: #FDF6EC;
+        }
+
+        .problem h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            color: #6B1D2A;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+
+        .problem p {
+            font-size: 1.08rem;
+            margin-bottom: 20px;
+            color: #3D2519;
+        }
+
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: 28px 0;
+        }
+
+        .problem-list li {
+            font-size: 1.05rem;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            color: #3D2519;
+        }
+
+        .problem-list li::before {
+            content: '~';
+            position: absolute;
+            left: 8px;
+            color: #8B2F3F;
+            font-weight: 700;
+        }
+
+        /* ========================================
+           WHAT'S INSIDE
+           ======================================== */
+
+        .whats-inside {
+            background: #FAF0E0;
+        }
+
+        .whats-inside h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            color: #6B1D2A;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .whats-inside .section-sub {
+            text-align: center;
+            font-size: 1.08rem;
+            color: #6B5D52;
+            margin-bottom: 48px;
+            font-style: italic;
+        }
+
+        .guide-card {
+            background: #FDF6EC;
+            border: 1px solid rgba(107,29,42,0.1);
+            border-radius: 10px;
+            padding: 32px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .guide-card:hover {
+            box-shadow: 0 4px 20px rgba(107,29,42,0.08);
+        }
+
+        .guide-card-number {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            background: #6B1D2A;
+            color: #C9A84C;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .guide-card h3 {
+            font-size: 1.2rem;
+            color: #6B1D2A;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            font-size: 1rem;
+            color: #4A3728;
+        }
+
+        .guide-card .cross-sell-note {
+            margin-top: 12px;
+            padding: 10px 14px;
+            background: rgba(201,168,76,0.1);
+            border-left: 3px solid #C9A84C;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.92rem;
+            color: #6B5D52;
+        }
+
+        .guide-card .cross-sell-note strong {
+            color: #6B1D2A;
+        }
+
+        /* ========================================
+           WHO IT'S FOR
+           ======================================== */
+
+        .who-for {
+            background: #FDF6EC;
+        }
+
+        .who-for h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            color: #6B1D2A;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .who-card {
+            background: #FAF0E0;
+            border-radius: 10px;
+            padding: 28px;
+            border: 1px solid rgba(107,29,42,0.08);
+        }
+
+        .who-card h4 {
+            color: #6B1D2A;
+            font-size: 1.08rem;
+            margin-bottom: 8px;
+        }
+
+        .who-card p {
+            font-size: 0.97rem;
+            color: #4A3728;
+        }
+
+        .who-card .check {
+            color: #C9A84C;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        /* ========================================
+           WHAT IT'S NOT
+           ======================================== */
+
+        .not-section {
+            background: #FAF0E0;
+            padding: 56px 0;
+        }
+
+        .not-section h2 {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: #6B1D2A;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .not-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            max-width: 620px;
+            margin: 0 auto;
+            background: #FDF6EC;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(107,29,42,0.1);
+        }
+
+        .not-col {
+            padding: 28px 32px;
+        }
+
+        .not-col:first-child {
+            border-right: 1px solid rgba(107,29,42,0.1);
+        }
+
+        .not-col h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .not-col:first-child h4 {
+            color: #C9A84C;
+        }
+
+        .not-col:last-child h4 {
+            color: #999;
+        }
+
+        .not-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .not-col ul li {
+            font-size: 0.95rem;
+            padding: 6px 0;
+            color: #4A3728;
+        }
+
+        @media (max-width: 520px) {
+            .not-grid {
+                grid-template-columns: 1fr;
+            }
+            .not-col:first-child {
+                border-right: none;
+                border-bottom: 1px solid rgba(107,29,42,0.1);
+            }
+        }
+
+        /* ========================================
+           CTA SECTION
+           ======================================== */
+
+        .cta-section {
+            background: linear-gradient(170deg, #6B1D2A 0%, #8B2F3F 100%);
+            color: #FDF6EC;
+            text-align: center;
+            padding: 72px 0;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            margin-bottom: 16px;
+            color: #FDF6EC;
+        }
+
+        .cta-section p {
+            font-size: 1.08rem;
+            color: rgba(253,246,236,0.8);
+            margin-bottom: 32px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .price-compare {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            margin-bottom: 32px;
+        }
+
+        .price-compare .price-main {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #FDF6EC;
+        }
+
+        .price-compare .price-note {
+            font-size: 0.92rem;
+            color: rgba(253,246,236,0.6);
+            margin-top: 4px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .cta-section .guarantee {
+            font-size: 0.9rem;
+            color: rgba(253,246,236,0.55);
+            font-style: italic;
+        }
+
+        /* ========================================
+           CROSS-SELL BANNER
+           ======================================== */
+
+        .cross-sell {
+            background: #2C1810;
+            color: #FDF6EC;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .cross-sell h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #C9A84C;
+        }
+
+        .cross-sell p {
+            font-size: 1rem;
+            color: rgba(253,246,236,0.75);
+            max-width: 540px;
+            margin: 0 auto 20px;
+        }
+
+        .cross-sell a {
+            color: #C9A84C;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .cross-sell a:hover {
+            color: #FDF6EC;
+        }
+
+        /* ========================================
+           FAQ
+           ======================================== */
+
+        .faq {
+            background: #FDF6EC;
+        }
+
+        .faq h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            color: #6B1D2A;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(107,29,42,0.12);
+            padding: 24px 0;
+        }
+
+        .faq-item:first-of-type {
+            border-top: 1px solid rgba(107,29,42,0.12);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #6B1D2A;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: #C9A84C;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            display: none;
+            padding-top: 14px;
+            font-size: 1rem;
+            color: #4A3728;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+
+        footer {
+            background: #2C1810;
+            color: rgba(253,246,236,0.5);
+            text-align: center;
+            padding: 36px 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: #C9A84C;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+
+        @media (max-width: 600px) {
+            section {
+                padding: 52px 0;
+            }
+            .hero {
+                padding: 56px 0 64px;
+            }
+            .guide-card {
+                padding: 24px;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">By Coffee Shop Office</div>
+            <h1>The Craft Business <span>Starter Kit</span></h1>
+            <p class="hero-sub">Everything you need to go from maker to seller. Nothing you don't.</p>
+            <div class="hero-price">
+                <strong>$9.99</strong> &middot; Instant download &middot; 8 printable PDFs
+            </div>
+            <div class="hero-buttons">
+                <a href="#checkout-pending" data-product-num="12" class="btn btn-gold lemonsqueezy-button">Get the Starter Kit</a>
+                <a href="#whats-inside" class="btn btn-outline">See what's inside</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="problem">
+        <div class="container">
+            <h2>You know how to make things. But selling them? That's a different skill.</h2>
+            <p>You've got a closet full of handmade goods and a growing list of people telling you to "just open an Etsy shop." But it's not that simple. You sit down to do it and immediately hit a wall of questions:</p>
+            <ul class="problem-list">
+                <li>What should I charge?</li>
+                <li>How do I write a listing that actually gets clicks?</li>
+                <li>Do I need an LLC? A business bank account? A logo?</li>
+                <li>What should I sell first?</li>
+                <li>Where do I even sell? Etsy? Amazon? My own site?</li>
+            </ul>
+            <p>So you Google it. And you find a hundred blog posts, fifty YouTube videos, and twenty free PDFs, all saying different things. Three hours later you've made zero progress.</p>
+            <p>This kit exists to fix that. One download. Eight focused guides. Every step covered.</p>
+        </div>
+    </section>
+
+    <!-- ============ WHAT'S INSIDE ============ -->
+    <section class="whats-inside" id="whats-inside">
+        <div class="container">
+            <h2>What's in the kit</h2>
+            <p class="section-sub">8 printable PDF guides. Each one built to help you make progress in a single sitting.</p>
+
+            <div class="guide-card">
+                <div class="guide-card-number">1</div>
+                <h3>Getting Started Guide</h3>
+                <p>Your roadmap from "I want to sell" to "I'm open for business." Covers the decisions that matter right now and the ones that can wait. Stops you from overthinking and gets you moving.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">2</div>
+                <h3>Business Basics Checklist</h3>
+                <p>Every practical task you need to handle: naming your shop, basic legal stuff, setting up payments, organizing your workspace. A simple checklist you work through one item at a time.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">3</div>
+                <h3>Product Line Planner</h3>
+                <p>Figure out what to sell, how many variations to offer, and how to build a product line that makes sense. Instead of listing every random thing you've made, you'll have a focused lineup.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">4</div>
+                <h3>First Listing Template</h3>
+                <p>A fill-in-the-blank template for writing your first product listing. Covers titles, descriptions, photos, and tags. Works on Etsy, Amazon Handmade, Shopify, or any marketplace.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">5</div>
+                <h3>Pricing Quickstart</h3>
+                <p>Stop guessing what to charge. This gives you a real formula: materials + time + overhead + profit margin. You'll walk away knowing what to charge and why.</p>
+                <div class="cross-sell-note">
+                    <strong>Want to go deeper?</strong> The Maker's Pricing Workbook picks up where this guide leaves off, with advanced strategies for profit margins, competitor analysis, and pricing psychology.
+                </div>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">6</div>
+                <h3>Brand Identity Quickstart</h3>
+                <p>Pick your shop name, define your visual style, choose your colors, and write your brand story. Everything you need to look like a professional brand from day one, not a random hobby seller.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">7</div>
+                <h3>30-60-90 Day Action Plan</h3>
+                <p>Your first three months broken into weekly focus areas. Know exactly what to work on and when, so you don't freeze up trying to do everything at once or burn out in the first two weeks.</p>
+            </div>
+
+            <div class="guide-card">
+                <div class="guide-card-number">8</div>
+                <h3>Resource Directory</h3>
+                <p>A curated, vetted list of tools, platforms, communities, and free resources for craft sellers. No affiliate spam. Just the stuff we've used ourselves and actually recommend.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHO IT'S FOR ============ -->
+    <section class="who-for">
+        <div class="container">
+            <h2>This kit is for you if...</h2>
+            <div class="who-grid">
+                <div class="who-card">
+                    <h4><span class="check">&check;</span> You're a maker ready to sell</h4>
+                    <p>You've been crafting for yourself or as gifts, and you're ready to turn it into income. You just need a plan.</p>
+                </div>
+                <div class="who-card">
+                    <h4><span class="check">&check;</span> You've been stuck in "research mode"</h4>
+                    <p>You've watched the videos and read the blogs. But you haven't done anything yet because it's all too scattered. This gives you one clear path.</p>
+                </div>
+                <div class="who-card">
+                    <h4><span class="check">&check;</span> Your first listings flopped</h4>
+                    <p>You put a few things up but nothing sold. You're not sure if it's the product, the price, the listing, or all three. This helps you fix it systematically.</p>
+                </div>
+                <div class="who-card">
+                    <h4><span class="check">&check;</span> You make any type of craft</h4>
+                    <p>Jewelry, candles, soap, pottery, woodwork, knitting, sewing, resin, paper goods... it doesn't matter. The business fundamentals are the same.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IT'S NOT ============ -->
+    <section class="not-section">
+        <div class="container-wide">
+            <h2>What this is vs. what this isn't</h2>
+            <div class="not-grid">
+                <div class="not-col">
+                    <h4>This is</h4>
+                    <ul>
+                        <li>&check; 8 focused, printable guides</li>
+                        <li>&check; Actionable worksheets</li>
+                        <li>&check; A clear 90-day roadmap</li>
+                        <li>&check; Built for any craft type</li>
+                        <li>&check; Designed to finish in one sitting each</li>
+                    </ul>
+                </div>
+                <div class="not-col">
+                    <h4>This is not</h4>
+                    <ul>
+                        <li>&times; A 200-page ebook</li>
+                        <li>&times; A video course</li>
+                        <li>&times; Vague motivational content</li>
+                        <li>&times; Specific to one craft type</li>
+                        <li>&times; Something you'll "get to later"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>You've waited long enough. Let's do this.</h2>
+            <p>Download the kit, print what you need, and start building your craft business today.</p>
+            <div class="price-compare">
+                <div class="price-main">$9.99</div>
+                <div class="price-note">Includes free updates forever. Instant download.</div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#checkout-pending" data-product-num="12" class="btn btn-gold lemonsqueezy-button">Get the Starter Kit</a>
+            </div>
+            <p class="guarantee">Instant download. 8 PDFs. Print as many copies as you need.</p>
+        </div>
+    </section>
+
+    <!-- ============ CROSS-SELL ============ -->
+    <section class="cross-sell">
+        <div class="container">
+            <h3>Ready to master your pricing?</h3>
+            <p>The Starter Kit gives you a pricing formula. The Maker's Pricing Workbook gives you a pricing strategy. Advanced techniques for margins, competitor analysis, and pricing psychology. Picks up right where the Starter Kit leaves off.</p>
+            <a href="#">Learn more about The Maker's Pricing Workbook &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What file format are the guides?</div>
+                <div class="faq-answer">All 8 guides are PDF files, delivered as a single ZIP download. You can print them on US Letter or A4 paper, or use them digitally on a tablet or laptop.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will this work for my specific craft?</div>
+                <div class="faq-answer">Yes. This kit covers universal business fundamentals that apply to every craft type: jewelry, candles, soap, pottery, woodwork, knitting, sewing, resin art, paper goods, and anything else handmade. The steps are the same no matter what you make.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I already have an Etsy shop. Is this still useful?</div>
+                <div class="faq-answer">If your shop is up but sales aren't where you want them, yes. The Product Line Planner, Pricing Quickstart, and First Listing Template will help you rethink your approach. The 30-60-90 Day Action Plan can be used as a relaunch plan too.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why buy directly from the site?</div>
+                <div class="faq-answer">When you buy directly from us, you get free lifetime updates. If we add new guides or update existing ones, you'll get them automatically at no extra cost.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a refund policy?</div>
+                <div class="faq-answer">Because this is a digital product, we can't do traditional returns. But if you're not happy, email us within 30 days and we'll make it right.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What's The Maker's Pricing Workbook?</div>
+                <div class="faq-answer">It's our deep-dive product on pricing strategy. The Pricing Quickstart in this kit gives you a solid baseline formula. The Workbook goes further with advanced margin analysis, competitor research frameworks, and pricing psychology. It's a separate product designed to be the next step after the Starter Kit.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I print these more than once?</div>
+                <div class="faq-answer">Absolutely. Print as many copies as you need for your own personal use. These are yours to keep and reuse.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office &middot; <a href="mailto:hello@coffeeshopoffice.com">hello@coffeeshopoffice.com</a></p>
+            <p style="margin-top:8px;">We make tools for people who make things.</p>
+        </div>
+    </footer>
+
+    <!-- ============ FAQ TOGGLE SCRIPT ============ -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Craft Business Starter Kit'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

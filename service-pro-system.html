@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Pro System | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --blue: #2563EB;
+      --slate: #0F172A;
+      --white: #FFFFFF;
+      --lime: #84CC16;
+      --light: #F1F5F9;
+      --mid: #94A3B8;
+      --border: #CBD5E1;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: var(--slate);
+      line-height: 1.6;
+      background: var(--white);
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--slate) 0%, #1E293B 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--lime);
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--lime); }
+    .hero p {
+      color: var(--mid);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .hero .price {
+      color: var(--white);
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .hero .price .original {
+      text-decoration: line-through;
+      color: var(--mid);
+      font-size: 20px;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--slate);
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(132, 204, 22, 0.3);
+    }
+
+    /* PAIN POINTS */
+    .pain {
+      background: var(--light);
+      padding: 60px 0;
+    }
+    .pain h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .pain-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 4px solid var(--blue);
+    }
+    .pain-card .emoji { font-size: 24px; margin-bottom: 8px; }
+    .pain-card h3 { font-size: 16px; margin-bottom: 6px; }
+    .pain-card p { font-size: 14px; color: var(--mid); }
+
+    /* WHAT'S INCLUDED */
+    .included {
+      padding: 80px 0;
+    }
+    .included h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 48px;
+    }
+    .included h2 span { color: var(--blue); }
+    .template-list {
+      display: grid;
+      gap: 20px;
+    }
+    .template-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+    .template-item:hover { border-color: var(--blue); }
+    .template-num {
+      width: 56px;
+      height: 56px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .template-item h3 { font-size: 17px; margin-bottom: 4px; }
+    .template-item .pages {
+      display: inline-block;
+      background: var(--light);
+      padding: 2px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      color: var(--mid);
+      margin-left: 8px;
+    }
+    .template-item p { font-size: 14px; color: #475569; margin-top: 4px; }
+
+    /* WHO IT'S FOR */
+    .audience {
+      background: var(--slate);
+      padding: 60px 0;
+      color: var(--white);
+    }
+    .audience h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .audience-tag {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* FEATURES */
+    .features {
+      padding: 60px 0;
+      background: var(--light);
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      text-align: center;
+      padding: 24px 16px;
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      border-radius: 12px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon svg { width: 24px; height: 24px; fill: var(--white); }
+    .feature-card h3 { font-size: 15px; margin-bottom: 6px; }
+    .feature-card p { font-size: 13px; color: var(--mid); }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: linear-gradient(135deg, var(--blue) 0%, #1D4ED8 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      color: var(--white);
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    .final-cta .cta-btn {
+      font-size: 20px;
+      padding: 18px 48px;
+    }
+    .final-cta .guarantee {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--slate);
+      padding: 24px 0;
+      text-align: center;
+      color: var(--mid);
+      font-size: 13px;
+    }
+  
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">8-TEMPLATE BUNDLE</div>
+      <h1>The Service Pro<br>Client & Operations <span>System</span></h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Service Pro System</p>
+
+      <p>Run your service business like a business. 9 printable PDF templates built for solo service providers who are done winging it.</p>
+      <div class="price">$9.99 <span class="original">$9.99</span></div>
+      <a href="#buy" class="cta-btn">Get Instant Access</a>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain">
+    <div class="container">
+      <h2>Sound familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="emoji">&#128241;</div>
+          <h3>"Wait, did they pay me?"</h3>
+          <p>You're scrolling through Venmo, texts, and your memory trying to figure out who owes what. There's no system.</p>
+        </div>
+        <div class="pain-card">
+          <div class="emoji">&#128197;</div>
+          <h3>"What's my schedule again?"</h3>
+          <p>Your calendar is a mix of text confirmations, mental notes, and hope. One missed appointment costs real money.</p>
+        </div>
+        <div class="pain-card">
+          <div class="emoji">&#128176;</div>
+          <h3>"Am I even making money?"</h3>
+          <p>You're busy every day but have no idea if you're profitable. Gas, supplies, and time add up fast.</p>
+        </div>
+        <div class="pain-card">
+          <div class="emoji">&#128172;</div>
+          <h3>"I look unprofessional"</h3>
+          <p>No invoice, no agreement, no intake form. Clients notice. The ones who pay well want to work with someone organized.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="included">
+    <div class="container">
+      <h2>What's <span>Inside</span></h2>
+      <div class="template-list">
+        <div class="template-item">
+          <div class="template-num">1</div>
+          <div>
+            <h3>Client Intake Form <span class="pages">2 pages</span></h3>
+            <p>Professional onboarding: service details, property access, pet info, emergency contact, and terms with signature line. First impressions matter.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">2</div>
+          <div>
+            <h3>Service Agreement Template <span class="pages">2 pages</span></h3>
+            <p>Services, schedule, pricing, payment terms, cancellation policy, liability, and signatures. Protect yourself from day one.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">3</div>
+          <div>
+            <h3>Client Tracker <span class="pages">2 pages</span></h3>
+            <p>Track 25 clients: name, service, frequency, rate, start date, status, balance. Monthly Recurring Revenue dashboard included.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">4</div>
+          <div>
+            <h3>Weekly Schedule Planner <span class="pages">2 pages</span></h3>
+            <p>Mon-Sat time blocks, 7am-7pm. Client, service, and address for every slot. Mileage tracker. Weekly income target vs. actual.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">5</div>
+          <div>
+            <h3>Invoice Template <span class="pages">1 page</span></h3>
+            <p>Professional invoice with 6 line items, subtotal, tax, discount, total due, and multiple payment options. Get paid faster.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">6</div>
+          <div>
+            <h3>Client Communication Templates <span class="pages">2 pages</span></h3>
+            <p>8 fill-in-the-blank scripts: welcome, confirmation, reminder, reschedule, price increase, holiday, referral request, review request.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">7</div>
+          <div>
+            <h3>Income & Expense Tracker <span class="pages">2 pages</span></h3>
+            <p>Monthly income by client, expenses by 11 categories, net profit, hourly rate. 12-month annual view with tax prep notes.</p>
+          </div>
+        </div>
+        <div class="template-item">
+          <div class="template-num">8</div>
+          <div>
+            <h3>Business Growth Planner <span class="pages">1 page</span></h3>
+            <p>Quarterly: current vs. target clients/revenue, 3 acquisition strategies, 3 value-increase strategies, skills to develop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="audience">
+    <div class="container">
+      <h2>Built For Solo Service Providers</h2>
+      <div class="audience-grid">
+        <div class="audience-tag">House Cleaners</div>
+        <div class="audience-tag">Dog Groomers</div>
+        <div class="audience-tag">Tutors</div>
+        <div class="audience-tag">Handymen</div>
+        <div class="audience-tag">Personal Trainers</div>
+        <div class="audience-tag">Dog Walkers</div>
+        <div class="audience-tag">Lawn Care</div>
+        <div class="audience-tag">Pet Sitters</div>
+        <div class="audience-tag">Music Teachers</div>
+        <div class="audience-tag">Mobile Detailers</div>
+        <div class="audience-tag">Pressure Washers</div>
+        <div class="audience-tag">Any Service Pro</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <h2>Why This System Works</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h3>Print & Fill</h3>
+          <p>No apps to learn. No subscriptions. Print at home, fill in with a pen, and use immediately.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Built for Services</h3>
+          <p>Designed for the reality of mobile, in-home, and on-site service work. Not generic office templates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h3>Know Your Numbers</h3>
+          <p>Track income, expenses, profit, and hourly rate. Stop guessing whether you're actually making money.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>Look Professional</h3>
+          <p>Clients trust providers who show up organized. Intake forms, agreements, and invoices build confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="buy">
+    <div class="container">
+      <h2>Ready to Run Your Business Like a Business?</h2>
+      <p>8 templates. Instant download. Start using them today.</p>
+      <div class="price" style="color: white; font-size: 36px; font-weight: 800; margin-bottom: 8px;">$9.99 <span style="text-decoration: line-through; color: rgba(255,255,255,0.5); font-size: 22px; font-weight: 400;">$9.99</span></div>
+      <a href="#buy" class="cta-btn">Download Now</a>
+      <p class="guarantee">Instant delivery. Printable PDFs. Use forever.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Coffee Shop Office &nbsp;|&nbsp; Service Pro System</p>
+    </div>
+  </footer>
+
+  <!-- Lemon.js -->
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Service Pro System'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

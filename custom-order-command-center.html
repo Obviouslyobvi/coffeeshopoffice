@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Custom Order Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --plum: #5B2C6F;
+            --plum-dark: #4A2359;
+            --lavender: #E8DAEF;
+            --lavender-light: #F4EEF8;
+            --copper: #B87333;
+            --copper-light: #D4975A;
+            --copper-dark: #96592A;
+            --white: #FFFFFF;
+            --off-white: #FAF8FC;
+            --text-dark: #2C1338;
+            --text-mid: #5D4669;
+            --text-light: #8A7694;
+        }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--copper); text-decoration: none; }
+        a:hover { color: var(--copper-dark); }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 18px 48px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--copper);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--copper-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(184, 115, 51, 0.35);
+        }
+
+        .btn-secondary {
+            background: var(--plum);
+            color: var(--white);
+        }
+        .btn-secondary:hover {
+            background: var(--plum-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(91, 44, 111, 0.35);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--plum) 0%, var(--plum-dark) 100%);
+            color: var(--white);
+            padding: 80px 24px 72px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: var(--lavender);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 12px;
+            opacity: 0.92;
+            line-height: 1.6;
+        }
+
+        .hero .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--copper-light);
+            margin: 24px 0 32px;
+        }
+
+        .hero .price span {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 72px 0; }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            color: var(--plum);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== PROBLEM ===== */
+        .problem { background: var(--lavender-light); }
+
+        .problem-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .problem-list li {
+            background: var(--white);
+            padding: 24px 28px;
+            border-radius: 10px;
+            border-left: 4px solid var(--copper);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .problem-list li strong {
+            color: var(--plum);
+        }
+
+        /* ===== SOLUTION ===== */
+        .solution-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-mid);
+        }
+
+        .solution-text strong {
+            color: var(--text-dark);
+        }
+
+        /* ===== WHAT'S INCLUDED ===== */
+        .included { background: var(--lavender-light); }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .template-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px;
+            border: 1px solid rgba(91, 44, 111, 0.08);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .template-card:hover {
+            box-shadow: 0 4px 20px rgba(91, 44, 111, 0.1);
+        }
+
+        .template-card .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--plum);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .template-card p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+
+        /* ===== MID CTA ===== */
+        .mid-cta {
+            background: var(--plum);
+            color: var(--white);
+            text-align: center;
+            padding: 56px 24px;
+        }
+
+        .mid-cta h2 { color: var(--white); margin-bottom: 12px; }
+        .mid-cta p { color: var(--lavender); margin-bottom: 28px; font-size: 1.1rem; }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            counter-reset: step;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--lavender);
+            color: var(--plum);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .step-content h3 { color: var(--plum); }
+        .step-content p { color: var(--text-mid); font-size: 0.95rem; }
+
+        /* ===== WHO IT'S FOR ===== */
+        .audience { background: var(--lavender-light); }
+
+        .audience-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .audience-list li {
+            padding-left: 28px;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--text-mid);
+        }
+
+        .audience-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-weight: 700;
+        }
+
+        /* ===== GUARANTEE ===== */
+        .guarantee {
+            text-align: center;
+        }
+
+        .guarantee-box {
+            background: var(--lavender-light);
+            border: 2px solid var(--copper);
+            border-radius: 16px;
+            padding: 48px 36px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-box h2 { font-size: 1.5rem; }
+        .guarantee-box p { color: var(--text-mid); font-size: 1rem; margin-top: 12px; }
+
+        /* ===== FAQ ===== */
+        .faq { background: var(--lavender-light); }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .faq-item h3 {
+            color: var(--plum);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .faq-item p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--plum) 0%, var(--plum-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 24px;
+        }
+
+        .final-cta h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 16px; }
+        .final-cta p { color: var(--lavender); font-size: 1.15rem; max-width: 560px; margin: 0 auto 32px; }
+        .final-cta .price { font-size: 1.4rem; color: var(--copper-light); font-weight: 700; margin-bottom: 24px; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (min-width: 640px) {
+            .hero h1 { font-size: 3rem; }
+            .template-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 56px 20px 48px; }
+            .hero h1 { font-size: 1.85rem; }
+            .hero p { font-size: 1.05rem; }
+            section { padding: 52px 0; }
+            h2 { font-size: 1.6rem; }
+            .btn { padding: 16px 36px; font-size: 1rem; width: 100%; }
+            .step { flex-direction: column; gap: 12px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">By Coffee Shop Office.</div>
+            <h1>Stop Losing Money on Custom Orders</h1>
+            <p>8 printable PDF templates that manage every commission from first inquiry to final delivery to profitability review.</p>
+            <p>The complete system that replaces scattered DMs, guesswork pricing, and that sinking feeling of "did I even make money on that?"</p>
+            <div class="price">$9.99 <span>instant download</span></div>
+            <a href="#buy" class="btn btn-primary lemonsqueezy-button" data-product="custom-order-command-center">Get the Command Center</a>
+        </div>
+    </header>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-label">The Problem</div>
+            <h2>Custom Orders Are Profitable. Managing Them Is a Nightmare.</h2>
+            <p class="lead">You started taking commissions because people love your work. But the business side? That part nobody warned you about.</p>
+            <ul class="problem-list">
+                <li><strong>Scattered details.</strong> The specs are in a DM. The measurements are in a text. The deadline was mentioned in a comment you can't find. Something always gets missed.</li>
+                <li><strong>Guesswork pricing.</strong> You pick a number that feels right, then discover 20 hours later that you made less than minimum wage after materials and revisions.</li>
+                <li><strong>No paper trail.</strong> The client says "that's not what I asked for" and you have no written record of what was agreed. Awkward conversation incoming.</li>
+                <li><strong>Deadline chaos.</strong> With multiple orders in progress, it's impossible to remember which one is due Friday and which one hasn't been started yet.</li>
+                <li><strong>Mystery margins.</strong> You finished a busy month. You feel exhausted. But did you actually profit? You have no way to know.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION ===== -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-label">The Fix</div>
+            <h2>A Complete System. Not Another Spreadsheet Row.</h2>
+            <p class="solution-text">
+                Most order trackers give you a single spreadsheet with columns for name, date, and status. That works fine until you're juggling 10 orders with different specs, revision histories, and price adjustments.
+            </p>
+            <br>
+            <p class="solution-text">
+                <strong>The Custom Order Command Center is different.</strong> It's 8 purpose-built templates that cover every phase of a custom order: capturing the details, quoting accurately, planning production, documenting communication, tracking revisions, measuring profit, and reviewing what you learned.
+            </p>
+            <br>
+            <p class="solution-text">
+                Print them. Put them in a binder. Fill them in by hand. No apps. No subscriptions. No learning curve. Just a system that makes sure nothing falls through the cracks and every order makes you money.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== WHAT'S INCLUDED ===== -->
+    <section class="included">
+        <div class="container">
+            <div class="section-label">What's Inside</div>
+            <h2>8 Templates. Every Phase Covered.</h2>
+            <p class="lead">Each template handles a specific stage of the custom order process. Together, they form a complete management system.</p>
+            <div class="template-grid">
+                <div class="template-card">
+                    <div class="number">1</div>
+                    <h3>Custom Order Intake Form</h3>
+                    <p>Capture client details, project specs, materials, dimensions, deadline, and special requests in one structured form. No more digging through old messages.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">2</div>
+                    <h3>Order Tracking Dashboard</h3>
+                    <p>One-page view of 25+ active orders. Status, due date, payment info, and next action for each. Always know what needs your attention today.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">3</div>
+                    <h3>Production Timeline Planner</h3>
+                    <p>Map out phases, milestones, and buffer days for each project. Deliver on time, every time, without the last-minute panic.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">4</div>
+                    <h3>Client Communication Log</h3>
+                    <p>Record every call, text, DM, and email with dates and outcomes. Your memory is good. A written record is better.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">5</div>
+                    <h3>Pricing Quote Template</h3>
+                    <p>Itemize materials, labor, complexity add-ons, shipping, and your margin. Name a price you can stand behind.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">6</div>
+                    <h3>Order Profit Tracker</h3>
+                    <p>Compare quoted price vs. actual costs after delivery. See your real margin per order. Stop wondering if you made money.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">7</div>
+                    <h3>Revision & Approval Log</h3>
+                    <p>Document every revision request, what changed, client approval, and any cost adjustments. Scope creep stops here.</p>
+                </div>
+                <div class="template-card">
+                    <div class="number">8</div>
+                    <h3>Post-Order Review</h3>
+                    <p>Debrief after each order: what went well, what to fix, whether to accept similar work at the same price. Learn from every commission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MID CTA ===== -->
+    <section class="mid-cta">
+        <div class="container">
+            <h2>All 8 Templates. One Price. Unlimited Prints.</h2>
+            <p>Download instantly. Print as many copies as you need. Use them forever.</p>
+            <a href="#buy" class="btn btn-primary lemonsqueezy-button" data-product="custom-order-command-center">Get It for $9.99</a>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-label">How It Works</div>
+            <h2>From Inquiry to Income in 4 Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Intake</h3>
+                        <p>A client reaches out about a custom piece. Pull out the Intake Form and capture every detail before you commit to anything. Dimensions, materials, deadline, budget, special requests. All on one page.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Quote & Plan</h3>
+                        <p>Use the Pricing Quote Template to build a number you feel good about. Then map out your production timeline with milestones and buffer days. Add the order to your Dashboard.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Produce & Communicate</h3>
+                        <p>Do what you do best: make amazing things. Along the way, log every client conversation and every revision request. Update your Dashboard status as you hit milestones.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h3>Deliver & Review</h3>
+                        <p>Ship the finished piece. Complete the Profit Tracker to see your real margin. Fill in the Post-Order Review so the next commission goes even smoother. Repeat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHO IT'S FOR ===== -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-label">Who It's For</div>
+            <h2>Built for People Who Make Things to Order</h2>
+            <ul class="audience-list">
+                <li>Etsy sellers who take custom and made-to-order requests</li>
+                <li>Craft fair vendors who accept commissions on the spot</li>
+                <li>Jewelry makers, woodworkers, sewists, knitters, and crocheters</li>
+                <li>Potters, ceramicists, and resin artists</li>
+                <li>Leather workers, calligraphers, and engravers</li>
+                <li>Candle makers and soap makers doing custom scents or labels</li>
+                <li>Anyone who has ever said "I think I made money on that" without actually knowing</li>
+                <li>Craft business owners who want to run their commissions like a real business</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== GUARANTEE ===== -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="section-label">Our Promise</div>
+                <h2>Use It on Your Next 3 Orders</h2>
+                <p>If the Command Center doesn't save you time, prevent at least one miscommunication, or reveal something about your pricing you didn't know, reach out and we'll make it right. We built this because we needed it ourselves. We stand behind it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-label">Questions</div>
+            <h2>Frequently Asked</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Is this a physical product or a digital download?</h3>
+                    <p>Digital. You get 8 PDF files delivered instantly after purchase. Nothing is shipped. Print at home or at any print shop.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I fill these in on my iPad or tablet?</h3>
+                    <p>Yes. The PDFs work with annotation apps like GoodNotes, Notability, and Adobe Acrobat. You can also print and fill in by hand.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What size are the pages?</h3>
+                    <p>US Letter (8.5 x 11 inches). They also scale nicely to A4 if you're outside the US.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>I only take a few custom orders per month. Do I need a whole system?</h3>
+                    <p>Even 2-3 commissions per month benefit from structure. The Profit Tracker alone might show you that a type of order you love doing is actually losing you money. That's worth knowing.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Does this work for my specific craft niche?</h3>
+                    <p>If you take custom orders or commissions of any kind, yes. The templates are craft-agnostic. They work whether you make jewelry, furniture, quilts, pottery, or custom pet portraits.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I print unlimited copies?</h3>
+                    <p>Absolutely. Buy once, print as many as you need, forever. The license covers personal and small business use. Not for resale or redistribution.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I have trouble with the download?</h3>
+                    <p>Email us at hello@coffeeshopoffice.com and we'll get you sorted within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="final-cta" id="buy">
+        <div class="container">
+            <h2>Your Custom Orders Deserve a System</h2>
+            <p>Stop juggling details in your head. Stop guessing on prices. Stop wondering if you made money. Start running your commissions like the business they are.</p>
+            <div class="price">$9.99 — instant download, print forever</div>
+            <a href="#buy" class="btn btn-primary lemonsqueezy-button" data-product="custom-order-command-center">Get the Custom Order Command Center</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+            <p style="margin-top: 8px;">Questions? Email hello@coffeeshopoffice.com</p>
+        </div>
+    </footer>
+
+    <!-- LemonSqueezy Integration -->
+    
+    <script>
+        // Initialize LemonSqueezy overlay checkout
+        // Replace the href="#buy" on .lemonsqueezy-button elements with your actual
+        // LemonSqueezy checkout URL once your product is live. Example:
+        // href="#checkout-pending" data-product-num="7"
+        //
+        // The lemon.js script automatically converts links to LemonSqueezy checkout
+        // URLs into overlay checkouts when the class "lemonsqueezy-button" is present.
+
+        window.lemonSqueezyAffiliateConfig = { store: "coffeeshopoffice" };
+    </script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Custom Order Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

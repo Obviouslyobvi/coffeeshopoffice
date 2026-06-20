@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homestead &amp; Small Farm Management System | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #008080 0%, #006666 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .price-badge {
+            font-size: 1.4em;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 50px 30px;
+            background-color: #fff5f5;
+            border-left: 5px solid #d32f2f;
+        }
+
+        .problem h2 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .problem-list {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .problem-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .problem-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 50px 30px;
+            background-color: #f5f5f5;
+            border-left: 5px solid #008080;
+        }
+
+        .solution h2 {
+            color: #008080;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .solution-list {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .solution-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .solution-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #008080;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* What You Get */
+        .what-you-get {
+            padding: 50px 30px;
+            background-color: white;
+        }
+
+        .what-you-get h2 {
+            color: #008080;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .template-card {
+            background-color: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            border-color: #008080;
+            box-shadow: 0 4px 12px rgba(0, 128, 128, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .template-card h3 {
+            color: #008080;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .template-card p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px 30px;
+            background-color: #fafafa;
+        }
+
+        .features h2 {
+            color: #008080;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .features-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .features-list li {
+            background-color: white;
+            padding: 15px 20px;
+            border-left: 4px solid #008080;
+            border-radius: 4px;
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: #008080;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 50px 30px;
+            background: linear-gradient(135deg, #008080 0%, #006666 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #008080;
+            padding: 15px 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 50px 30px;
+            background-color: white;
+        }
+
+        .faq h2 {
+            color: #008080;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            color: #008080;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .template-grid,
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                border-radius: 0;
+            }
+        }
+
+        .highlight {
+            color: #008080;
+            font-weight: bold;
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Homestead & Small Farm Management System</h1>
+            <p>Stop losing track of your farm. Get organized with the Homestead Command System.</p>
+            <div class="price-badge">$9.99</div>
+        </header>
+
+        <!-- Problem -->
+        <section class="problem">
+            <h2>Your Farm Deserves Better Than Scattered Notebooks</h2>
+            <ul class="problem-list">
+                <li>Animal health records scattered—you can't find breeding dates when you need them</li>
+                <li>Crop rotation forgotten—soil depletes, pests return every season</li>
+                <li>Canned goods in the pantry with lost dates—you don't know what's safe to eat</li>
+                <li>No idea which products are actually profitable</li>
+                <li>Equipment breaks unexpectedly because maintenance got forgotten</li>
+                <li>Pasture rotations slip—overgrazing damages your land</li>
+                <li>Daily chores pile up—nobody knows what's been delegated or completed</li>
+            </ul>
+        </section>
+
+        <!-- Solution -->
+        <section class="solution">
+            <h2>Everything Under Control With the Homestead Command System</h2>
+            <ul class="solution-list">
+                <li>Complete livestock records for each animal in one place</li>
+                <li>Crop rotation plans prevent depletion and reduce disease year after year</li>
+                <li>Every preserved item tracked with dates and storage location</li>
+                <li>Clear visibility into what products actually make money</li>
+                <li>Maintenance schedules prevent equipment failures</li>
+                <li>Pasture rotations optimized for health and recovery</li>
+                <li>Chores delegated, tracked, and completed on time</li>
+            </ul>
+        </section>
+
+        <!-- What You Get -->
+        <section class="what-you-get">
+            <h2>8 Professional Farm Management PDFs</h2>
+            <div class="template-grid">
+                <div class="template-card">
+                    <h3>Getting Started Guide</h3>
+                    <p>Overview of the system and how to use each tracker. Quick-start instructions included.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Livestock & Animal Record Keeper</h3>
+                    <p>Health, breeding, feed schedules, and vet care for each animal. Complete production records.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Crop & Garden Planner</h3>
+                    <p>Planting schedules, seed inventory, harvest logs, and 3-year crop rotation plans.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Food Preservation & Pantry Log</h3>
+                    <p>Track canning dates, quantities, storage locations, and expiration dates. Prevent waste.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Farm Income & Expense Tracker</h3>
+                    <p>Monitor revenue by product, track costs, calculate margins, and identify trends.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Equipment & Maintenance Log</h3>
+                    <p>Equipment inventory, maintenance schedules, repair history, and replacement dates.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Pasture & Land Management Planner</h3>
+                    <p>Rotation schedules, fencing, water sources, and soil testing results.</p>
+                </div>
+                <div class="template-card">
+                    <h3>Weekly Farm Task Planner</h3>
+                    <p>Daily and weekly chores, seasonal tasks, and delegation tracking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>Why This System Works</h2>
+            <ul class="features-list">
+                <li>14+ pages of practical farm management templates</li>
+                <li>Designed for people with livestock and gardens of any size</li>
+                <li>Professional teal and black design, easy to read and fill out</li>
+                <li>Print and use immediately—no digital setup required</li>
+                <li>Track health, breeding, and genetics to optimize your herd</li>
+                <li>Prevent soil depletion with proper crop rotation planning</li>
+                <li>Know which products are most profitable</li>
+                <li>Maintain equipment with preventive maintenance schedules</li>
+                <li>Organize chores and delegate tasks effectively</li>
+                <li>Quarterly reviews identify trends and opportunities</li>
+                <li>Reusable templates you can photocopy for multiple years</li>
+                <li>Backed by Coffee Shop Office quality and satisfaction guarantee</li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What format are the files?</h3>
+                <p>All 8 templates are PDF files sized for standard 8.5" × 11" paper. Download, print, and start using immediately.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need any special software?</h3>
+                <p>No. The PDFs are designed to be printed and filled out by hand. You just need a printer and a pen.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How often should I update the trackers?</h3>
+                <p>Weekly updates are ideal. That's how often you'll use them effectively. Review quarterly to spot trends.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I photocopy the pages to reuse them?</h3>
+                <p>Absolutely. All templates are designed to be reusable. Photocopy and use year after year.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which templates do I need?</h3>
+                <p>It depends on your farm. You get all 8, so you can choose the ones that fit your operation. Most users find all of them valuable.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I share this with someone else?</h3>
+                <p>This is a single-user license. If you want to share with others on your farm, each person should purchase their own copy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is there a money-back guarantee?</h3>
+                <p>Yes. If you're not satisfied with the Homestead Management System, contact us for a full refund within 30 days.</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Stop Losing Track of Your Farm</h2>
+            <p>Get organized with the <span class="highlight">Homestead Command System</span>. 8 professional PDFs, 14+ pages, everything you need to manage livestock, crops, food preservation, finances, equipment, and more.</p>
+            <button class="btn">Get Started Now - $9.99</button>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+            <p>AI Disclosure: This product was created with assistance from AI. All content has been reviewed and adapted for farm and homestead management.</p>
+        </footer>
+    </div>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Homestead & Small Farm Management System'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

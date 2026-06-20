@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co-Parenting &amp; Custody Command Center | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        header {
+            background: #008080;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #008080;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #008080;
+        }
+
+        h3 {
+            color: #008080;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .pain-point {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-left: 4px solid #008080;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        .whats-inside {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .item {
+            background: #f9f9f9;
+            padding: 1.2rem;
+            border-radius: 6px;
+            border-left: 3px solid #008080;
+        }
+
+        .item strong {
+            color: #008080;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #008080;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            background: #008080;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 1rem 0;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #006666;
+        }
+
+        .price-section {
+            text-align: center;
+            background: #f0f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: #008080;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .price-description {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .column h3 {
+            margin-top: 0;
+        }
+
+        .faq-item {
+            margin: 1.5rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item strong {
+            color: #008080;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .guarantee {
+            background: #f0f9f9;
+            border-left: 4px solid #008080;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .whats-inside {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<header>
+        <h1>Co-Parenting & Custody Command Center</h1>
+        <p>The printable system divorced parents use to manage custody, expenses, and communication with clarity</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Stop Managing Co-Parenting in Your Head</h2>
+            <p class="intro-text">
+                Managing shared custody is complicated. You're juggling two schedules, tracking who owes what, documenting conversations with your co-parent, and trying to keep everything consistent for your kids.
+            </p>
+
+            <div class="pain-point">
+                <strong>The Problem:</strong> Without a system, critical details slip through. You forget when the next handoff is. Expenses don't get settled. Conversations get misremembered. Communication breaks down. The stress builds.
+            </div>
+
+            <p class="intro-text">
+                The <strong>Co-Parenting & Custody Command Center</strong> brings everything into one organized system. Now you have records. You have clarity. You have protection.
+            </p>
+        </section>
+
+        <section>
+            <h2>What's Inside</h2>
+            <p>8 printable documents designed specifically for co-parenting challenges:</p>
+
+            <div class="whats-inside">
+                <div class="item">
+                    <strong>Custody Schedule Planner</strong>
+                    <p>Weekly calendar for custody days, handoff times, and locations. See your entire schedule at a glance.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Handoff Log</strong>
+                    <p>Track every custody exchange: date, time, location, and child's condition. Build a record if you ever need it.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Shared Expense Tracker</strong>
+                    <p>Medical, school, activities, clothing—record who paid, who owes, and track reimbursements. No more guessing.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Communication Log</strong>
+                    <p>Document every conversation with your co-parent: date, method, topic, outcome. Your proof of what was discussed.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Child Info Sheet</strong>
+                    <p>One page per child with medical info, allergies, emergency contacts, school details, and daily routines.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Parenting Plan Reference</strong>
+                    <p>Your agreement terms and decision-making authority on one page. Quick reference anytime you need it.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Monthly Review</strong>
+                    <p>Reflection prompts to assess what's working, what challenges you faced, and what to adjust next month.</p>
+                </div>
+
+                <div class="item">
+                    <strong>Getting Started Guide</strong>
+                    <p>Setup instructions, printing tips, and quick-start checklist to get you using the system today.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #666; margin-top: 1.5rem;">
+                <strong>Total:</strong> 8 PDF documents, 14+ pages. Print on standard paper and organize in a binder.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why This System Works</h2>
+
+            <ul class="benefits-list">
+                <li><strong>Reduces conflict</strong> — Written records keep everyone accountable and prevent "he said/she said" disputes</li>
+                <li><strong>Protects your interests</strong> — Documentation is essential if legal questions ever arise</li>
+                <li><strong>Saves time</strong> — Stop recalculating expenses and stop mentally tracking schedules</li>
+                <li><strong>Creates stability for kids</strong> — Organized parenting shows children consistency and reduces their anxiety</li>
+                <li><strong>No apps, no subscriptions</strong> — Print and use immediately. No learning curve, no tech required</li>
+                <li><strong>Professional design</strong> — Clean, teal-branded layouts that feel complete and organized</li>
+                <li><strong>Customizable for any arrangement</strong> — Works for 50/50 split, primary custody, flexible schedules, anything</li>
+                <li><strong>Instant download</strong> — Start using today, not next week</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Who This Is For</h2>
+
+            <ul class="benefits-list">
+                <li>Divorced or separated parents managing shared or joint custody</li>
+                <li>Parents navigating blended family schedules</li>
+                <li>Co-parents who want better communication systems</li>
+                <li>Anyone building legal documentation</li>
+                <li>Parents tired of managing custody chaos mentally</li>
+                <li>People who believe in organization and clarity</li>
+            </ul>
+        </section>
+
+        <div class="price-section">
+            <p style="font-size: 1rem; margin-bottom: 0.5rem;">Complete system, instant download</p>
+            <div class="price">$9.99</div>
+            <p class="price-description">One-time purchase. Instant digital download. No subscription.</p>
+            <a href="#purchase" class="cta-button">Get Your Copy Now</a>
+        </div>
+
+        <section>
+            <h2>How to Use</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Step 1: Download & Print</h3>
+                    <p>Download your PDF files instantly after purchase. Print on standard 8.5 x 11 paper (color recommended for headers).</p>
+
+                    <h3>Step 2: Organize</h3>
+                    <p>Punch holes and add to a binder, or keep in a folder. Use the Getting Started Guide as your cover page.</p>
+                </div>
+
+                <div>
+                    <h3>Step 3: Fill In Your Info</h3>
+                    <p>Complete your child info sheets, parenting plan reference, and custody schedule. Takes about 30 minutes.</p>
+
+                    <h3>Step 4: Start Tracking</h3>
+                    <p>Begin documenting handoffs, expenses, and communications. Your system is now live and protecting your interests.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <strong>What format are the files?</strong>
+                <p>All files are PDF. Download them instantly and print on your own printer or at a print shop.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Can I customize the pages?</strong>
+                <p>The PDFs are fill-in forms—you write your information by hand. They're not editable Word documents.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Do I need any apps or digital tools?</strong>
+                <p>No. Everything works completely offline. Print and use. No subscriptions, no learning curve.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Can I print multiple copies?</strong>
+                <p>Yes. Print as many pages as you need for ongoing tracking. Print extras for your co-parent if helpful.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>What if my custody arrangement is different?</strong>
+                <p>This system works for any custody arrangement: 50/50, primary custody, flexible schedules, anything. The forms are flexible.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Is this legally binding?</strong>
+                <p>This is an organizational tool, not legal advice. However, documentation is valuable for legal proceedings. Consult your attorney about legal matters.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Can I use this for co-parenting without being divorced?</strong>
+                <p>Absolutely. Any co-parenting situation benefits from clarity and organization—divorced, separated, never-married, or blended families.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="guarantee">
+                <h3 style="margin-top: 0;">Our Promise</h3>
+                <p>
+                    This system is designed by parents who understand co-parenting complexity. It's been tested by divorced and separated families managing real custody arrangements. If you use it and don't find it valuable, we stand behind the quality.
+                </p>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h2>Ready to Organize Your Co-Parenting?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Stop managing everything mentally. Start using a system.</p>
+            <a href="#purchase" class="cta-button" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get the Command Center - $9.99</a>
+            <p style="margin-top: 1.5rem; color: #666; font-size: 0.95rem;">Instant download • 8 documents • 14+ pages • Print and use immediately</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+        <p>Made by parents, for parents managing real life.</p>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Co-Parenting & Custody Command Center'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

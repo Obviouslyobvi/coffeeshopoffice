@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Retirement Readiness System | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        :root {
+            --navy: #1E3A5F;
+            --gold: #C5960C;
+            --cream: #FFF8F0;
+            --sage: #6B8F71;
+            --light-navy: #2C5282;
+            --light-gold: #D4A843;
+            --dark-text: #1A1A2E;
+            --med-text: #3D3D5C;
+            --light-text: #6B6B8D;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--cream);
+            color: var(--dark-text);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(145deg, var(--navy) 0%, #0F2340 100%);
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(197,150,12,0.15);
+            color: var(--gold);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(197,150,12,0.3);
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            color: white;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.2;
+            max-width: 680px;
+            margin: 0 auto 20px;
+            font-weight: 700;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero-sub {
+            color: #A8B8CC;
+            font-size: 18px;
+            max-width: 560px;
+            margin: 0 auto 36px;
+        }
+        .hero-price {
+            color: white;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+        .hero-price .sale { font-size: 36px; font-weight: 700; }
+        .hero-price .original { font-size: 18px; text-decoration: line-through; color: #7A8DA0; margin-left: 10px; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-btn:hover { background: #D4A843; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(197,150,12,0.4); }
+
+        .guarantee-badge {
+            color: #7A8DA0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 70px 24px;
+            background: white;
+        }
+        .problem h2 {
+            color: var(--navy);
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .gold-line {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto 30px;
+        }
+        .problem p {
+            max-width: 620px;
+            margin: 0 auto 18px;
+            font-size: 17px;
+            color: var(--med-text);
+        }
+
+        /* What's Inside */
+        .whats-inside {
+            padding: 70px 24px;
+            background: var(--cream);
+        }
+        .whats-inside h2 {
+            color: var(--navy);
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .doc-card {
+            background: white;
+            border-radius: 10px;
+            padding: 24px 28px;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .doc-card h3 {
+            color: var(--navy);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+        .doc-card .pages {
+            color: var(--sage);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .doc-card p {
+            color: var(--med-text);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Who For */
+        .who-for {
+            padding: 70px 24px;
+            background: var(--navy);
+            color: white;
+        }
+        .who-for h2 { font-size: 28px; text-align: center; margin-bottom: 10px; }
+        .who-for .gold-line { margin-bottom: 30px; }
+        .who-list {
+            list-style: none;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        .who-list li {
+            font-size: 17px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-left: 32px;
+            position: relative;
+        }
+        .who-list li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* Not Section */
+        .what-not {
+            padding: 50px 24px;
+            background: #F5F0E6;
+        }
+        .what-not h2 {
+            color: var(--navy);
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .what-not p {
+            max-width: 600px;
+            margin: 0 auto 12px;
+            font-size: 16px;
+            color: var(--med-text);
+            text-align: center;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 70px 24px;
+            background: linear-gradient(145deg, var(--navy) 0%, #0F2340 100%);
+            text-align: center;
+        }
+        .final-cta h2 { color: white; font-size: 30px; margin-bottom: 16px; }
+        .final-cta p { color: #A8B8CC; font-size: 18px; max-width: 520px; margin: 0 auto 30px; }
+
+        /* Footer */
+        footer {
+            background: #0A1929;
+            padding: 30px 24px;
+            text-align: center;
+            color: #5A6E82;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 50px 16px 40px; }
+            .hero h1 { font-size: 28px; }
+            .hero-sub { font-size: 16px; }
+            .problem, .whats-inside, .who-for, .final-cta { padding: 50px 16px; }
+            .cta-btn { padding: 14px 28px; font-size: 15px; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">Coffee Shop Office</div>
+        <h1>The Retirement <span>Readiness</span> System</h1>
+        <p class="hero-sub">Retire with a plan. Not just financially, but for the life you actually want.</p>
+        <div class="hero-price">
+            <span class="sale">$9.99</span>
+            <span class="original">$9.99</span>
+        </div>
+        <a href="#checkout-pending" data-product-num="43" class="cta-btn lemonsqueezy-button">Get Instant Access</a>
+        <p class="guarantee-badge">Instant download &middot; 30-day money-back guarantee</p>
+    </div>
+</section>
+
+<!-- Problem -->
+<section class="problem">
+    <div class="container">
+        <h2>Retirement Is More Than a Number</h2>
+        <div class="gold-line"></div>
+        <p>Most retirement planning tools stop at the savings calculator. Hit your number and you're done, right?</p>
+        <p>Talk to anyone in their first year of retirement and they'll tell you the hard part wasn't the money. It was Monday morning. It was losing the identity they'd built for decades. It was figuring out what to do with all that time.</p>
+        <p>The people who thrive in retirement planned for all of it. The healthcare maze. The daily routine. The emotional shift. The relationships. The purpose.</p>
+        <p>That's what this toolkit is for.</p>
+    </div>
+</section>
+
+<!-- What's Inside -->
+<section class="whats-inside">
+    <div class="container">
+        <h2>What's Inside: 10 Professional Worksheets</h2>
+        <div class="gold-line"></div>
+        <div class="doc-grid">
+            <div class="doc-card">
+                <div class="pages">3 Pages</div>
+                <h3>Retirement Countdown Planner</h3>
+                <p>Milestone checklists from 5 years out to 1 month before retirement. Every task, every deadline, every decision point.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Medicare Enrollment Guide</h3>
+                <p>Enrollment windows, Parts A through D explained simply, Medigap vs. Medicare Advantage decision matrix, penalty avoidance checklist.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Social Security Decision Worksheet</h3>
+                <p>Benefit comparison tables, break-even analysis, spousal considerations, and working-while-collecting rules. Organized thinking, not advice.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Income &amp; Budget Transition Planner</h3>
+                <p>Map every income source. Compare working vs. retired budgets side by side. Find the gap. Plan to close it.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Downsizing &amp; Declutter Planner</h3>
+                <p>Room-by-room declutter checklists, moving timeline, important document locator, and a complete digital life inventory.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Knowledge Transfer Workbook</h3>
+                <p>For people leaving a job or business. Contacts, processes, systems access, project status, and successor recommendations.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">1 Page</div>
+                <h3>Daily Routine Builder</h3>
+                <p>Design your post-retirement days with purpose blocks: morning routine, projects, social time, learning, evening wind-down. Plus a weekly view.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Identity Transition Journal</h3>
+                <p>12 guided prompts for the emotional side of retirement. Who are you beyond your title? What are you afraid of? What excites you?</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>Healthcare &amp; Wellness Tracker</h3>
+                <p>All your doctors, medications, preventive care schedule, exercise tracker, mental health check-ins, and insurance ID quick reference.</p>
+            </div>
+            <div class="doc-card">
+                <div class="pages">2 Pages</div>
+                <h3>First Year Retirement Calendar</h3>
+                <p>Month-by-month guide covering admin tasks, social goals, health milestones, financial check-ins, and one "try something new" prompt per month.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who It's For -->
+<section class="who-for">
+    <div class="container">
+        <h2>Who This Is For</h2>
+        <div class="gold-line"></div>
+        <ul class="who-list">
+            <li>People 1 to 5 years from retirement who want to prepare properly</li>
+            <li>Recent retirees who want structure and guidance for their first year</li>
+            <li>Partners planning retirement together who need a shared framework</li>
+            <li>Anyone who knows retirement is a life change, not just a financial event</li>
+            <li>People buying a meaningful retirement gift (beats another gold watch)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- What It's Not -->
+<section class="what-not">
+    <div class="container">
+        <h2>A Quick Note on What This Isn't</h2>
+        <div class="gold-line"></div>
+        <p>This is not financial advice. It's not medical advice. It's not a magic bullet.</p>
+        <p>It's a decision-support framework. You bring your life, your numbers, your situation. The toolkit gives you the structure to think it through clearly and completely.</p>
+        <p>All 11 documents are professionally designed, print-ready PDFs with fillable fields, checkboxes, and decision matrices.</p>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Plan for the Life You Actually Want</h2>
+        <p>10 worksheets. Every dimension of retirement. One toolkit. Instant download.</p>
+        <div class="hero-price" style="margin-bottom:24px;">
+            <span class="sale">$9.99</span>
+            <span class="original">$9.99</span>
+        </div>
+        <a href="#checkout-pending" data-product-num="43" class="cta-btn lemonsqueezy-button">Get The Retirement Readiness System</a>
+        <p class="guarantee-badge" style="margin-top:16px;">Instant download &middot; 30-day money-back guarantee &middot; Printable PDFs</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Coffee Shop Office</p>
+</footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Retirement Readiness System'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

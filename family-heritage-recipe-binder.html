@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Heritage Recipe Binder | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            background-color: #FFF8F0;
+        }
+
+        /* Color Variables */
+        :root {
+            --burgundy: #8B2252;
+            --cream: #FFF8F0;
+            --charcoal: #2D2D2D;
+            --gold: #C5960C;
+            --burgundy-light: #B5527F;
+            --charcoal-light: #555555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #6B1A3F 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(139, 34, 82, 0.85), rgba(139, 34, 82, 0.85)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,100 Q300,50 600,100 T1200,100 L1200,600 L0,600 Z" fill="%23FFF8F0" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: var(--cream);
+            font-style: italic;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--charcoal);
+            border: none;
+            padding: 16px 48px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #E8B82C;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        /* Price */
+        .price-badge {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        /* Feature Section */
+        .features {
+            padding: 80px 20px;
+            background: white;
+            margin-bottom: 60px;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--cream);
+            padding: 40px;
+            border-left: 4px solid var(--burgundy);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--burgundy);
+            margin-bottom: 16px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .feature-card p {
+            color: var(--charcoal-light);
+            line-height: 1.8;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        /* What's Included */
+        .whats-included {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #F5E6E8 0%, var(--cream) 100%);
+            margin-bottom: 60px;
+        }
+
+        .whats-included h2 {
+            text-align: center;
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+
+        .included-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .included-item {
+            background: white;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .included-item h4 {
+            color: var(--burgundy);
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .included-item p {
+            color: var(--charcoal-light);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .included-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 12px;
+        }
+
+        .included-item li {
+            color: var(--charcoal-light);
+            font-size: 14px;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .included-item li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: white;
+            margin-bottom: 60px;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: var(--cream);
+            padding: 30px;
+            border-top: 4px solid var(--burgundy);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-text {
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            color: var(--burgundy);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #F5E6E8 0%, var(--cream) 100%);
+            margin-bottom: 60px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--burgundy);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: var(--burgundy);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--cream);
+        }
+
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 20px;
+            background: var(--cream);
+            color: var(--charcoal-light);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Perfect For Section */
+        .perfect-for {
+            padding: 80px 20px;
+            background: white;
+            margin-bottom: 60px;
+        }
+
+        .perfect-for h2 {
+            text-align: center;
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: normal;
+        }
+
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .use-case {
+            background: var(--cream);
+            padding: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .use-case-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .use-case h3 {
+            color: var(--burgundy);
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: normal;
+        }
+
+        .use-case p {
+            color: var(--charcoal-light);
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #6B1A3F 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: var(--cream);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 16px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 15px;
+            }
+
+            .features h2,
+            .whats-included h2,
+            .testimonials h2,
+            .faq h2,
+            .perfect-for h2,
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .features-grid,
+            .included-items,
+            .testimonial-grid,
+            .use-cases {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .cta-button, .cta-section {
+                display: none;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<header>
+    <div class="container">
+        <div class="logo">Coffee Shop Office.</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#included">What's Inside</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Family Heritage Recipe Binder</h1>
+<p><strong>The Family Food Preservation System:</strong> A 19-page printable system for preserving family recipes, cooking stories, and culinary traditions across generations.</p>
+
+        <p class="subtitle">Preserve Your Family's Culinary Legacy</p>
+        <p style="font-size: 16px; margin-bottom: 30px;">Transform scattered recipes into a documented family heritage with guided storytelling templates, generational timelines, and memory preservation pages.</p>
+        <div class="price-badge">$9.99</div>
+        <div style="margin-top: 40px;">
+            <a href="#" class="cta-button" id="buy-now">Buy Now</a>
+            <a href="#included" class="cta-button secondary" style="margin-left: 15px;">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2>Why Heritage Storytelling Matters</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Capture the Stories</h3>
+                <p>Recipes are memories. Document why your grandmother made that dish, what it meant to your family, and how it shaped your traditions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <h3>Map Generations</h3>
+                <p>Use the heritage timeline to connect recipes to decades and family branches. See at a glance which traditions come from which generation.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3>Create a Legacy Gift</h3>
+                <p>Perfect for Mother's Day, family reunions, or passing down to the next generation. A gift with real meaning and lasting value.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✓</div>
+                <h3>Everything You Need</h3>
+                <p>Recipe templates, memory prompts, cook profiles, seasonal planners, conversion guides—one complete system for your entire collection.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖨️</div>
+                <h3>Print-Ready Design</h3>
+                <p>Beautiful warm burgundy and cream aesthetic. Print on any standard printer, in color or black & white. Customize with photos and notes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Practical Organization</h3>
+                <p>Complete recipe index, seasonal meal planner, measurement conversions, and preservation checklist—organize everything in one place.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="whats-included" id="included">
+    <div class="container">
+        <h2>What's Included</h2>
+        <div class="included-items">
+            <div class="included-item">
+                <h4>Recipe Documentation</h4>
+                <p>12 full-page recipe templates with dedicated space for:</p>
+                <ul>
+                    <li>Ingredients and instructions</li>
+                    <li>Family story and memory</li>
+                    <li>Contributor name and note</li>
+                    <li>Cooking tips and variations</li>
+                </ul>
+            </div>
+            <div class="included-item">
+                <h4>Heritage Storytelling</h4>
+                <p>8 guided prompts designed to capture:</p>
+                <ul>
+                    <li>Why this recipe matters to your family</li>
+                    <li>Who made it first and how it evolved</li>
+                    <li>Family traditions connected to this dish</li>
+                    <li>Childhood memories and celebrations</li>
+                </ul>
+            </div>
+            <div class="included-item">
+                <h4>Family Cook Profiles</h4>
+                <p>8 profile pages to document:</p>
+                <ul>
+                    <li>The cook's name and family role</li>
+                    <li>Their signature dishes</li>
+                    <li>Cooking style and approach</li>
+                    <li>Legacy and influence</li>
+                </ul>
+            </div>
+            <div class="included-item">
+                <h4>Generational Timeline</h4>
+                <p>Map your recipes across time:</p>
+                <ul>
+                    <li>Organize by decade or generation</li>
+                    <li>See food evolution across time</li>
+                    <li>Connect recipes to family history</li>
+                    <li>Preserve cultural and ethnic heritage</li>
+                </ul>
+            </div>
+            <div class="included-item">
+                <h4>Recipe Index & Planning</h4>
+                <p>Organize and track 50+ recipes:</p>
+                <ul>
+                    <li>50-entry recipe catalog</li>
+                    <li>Seasonal meal planner by holiday</li>
+                    <li>Cross-reference your collection</li>
+                    <li>Plan heritage meals year-round</li>
+                </ul>
+            </div>
+            <div class="included-item">
+                <h4>Practical Tools</h4>
+                <p>Everything you need for cooking success:</p>
+                <ul>
+                    <li>Complete recipe conversion guide</li>
+                    <li>Measurement substitutions</li>
+                    <li>Altitude adjustments</li>
+                    <li>Preservation and archival checklist</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="perfect-for">
+    <div class="container">
+        <h2>Perfect For</h2>
+        <div class="use-cases">
+            <div class="use-case">
+                <div class="use-case-icon">🎁</div>
+                <h3>Mother's Day Gifts</h3>
+                <p>A thoughtful, meaningful gift that honors the women who shaped your family traditions.</p>
+            </div>
+            <div class="use-case">
+                <div class="use-case-icon">👵</div>
+                <h3>Preserving Grandma's Recipes</h3>
+                <p>Document the dishes and stories before they're lost to time.</p>
+            </div>
+            <div class="use-case">
+                <div class="use-case-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Reunions</h3>
+                <p>Share recipes and food memories across generations in one beautiful system.</p>
+            </div>
+            <div class="use-case">
+                <div class="use-case-icon">🌍</div>
+                <h3>Cultural Heritage</h3>
+                <p>Preserve ethnic and cultural food traditions for future generations.</p>
+            </div>
+            <div class="use-case">
+                <div class="use-case-icon">📖</div>
+                <h3>Genealogy Projects</h3>
+                <p>Add a food history dimension to your family genealogy work.</p>
+            </div>
+            <div class="use-case">
+                <div class="use-case-icon">🏠</div>
+                <h3>Home Cooks</h3>
+                <p>Organize your personal collection with intention and storytelling.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2>From Our Community</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This is exactly what I needed to preserve my grandmother's recipes before they were lost. The story prompts made me remember details I'd forgotten. My kids are learning where these traditions come from."</p>
+                <div class="testimonial-author">— Sarah M.</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Beautiful design and so thoughtfully organized. I gave this to my mom for Mother's Day and she's already filling it with family recipes and writing down the stories. She said it made her cry—in the best way."</p>
+                <div class="testimonial-author">— Jennifer T.</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"My cultural heritage is so important to me, and this binder gave me a way to document my family's food traditions properly. The timeline feature helps my kids understand how our recipes evolved."</p>
+                <div class="testimonial-author">— Maria R.</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've been collecting family recipes for years, scattered in notebooks and loose cards. This organized them and gave them context. Now they feel like a real legacy, not just a collection."</p>
+                <div class="testimonial-author">— David L.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What file format do I receive?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    You receive a set of print-ready PDF files immediately after purchase. Each PDF is optimized for standard home or office printing. No special software needed—just open with any PDF reader and print on your preferred paper type.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How many recipes can I include?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    The recipe index accommodates 50+ recipes, but you're not limited to that number. The system is modular—use what you need and print additional templates as your collection grows. Many families use multiple binders for different branches or traditions.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I print this in black & white?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! The design is optimized for color printing (the burgundy and cream palette is beautiful in color), but it works perfectly well in black and white if you prefer. The layout and readability remain excellent either way.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I customize the pages?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    The PDFs are print-ready and designed to be filled in by hand. You can add photos, handwritten notes, family tree details, or use a marker to highlight sections. Some families also scan their printed binder and add digital notes or photos. The modular design means you only use what fits your family.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I bind the pages together?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    The pages work with any standard binding method: 3-hole punch and brads, spiral binding, comb binding, or traditional binder rings. Some families simply use a folder or keep them loose. The 19 pages are designed to fit standard binder layouts. Choose whatever feels right for your family.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a physical/printed version available?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    This product is a printable PDF download. You print it yourself at home or at a local print shop (like FedEx Office or Staples). We recommend printing on cardstock or quality paper for durability. This approach gives you control over binding, customization, and cost.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>When do I get access?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Immediately after purchase! You'll receive a download link via email within minutes. The PDF files are yours to download and save forever. No expiration date, no subscription required.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I print multiple copies for my family?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! For personal use with your immediate family, you can print as many copies as you need. Each family member can have their own binder to fill in. For larger commercial distribution or professional use, please contact us about a business license.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I have printing questions?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Our customer support team is here to help! We can answer questions about printing, paper recommendations, binding options, or customization ideas. Reach out to support@homesteadplanning.co with any questions.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Preserve Your Family's Story</h2>
+        <p>Start documenting your heritage recipes and food memories today</p>
+        <a href="#" class="cta-button" id="buy-now-2">Buy Now — $9.99</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Coffee Shop Office. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact Us</a>
+        </p>
+        <p>Made with care for families who value tradition and heritage.</p>
+    </div>
+</footer>
+
+
+
+<script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const item = this.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href.length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Lemon.js CTA Button Integration
+    const buyButtons = document.querySelectorAll('#buy-now, #buy-now-2');
+    buyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Lemon.js checkout URL structure
+            window.location.href = 'https://homestead-planning.lemonsqueezy.com/checkout/buy/product-45';
+        });
+    });
+</script>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'Family Heritage Recipe Binder'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

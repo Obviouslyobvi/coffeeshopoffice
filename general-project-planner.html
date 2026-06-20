@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maker&#x27;s Project Planner | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --terracotta: #C67B5C;
+            --terracotta-dark: #A8604A;
+            --cream: #FDF8EE;
+            --charcoal: #2D2D2D;
+            --olive: #6B705C;
+            --olive-light: #8A9178;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1.5rem 4rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 0.8rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p.tagline {
+            font-size: 1.25rem;
+            opacity: 0.92;
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #fff;
+            color: var(--terracotta);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero-price {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* SECTION */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        section .section-sub {
+            text-align: center;
+            color: var(--olive);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* FEATURES GRID */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e8ddd3;
+            border-radius: 12px;
+            padding: 1.8rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 16px rgba(107, 112, 92, 0.1);
+        }
+
+        .feature-card .icon {
+            width: 44px;
+            height: 44px;
+            background: var(--cream);
+            border: 2px solid var(--terracotta);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: var(--charcoal);
+        }
+
+        .feature-card .pages {
+            font-size: 0.8rem;
+            color: var(--terracotta);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.92rem;
+            color: var(--olive);
+            line-height: 1.55;
+        }
+
+        /* WHO IT'S FOR */
+        .crafts-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .craft-tag {
+            background: #fff;
+            border: 1px solid var(--terracotta);
+            color: var(--terracotta);
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* HOW IT WORKS */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .step-num {
+            width: 48px;
+            height: 48px;
+            background: var(--terracotta);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 0.8rem;
+        }
+
+        .steps h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .steps p {
+            font-size: 0.88rem;
+            color: var(--olive);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: var(--charcoal);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1.5rem;
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            margin-bottom: 0.6rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--terracotta);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.15s, transform 0.15s;
+        }
+
+        .cta-btn:hover {
+            background: var(--terracotta-dark);
+            transform: translateY(-2px);
+        }
+
+        .cta-price {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* DETAILS BAR */
+        .details-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            padding: 2rem 1.5rem;
+            background: #fff;
+            border-top: 1px solid #e8ddd3;
+            border-bottom: 1px solid #e8ddd3;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-item .num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--terracotta);
+        }
+
+        .detail-item .label {
+            font-size: 0.82rem;
+            color: var(--olive);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e8ddd3;
+            padding: 1.2rem 0;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-item p {
+            font-size: 0.92rem;
+            color: var(--olive);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.82rem;
+            color: var(--olive);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 3rem 1.2rem 2.5rem; }
+            section { padding: 2.5rem 1.2rem; }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- HERO -->
+    <div class="hero">
+        <div class="hero-badge">Coffee Shop Office.</div>
+        <h1>The Maker's Project Planner</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The General Project System</p>
+
+        <p class="tagline">Every project deserves a plan. Track your craft projects from first idea to finished piece.</p>
+        <a href="#checkout-pending" data-product-num="20" class="hero-cta lemonsqueezy-button">Get Instant Access</a>
+        <p class="hero-price">$9.99 &mdash; Instant PDF Download</p>
+    </div>
+
+    <!-- NUMBERS BAR -->
+    <div class="details-bar">
+        <div class="detail-item">
+            <div class="num">6</div>
+            <div class="label">PDF Files</div>
+        </div>
+        <div class="detail-item">
+            <div class="num">12</div>
+            <div class="label">Total Pages</div>
+        </div>
+        <div class="detail-item">
+            <div class="num">16</div>
+            <div class="label">Project Templates</div>
+        </div>
+        <div class="detail-item">
+            <div class="num">8.5x11</div>
+            <div class="label">Letter Size</div>
+        </div>
+    </div>
+
+    <!-- WHAT'S INSIDE -->
+    <section>
+        <h2>What's Inside</h2>
+        <p class="section-sub">Six focused tools that cover your entire project lifecycle.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">&#9998;</div>
+                <h3>Project Planning Sheets</h3>
+                <div class="pages">4 pages &middot; 16 templates</div>
+                <p>Capture every detail: project name, type, materials, tools, time estimates, dates, difficulty, satisfaction, and notes. Works for any craft.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#9776;</div>
+                <h3>Project Timeline</h3>
+                <div class="pages">2 pages &middot; 6 projects</div>
+                <p>Gantt-style timelines with 12-week bars, milestone markers, and completion checkboxes. See your progress at a glance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#10003;</div>
+                <h3>Materials Checklist</h3>
+                <div class="pages">2 pages &middot; 4 projects</div>
+                <p>Track 10 materials per project: item, quantity, have-it status, where to buy, cost, and purchased status. Totals included.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#9744;</div>
+                <h3>Project Photo Log</h3>
+                <div class="pages">1 page &middot; 20 entries</div>
+                <p>Document your project photos with stage tracking, edit status, and usage notes for listings, social media, or portfolio.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#9733;</div>
+                <h3>Post-Project Review</h3>
+                <div class="pages">1 page</div>
+                <p>Structured reflection on what worked, what to fix, time and cost accuracy, sell-worthiness, and pricing guidance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128197;</div>
+                <h3>Annual Project Tracker</h3>
+                <div class="pages">2 pages</div>
+                <p>12-month overview with projects started and completed per month, year-end stats, favorite project, most profitable, and next-year goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section style="background: #fff; max-width: 100%; padding: 3.5rem 1.5rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2>Built for Every Kind of Maker</h2>
+            <p class="section-sub">If you make things with your hands, this planner is for you.</p>
+            <div class="crafts-list">
+                <span class="craft-tag">Knitting</span>
+                <span class="craft-tag">Crochet</span>
+                <span class="craft-tag">Sewing</span>
+                <span class="craft-tag">Quilting</span>
+                <span class="craft-tag">Woodworking</span>
+                <span class="craft-tag">Painting</span>
+                <span class="craft-tag">Resin Art</span>
+                <span class="craft-tag">Jewelry</span>
+                <span class="craft-tag">Pottery</span>
+                <span class="craft-tag">Candle Making</span>
+                <span class="craft-tag">Soap Making</span>
+                <span class="craft-tag">Embroidery</span>
+                <span class="craft-tag">Leatherwork</span>
+                <span class="craft-tag">Paper Crafts</span>
+                <span class="craft-tag">Macrame</span>
+                <span class="craft-tag">Weaving</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section>
+        <h2>How It Works</h2>
+        <p class="section-sub">Simple enough to start today.</p>
+        <div class="steps">
+            <div>
+                <div class="step-num">1</div>
+                <h3>Download</h3>
+                <p>Get your 7 PDFs instantly after purchase. Save them anywhere.</p>
+            </div>
+            <div>
+                <div class="step-num">2</div>
+                <h3>Print or Go Digital</h3>
+                <p>Print the pages you need, or fill them in on a tablet with any PDF app.</p>
+            </div>
+            <div>
+                <div class="step-num">3</div>
+                <h3>Plan Your Project</h3>
+                <p>Fill in the details as you work. Track materials, time, and progress.</p>
+            </div>
+            <div>
+                <div class="step-num">4</div>
+                <h3>Review & Grow</h3>
+                <p>Reflect on finished projects. See your whole year of making at a glance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="cta-section">
+        <h2>Start Planning Your Next Project</h2>
+        <p>Every project deserves a plan. Yours starts here.</p>
+        <a href="#checkout-pending" data-product-num="20" class="cta-btn lemonsqueezy-button">Get The Planner &mdash; $9.99</a>
+        <p class="cta-price">Instant download. Print unlimited copies. All sales final.</p>
+    </div>
+
+    <!-- FAQ -->
+    <section>
+        <h2>Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Is this a physical planner?</h3>
+                <p>No. This is a digital download (7 PDF files). You print the pages yourself, or use them on a tablet with a PDF annotation app.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What size are the pages?</h3>
+                <p>US Letter (8.5 x 11 inches). They work with any standard home printer.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I print them more than once?</h3>
+                <p>Yes. Print as many copies as you need for personal use.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What crafts does this work for?</h3>
+                <p>All of them. The templates are craft-agnostic. Whether you knit, sew, woodwork, paint, do resin art, make candles, or anything else, the fields cover what you need.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use these on my iPad or tablet?</h3>
+                <p>Yes. Open the PDFs in any annotation app (GoodNotes, Notability, Xodo, etc.) and fill them in digitally.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer refunds?</h3>
+                <p>Due to the digital nature of this product, all sales are final. Please review the product details and reach out with any questions before purchasing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Coffee Shop Office.
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Maker\'s Project Planner'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

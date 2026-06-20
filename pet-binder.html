@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pet Owner&#x27;s Health &amp; Life Binder | Coffee Shop Office</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102818036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18102818036');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1907087947346243');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Site navigation bar */
+.cso-nav {
+  background: rgba(254,252,248,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cso-nav a {
+  text-decoration: none;
+  color: #1F2937;
+}
+.cso-nav .cso-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+}
+.cso-nav .cso-back {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9em;
+  color: #8B7355;
+  transition: color 0.2s;
+}
+.cso-nav .cso-back:hover {
+  color: #6B5A45;
+}
+
+/* Existing product page styles */
+
+        /* ========================================
+           RESET & BASE
+           ======================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --terracotta: #C17A56;
+            --terracotta-dark: #A8623E;
+            --terracotta-light: #D4956F;
+            --cream: #FAF6F1;
+            --cream-dark: #F0E8DE;
+            --brown-dark: #3D2B1F;
+            --brown-medium: #5C4033;
+            --brown-light: #8B7355;
+            --white: #FFFFFF;
+            --text-primary: #3D2B1F;
+            --text-secondary: #5C4033;
+            --text-light: #8B7355;
+            --border: #E8DDD2;
+            --shadow-sm: 0 1px 3px rgba(61, 43, 31, 0.08);
+            --shadow-md: 0 4px 12px rgba(61, 43, 31, 0.1);
+            --shadow-lg: 0 8px 30px rgba(61, 43, 31, 0.12);
+            --radius: 8px;
+            --radius-lg: 16px;
+            --max-width: 1100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            background-color: var(--cream);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* ========================================
+           TYPOGRAPHY
+           ======================================== */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--brown-dark);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); margin-bottom: 0.5rem; }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* ========================================
+           LAYOUT
+           ======================================== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 72px 0;
+        }
+
+        /* ========================================
+           BUTTONS
+           ======================================== */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--terracotta);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--terracotta-dark);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--terracotta);
+            border: 2px solid var(--terracotta);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--terracotta);
+            color: var(--white);
+        }
+
+        .price-tag {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-top: 6px;
+            opacity: 0.9;
+        }
+
+        /* ========================================
+           NAV
+           ======================================== */
+        .nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--brown-dark);
+            text-decoration: none;
+        }
+
+        .nav .btn {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* ========================================
+           HERO
+           ======================================== */
+        .hero {
+            background-color: var(--white);
+            padding: 80px 0 88px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            max-width: 780px;
+            margin: 0 auto 24px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: 0 auto 36px;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           PROBLEM SECTION
+           ======================================== */
+        .problem {
+            background-color: var(--cream);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .problem-card h3 {
+            color: var(--terracotta-dark);
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .problem-icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        /* ========================================
+           SOLUTION SECTION
+           ======================================== */
+        .solution {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .solution p {
+            max-width: 660px;
+            margin: 0 auto 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        /* ========================================
+           WHAT'S INCLUDED
+           ======================================== */
+        .included {
+            background-color: var(--cream);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .included-item {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .included-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .included-item.featured {
+            border-color: var(--terracotta);
+            border-width: 2px;
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -11px;
+            left: 24px;
+            background-color: var(--terracotta);
+            color: var(--white);
+            font-family: sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .included-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--cream-dark);
+            color: var(--terracotta-dark);
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: 14px;
+        }
+
+        .included-item h3 {
+            margin-bottom: 8px;
+        }
+
+        .included-item p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           MID CTA
+           ======================================== */
+        .mid-cta {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            text-align: center;
+            padding: 56px 0;
+        }
+
+        .mid-cta h2 {
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .mid-cta p {
+            color: var(--cream-dark);
+            opacity: 0.85;
+            margin-bottom: 28px;
+        }
+
+        /* ========================================
+           HOW IT WORKS
+           ======================================== */
+        .how-it-works {
+            background-color: var(--white);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: var(--terracotta);
+            color: var(--white);
+            font-family: sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
+
+        .steps h3 {
+            margin-bottom: 8px;
+        }
+
+        .steps p {
+            font-size: 0.92rem;
+        }
+
+        /* ========================================
+           WHO IT'S FOR
+           ======================================== */
+        .audience {
+            background-color: var(--cream);
+        }
+
+        .audience-list {
+            max-width: 680px;
+            margin: 32px auto 0;
+        }
+
+        .audience-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .audience-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background-color: var(--terracotta);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .audience-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* ========================================
+           GUARANTEE
+           ======================================== */
+        .guarantee {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: var(--cream);
+            border: 2px solid var(--terracotta);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+        }
+
+        .guarantee-box h2 {
+            color: var(--terracotta-dark);
+        }
+
+        .guarantee-box p {
+            font-size: 1rem;
+        }
+
+        /* ========================================
+           FAQ
+           ======================================== */
+        .faq {
+            background-color: var(--cream);
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 40px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--brown-dark);
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           FINAL CTA
+           ======================================== */
+        .final-cta {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .final-cta h2 {
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            color: var(--cream-dark);
+            max-width: 560px;
+            margin: 0 auto 36px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .final-cta .price-note {
+            display: block;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: var(--cream-dark);
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        .footer {
+            background-color: var(--brown-dark);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 28px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: var(--cream-dark);
+            opacity: 0.5;
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 768px) {
+            section {
+                padding: 56px 0;
+            }
+
+            .hero {
+                padding: 56px 0 64px;
+            }
+
+            .hero-meta {
+                gap: 16px;
+            }
+
+            .btn {
+                padding: 14px 32px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 360px;
+            }
+
+            .problem-grid,
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<nav class="cso-nav">
+  <a href="https://coffeeshopoffice.com" class="cso-brand">Coffee Shop Office</a>
+  <a href="https://coffeeshopoffice.com" class="cso-back">&larr; All Products</a>
+</nav>
+
+<!-- NAV -->
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="nav-brand">Coffee Shop Office.</a>
+            <a href="#buy" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Get the Binder — $9.99</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-eyebrow">9 Printable PDFs &middot; Instant Download</span>
+            <h1>Your Pet Deserves the Same Organization You'd Give Any Family Member</h1>
+<p style="font-weight:bold;font-size:1.2em;margin-bottom:0.5em;">The Complete Pet Care System</p>
+
+            <p>Health records, vet info, sitter instructions, medications, expenses, and emergency plans — finally in one beautiful, printable system.</p>
+            <a href="#checkout-pending" data-product-num="5" class="btn btn-primary lemonsqueezy-button">
+                Download the Binder Now
+                <span class="price-tag">$9.99 &middot; Instant PDF delivery</span>
+            </a>
+            <div class="hero-meta">
+                <span>9 PDF documents</span>
+                <span>Prints on 8.5&times;11 paper</span>
+                <span>Dogs, cats & multi-pet homes</span>
+                <span>No subscriptions, ever</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem">
+        <div class="container">
+            <h2 style="text-align: center;">Sound Familiar?</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">You love your pet like family. But the organizational side of pet ownership? It's a mess.</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">&#128203;</div>
+                    <h3>Scattered Vet Records</h3>
+                    <p>Vaccination dates on a fridge magnet. Medication dosages on a sticky note. Lab results in an email you can't find. When a new vet asks for your pet's history, you're guessing.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">&#9992;&#65039;</div>
+                    <h3>No Real Sitter Instructions</h3>
+                    <p>You text your pet sitter a wall of messages from the airport gate. Half the details get buried. Your sitter doesn't know the feeding routine, the medication schedule, or that your dog is terrified of the vacuum.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">&#128176;</div>
+                    <h3>Surprise Bills, No Budget</h3>
+                    <p>Vet visits, food switches, flea treatments, grooming, that emergency visit last October — you have no idea what your pet actually costs per year. The number would probably surprise you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="solution">
+        <div class="container">
+            <h2>There's a Better Way</h2>
+            <p>The Pet Owner's Health & Life Binder replaces scattered notes, forgotten records, and guesswork with 8 clean, printable documents that cover your pet's entire life.</p>
+            <p>Health. Safety. Daily care. Finances. Even the hard conversations nobody wants to have until they have to.</p>
+            <p style="color: var(--terracotta-dark); font-weight: 700;">Set it up in 15 minutes. Use it for your pet's entire life.</p>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="included" id="whats-included">
+        <div class="container">
+            <h2 style="text-align: center;">What's Inside the Binder</h2>
+            <p style="text-align: center; max-width: 560px; margin: 0 auto;">9 printable PDFs. Each one solves a specific problem that pet owners deal with every day.</p>
+            <div class="included-grid">
+                <div class="included-item">
+                    <span class="included-number">1</span>
+                    <h3>Vet Visit Log</h3>
+                    <p>Date, reason, diagnosis, treatments, follow-ups. Your pet's complete medical history on paper, ready for any vet.</p>
+                </div>
+                <div class="included-item">
+                    <span class="included-number">2</span>
+                    <h3>Vaccination Tracker</h3>
+                    <p>Every vaccine, every booster, every due date. Hand it to a new vet and they know exactly where your pet stands.</p>
+                </div>
+                <div class="included-item">
+                    <span class="included-number">3</span>
+                    <h3>Medication Schedule</h3>
+                    <p>Drug names, dosages, timing, refill dates. No more second-guessing whether you gave the morning dose.</p>
+                </div>
+                <div class="included-item featured">
+                    <span class="featured-badge">Only Binder With This</span>
+                    <span class="included-number">4</span>
+                    <h3>Pet-Sitter Instruction Sheet</h3>
+                    <p>Feeding, medications, routines, behavioral quirks, emergency contacts, house rules. Hand it to your sitter and actually relax.</p>
+                </div>
+                <div class="included-item featured">
+                    <span class="featured-badge">Only Binder With This</span>
+                    <span class="included-number">5</span>
+                    <h3>Emergency Vet Protocol</h3>
+                    <p>Step-by-step action plan filled out before crisis hits. Poison control, nearest ER vet, insurance info, symptom checklist.</p>
+                </div>
+                <div class="included-item">
+                    <span class="included-number">6</span>
+                    <h3>Food & Allergy Log</h3>
+                    <p>Track every food, treat, and supplement. Note reactions. Invaluable for elimination diets and food transitions.</p>
+                </div>
+                <div class="included-item featured">
+                    <span class="featured-badge">Only Binder With This</span>
+                    <span class="included-number">7</span>
+                    <h3>Expense Tracker</h3>
+                    <p>Monthly and annual pet spending by category. Finally answer: "How much do we actually spend on the dog?"</p>
+                </div>
+                <div class="included-item">
+                    <span class="included-number">8</span>
+                    <h3>End-of-Life Wishes</h3>
+                    <p>A private, gentle document to record your preferences for your pet's final care. Hard to write. Important to have.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MID CTA -->
+    <section class="mid-cta" id="buy">
+        <div class="container">
+            <h2>8 Documents. One Download. Your Pet's Whole Life Covered.</h2>
+            <p>Instant PDF delivery. Print at home. Use forever.</p>
+            <a href="#checkout-pending" data-product-num="5" class="btn btn-primary lemonsqueezy-button">
+                Get the Binder — $9.99
+            </a>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 style="text-align: center;">How It Works</h2>
+            <div class="steps">
+                <div>
+                    <span class="step-number">1</span>
+                    <h3>Download</h3>
+                    <p>Instant PDF delivery after purchase. All 8 documents in one zip file.</p>
+                </div>
+                <div>
+                    <span class="step-number">2</span>
+                    <h3>Print</h3>
+                    <p>Standard 8.5&times;11 paper. Home printer or any print shop works perfectly.</p>
+                </div>
+                <div>
+                    <span class="step-number">3</span>
+                    <h3>Fill In</h3>
+                    <p>Grab your pet's records and fill in what you know. Bring the rest to your next vet visit.</p>
+                </div>
+                <div>
+                    <span class="step-number">4</span>
+                    <h3>Store</h3>
+                    <p>Binder, folder, or fridge. Make sure your family and sitter know where it lives.</p>
+                </div>
+                <div>
+                    <span class="step-number">5</span>
+                    <h3>Update</h3>
+                    <p>After every vet visit or change, take 60 seconds to update the relevant page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="audience">
+        <div class="container">
+            <h2 style="text-align: center;">Who This Is For</h2>
+            <div class="audience-list">
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>Dog owners and cat owners</strong> who want their pet's health info organized and accessible — not scattered across sticky notes and old emails.</p>
+                </div>
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>Multi-pet households</strong> juggling different medication schedules, vet appointments, and dietary needs for more than one animal.</p>
+                </div>
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>New pet parents</strong> who want to start organized from day one — whether you just adopted a puppy, a senior rescue, or your first cat.</p>
+                </div>
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>Travelers</strong> who leave their pet with a sitter and want to hand over a clear, complete instruction sheet instead of a frantic text chain.</p>
+                </div>
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>Pet parents managing health conditions</strong> — chronic illness, allergies, multiple medications — who need a reliable tracking system.</p>
+                </div>
+                <div class="audience-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>Anyone who's ever wondered</strong> "how much do we actually spend on the dog?" and wants real numbers instead of guesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>The "Print One Page" Guarantee</h2>
+                <p>Download the binder. Print out the Pet-Sitter Instruction Sheet. Fill it in. If you don't immediately feel more organized and more prepared, email us and we'll refund every penny. No questions, no hassle.</p>
+                <p style="margin-bottom: 0;"><strong>good@goodpetlife.co</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 style="text-align: center;">Questions People Ask</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <p class="faq-question">Can I use this for multiple pets?</p>
+                    <p class="faq-answer">Yes. Print a full set for each pet. Your purchase includes unlimited personal printing.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Does this work for cats, rabbits, or other pets?</p>
+                    <p class="faq-answer">Every document works for dogs, cats, rabbits, and most household pets. The fields are intentionally universal.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Is this editable on a computer?</p>
+                    <p class="faq-answer">These are printable PDFs designed for handwriting. Many pet owners prefer pen and paper for quick updates, and a printed sheet doesn't need a login at the vet's office.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">What paper size do I need?</p>
+                    <p class="faq-answer">Standard US Letter (8.5 &times; 11 inches). Prints perfectly on any home printer or at a print shop.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Can I give this as a gift?</p>
+                    <p class="faq-answer">It makes a thoughtful gift for new pet parents, adopters, or anyone who takes their pet's care seriously. Purchase one copy per recipient.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">I already use an app to track my pet's health. Do I need this?</p>
+                    <p class="faq-answer">Apps are great day-to-day. But a printed binder is accessible to sitters, family members, and emergency responders who don't have your app login. Think of this as your offline backup for the people who care for your pet when you're not there.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">What if I want a refund?</p>
+                    <p class="faq-answer">Email us at good@goodpetlife.co. If the binder isn't useful to you, we'll refund you. No forms, no waiting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Your Pet's Health Deserves More Than a Junk Drawer</h2>
+            <p>8 printable documents. 15 minutes to set up. A lifetime of organized pet care.</p>
+            <a href="#checkout-pending" data-product-num="5" class="btn btn-primary lemonsqueezy-button">
+                Get the Pet Owner's Health & Life Binder
+                <span class="price-tag">$9.99 &middot; Instant Download &middot; Print Forever</span>
+            </a>
+            <span class="price-note">PDF download. No subscriptions. No recurring fees. Unlimited personal printing.</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+        </div>
+    </footer>
+
+<div style="text-align:center; padding:24px; font-size:0.85em; color:#8B7355; font-family:Helvetica,Arial,sans-serif;">
+  &copy; 2026 Coffee Shop Office &middot; <a href="https://coffeeshopoffice.com" style="color:#8B7355;">coffeeshopoffice.com</a>
+</div>
+
+<!-- Google Ads conversion tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button');
+    ctaButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18102818036/V5HnCN2f3Z4cEPSpjLhD',
+          'value': 9.99,
+          'currency': 'USD'
+        });
+        fbq('track', 'InitiateCheckout', {
+          value: 9.99,
+          currency: 'USD',
+          content_name: 'The Pet Owner\'s Health & Life Binder'
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
