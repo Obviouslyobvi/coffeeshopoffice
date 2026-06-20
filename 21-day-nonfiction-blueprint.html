@@ -299,7 +299,7 @@ src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
 <!-- Google Ads conversion tracking: fires when checkout button is clicked -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var ctaButtons = document.querySelectorAll('a.cta-btn');
+    var ctaButtons = document.querySelectorAll('a.cta-btn, a.lemonsqueezy-button, a[data-product-num]');
     ctaButtons.forEach(function(btn) {
       btn.addEventListener('click', function() {
         gtag('event', 'conversion', {
