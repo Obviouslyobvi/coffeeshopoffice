@@ -79,6 +79,7 @@ tailwind.config = {
     cursor: pointer;
     white-space: nowrap;
     user-select: none;
+    flex-shrink: 0;
   }
 
   .search-input:focus { outline: none; }
@@ -1630,7 +1631,7 @@ document.addEventListener('DOMContentLoaded', () => { initPage(); scrollToHash()
     </div>
 
     <!-- Category Pills -->
-    <div id="category-pills" class="pills-scroll" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px"></div>
+    <div id="category-pills" class="pills-scroll" style="display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding-bottom:8px"></div>
   </div>
 </section>
 
