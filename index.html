@@ -1595,7 +1595,7 @@ document.addEventListener('DOMContentLoaded', () => { initPage(); scrollToHash()
   <div style="max-width:80rem;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between">
     <a href="#" class="font-serif" style="font-size:1.25rem;text-decoration:none;color:inherit;letter-spacing:-0.01em">Coffee Shop Office</a>
     <div style="display:flex;align-items:center;gap:16px">
-      <a href="#products" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">Products</a>
+      <a href="#" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">Products</a>
       <a href="#about" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">About</a>
       <button onclick="toggleTheme()" style="padding:8px;border-radius:8px;border:none;background:transparent;cursor:pointer;color:inherit;display:flex;align-items:center" aria-label="Toggle theme">
         <span id="theme-icon"></span>
