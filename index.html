@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coffee Shop Office - Printable Systems for an Organized Life</title>
-<meta name="description" content="Printable organizational systems from Coffee Shop Office. Planners, toolkits, and binders. Print them. Use them. Get organized.">
+<meta name="description" content="Beautifully designed printable planners, binders, and toolkits for home, business, health, and creativity. 97 products starting at $9.99.">
 <meta name="facebook-domain-verification" content="ubbmzek0e5odp2786ax3b4sf242b5o" />
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,10 +21,13 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1907087947346243&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -35,86 +37,343 @@ tailwind.config = {
       fontFamily: {
         serif: ['DM Serif Display', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        cream: '#FEFCF8',
-        charcoal: '#1F2937',
-        warmgray: '#6B7280',
-        terracotta: '#C67B5C',
-        darkbg: '#111318',
-        darkcard: '#1C1E26',
-        darktext: '#E8E6E1',
-        darksecondary: '#9CA3AF',
-        warmgold: '#D4A843',
+        coral: {
+          50: '#FEF2EE',
+          100: '#FDDDD4',
+          200: '#FBB9A8',
+          300: '#F68E72',
+          400: '#E8765A',
+          500: '#D9603F',
+          600: '#C04A2B',
+          700: '#9E3A22',
+          800: '#7D311F',
+          900: '#672C1E',
+        },
+        warmgold: {
+          400: '#E8A952',
+          500: '#D4972E',
+        },
+        darkbg: '#1A1625',
+        darkcard: '#2A2435',
+        darksurface: '#332D40',
       }
     }
   }
 }
 </script>
+
 <style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', system-ui, sans-serif; background: #FEFCF8; color: #1F2937; }
-  .dark body, body.dark-mode { background: #111318; color: #E8E6E1; }
-  html.dark { background: #111318; }
-  html.dark body { background: #111318; color: #E8E6E1; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #FFFAF6;
+    color: #1F2937;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  body.dark-mode {
+    background: #1A1625;
+    color: #E8E6E1;
+  }
   .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
-  .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-  .pills-scroll::-webkit-scrollbar { height: 0; }
-  .pills-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+  /* Header */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 250, 246, 0.85);
+    border-bottom: 1px solid rgba(232, 118, 90, 0.12);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  body.dark-mode .site-header {
+    background: rgba(26, 22, 37, 0.9);
+    border-bottom-color: rgba(232, 169, 82, 0.15);
+  }
 
+  /* Hero */
+  .hero-section {
+    background: linear-gradient(135deg, #FDE8D8 0%, #F0D0E8 50%, #E8D0F0 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(232, 118, 90, 0.08) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 20%, rgba(200, 140, 220, 0.1) 0%, transparent 50%),
+                       radial-gradient(circle at 50% 80%, rgba(255, 180, 120, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E8765A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #2A2040 0%, #1E1A30 50%, #251D35 100%);
+  }
+  body.dark-mode .hero-section::before {
+    background-image: radial-gradient(circle at 20% 50%, rgba(232, 169, 82, 0.06) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 20%, rgba(140, 100, 180, 0.08) 0%, transparent 50%);
+  }
+  body.dark-mode .hero-section::after {
+    opacity: 0.15;
+  }
+
+  /* Search */
+  .search-bar {
+    background: rgba(255,255,255,0.9);
+    border: 2px solid rgba(232, 118, 90, 0.15);
+    box-shadow: 0 4px 20px rgba(232, 118, 90, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .search-bar:focus-within {
+    border-color: #E8765A;
+    box-shadow: 0 4px 24px rgba(232, 118, 90, 0.15);
+  }
+  body.dark-mode .search-bar {
+    background: rgba(42, 36, 53, 0.9);
+    border-color: rgba(232, 169, 82, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    color: #E8E6E1;
+  }
+  body.dark-mode .search-bar:focus-within {
+    border-color: #E8A952;
+    box-shadow: 0 4px 24px rgba(232, 169, 82, 0.2);
+  }
+  body.dark-mode .search-bar input {
+    color: #E8E6E1;
+  }
+  body.dark-mode .search-bar input::placeholder {
+    color: #8B8299;
+  }
+
+  /* Category pills */
+  .cat-pill {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .cat-pill:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.95);
+  }
+
+  /* Product cards */
   .product-card {
     opacity: 0;
     transform: translateY(12px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.25s ease;
+    border-left: 4px solid transparent;
   }
   .product-card.visible {
     opacity: 1;
     transform: translateY(0);
   }
-
-  .cat-pill {
-    transition: all 0.15s ease;
-    cursor: pointer;
-    white-space: nowrap;
-    user-select: none;
+  .product-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(232, 118, 90, 0.12) !important;
+  }
+  body.dark-mode .product-card:hover {
+    box-shadow: 0 8px 30px rgba(232, 169, 82, 0.1) !important;
   }
 
-  .search-input:focus { outline: none; }
-  .store-link { text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  .store-link:hover { text-decoration: underline; }
+  /* Store links */
+  .store-link {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .store-link:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+  }
 
-  /* Header theming */
-  #site-header { background: rgba(254,252,248,0.92); border-bottom: 1px solid rgba(0,0,0,0.08); }
-  html.dark #site-header { background: rgba(17,19,24,0.92); border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .nav-link { color: #6B7280; }
-  html.dark .nav-link { color: #9CA3AF; }
+  /* About section */
+  .about-section {
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #FDE8D8, #F0D0E8, #E8D0F0, #FDE8D8) 1;
+  }
+  body.dark-mode .about-section {
+    border-image: linear-gradient(90deg, #2A2040, #3A2D50, #2A2040) 1;
+  }
 
-  /* Dark mode overrides for inline-styled elements */
-  html.dark [style*="color:#6B7280"] { color: #9CA3AF !important; }
-  html.dark [style*="color:#1F2937"] { color: #E8E6E1 !important; }
-  html.dark [style*="background:#FEFCF8"] { background: #111318 !important; }
-  html.dark [style*="background: #FEFCF8"] { background: #111318 !important; }
-  html.dark [style*="background:#fff"] { background: #1C1E26 !important; }
-  html.dark [style*="background: #fff"] { background: #1C1E26 !important; }
-  html.dark [style*="background:#FFFFFF"] { background: #1C1E26 !important; }
-  html.dark [style*="background: #FFFFFF"] { background: #1C1E26 !important; }
-  html.dark [style*="background:white"] { background: #1C1E26 !important; }
-  html.dark [style*="background: white"] { background: #1C1E26 !important; }
-  html.dark [style*="border-color:#e5e7eb"] { border-color: #2A2B2E !important; }
-  html.dark [style*="border:1px solid #e5e7eb"] { border-color: #2A2B2E !important; }
-  html.dark [style*="border-bottom:1px solid #eee"] { border-bottom-color: #2A2B2E !important; }
-  html.dark input, html.dark select { background: #1C1E26 !important; color: #E8E6E1 !important; border-color: #2A2B2E !important; }
-  html.dark footer { border-top-color: #2A2B2E !important; }
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #E8765A40; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #E8765A80; }
+  body.dark-mode ::-webkit-scrollbar-thumb { background: #E8A95240; }
+  body.dark-mode ::-webkit-scrollbar-thumb:hover { background: #E8A95280; }
+
+  /* Theme toggle */
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(232, 118, 90, 0.2);
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: #E8765A;
+  }
+  .theme-toggle:hover {
+    background: rgba(232, 118, 90, 0.1);
+    border-color: #E8765A;
+  }
+  body.dark-mode .theme-toggle {
+    background: rgba(42, 36, 53, 0.6);
+    border-color: rgba(232, 169, 82, 0.2);
+    color: #E8A952;
+  }
+  body.dark-mode .theme-toggle:hover {
+    background: rgba(232, 169, 82, 0.1);
+    border-color: #E8A952;
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
 </style>
 </head>
-<body class="min-h-screen transition-colors duration-200">
+<body>
 
+<!-- ============================================================ -->
+<!-- HEADER -->
+<!-- ============================================================ -->
+<header class="site-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Brand -->
+      <a href="#" class="flex items-center gap-2 no-underline">
+        <span class="text-xl font-serif" style="color: #E8765A;">Coffee Shop Office</span>
+      </a>
+      <!-- Nav -->
+      <nav class="flex items-center gap-6">
+        <a href="#products" class="text-sm font-medium hover:opacity-70 transition-opacity no-underline" style="color: inherit;">Products</a>
+        <a href="#about" class="text-sm font-medium hover:opacity-70 transition-opacity no-underline" style="color: inherit;">About</a>
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle dark mode">
+          <span id="theme-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="hero-section pt-28 pb-16 sm:pt-32 sm:pb-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl mb-4" style="color: #2D1B14; line-height: 1.15;">
+      Printable systems for<br>an organized life.
+    </h1>
+    <p class="text-lg sm:text-xl mb-8" style="color: #5A4A42;">
+      <span id="product-count" class="font-semibold" style="color: #E8765A;">97</span> beautifully designed planners, binders, and toolkits. Print and go.
+    </p>
+
+    <!-- Search bar -->
+    <div class="search-bar max-w-xl mx-auto rounded-2xl flex items-center px-5 py-3 mb-10">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mr-3"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input id="search-input" type="text" placeholder="Search planners, toolkits, binders..."
+        oninput="handleSearch(event)"
+        class="w-full bg-transparent outline-none text-base"
+        style="color: #2D1B14;">
+    </div>
+
+    <!-- Category pills -->
+    <div id="category-pills" class="flex flex-wrap justify-center gap-2 sm:gap-3"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PRODUCTS -->
+<!-- ============================================================ -->
+<section id="products" class="py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p id="product-counter" class="text-sm mb-6" style="color: #9CA3AF;"></p>
+    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- ABOUT -->
+<!-- ============================================================ -->
+<section id="about" class="about-section py-16 sm:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-serif text-3xl sm:text-4xl mb-6" style="color: inherit;">Built for real life, not perfect life.</h2>
+    <p class="text-base sm:text-lg leading-relaxed mb-6" style="color: #6B7280;">
+      Coffee Shop Office makes printable planning systems for people who actually need to get things organized.
+      Not aesthetic-for-the-sake-of-aesthetic. Not 47 pastel tabs and zero substance.
+      Real tools that help you track what matters, stop forgetting things, and feel like you have a handle on your life.
+    </p>
+    <p class="text-base sm:text-lg leading-relaxed mb-6" style="color: #6B7280;">
+      Every product is a complete system: multiple PDFs, ready to print, spiral-bind, and use.
+      Each one costs $9.99 and works the moment ink hits paper.
+    </p>
+    <p class="text-base sm:text-lg leading-relaxed" style="color: #6B7280;">
+      Built in Santa Barbara, CA by a solo maker who believes the best planning system is the one you actually use.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer class="py-12" style="border-top: 1px solid rgba(232, 118, 90, 0.1);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <h3 class="font-serif text-lg mb-3" style="color: #E8765A;">Coffee Shop Office</h3>
+        <p class="text-sm" style="color: #9CA3AF;">Printable planning systems that actually get used.</p>
+        <p class="text-sm mt-2" style="color: #9CA3AF;">Santa Barbara, CA</p>
+      </div>
+      <!-- Links -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3" style="color: inherit;">Shop</h4>
+        <ul class="space-y-2 list-none">
+          <li><a href="https://www.etsy.com/shop/CoffeeShopOffice" target="_blank" rel="noopener" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">Etsy Store</a></li>
+          <li><a href="https://coffeeshopoffice.lemonsqueezy.com" target="_blank" rel="noopener" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">LemonSqueezy Store</a></li>
+          <li><a href="#products" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">All Products</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3" style="color: inherit;">Contact</h4>
+        <ul class="space-y-2 list-none">
+          <li><a href="mailto:coffeeshopoffice@gmail.com" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">coffeeshopoffice@gmail.com</a></li>
+          <li><a href="/terms.html" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">Terms of Service</a></li>
+          <li><a href="/privacy.html" class="text-sm no-underline hover:underline" style="color: #9CA3AF;">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 text-center" style="border-top: 1px solid rgba(232, 118, 90, 0.08);">
+      <p class="text-xs" style="color: #9CA3AF;">&copy; 2026 Coffee Shop Office. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- PRODUCTS DATA -->
+<!-- ============================================================ -->
 <script>
-// ============================================================
-// PRODUCT DATA - Edit this array to add/remove products
-// ============================================================
 const PRODUCTS = [
   {
     id: 1,
@@ -1357,25 +1616,28 @@ const PRODUCTS = [
             urlLemon: "subscription-warranty-tracker.html",
             urlEtsy: "https://www.etsy.com/listing/4506233409"
         }
-    
-];
 
+];
+</script>
+
+<!-- ============================================================ -->
+<!-- APP LOGIC -->
+<!-- ============================================================ -->
+<script>
 const CATEGORY_COLORS = {
-    "Business & Finance":       { light: "bg-blue-100 text-blue-800", dark: "dark:bg-blue-900 dark:text-blue-200" },
-  "Crafts & Creative":        { light: "bg-pink-100 text-pink-800", dark: "dark:bg-pink-900 dark:text-pink-200" },
-    "Craft Business":          { light: "bg-amber-100 text-amber-800", dark: "dark:bg-amber-900 dark:text-amber-200" },
-  "Home & Life":              { light: "bg-emerald-100 text-emerald-800", dark: "dark:bg-emerald-900/40 dark:text-emerald-300" },
-  "Productivity":             { light: "bg-violet-100 text-violet-800", dark: "dark:bg-violet-900/40 dark:text-violet-300" },
-  "Business & Career":        { light: "bg-orange-100 text-orange-800", dark: "dark:bg-orange-900/40 dark:text-orange-300" },
-  "Health & Wellness":        { light: "bg-red-100 text-red-800", dark: "dark:bg-red-900/40 dark:text-red-300" },
-  "Finance":                  { light: "bg-sky-100 text-sky-800", dark: "dark:bg-sky-900/40 dark:text-sky-300" },
-  "Thinking Tools":           { light: "bg-cyan-100 text-cyan-800", dark: "dark:bg-cyan-900/40 dark:text-cyan-300" },
-  "Professional Development": { light: "bg-rose-100 text-rose-800", dark: "dark:bg-rose-900/40 dark:text-rose-300" },
+    "Business & Finance":       { light: "bg-blue-100 text-blue-800", dark: "dark:bg-blue-900 dark:text-blue-200", border: "#3B82F6", pillBg: "#DBEAFE", pillText: "#1E40AF" },
+  "Crafts & Creative":        { light: "bg-pink-100 text-pink-800", dark: "dark:bg-pink-900 dark:text-pink-200", border: "#EC4899", pillBg: "#FCE7F3", pillText: "#9D174D" },
+    "Craft Business":          { light: "bg-amber-100 text-amber-800", dark: "dark:bg-amber-900 dark:text-amber-200", border: "#F59E0B", pillBg: "#FEF3C7", pillText: "#92400E" },
+  "Home & Life":              { light: "bg-emerald-100 text-emerald-800", dark: "dark:bg-emerald-900/40 dark:text-emerald-300", border: "#10B981", pillBg: "#D1FAE5", pillText: "#065F46" },
+  "Productivity":             { light: "bg-violet-100 text-violet-800", dark: "dark:bg-violet-900/40 dark:text-violet-300", border: "#8B5CF6", pillBg: "#EDE9FE", pillText: "#5B21B6" },
+  "Business & Career":        { light: "bg-orange-100 text-orange-800", dark: "dark:bg-orange-900/40 dark:text-orange-300", border: "#F97316", pillBg: "#FFEDD5", pillText: "#9A3412" },
+  "Health & Wellness":        { light: "bg-red-100 text-red-800", dark: "dark:bg-red-900/40 dark:text-red-300", border: "#EF4444", pillBg: "#FEE2E2", pillText: "#991B1B" },
+  "Finance":                  { light: "bg-sky-100 text-sky-800", dark: "dark:bg-sky-900/40 dark:text-sky-300", border: "#0EA5E9", pillBg: "#E0F2FE", pillText: "#075985" },
+  "Thinking Tools":           { light: "bg-cyan-100 text-cyan-800", dark: "dark:bg-cyan-900/40 dark:text-cyan-300", border: "#06B6D4", pillBg: "#CFFAFE", pillText: "#155E75" },
+  "Professional Development": { light: "bg-rose-100 text-rose-800", dark: "dark:bg-rose-900/40 dark:text-rose-300", border: "#F43F5E", pillBg: "#FFE4E6", pillText: "#9F1239" },
 };
 
 const CATEGORIES = ["All", "Home & Life", "Business & Career", "Health & Wellness", "Craft Business", "Productivity", "Thinking Tools", "Finance", "Professional Development", "Business & Finance", "Crafts & Creative"];
-
-
 
 // ============================================================
 // APP STATE
@@ -1391,8 +1653,6 @@ function toggleTheme() {
   isDark = !isDark;
   document.documentElement.classList.toggle('dark', isDark);
   document.body.classList.toggle('dark-mode', isDark);
-  document.body.style.background = isDark ? '#111318' : '#FEFCF8';
-  document.body.style.color = isDark ? '#E8E6E1' : '#1F2937';
   const icon = document.getElementById('theme-icon');
   icon.innerHTML = isDark ? sunSVG : moonSVG;
   renderPills();
@@ -1445,18 +1705,27 @@ function renderPills() {
   if (!container) return;
   container.innerHTML = CATEGORIES.map(cat => {
     const isActive = cat === activeCategory;
-    let classes;
+    const catInfo = CATEGORY_COLORS[cat];
+    let style;
     if (isActive) {
-      classes = isDark
-        ? 'background:#D4A843;color:#111318;'
-        : 'background:#C67B5C;color:#fff;';
+      style = isDark
+        ? 'background:#E8A952;color:#1A1625;'
+        : 'background:#E8765A;color:#fff;';
+    } else if (cat === 'All') {
+      style = isDark
+        ? 'background:#2A2435;color:#E8E6E1;border:1px solid #3D3650;'
+        : 'background:#FFF5F0;color:#5A4A42;border:1px solid #F0D0C8;';
+    } else if (catInfo) {
+      style = isDark
+        ? `background:#2A2435;color:#E8E6E1;border:1px solid #3D3650;`
+        : `background:${catInfo.pillBg};color:${catInfo.pillText};border:1px solid transparent;`;
     } else {
-      classes = isDark
-        ? 'background:#1C1E26;color:#E8E6E1;border:1px solid #333;'
-        : 'background:#fff;color:#1F2937;border:1px solid #e5e7eb;';
+      style = isDark
+        ? 'background:#2A2435;color:#E8E6E1;border:1px solid #3D3650;'
+        : 'background:#F3F4F6;color:#374151;border:1px solid transparent;';
     }
     const count = cat !== 'All' ? ` (${PRODUCTS.filter(p=>p.category===cat).length})` : '';
-    return `<button onclick="setCategory('${cat}')" class="cat-pill px-3 py-1.5 rounded-full text-sm font-medium" style="${classes}">${cat}${count}</button>`;
+    return `<button onclick="setCategory('${cat}')" class="cat-pill px-4 py-2 rounded-full text-sm font-medium" style="${style}">${cat}${count}</button>`;
   }).join('');
 }
 
@@ -1471,49 +1740,44 @@ function renderProducts() {
       <div class="col-span-full text-center py-16">
         <p class="text-lg" style="color:${isDark?'#9CA3AF':'#6B7280'}">No products match your search.</p>
         <button onclick="searchQuery='';document.getElementById('search-input').value='';setCategory('All');"
-          class="mt-4 underline" style="color:${isDark?'#D4A843':'#C67B5C'}">Clear filters</button>
+          class="mt-4 underline" style="color:${isDark?'#E8A952':'#E8765A'}">Clear filters</button>
       </div>`;
     return;
   }
 
   grid.innerHTML = filtered.map(p => {
-    const catColors = CATEGORY_COLORS[p.category] || { light: "bg-gray-100 text-gray-800", dark: "dark:bg-gray-800 dark:text-gray-300" };
-    const appLabel = '';
+    const catColors = CATEGORY_COLORS[p.category] || { border: "#9CA3AF", pillBg: "#F3F4F6", pillText: "#374151" };
     const pdfLabel = p.pdfCount === 1 ? '1 PDF' : `${p.pdfCount} PDFs`;
-    const accent = isDark ? '#D4A843' : '#C67B5C';
-    const cardBg = isDark ? '#1C1E26' : '#FFFFFF';
-    const cardBorder = isDark ? '#2a2d37' : '#f3f4f6';
+    const accent = isDark ? '#E8A952' : '#E8765A';
+    const cardBg = isDark ? '#2A2435' : '#FFFFFF';
+    const cardBorder = isDark ? '#3D3650' : '#F3F0ED';
     const textMain = isDark ? '#E8E6E1' : '#1F2937';
     const textSec = isDark ? '#9CA3AF' : '#6B7280';
+    const borderColor = catColors.border || '#E8765A';
 
     let priceLinks = [];
-    if (p.priceEtsy) priceLinks.push(`<a href="${p.urlEtsy||'#'}" ${p.urlEtsy?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500">Etsy ${p.priceEtsy}</a>`);
-    if (p.priceLemon) priceLinks.push(`<a href="${p.urlLemon||'#'}" ${p.urlLemon?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500">LemonSqueezy ${p.priceLemon}</a>`);
+    if (p.priceEtsy) priceLinks.push(`<a href="${p.urlEtsy||'#'}" ${p.urlEtsy?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg> Etsy ${p.priceEtsy}</a>`);
+    if (p.priceLemon) priceLinks.push(`<a href="${p.urlLemon||'#'}" ${p.urlLemon?'target="_blank" rel="noopener"':''} class="store-link" style="color:${accent};font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg> LemonSqueezy ${p.priceLemon}</a>`);
 
-    // Category badge inline style
-    const catBadgeColors = {
-      "Craft Business": isDark ? "background:rgba(180,140,60,0.2);color:#fbbf24" : "background:#fef3c7;color:#92400e",
-      "Home & Life": isDark ? "background:rgba(74,150,100,0.2);color:#6ee7b7" : "background:#d1fae5;color:#065f46",
-      "Productivity": isDark ? "background:rgba(100,80,200,0.2);color:#a78bfa" : "background:#ede9fe;color:#5b21b6",
-      "Business & Career": isDark ? "background:rgba(220,120,60,0.2);color:#fb923c" : "background:#ffedd5;color:#9a3412",
-      "Health & Wellness": isDark ? "background:rgba(180,60,60,0.2);color:#fca5a5" : "background:#fee2e2;color:#991b1b",
-      "Finance": isDark ? "background:rgba(40,140,220,0.2);color:#7dd3fc" : "background:#e0f2fe;color:#075985",
-      "Thinking Tools": isDark ? "background:rgba(20,160,200,0.2);color:#67e8f9" : "background:#cffafe;color:#155e75",
-      "Professional Development": isDark ? "background:rgba(200,80,100,0.2);color:#fda4af" : "background:#ffe4e6;color:#9f1239",
-    };
-    const badgeStyle = catBadgeColors[p.category] || (isDark ? "background:#333;color:#ccc" : "background:#f3f4f6;color:#374151");
+    // Category badge colors
+    const badgeBg = isDark
+      ? (catColors.border ? `${catColors.border}20` : '#333')
+      : (catColors.pillBg || '#f3f4f6');
+    const badgeText = isDark
+      ? (catColors.border ? catColors.border : '#ccc')
+      : (catColors.pillText || '#374151');
 
     const slug = p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
     return `
-      <div id="${slug}" class="product-card rounded-lg overflow-hidden" style="background:${cardBg};border:1px solid ${cardBorder};box-shadow:0 1px 3px rgba(0,0,0,${isDark?'0.3':'0.08'})">
-        <div style="padding:20px">
-          <h3 class="font-serif" style="font-size:1.125rem;color:${textMain};line-height:1.3;margin-bottom:8px">${p.name}</h3>
+      <div id="${slug}" class="product-card rounded-xl overflow-hidden" style="background:${cardBg};border:1px solid ${cardBorder};border-left:4px solid ${borderColor};box-shadow:0 2px 8px rgba(0,0,0,${isDark?'0.2':'0.04'})">
+        <div style="padding:24px">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px">
-            <span style="font-size:11px;padding:2px 8px;border-radius:9999px;font-weight:500;${badgeStyle}">${p.category}</span>
-            <span style="font-size:12px;color:${textSec}">${pdfLabel}${appLabel}</span>
+            <span style="font-size:11px;padding:3px 10px;border-radius:9999px;font-weight:600;background:${badgeBg};color:${badgeText}">${p.category}</span>
+            <span style="font-size:12px;color:${textSec};font-weight:500">${pdfLabel}</span>
           </div>
-          <p style="font-size:14px;color:${textSec};line-height:1.6;margin-bottom:16px">${p.tagline}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:12px 16px;font-size:14px">
+          <h3 class="font-serif" style="font-size:1.15rem;color:${textMain};line-height:1.3;margin-bottom:10px">${p.name}</h3>
+          <p style="font-size:14px;color:${textSec};line-height:1.65;margin-bottom:18px">${p.tagline}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 18px;font-size:13px;padding-top:14px;border-top:1px solid ${isDark?'#3D3650':'#F3F0ED'}">
             ${priceLinks.join('')}
           </div>
         </div>
@@ -1528,21 +1792,14 @@ function renderProducts() {
   });
 }
 
-
 // ============================================================
 // INIT
 // ============================================================
 function initPage() {
-  try {
-    const saved = localStorage.getItem('cso-theme');
-    if (saved === 'dark') {
-      isDark = true;
-      document.documentElement.classList.add('dark');
-      document.body.classList.add('dark-mode');
-      document.body.style.background = '#111318';
-      document.body.style.color = '#E8E6E1';
-    }
-  } catch(e) {}
+  // Always start in light mode on page load
+  isDark = false;
+  document.documentElement.classList.remove('dark');
+  document.body.classList.remove('dark-mode');
 
   const countEl = document.getElementById('product-count');
   if (countEl) countEl.textContent = PRODUCTS.length;
@@ -1567,7 +1824,7 @@ function scrollToHash() {
       const el = document.getElementById(slug);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        el.style.outline = '3px solid #b45309';
+        el.style.outline = '3px solid #E8765A';
         el.style.outlineOffset = '4px';
         setTimeout(() => { el.style.outline = ''; el.style.outlineOffset = ''; }, 3000);
       }
@@ -1579,111 +1836,5 @@ window.addEventListener('hashchange', scrollToHash);
 document.addEventListener('DOMContentLoaded', () => { initPage(); scrollToHash(); });
 </script>
 
-<!-- ============================================================ -->
-<!-- HEADER -->
-<!-- ============================================================ -->
-<header id="site-header" style="position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background 0.2s,border-color 0.2s">
-  <div style="max-width:80rem;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between">
-    <a href="#" class="font-serif" style="font-size:1.25rem;text-decoration:none;color:inherit;letter-spacing:-0.01em">Coffee Shop Office</a>
-    <div style="display:flex;align-items:center;gap:16px">
-      <a href="#products" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">Products</a>
-      <a href="#about" class="nav-link hidden sm:inline" style="font-size:14px;text-decoration:none">About</a>
-      <button onclick="toggleTheme()" style="padding:8px;border-radius:8px;border:none;background:transparent;cursor:pointer;color:inherit;display:flex;align-items:center" aria-label="Toggle theme">
-        <span id="theme-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- ============================================================ -->
-<!-- HERO -->
-<!-- ============================================================ -->
-<section style="padding-top:80px;padding-bottom:24px;padding-left:1.5rem;padding-right:1.5rem">
-  <div style="max-width:80rem;margin:0 auto">
-    <h1 class="font-serif" style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2;margin-bottom:12px">
-      Printable systems for an organized life.
-    </h1>
-    <p style="font-size:clamp(1rem,2vw,1.125rem);color:#6B7280;max-width:42rem;line-height:1.6;margin-bottom:24px">
-      <strong id="product-count" style="color:inherit;font-weight:600"></strong> printable organizational systems. Planners, toolkits, and binders. Print them. Use them. Get organized.
-    </p>
-
-    <!-- Search -->
-    <div style="position:relative;max-width:28rem;margin-bottom:16px">
-      <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#6B7280" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input
-        id="search-input"
-        type="text"
-        placeholder="Search products..."
-        oninput="handleSearch(event)"
-        class="search-input"
-        style="width:100%;padding:10px 16px 10px 40px;border-radius:8px;border:1px solid #e5e7eb;font-size:14px;font-family:Inter,system-ui,sans-serif;background:inherit;color:inherit"
-      >
-    </div>
-
-    <!-- Category Pills -->
-    <div id="category-pills" class="pills-scroll" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px"></div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- PRODUCT GRID -->
-<!-- ============================================================ -->
-<section id="products" style="padding:0 1.5rem 4rem">
-  <div style="max-width:80rem;margin:0 auto">
-    <p id="product-counter" style="font-size:14px;color:#6B7280;margin-bottom:16px"></p>
-    <div id="product-grid" style="display:grid;grid-template-columns:repeat(1,1fr);gap:20px">
-    </div>
-  </div>
-</section>
-
-<!-- Responsive grid via media queries -->
-<style>
-  @media (min-width: 768px) {
-    #product-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  }
-  @media (min-width: 1024px) {
-    #product-grid { grid-template-columns: repeat(3, 1fr) !important; }
-  }
-  .hidden { display: none; }
-  @media (min-width: 640px) {
-    .sm\:inline { display: inline !important; }
-  }
-</style>
-
-<!-- ============================================================ -->
-<!-- ABOUT -->
-<!-- ============================================================ -->
-<section id="about" style="padding:3rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
-  <div style="max-width:48rem;margin:0 auto;text-align:center">
-    <h2 class="font-serif" style="font-size:1.5rem;margin-bottom:16px">About Coffee Shop Office</h2>
-    <p style="color:#6B7280;line-height:1.7">
-      Coffee Shop Office builds printable organizational systems and digital tools for people who want structure without complexity. Every product is a complete, ready-to-print PDF bundle you can use today. Interactive app versions are available on request. Built in Santa Barbara, CA.
-    </p>
-  </div>
-</section>
-
-
-<!-- ============================================================ -->
-<!-- FOOTER -->
-<!-- ============================================================ -->
-<footer style="padding:2.5rem 1.5rem;border-top:1px solid rgba(0,0,0,0.08)">
-  <div style="max-width:80rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:#6B7280">
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
-      <span class="font-serif" style="color:inherit">Coffee Shop Office</span>
-      <span style="opacity:0.4">&middot;</span>
-      <span>Santa Barbara, CA</span>
-      <span style="opacity:0.4">&middot;</span>
-      <a href="mailto:hello@coffeeshopoffice.com" style="color:inherit;text-decoration:none">hello@coffeeshopoffice.com</a>
-    </div>
-    <div style="display:flex;align-items:center;gap:16px">
-      <a href="#" style="color:inherit;text-decoration:none">Etsy Shop</a>
-      <a href="#" style="color:inherit;text-decoration:none">LemonSqueezy</a>
-            <a href="terms.html" style="color:inherit;text-decoration:none">Terms & Refund Policy</a>
-      
-    </div>
-  </div>
-</footer>
-
 </body>
 </html>
-
