@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <title>The Everyday Prize List: Free Daily Sweepstakes Email</title>
+  <style>
+    :root {
+      --ink: #12271f;
+      --muted: #52635c;
+      --green: #176b4b;
+      --green-dark: #0c4e36;
+      --lime: #d8f065;
+      --paper: #f8f7f1;
+      --white: #ffffff;
+      --line: #d9ddd5;
+      --soft: #edf2eb;
+      --orange: #e26e32;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    svg { display: block; max-width: 100%; }
+    body { overflow-x: clip; }
+    .shell { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    img, input, button { max-width: 100%; }
+    .hero > *,
+    .section-head > *,
+    .faq-layout > *,
+    .closing-inner > *,
+    .entry > *,
+    .difference-block > * { min-width: 0; }
+    h1, h2, h3, p, .email-preview-subject, .proof-item strong { overflow-wrap: break-word; }
+
+    .jump-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 26px;
+      padding: 22px 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .jump-nav a { text-decoration: none; border-bottom: 1px solid transparent; }
+    .jump-nav a:hover, .jump-nav a:focus-visible { border-color: currentColor; }
+
+    .hero {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
+      align-items: center;
+      gap: clamp(30px, 5vw, 64px);
+      padding: 30px 0 24px;
+      overflow-x: hidden;
+    }
+    .hero-copy { max-width: 680px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--green-dark);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 3px;
+      background: var(--orange);
+    }
+    h1, h2, h3 { margin-top: 0; }
+    h1 {
+      max-width: 720px;
+      margin-bottom: 22px;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .96;
+      letter-spacing: -.045em;
+    }
+    #hero-title { font-size: clamp(33px, 4.75vw, 59px); }
+    .headline-line { display: block; }
+    .hero-copy > p {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: #33483f;
+      font-size: clamp(18px, 2vw, 21px);
+      line-height: 1.55;
+    }
+    .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 2px solid var(--ink);
+      background: var(--lime);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .primary:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+    .primary:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .free-note { color: var(--muted); font-size: 14px; }
+
+    .email-preview-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      padding: 18px 0;
+    }
+    .email-preview-shadow {
+      position: absolute;
+      width: min(430px, 94%);
+      height: calc(100% - 36px);
+      background: var(--orange);
+      transform: rotate(6deg) translate(18px, 8px);
+    }
+    .email-preview {
+      position: relative;
+      width: min(430px, 94%);
+      padding: 24px 26px 23px;
+      border: 2px solid var(--ink);
+      background: var(--white);
+      color: #1a1a1a;
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: 10px 12px 0 rgba(18,39,31,.14);
+      transform: rotate(-2.5deg);
+    }
+    .email-preview-subject {
+      margin: 0 0 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .email-preview-intro {
+      margin: 0 0 17px;
+      color: #1a1a1a;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+    .email-preview-heading {
+      margin: 0 0 5px;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .email-preview-numbers-copy {
+      margin: 0 0 17px;
+      color: #1a1a1a;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .email-preview-featured { margin-top: 0; padding: 0; }
+    .email-preview-featured .email-preview-heading { margin-bottom: 11px; }
+    .email-preview-entry { margin: 0 0 11px; }
+    .email-preview-entry:last-child { margin-bottom: 0; }
+    .email-preview-entry p {
+      margin: 0 0 1px;
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+    .email-preview-entry .email-preview-prize { color: #444; font-size: 10px; }
+    .email-preview-entry .email-preview-link { margin-bottom: 0; }
+    .email-preview-entry a {
+      color: #0066cc;
+      font-weight: 700;
+    }
+    .email-preview-entry a:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
+    .proof-strip {
+      border-block: 1px solid var(--line);
+      background: var(--white);
+    }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .proof-item { padding: 24px 30px; border-left: 1px solid var(--line); }
+    .proof-item:first-child { border-left: 0; padding-left: 0; }
+    .proof-item:last-child { padding-right: 0; }
+    .proof-item strong { display: block; font-family: "Newsreader", Georgia, serif; font-size: 26px; line-height: 1.05; }
+    .proof-item span { color: var(--muted); font-size: 14px; }
+
+    section { padding: clamp(54px, 7vw, 82px) 0; }
+    .section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 60px; margin-bottom: 48px; align-items: end; }
+    .section-head h2 {
+      margin-bottom: 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.025em;
+    }
+    .section-head p { margin: 0; max-width: 650px; color: var(--muted); }
+
+    .process { background: var(--green-dark); color: var(--white); }
+    .process .section-head p { color: #c7d8d0; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #46715f; }
+    .step { padding: 32px 36px 12px 0; }
+    .step + .step { padding-left: 36px; border-left: 1px solid #46715f; }
+    .step-num { color: var(--lime); font-family: "Newsreader", Georgia, serif; font-size: 28px; }
+    .step h3 { margin: 18px 0 9px; font-size: 19px; }
+    .step p { margin: 0; color: #c7d8d0; font-size: 15px; }
+
+    .sample { background: #e9eee7; }
+    .issue-paper {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      border: 1px solid #cdd6cf;
+      background: var(--white);
+      box-shadow: 0 18px 50px rgba(18,39,31,.08);
+      overflow-wrap: anywhere;
+    }
+    .issue-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      padding: 32px 38px 26px;
+      border-bottom: 3px solid var(--ink);
+    }
+    .issue-top h2 { margin: 0 0 2px; font-family: "Newsreader", Georgia, serif; font-size: 36px; }
+    .issue-top p { margin: 0; color: var(--muted); font-size: 14px; }
+    .sample-stamp { color: var(--green); font-size: 13px; font-weight: 700; text-align: right; }
+    .entry { display: grid; grid-template-columns: 48px minmax(0,1fr) auto; gap: 18px; padding: 25px 38px; border-bottom: 1px solid var(--line); align-items: start; }
+    .entry:last-child { border-bottom: 0; }
+    .entry-check { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--soft); color: var(--green); }
+    .entry h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.35; }
+    .entry-title-link { color: var(--green-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .entry-title-link:hover { color: var(--orange); }
+    .entry-title-link:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .entry p { margin: 0; color: var(--muted); font-size: 14px; }
+    .manual-tag { display: inline-block; margin-top: 9px; padding: 3px 8px; background: #fff1e9; color: #8a3c18; font-size: 12px; font-weight: 700; }
+    .enter-link { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); font-size: 14px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
+    .enter-link:hover { color: var(--orange); }
+    .issue-foot { padding: 20px 38px 24px; background: #fbfcfa; color: var(--muted); font-size: 13px; }
+
+    .difference { padding-top: 18px; padding-bottom: 44px; background: var(--paper); }
+    .difference-block {
+      display: grid;
+      grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr);
+      gap: clamp(42px, 7vw, 86px);
+      padding: clamp(38px, 6vw, 66px);
+      background: var(--green-dark);
+      color: var(--white);
+      box-shadow: 10px 12px 0 var(--orange);
+    }
+    .difference-block h2 {
+      margin: 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.025em;
+    }
+    .difference-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid #46715f;
+    }
+    .difference-list li {
+      position: relative;
+      padding: 18px 0 18px 34px;
+      border-bottom: 1px solid #46715f;
+      color: #d7e4de;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .difference-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 26px;
+      width: 12px;
+      height: 6px;
+      border-left: 2px solid var(--lime);
+      border-bottom: 2px solid var(--lime);
+      transform: rotate(-45deg);
+    }
+    .difference-list strong { color: var(--white); }
+
+    .faq { background: var(--white); }
+    .faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 80px; }
+    .faq h2 { font-family: "Newsreader", Georgia, serif; font-size: clamp(38px, 5vw, 56px); line-height: 1; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; list-style: none; padding: 21px 42px 21px 0; font-weight: 700; position: relative; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 4px; top: 17px; color: var(--green); font-size: 25px; font-weight: 400; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: -6px 0 22px; padding-right: 50px; color: var(--muted); font-size: 15px; }
+
+    .closing { padding: 48px 0; background: var(--lime); }
+    .closing-inner { display: grid; grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr); align-items: center; gap: clamp(48px, 8vw, 96px); }
+    .closing h2 { max-width: 650px; margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(38px, 5vw, 60px); line-height: 1; }
+    .signup-block { max-width: 560px; }
+    .hero-signup {
+      max-width: 600px;
+      padding: 18px 20px 16px;
+      background: var(--lime);
+    }
+    .signup-block > p { margin: 0 0 16px; color: #35443e; font-size: 15px; }
+    .subscribe-form {
+      display: flex;
+      width: 100%;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .subscribe-form input[type="email"] {
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 54px;
+      padding: 0 17px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+      font-size: 16px;
+      box-shadow: none;
+    }
+    .subscribe-form input[type="email"]::placeholder { color: #68766f; opacity: 1; }
+    .subscribe-form input[type="email"]:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+    .subscribe-form button {
+      flex: 0 0 auto;
+      min-height: 54px;
+      padding: 0 22px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--green-dark);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .subscribe-form button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+    .subscribe-form button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .signup-note { display: block; margin-top: 11px; color: #35443e; font-size: 13px; }
+    .subscribe-fallback {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+    .subscribe-fallback:hover { color: var(--orange); }
+    footer { padding: 28px 0 40px; background: var(--lime); color: #35443e; font-size: 13px; }
+    footer .shell { border-top: 1px solid rgba(18,39,31,.28); padding-top: 24px; }
+
+    @media (max-width: 1100px) {
+      .shell { width: min(var(--max), calc(100% - 40px)); }
+      .jump-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        padding-top: 14px;
+      }
+      .jump-nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 4px;
+      }
+      .hero {
+        min-height: auto;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding: 24px 0 20px;
+      }
+      .hero-copy { max-width: 850px; }
+      h1 { max-width: 850px; font-size: clamp(48px, 7vw, 70px); }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(430px, calc(100% - 48px)); }
+      .closing-inner {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 32px;
+        max-width: 780px;
+      }
+      .signup-block { width: 100%; max-width: none; }
+      .subscribe-form {
+        flex-direction: column;
+        max-width: 620px;
+      }
+      .subscribe-form button { width: 100%; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(var(--max), calc(100% - 32px)); }
+      section { padding: clamp(44px, 8vw, 58px) 0; }
+      h1 { font-size: clamp(40px, 8.5vw, 54px); line-height: 1; }
+      .hero-copy > p { font-size: 18px; }
+      .email-preview-wrap { min-height: 0; padding-block: 14px; }
+      .section-head, .faq-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+      .section-head { margin-bottom: 36px; }
+      .section-head h2, .faq h2, .closing h2 { font-size: clamp(36px, 7vw, 48px); }
+      .steps { grid-template-columns: minmax(0, 1fr); }
+      .step, .step + .step { padding: 26px 0; border-left: 0; }
+      .step + .step { border-top: 1px solid #46715f; }
+      .difference-block { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+      .faq-layout { gap: 12px; }
+      .faq h2 { margin-bottom: 20px; }
+      .enter-link { white-space: normal; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .hero { gap: 14px; padding: 16px 0 16px; overflow-x: hidden; }
+      h1 { font-size: clamp(36px, 10vw, 46px); letter-spacing: -.035em; }
+      .eyebrow { margin-bottom: 15px; font-size: 13px; }
+      .hero-copy > p { margin-bottom: 25px; font-size: 17px; line-height: 1.5; }
+      .actions { gap: 13px; }
+      .primary { width: 100%; justify-content: center; min-height: 56px; }
+      .free-note { width: 100%; text-align: center; }
+      .email-preview-wrap { min-height: 0; padding-block: 10px 14px; }
+      .email-preview, .email-preview-shadow { width: min(350px, calc(100% - 28px)); }
+      .email-preview-shadow { height: calc(100% - 24px); transform: rotate(1.25deg) translate(4px, 3px); }
+      .email-preview { padding: 21px 20px 19px; transform: rotate(-.6deg); }
+      .email-preview-subject { font-size: 17px; }
+      .proof-grid { grid-template-columns: minmax(0, 1fr); }
+      .proof-item, .proof-item:first-child, .proof-item:last-child { padding: 18px 0; border-left: 0; }
+      .proof-item + .proof-item { border-top: 1px solid var(--line); }
+      .issue-top { align-items: flex-start; flex-direction: column; gap: 8px; padding: 26px 22px 20px; }
+      .issue-top h2 { font-size: clamp(30px, 9vw, 36px); }
+      .sample-stamp { text-align: left; }
+      .entry { grid-template-columns: 38px minmax(0, 1fr); gap: 13px; padding: 22px; }
+      .entry-check { width: 34px; height: 34px; }
+      .enter-link {
+        width: fit-content;
+        min-height: 44px;
+        align-items: center;
+      }
+      .issue-foot { padding: 18px 22px 22px; }
+      .difference-block { padding: 34px 24px; box-shadow: 7px 8px 0 var(--orange); }
+      .difference-list li { padding-left: 30px; }
+      summary { min-height: 56px; padding-block: 17px; }
+      summary::after { top: 13px; }
+      details p { padding-right: 12px; }
+      .closing { padding: 40px 0; }
+      .hero-signup { padding: 14px; }
+      .subscribe-form { max-width: none; }
+      .subscribe-form input[type="email"],
+      .subscribe-form button { min-height: 56px; }
+    }
+
+    @media (max-width: 420px) {
+      .shell { width: min(var(--max), calc(100% - 24px)); }
+      .jump-nav {
+        justify-content: space-between;
+        gap: 0;
+        font-size: 13px;
+        padding-bottom: 4px;
+      }
+      .jump-nav a { padding-inline: 3px; }
+      h1 { font-size: clamp(32px, 10.8vw, 42px); line-height: 1.02; }
+      .hero { padding-top: 12px; }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(320px, calc(100% - 24px)); }
+      .email-preview { padding: 19px 17px 17px; transform: rotate(-.35deg); }
+      .email-preview-shadow { height: calc(100% - 24px); transform: rotate(.6deg) translate(3px, 2px); }
+      .email-preview-subject { font-size: 16px; }
+      .email-preview-entry p { font-size: 10px; }
+      .email-preview-entry .email-preview-prize { font-size: 9.5px; }
+      section { padding: 40px 0; }
+      .section-head h2, .faq h2, .closing h2 { font-size: 34px; }
+      .entry { grid-template-columns: 32px minmax(0, 1fr); gap: 11px; padding: 20px 16px; }
+      .entry-check { width: 32px; height: 32px; }
+      .entry h3 { font-size: 16px; }
+      .issue-top, .issue-foot { padding-inline: 16px; }
+      .difference-block { padding: 30px 20px; }
+      .difference-list li { font-size: 15px; }
+      .closing { padding: 36px 0; }
+      footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+
+    @media (max-width: 340px) {
+      .jump-nav { justify-content: flex-start; gap: 0 10px; }
+      .jump-nav a { font-size: 12px; }
+      h1 { font-size: 31px; }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(294px, calc(100% - 22px)); }
+      .email-preview { padding-inline: 14px; }
+      .email-preview-shadow { height: calc(100% - 24px); transform: none; }
+      .email-preview-subject { font-size: 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">FREE DAILY EMAIL</p>
+        <h1 id="hero-title"><span class="headline-line">113 entries completed today, $811,911 in prize value.</span><span class="headline-line">Sunday, September 27, 2026.</span></h1>
+        <p>Other sweepstakes lists are scraped by bots. Ours is built by entering dozens of drawings per day. A listing only makes the list if the entry went through.</p>
+        <div class="signup-block hero-signup">
+          <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List">
+            <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
+            <input type="hidden" name="form_id" value="9ffc7ae2-5f93-4a67-ae33-8b2f379471f0" />
+            <input type="hidden" name="utm_source" value="the-everyday-prize-list" />
+            <input type="hidden" name="utm_medium" value="landing-page" />
+            <input type="hidden" name="utm_campaign" value="daily-prize-list" />
+            <label for="subscribe-email" class="visually-hidden">Email address</label>
+            <input id="subscribe-email" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
+            <button type="submit" name="button">Subscribe free</button>
+          </form>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+        </div>
+      </div>
+
+      <div class="email-preview-wrap" aria-label="Preview of today’s email">
+        <article class="email-preview">
+          <div class="email-preview-subject">The Everyday Prize List — Sunday, September 27, 2026</div>
+          <p class="email-preview-intro">Every giveaway below was verified today. If it’s listed here, the link worked for us this morning.</p>
+          <p class="email-preview-heading" id="preview-numbers-title">📊 Today in numbers</p>
+          <p class="email-preview-numbers-copy">Entries completed: 113<br>Value of today’s cash and prizes: $811,911</p>
+          <section class="email-preview-featured" aria-labelledby="preview-featured-title">
+            <p class="email-preview-heading" id="preview-featured-title">✅ Featured: 5 highest value</p>
+            <div class="email-preview-entry">
+              <p><strong>Maverik Fuel Your Adventure</strong>, Maverik</p>
+              <p class="email-preview-prize">Prize: $250,000</p>
+              <p class="email-preview-link"><a href="https://maverik.com/sweepstakes/fuel-your-adventure-rules#entry-form" target="_blank" rel="noopener">Enter here</a></p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong>2026 Ford F-150 Raptor Sweepstakes</strong>, teamDigital / NASCAR</p>
+              <p class="email-preview-prize">Prize: ~$75K+ Raptor</p>
+              <p class="email-preview-link"><a href="https://thechasefordpromo.nascar.com/" target="_blank" rel="noopener">Enter here</a></p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong>HOT WHEELS 2026 Jeep Wrangler Sweepstakes</strong>, Mattel (Hot Wheels)</p>
+              <p class="email-preview-prize">Prize: 2026 Jeep Wrangler (MSRP up to ~$65,000)</p>
+              <p class="email-preview-link"><a href="https://jeep.hotwheelssweepstakes.com/" target="_blank" rel="noopener">Enter here</a></p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong>MLF Bass Pro Shops Nitro Z19 Sweepstakes</strong>, Major League Fishing</p>
+              <p class="email-preview-prize">Prize: $57,995 Nitro Z19 boat package (grand prize)</p>
+              <p class="email-preview-link"><a href="https://majorleaguefishing.com/2026-mlf-bass-pro-shops-nitro-z19-sweepstakes/" target="_blank" rel="noopener">Enter here</a></p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong>SuperATV Built To Ride SXS Sweepstakes</strong>, SuperATV</p>
+              <p class="email-preview-prize">Prize: SXS Vehicle</p>
+              <p class="email-preview-link"><a href="https://lp.satvlandingpage.com/entry-form-feb/" target="_blank" rel="noopener">Enter here</a></p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="difference" aria-labelledby="difference-title">
+      <div class="shell">
+        <div class="difference-block">
+          <h2 id="difference-title">Why this list is different</h2>
+          <ul class="difference-list">
+            <li><strong>Clean by design.</strong> A simple list of entry links. No popups, no ads crowding the entry area.</li>
+            <li><strong>Verified today.</strong> Every link was checked and working the day it was sent.</li>
+            <li><strong>Zero dead links.</strong> Broken or expired giveaways get removed, never left to waste your time.</li>
+            <li><strong>The hard ones, included.</strong> CAPTCHA and manual entries most directories skip.</li>
+            <li><strong>Honest prize values.</strong> The maximum one person can win, never an inflated total pool.</li>
+            <li><strong>No dead ends.</strong> Nothing purchase-required, mail-in, or receipt-only ever makes the list.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="shell closing-inner">
+        <h2 id="closing-title">Get tomorrow’s verified prize list.</h2>
+        <div class="signup-block">
+          <p>Fresh sweepstakes links, checked and delivered daily.</p>
+          <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List at the bottom of the page">
+            <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
+            <input type="hidden" name="form_id" value="9ffc7ae2-5f93-4a67-ae33-8b2f379471f0" />
+            <input type="hidden" name="utm_source" value="the-everyday-prize-list" />
+            <input type="hidden" name="utm_medium" value="landing-page" />
+            <input type="hidden" name="utm_campaign" value="daily-prize-list" />
+            <label for="subscribe-email-bottom" class="visually-hidden">Email address</label>
+            <input id="subscribe-email-bottom" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
+            <button type="submit" name="button">Subscribe free</button>
+          </form>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="shell">The Everyday Prize List · Every listing entry-verified · Unsubscribe anytime</div>
+  </footer>
+
+</body>
+</html>
