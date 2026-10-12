@@ -646,5 +646,82 @@
     <div class="shell">The Everyday Prize List · Every listing entry-verified · Unsubscribe anytime</div>
   </footer>
 
+  <script>
+    (function () {
+      var forbiddenCopy = /sponsored\s+entry/i;
+      var chanceNote = /\s*\(\s*\d+\s+chances?\s*\)/gi;
+      var prizeGrabAttribution = /sponsored\s+entry\s+via\s+PrizeGrab/gi;
+      var forbiddenWording = /\bsponsored\s+entry\b/gi;
+      var rowSelector = ".email-preview-entry, .entry, li, tr, article";
+
+      function textNodesWithin(root) {
+        var nodes = [];
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        var node;
+        while ((node = walker.nextNode())) nodes.push(node);
+        return nodes;
+      }
+
+      function tidyText(value) {
+        return value
+          .replace(/\s+([,.;:])/g, "$1")
+          .replace(/[ \t]{2,}/g, " ");
+      }
+
+      function cleanPrizeGrabCopy(root) {
+        var affectedRows = [];
+
+        textNodesWithin(root).forEach(function (node) {
+          if (!forbiddenCopy.test(node.nodeValue)) return;
+          forbiddenCopy.lastIndex = 0;
+
+          var parent = node.parentElement;
+          var row = parent && parent.closest(rowSelector);
+          affectedRows.push(row || parent || root);
+
+          node.nodeValue = tidyText(
+            node.nodeValue
+              .replace(prizeGrabAttribution, "PrizeGrab")
+              .replace(forbiddenWording, "")
+              .replace(chanceNote, "")
+          );
+        });
+
+        affectedRows.forEach(function (row) {
+          textNodesWithin(row).forEach(function (node) {
+            node.nodeValue = tidyText(node.nodeValue.replace(chanceNote, ""));
+          });
+        });
+      }
+
+      function assertPrizeGrabCopy() {
+        if (forbiddenCopy.test(document.body.innerText)) {
+          forbiddenCopy.lastIndex = 0;
+          throw new Error("Forbidden PrizeGrab display wording remains on the page.");
+        }
+        forbiddenCopy.lastIndex = 0;
+      }
+
+      function enforcePrizeGrabCopy(root) {
+        cleanPrizeGrabCopy(root || document.body);
+        assertPrizeGrabCopy();
+      }
+
+      enforcePrizeGrabCopy(document.body);
+
+      new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+              enforcePrizeGrabCopy(node.parentElement || document.body);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              enforcePrizeGrabCopy(node);
+            }
+          });
+        });
+        assertPrizeGrabCopy();
+      }).observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 </html>
