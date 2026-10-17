@@ -194,6 +194,18 @@
       line-height: 1.4;
     }
     .email-preview-entry .email-preview-prize { color: #444; font-size: 10px; }
+    .age-note {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 0 4px;
+      border: 1.5px solid #8a3c18;
+      border-radius: 2px;
+      color: #8a3c18;
+      font-size: 9.5px;
+      font-weight: 700;
+      line-height: 1.5;
+      vertical-align: 1px;
+    }
     .email-preview-entry .email-preview-link { margin-bottom: 0; }
     .email-preview-entry a {
       color: #0066cc;
@@ -375,6 +387,15 @@
     .subscribe-form button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
     .subscribe-form button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
     .signup-note { display: block; margin-top: 11px; color: #35443e; font-size: 13px; }
+    .privacy-link {
+      color: var(--green-dark);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      white-space: nowrap;
+    }
+    .privacy-link:hover { color: var(--orange); }
+    .privacy-link:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
     .subscribe-fallback {
       display: inline-block;
       margin-top: 10px;
@@ -536,7 +557,7 @@
       <div class="hero-copy">
         <p class="eyebrow">FREE DAILY EMAIL</p>
         <h1 id="hero-title"><span class="headline-line">135 sweepstakes open today, worth $1,013,461 in prizes.</span><span class="headline-line">October 17, 2026.</span></h1>
-        <p>Other sweepstakes lists are scraped by bots. Ours is built by entering dozens of drawings per day. A listing only makes the list if the entry went through.</p>
+        <p>Other sweepstakes lists are scraped by bots. Ours is built by entering dozens of drawings per day. Every link is checked working before it's sent.</p>
         <div class="signup-block hero-signup">
           <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List">
             <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
@@ -548,7 +569,7 @@
             <input id="subscribe-email" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
             <button type="submit" name="button">Subscribe free</button>
           </form>
-          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime. <a class="privacy-link" href="https://www.coffeeshopoffice.com/privacy/">Privacy Policy</a></small>
         </div>
       </div>
 
@@ -565,11 +586,11 @@
             </div>
             <div class="email-preview-entry">
               <p><strong><a href="https://medterracbd.com/pages/better-sleep-sweepstakes" target="_blank" rel="noopener">Medterra Better Sleep. Bigger Dreams. Sweepstakes</a></strong>, Medterra CBD</p>
-              <p class="email-preview-prize">Prize value: $100,000.</p>
+              <p class="email-preview-prize">Prize value: $100,000. <span class="age-note">21+</span></p>
             </div>
             <div class="email-preview-entry">
               <p><strong><a href="https://whiteclaw.com/sweepstakes/surgetailgate" target="_blank" rel="noopener">White Claw SURGE Ultimate Tailgate Pickup Truck Sweepstakes</a></strong>, Mark Anthony Brands</p>
-              <p class="email-preview-prize">Prize value: $72,150.</p>
+              <p class="email-preview-prize">Prize value: $72,150. <span class="age-note">21+</span></p>
             </div>
             <div class="email-preview-entry">
               <p><strong><a href="https://ram.hotwheelssweepstakes.com/" target="_blank" rel="noopener">Hot Wheels 2026 Ram Trucks Sweepstakes</a></strong>, Mattel</p>
@@ -614,7 +635,7 @@
           </details>
           <details>
             <summary>How is this different from other sweepstakes lists?</summary>
-            <p>Every listing was entered by us the same day it appears. Scraped lists can’t say that, and they rot fast.</p>
+            <p>We enter dozens of these drawings ourselves every day, and every link is checked before it's sent. Scraped lists can’t say that, and they rot fast.</p>
           </details>
         </div>
       </div>
@@ -635,7 +656,7 @@
             <input id="subscribe-email-bottom" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
             <button type="submit" name="button">Subscribe free</button>
           </form>
-          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime. <a class="privacy-link" href="https://www.coffeeshopoffice.com/privacy/">Privacy Policy</a></small>
         </div>
       </div>
     </section>
@@ -643,7 +664,7 @@
   </main>
 
   <footer>
-    <div class="shell">The Everyday Prize List · Every listing entry-verified · Unsubscribe anytime</div>
+    <div class="shell">The Everyday Prize List · Every link checked before it's sent · Unsubscribe anytime</div>
   </footer>
 
   <script>
