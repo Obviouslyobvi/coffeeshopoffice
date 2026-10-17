@@ -1,223 +1,727 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Everyday Prize List: October 16, 2026</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <title>The Everyday Prize List: Free Daily Sweepstakes Email</title>
+  <style>
+    :root {
+      --ink: #12271f;
+      --muted: #52635c;
+      --green: #176b4b;
+      --green-dark: #0c4e36;
+      --lime: #d8f065;
+      --paper: #f8f7f1;
+      --white: #ffffff;
+      --line: #d9ddd5;
+      --soft: #edf2eb;
+      --orange: #e26e32;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    svg { display: block; max-width: 100%; }
+    body { overflow-x: clip; }
+    .shell { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    img, input, button { max-width: 100%; }
+    .hero > *,
+    .section-head > *,
+    .faq-layout > *,
+    .closing-inner > *,
+    .entry > *,
+    .difference-block > * { min-width: 0; }
+    h1, h2, h3, p, .email-preview-subject, .proof-item strong { overflow-wrap: break-word; }
+
+    .jump-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 26px;
+      padding: 22px 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .jump-nav a { text-decoration: none; border-bottom: 1px solid transparent; }
+    .jump-nav a:hover, .jump-nav a:focus-visible { border-color: currentColor; }
+
+    .hero {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
+      align-items: center;
+      gap: clamp(30px, 5vw, 64px);
+      padding: 30px 0 24px;
+      overflow-x: hidden;
+    }
+    .hero-copy { max-width: 680px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--green-dark);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 3px;
+      background: var(--orange);
+    }
+    h1, h2, h3 { margin-top: 0; }
+    h1 {
+      max-width: 720px;
+      margin-bottom: 22px;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .96;
+      letter-spacing: -.045em;
+    }
+    #hero-title { font-size: clamp(33px, 4.75vw, 59px); }
+    .headline-line { display: block; }
+    .hero-copy > p {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: #33483f;
+      font-size: clamp(18px, 2vw, 21px);
+      line-height: 1.55;
+    }
+    .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 2px solid var(--ink);
+      background: var(--lime);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .primary:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+    .primary:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .free-note { color: var(--muted); font-size: 14px; }
+
+    .email-preview-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      padding: 18px 0;
+    }
+    .email-preview-shadow {
+      position: absolute;
+      width: min(430px, 94%);
+      height: calc(100% - 36px);
+      background: var(--orange);
+      transform: rotate(6deg) translate(18px, 8px);
+    }
+    .email-preview {
+      position: relative;
+      width: min(430px, 94%);
+      padding: 24px 26px 23px;
+      border: 2px solid var(--ink);
+      background: var(--white);
+      color: #1a1a1a;
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: 10px 12px 0 rgba(18,39,31,.14);
+      transform: rotate(-2.5deg);
+    }
+    .email-preview-subject {
+      margin: 0 0 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .email-preview-intro {
+      margin: 0 0 17px;
+      color: #1a1a1a;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+    .email-preview-heading {
+      margin: 0 0 5px;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .email-preview-numbers-copy {
+      margin: 0 0 17px;
+      color: #1a1a1a;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .email-preview-featured { margin-top: 0; padding: 0; }
+    .email-preview-featured .email-preview-heading { margin-bottom: 11px; }
+    .email-preview-entry { margin: 0 0 11px; }
+    .email-preview-entry:last-child { margin-bottom: 0; }
+    .email-preview-entry p {
+      margin: 0 0 1px;
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+    .email-preview-entry .email-preview-prize { color: #444; font-size: 10px; }
+    .email-preview-entry .email-preview-link { margin-bottom: 0; }
+    .email-preview-entry a {
+      color: #0066cc;
+      font-weight: 700;
+    }
+    .email-preview-entry a:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
+    .proof-strip {
+      border-block: 1px solid var(--line);
+      background: var(--white);
+    }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .proof-item { padding: 24px 30px; border-left: 1px solid var(--line); }
+    .proof-item:first-child { border-left: 0; padding-left: 0; }
+    .proof-item:last-child { padding-right: 0; }
+    .proof-item strong { display: block; font-family: "Newsreader", Georgia, serif; font-size: 26px; line-height: 1.05; }
+    .proof-item span { color: var(--muted); font-size: 14px; }
+
+    section { padding: clamp(54px, 7vw, 82px) 0; }
+    .section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 60px; margin-bottom: 48px; align-items: end; }
+    .section-head h2 {
+      margin-bottom: 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.025em;
+    }
+    .section-head p { margin: 0; max-width: 650px; color: var(--muted); }
+
+    .process { background: var(--green-dark); color: var(--white); }
+    .process .section-head p { color: #c7d8d0; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #46715f; }
+    .step { padding: 32px 36px 12px 0; }
+    .step + .step { padding-left: 36px; border-left: 1px solid #46715f; }
+    .step-num { color: var(--lime); font-family: "Newsreader", Georgia, serif; font-size: 28px; }
+    .step h3 { margin: 18px 0 9px; font-size: 19px; }
+    .step p { margin: 0; color: #c7d8d0; font-size: 15px; }
+
+    .sample { background: #e9eee7; }
+    .issue-paper {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      border: 1px solid #cdd6cf;
+      background: var(--white);
+      box-shadow: 0 18px 50px rgba(18,39,31,.08);
+      overflow-wrap: anywhere;
+    }
+    .issue-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      padding: 32px 38px 26px;
+      border-bottom: 3px solid var(--ink);
+    }
+    .issue-top h2 { margin: 0 0 2px; font-family: "Newsreader", Georgia, serif; font-size: 36px; }
+    .issue-top p { margin: 0; color: var(--muted); font-size: 14px; }
+    .sample-stamp { color: var(--green); font-size: 13px; font-weight: 700; text-align: right; }
+    .entry { display: grid; grid-template-columns: 48px minmax(0,1fr) auto; gap: 18px; padding: 25px 38px; border-bottom: 1px solid var(--line); align-items: start; }
+    .entry:last-child { border-bottom: 0; }
+    .entry-check { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--soft); color: var(--green); }
+    .entry h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.35; }
+    .entry-title-link { color: var(--green-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .entry-title-link:hover { color: var(--orange); }
+    .entry-title-link:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .entry p { margin: 0; color: var(--muted); font-size: 14px; }
+    .manual-tag { display: inline-block; margin-top: 9px; padding: 3px 8px; background: #fff1e9; color: #8a3c18; font-size: 12px; font-weight: 700; }
+    .enter-link { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); font-size: 14px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
+    .enter-link:hover { color: var(--orange); }
+    .issue-foot { padding: 20px 38px 24px; background: #fbfcfa; color: var(--muted); font-size: 13px; }
+
+    .difference { padding-top: 18px; padding-bottom: 44px; background: var(--paper); }
+    .difference-block {
+      display: grid;
+      grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr);
+      gap: clamp(42px, 7vw, 86px);
+      padding: clamp(38px, 6vw, 66px);
+      background: var(--green-dark);
+      color: var(--white);
+      box-shadow: 10px 12px 0 var(--orange);
+    }
+    .difference-block h2 {
+      margin: 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -.025em;
+    }
+    .difference-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid #46715f;
+    }
+    .difference-list li {
+      position: relative;
+      padding: 18px 0 18px 34px;
+      border-bottom: 1px solid #46715f;
+      color: #d7e4de;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .difference-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 26px;
+      width: 12px;
+      height: 6px;
+      border-left: 2px solid var(--lime);
+      border-bottom: 2px solid var(--lime);
+      transform: rotate(-45deg);
+    }
+    .difference-list strong { color: var(--white); }
+
+    .faq { background: var(--white); }
+    .faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 80px; }
+    .faq h2 { font-family: "Newsreader", Georgia, serif; font-size: clamp(38px, 5vw, 56px); line-height: 1; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; list-style: none; padding: 21px 42px 21px 0; font-weight: 700; position: relative; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 4px; top: 17px; color: var(--green); font-size: 25px; font-weight: 400; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: -6px 0 22px; padding-right: 50px; color: var(--muted); font-size: 15px; }
+
+    .closing { padding: 48px 0; background: var(--lime); }
+    .closing-inner { display: grid; grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr); align-items: center; gap: clamp(48px, 8vw, 96px); }
+    .closing h2 { max-width: 650px; margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(38px, 5vw, 60px); line-height: 1; }
+    .signup-block { max-width: 560px; }
+    .hero-signup {
+      max-width: 600px;
+      padding: 18px 20px 16px;
+      background: var(--lime);
+    }
+    .signup-block > p { margin: 0 0 16px; color: #35443e; font-size: 15px; }
+    .subscribe-form {
+      display: flex;
+      width: 100%;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .subscribe-form input[type="email"] {
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 54px;
+      padding: 0 17px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+      font-size: 16px;
+      box-shadow: none;
+    }
+    .subscribe-form input[type="email"]::placeholder { color: #68766f; opacity: 1; }
+    .subscribe-form input[type="email"]:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+    .subscribe-form button {
+      flex: 0 0 auto;
+      min-height: 54px;
+      padding: 0 22px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--green-dark);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .subscribe-form button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+    .subscribe-form button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .signup-note { display: block; margin-top: 11px; color: #35443e; font-size: 13px; }
+    .subscribe-fallback {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+    .subscribe-fallback:hover { color: var(--orange); }
+    footer { padding: 28px 0 40px; background: var(--lime); color: #35443e; font-size: 13px; }
+    footer .shell { border-top: 1px solid rgba(18,39,31,.28); padding-top: 24px; }
+
+    @media (max-width: 1100px) {
+      .shell { width: min(var(--max), calc(100% - 40px)); }
+      .jump-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        padding-top: 14px;
+      }
+      .jump-nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 4px;
+      }
+      .hero {
+        min-height: auto;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding: 24px 0 20px;
+      }
+      .hero-copy { max-width: 850px; }
+      h1 { max-width: 850px; font-size: clamp(48px, 7vw, 70px); }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(430px, calc(100% - 48px)); }
+      .closing-inner {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 32px;
+        max-width: 780px;
+      }
+      .signup-block { width: 100%; max-width: none; }
+      .subscribe-form {
+        flex-direction: column;
+        max-width: 620px;
+      }
+      .subscribe-form button { width: 100%; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(var(--max), calc(100% - 32px)); }
+      section { padding: clamp(44px, 8vw, 58px) 0; }
+      h1 { font-size: clamp(40px, 8.5vw, 54px); line-height: 1; }
+      .hero-copy > p { font-size: 18px; }
+      .email-preview-wrap { min-height: 0; padding-block: 14px; }
+      .section-head, .faq-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+      .section-head { margin-bottom: 36px; }
+      .section-head h2, .faq h2, .closing h2 { font-size: clamp(36px, 7vw, 48px); }
+      .steps { grid-template-columns: minmax(0, 1fr); }
+      .step, .step + .step { padding: 26px 0; border-left: 0; }
+      .step + .step { border-top: 1px solid #46715f; }
+      .difference-block { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+      .faq-layout { gap: 12px; }
+      .faq h2 { margin-bottom: 20px; }
+      .enter-link { white-space: normal; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .hero { gap: 14px; padding: 16px 0 16px; overflow-x: hidden; }
+      h1 { font-size: clamp(36px, 10vw, 46px); letter-spacing: -.035em; }
+      .eyebrow { margin-bottom: 15px; font-size: 13px; }
+      .hero-copy > p { margin-bottom: 25px; font-size: 17px; line-height: 1.5; }
+      .actions { gap: 13px; }
+      .primary { width: 100%; justify-content: center; min-height: 56px; }
+      .free-note { width: 100%; text-align: center; }
+      .email-preview-wrap { min-height: 0; padding-block: 10px 14px; }
+      .email-preview, .email-preview-shadow { width: min(350px, calc(100% - 28px)); }
+      .email-preview-shadow { height: calc(100% - 24px); transform: rotate(1.25deg) translate(4px, 3px); }
+      .email-preview { padding: 21px 20px 19px; transform: rotate(-.6deg); }
+      .email-preview-subject { font-size: 17px; }
+      .proof-grid { grid-template-columns: minmax(0, 1fr); }
+      .proof-item, .proof-item:first-child, .proof-item:last-child { padding: 18px 0; border-left: 0; }
+      .proof-item + .proof-item { border-top: 1px solid var(--line); }
+      .issue-top { align-items: flex-start; flex-direction: column; gap: 8px; padding: 26px 22px 20px; }
+      .issue-top h2 { font-size: clamp(30px, 9vw, 36px); }
+      .sample-stamp { text-align: left; }
+      .entry { grid-template-columns: 38px minmax(0, 1fr); gap: 13px; padding: 22px; }
+      .entry-check { width: 34px; height: 34px; }
+      .enter-link {
+        width: fit-content;
+        min-height: 44px;
+        align-items: center;
+      }
+      .issue-foot { padding: 18px 22px 22px; }
+      .difference-block { padding: 34px 24px; box-shadow: 7px 8px 0 var(--orange); }
+      .difference-list li { padding-left: 30px; }
+      summary { min-height: 56px; padding-block: 17px; }
+      summary::after { top: 13px; }
+      details p { padding-right: 12px; }
+      .closing { padding: 40px 0; }
+      .hero-signup { padding: 14px; }
+      .subscribe-form { max-width: none; }
+      .subscribe-form input[type="email"],
+      .subscribe-form button { min-height: 56px; }
+    }
+
+    @media (max-width: 420px) {
+      .shell { width: min(var(--max), calc(100% - 24px)); }
+      .jump-nav {
+        justify-content: space-between;
+        gap: 0;
+        font-size: 13px;
+        padding-bottom: 4px;
+      }
+      .jump-nav a { padding-inline: 3px; }
+      h1 { font-size: clamp(32px, 10.8vw, 42px); line-height: 1.02; }
+      .hero { padding-top: 12px; }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(320px, calc(100% - 24px)); }
+      .email-preview { padding: 19px 17px 17px; transform: rotate(-.35deg); }
+      .email-preview-shadow { height: calc(100% - 24px); transform: rotate(.6deg) translate(3px, 2px); }
+      .email-preview-subject { font-size: 16px; }
+      .email-preview-entry p { font-size: 10px; }
+      .email-preview-entry .email-preview-prize { font-size: 9.5px; }
+      section { padding: 40px 0; }
+      .section-head h2, .faq h2, .closing h2 { font-size: 34px; }
+      .entry { grid-template-columns: 32px minmax(0, 1fr); gap: 11px; padding: 20px 16px; }
+      .entry-check { width: 32px; height: 32px; }
+      .entry h3 { font-size: 16px; }
+      .issue-top, .issue-foot { padding-inline: 16px; }
+      .difference-block { padding: 30px 20px; }
+      .difference-list li { font-size: 15px; }
+      .closing { padding: 36px 0; }
+      footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+
+    @media (max-width: 340px) {
+      .jump-nav { justify-content: flex-start; gap: 0 10px; }
+      .jump-nav a { font-size: 12px; }
+      h1 { font-size: 31px; }
+      .email-preview-wrap { min-height: 0; }
+      .email-preview, .email-preview-shadow { width: min(294px, calc(100% - 22px)); }
+      .email-preview { padding-inline: 14px; }
+      .email-preview-shadow { height: calc(100% - 24px); transform: none; }
+      .email-preview-subject { font-size: 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
-<body style="margin:0;background:#ffffff;">
-<main style="max-width:640px;margin:0 auto;padding:24px 20px 48px 20px;">
-<p style="font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#666;margin:0 0 4px 0;">The Everyday Prize List</p>
-<h1 style="font-size:28px;margin:0 0 24px 0;color:#1a1a1a;">October 16, 2026</h1>
-<p style="font-size:20px;font-weight:bold;margin:0 0 8px 0;color:#1a1a1a;">📊 Today in numbers</p>
-<p style="font-size:16px;line-height:1.4;margin:0 0 24px 0;color:#1a1a1a;">173 sweepstakes open today, worth $1,054,966 in prizes</p>
-<p style="font-size:20px;font-weight:bold;margin:24px 0 16px 0;color:#1a1a1a;">✅ Featured: 5 highest value</p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;"><span style="font-weight:bold;">5</span> featured sweepstakes, worth <span style="font-weight:bold;">$500,000</span> in prizes</p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Bearaby Ultimate 5-Star Sleep Retreat</span>, Bearaby</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $100,000</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://bearaby.com/pages/sweepstakes" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">FCA US $100,000 Vehicle Sweepstakes</span>, FCA US (Stellantis)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $100,000 vehicle credit</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://sweeps.stellantisexperiences.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Ground Speed Warriors F-150 or Cash Giveaway</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $100,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://groundspeedwarriors.org/pages/f150-or-cash-its-your-choice" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">M&amp;R&#x27;s Red White and Blue Crew Giveaway</span>, M&amp;R</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: HORNET grand prize (max value $100,000)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://webserver1.mrprint.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Medterra Better Sleep. Bigger Dreams. Sweepstakes</span>, Medterra CBD</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $100,000 cash (1 winner)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://medterracbd.com/pages/better-sleep-sweepstakes" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<hr style="border:none;border-top:2px solid #ddd;margin:24px 0;">
-<p style="font-size:20px;font-weight:bold;margin:24px 0 16px 0;color:#1a1a1a;">Today's sweepstakes</p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Copenhagen 250th Forged in Freedom Sweepstakes</span>, Copenhagen</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: 1 winner: 2026 Ford F-250 (ARV $108,560) + $30,000 cash; 13,000 instant-win $25 Visa Reward Virtual Cards. Ends Nov 1, 2026. Tobacco brand; verify tobacco-consumer eligibility.</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.freshcope.com/promo-rs/freedom/register" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">White Claw SURGE Ultimate Tailgate Pickup Truck Sweepstakes</span>, Mark Anthony Brands</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Ultimate Tailgate pickup truck + $6,000 check ($72,150)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://whiteclaw.com/sweepstakes/surgetailgate" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">HOT WHEELS 2026 Ram Trucks Sweepstakes</span>, Mattel, Inc.</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: One 2026 Ram 1500 Truck, MSRP up to $70,000; entry period 2026-09-14 to 2026-12-14</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://ram.hotwheelssweepstakes.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">MLF Bass Pro Shops Nitro Z19 Sweepstakes</span>, Major League Fishing</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $57,995 Nitro Z19 boat package (grand prize)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://majorleaguefishing.com/2026-mlf-bass-pro-shops-nitro-z19-sweepstakes/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Laxmi Dream Big Sweepstakes</span>, House of Spices / Laxmi</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: New car, ARV $55,000</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.laxmihos.com/dream-big-win-bigger-this-festival" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Valpak Free Ride Sweepstakes</span>, Valpak Direct Marketing Systems, LLC</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: 2026 Jeep Wrangler 2-Door Sport, ARV $40,625</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://valpak.com/freeride" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Straight Talk&#x27;s &quot;Ford Mustang&quot; 2026 Giveaway</span>, Straight Talk</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: 2026 Ford Mustang EcoBoost, ARV $32,640</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://straighttalkracingtour.com/mustang-giveaway" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Yerba Madre Cash for College Sweepstakes</span>, Yerba Madre</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $30,000 check plus merchandise and instant-win prizes</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://airbaton.net/l/yerbamadre-cashforcollege" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Marriott Bonvoy Super Bowl Sleepover Suite Giveaway</span>, Marriott</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $27,550</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.joinmarriottbonvoy.com/superbowlsleepoversuite" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Adventure Awaits $25K Sweepstakes</span>, Dotdash Meredith Inc. (People Inc.)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $25,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.travelandleisure.com/sweepstakes/entry?sweepId=tal-25k-advntrawts-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Better Homes &amp; Gardens Home &amp; Garden Refresh $25K Giveaway</span>, Better Homes &amp; Gardens</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $25,000 home &amp; garden refresh</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.bhg.com/25kFall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Southern Living Renew Your Home $25K</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $25,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.southernliving.com/sweepstakes/entry?sweepId=slv-25k-renewhome-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">USA TODAY Project Home Improved $25,000 Giveaway</span>, USA TODAY / Gannett</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $25,000 cash (1x$10,000 + 3x$5,000). Daily. Ends Nov 13, 2026. 21+, homeowner of qualifying detached single-family home; contiguous US+DC, Canada excl QC.</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://usatoday.gannettcontests.com/2026-Fall-Project-Home-Improved-25k" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Corona Football 2026 Sweepstakes</span>, Corona (Constellation Brands)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Grand prize: 3-day/2-night gameday beach trip for winner plus up to 5 companions including air, hotel, $1,000 spending money and up to $5,000 toward taxes (max ARV $21,250); 100 tailgate gear bundles (ARV $630 each)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.coronausa.com/pages/football-2026" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Coffee Mate Year of Flavor Sweepstakes</span>, Nestle USA (Coffee Mate)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Year of coffee flavor prizes</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.coffeemate.com/yearofflavor" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Hallmark Channel Countdown To Christmas Sweepstakes 2026</span>, Hallmark Media United States, LLC</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Grand Prize $20,000 cash (check) + $250 Spoonful of Comfort gift card (ARV $20,250); weekly prizes $1,000 + gift card packages</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://christmasmoviegame.hallmarkchannel.com" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Wheel of Fortune Hit It Rich Giveaway</span>, Wheel of Fortune</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: 5 daily drawings (Oct 19-23 episodes); each winner gets that episode&#x27;s Hit It Rich jackpot check ($3,000 up to $20,000). Total ARV $100,040.</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.wheeloffortune.com/win" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">NASCAR Swear Jar Sweepstakes</span>, NASCAR</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Progressive cash pot up to $15,000 (check)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.nascarswearjar.com/thanks" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Shop LC Hello Fall Sweepstakes</span>, Shop LC Global Limited</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: ~$14,000 in daily merchandise prizes (25 daily winners, one prize each): Dyson Airwrap/Airstrait/Supersonic, Shark FlexStyle, KitchenAid Artisan 5-qt stand mixer, Vitamix Ascent X2, Nespresso Vertuo Creatista by Breville, Breville Barista Express, Roborock Qrevo robot vacuum &amp; mop, Sonos Era 300, Bose earbuds and soundbar, Samsung 65-inch QLED and 43-inch Frame TVs, Apple iPad Air 11-inch and 13-inch, AirPods Max, Apple Watch Ultra 3, Galaxy Watch8 Classic, Aura digital frame, and more</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.shoplc.com/pages/giveaways" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">AirMedCare College Football $10,000 Giveaway</span>, AirMedCare (AMCN)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $10,000 cash via ACH transfer, one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.amcn-college-football-giveaway.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Dr Pepper Football Tuition Sweepstakes</span>, Dr Pepper</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $10,000 tuition</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://drpeppertuitiongiveaway.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Grizzly Camo Life Giveaway</span>, Grizzly (tobacco)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Instant win: 892 Digital Choice Prepaid Mastercard prizes; 4 weekly Grand Prizes: Yamaha Wolverine RMAX2 + $10,000 cash each. Total ARV $374,556.</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.mygrizzly.com" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">PrizeGrab Cash Dash (over $10,000 in cash prizes)</span>, PrizeGrab</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Multiple cash prizes, over $10,000 total</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://prizegrab.com/p/cash-dash-sweepstakes/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Serious Eats Prep Your Pantry $10K Giveaway</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $10,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.seriouseats.com/sweepstakes/entry?sweepId=se-10k-preppantry-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Simply Recipes $10K Groceries on Us</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $10,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.simplyrecipes.com/sweepstakes/entry?sweepId=sr-10k-grcyonus-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">The Spruce Eats $10K Save Your Kitchen</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $10,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.thespruceeats.com/sweepstakes/entry?sweepId=spreats-10k-savektchn-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">The Spruce Love Your Home $10K</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $10,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.thespruce.com/sweepstakes/entry?sweepId=spr-10k-lovehome-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Verywell Mind Relax &amp; Revive $10K</span></p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $10,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.verywellmind.com/sweepstakes/entry?sweepId=vwm-10k-rlxreviv-fall26" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Coors Light Football 2026 Sweepstakes</span>, Molson Coors Beverage Company USA LLC</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Grand Prize VIP trip for 4 to ESPN College GameDay broadcast (ARV $8,840); total ARV all prizes $32,767; ends 2027-01-31</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.coorslight.com/en-US/football" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Eggland&#x27;s Best - Fuel Your Flow With EB Sweepstakes</span>, Eggland&#x27;s Best</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Eggland&#x27;s Best sweepstakes, $7,420</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.ebfamilysweeps.com/entry-form" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Dallas Cowboys Invisalign Super Bowl Sweepstakes</span>, Invisalign / Dallas Cowboys</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Super Bowl LXI trip for 2 (ARV $7,000)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.dallascowboys.com/fans/invisalign/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Coca-Cola Football Ultimate Fan 2026 Promotion</span>, Coca-Cola</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $6,250 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.coca-cola.com/us/en/offerings/coca-cola/football" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Coca-Cola Football Ultimate Fan 2026 Sweepstakes &amp; IWG</span>, Coca-Cola</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: College football bowl trip ($6,250 ARV); 50x $25 Uber gift cards; 50x $25 Fanatics gift cards</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.coca-cola.com/us/en/offerings/coca-cola/football/flyaway-trip-sweepstakes" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">ExtremeTerrain $6,000 Giveaway</span>, ExtremeTerrain (Turn5 all-stores)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $6,000 (details in image only)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://link.extremeterrain.com/q/bE6jmQ3D7w37nVoJP38m6BngyQJEPCb6fXQ3VzdG9tZXJJbL0YmZvXFQ1T01Vc2VySUTDiTI2OTIwNzM2w4hlw4kxZ2VuZXBhbG1lckBnbWFpbC5jb23DiAHpdnYj5zdLQgFZ7E11gEMxueZQ" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Skrewball College Tailgate Tour Sweepstakes</span>, Skrewball Peanut Butter Whiskey</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Grand Prize: Las Vegas CFP trip for 2 (round-trip airfare, 2 nights hotel, 2 event tickets), ARV $6,000</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.skrewballwhiskey.com/en/collegetailgatetour" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Jason&#x27;s Deli 50th Anniversary Instant Win</span>, Jason&#x27;s Deli</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Grand: $5,400 Vegas trip; 100,000+ instant wins; total ARV $391,413.82</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.jasonsdeli.com/deli-brationsweepstakes" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Jason&#x27;s Deli 50th Anniversary Promotion</span>, Jason&#x27;s Deli</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: 3-night MGM Grand Las Vegas voucher + instant prizes (ARV $5,400)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://secure.cataboom.com/direct/jason-s-deli-entry" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Peroni Nastro Azzurro 0.0 Las Vegas Race Weekend Sweepstakes</span>, Peroni</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $5,308 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://mc.beveragepromo.com/262189" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">2026 Ford NASCAR Cup Series Chase</span>, Ford</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $5,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://thechasefordpromo.nascar.com/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Cricket Wireless 2026 Celebration Bowl Flyaway Sweepstakes</span>, Cricket Wireless</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: Trip for 2 to 2026 Celebration Bowl in Atlanta ($5,000 ARV)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.cricketsweepstakes.com/hbcu" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Cruise Together. Discover the Great Lakes Giveaway</span>, Victory Cruise Lines / USA Today</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $5,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://usatoday.gannettcontests.com/Victory-Cruise-Lines--Cruise-Together-Discover-the-Great-Lakes/" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Food Network Taste of Fall</span>, Food Network / Food.com</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $5,000 check</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.foodnetwork.com/sponsored/sweepstakes/taste-of-fall" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Food.com Dream It, Win It Giveaway</span>, Food Network</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: up to $5,000 for one winner</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.food.com/sweepstakes/dream-it-win-it" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">Ghost Orlando Festival 2026 Sweepstakes</span>, GHOST Energy / Live Nation</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: festival trip</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://lnpromos.com/ghostenergyflorida" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:0 0 2px 0;color:#1a1a1a;"><span style="font-weight:bold;">HGTV Trick or Treat $5K Giveaway</span>, HGTV (Warner Bros. Discovery)</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 2px 0;color:#444;">Prize: $5,000 cash</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 18px 0;color:#1a1a1a;">
-<a href="https://www.hgtv.com/sweepstakes" style="color:#0066cc;font-weight:bold;">Enter here</a></p>
-<p style="font-size:16px;line-height:1.6;margin:8px 0 24px 0;color:#1a1a1a;"><a href="https://www.coffeeshopoffice.com/prizes/" style="color:#0066cc;font-weight:bold;">See all 173 sweepstakes open today</a></p>
-<hr style="border:none;border-top:2px solid #ddd;margin:24px 0;">
-<p style="font-size:16px;line-height:1.6;margin:0;color:#1a1a1a;">💡 Got your own thing worth sharing? This newsletter runs on beehiiv, free to start with unlimited sends. Start yours through my link and get a 14-day trial plus 20% off your first 3 months: <a href="https://www.beehiiv.com/?via=coffee-shop-office" style="color:#0066cc;font-weight:bold;">Start on beehiiv</a></p>
-</main>
+<body>
+  <main>
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">FREE DAILY EMAIL</p>
+        <h1 id="hero-title"><span class="headline-line">135 sweepstakes open today, worth $1,013,461 in prizes.</span><span class="headline-line">October 17, 2026.</span></h1>
+        <p>Other sweepstakes lists are scraped by bots. Ours is built by entering dozens of drawings per day. A listing only makes the list if the entry went through.</p>
+        <div class="signup-block hero-signup">
+          <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List">
+            <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
+            <input type="hidden" name="form_id" value="9ffc7ae2-5f93-4a67-ae33-8b2f379471f0" />
+            <input type="hidden" name="utm_source" value="the-everyday-prize-list" />
+            <input type="hidden" name="utm_medium" value="landing-page" />
+            <input type="hidden" name="utm_campaign" value="daily-prize-list" />
+            <label for="subscribe-email" class="visually-hidden">Email address</label>
+            <input id="subscribe-email" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
+            <button type="submit" name="button">Subscribe free</button>
+          </form>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+        </div>
+      </div>
+
+      <div class="email-preview-wrap" aria-label="Preview of today’s email">
+        <article class="email-preview">
+          <div class="email-preview-subject">The Everyday Prize List: October 17, 2026</div>
+          <p class="email-preview-heading" id="preview-numbers-title">📊 Today in numbers</p>
+          <p class="email-preview-numbers-copy">135 sweepstakes open today, worth $1,013,461 in prizes</p>
+          <section class="email-preview-featured" aria-labelledby="preview-featured-title">
+            <p class="email-preview-heading" id="preview-featured-title">✅ Featured: 5 highest value</p>
+            <div class="email-preview-entry">
+              <p><strong><a href="https://www.montanaknifecompany.com/pages/ultimate-basecamp-4x4-rv-giveaway" target="_blank" rel="noopener">Ridge XT Overlander RV Prize Pack</a></strong>, Montana Knife Company</p>
+              <p class="email-preview-prize">Prize value: $183,000.</p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong><a href="https://medterracbd.com/pages/better-sleep-sweepstakes" target="_blank" rel="noopener">Medterra Better Sleep. Bigger Dreams. Sweepstakes</a></strong>, Medterra CBD</p>
+              <p class="email-preview-prize">Prize value: $100,000.</p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong><a href="https://whiteclaw.com/sweepstakes/surgetailgate" target="_blank" rel="noopener">White Claw SURGE Ultimate Tailgate Pickup Truck Sweepstakes</a></strong>, Mark Anthony Brands</p>
+              <p class="email-preview-prize">Prize value: $72,150.</p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong><a href="https://ram.hotwheelssweepstakes.com/" target="_blank" rel="noopener">Hot Wheels 2026 Ram Trucks Sweepstakes</a></strong>, Mattel</p>
+              <p class="email-preview-prize">Prize value: $70,000.</p>
+            </div>
+            <div class="email-preview-entry">
+              <p><strong><a href="https://www.lundboats.com/promotions/giveaway.html" target="_blank" rel="noopener">Lund Boats 2026 1875 Crossover XS Sweepstakes</a></strong>, Lund Boat Company</p>
+              <p class="email-preview-prize">Prize value: $65,000.</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="difference" aria-labelledby="difference-title">
+      <div class="shell">
+        <div class="difference-block">
+          <h2 id="difference-title">Why this list is different</h2>
+          <ul class="difference-list">
+            <li><strong>Clean by design.</strong> A simple list of entry links. No popups, no ads crowding the entry area.</li>
+            <li><strong>Verified today.</strong> Every link was checked and working the day it was sent.</li>
+            <li><strong>Zero dead links.</strong> Broken or expired giveaways get removed, never left to waste your time.</li>
+            <li><strong>The hard ones, included.</strong> CAPTCHA and manual entries most directories skip.</li>
+            <li><strong>Honest prize values.</strong> The maximum one person can win, never an inflated total pool.</li>
+            <li><strong>No dead ends.</strong> Nothing purchase-required, mail-in, or receipt-only ever makes the list.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="questions" aria-labelledby="questions-title">
+      <div class="shell faq-layout">
+        <h2 id="questions-title">Good questions.</h2>
+        <div>
+          <details>
+            <summary>Is it really free?</summary>
+            <p>Yes, free while we build the audience. No credit card, no catch.</p>
+          </details>
+          <details>
+            <summary>What time does it arrive?</summary>
+            <p>Daily at 11:00 AM Pacific, after that day’s entries are done, so everything in it is fresh and verified.</p>
+          </details>
+          <details>
+            <summary>How is this different from other sweepstakes lists?</summary>
+            <p>Every listing was entered by us the same day it appears. Scraped lists can’t say that, and they rot fast.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="shell closing-inner">
+        <h2 id="closing-title">Get tomorrow’s verified prize list.</h2>
+        <div class="signup-block">
+          <p>Fresh sweepstakes links, checked and delivered daily.</p>
+          <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List at the bottom of the page">
+            <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
+            <input type="hidden" name="form_id" value="9ffc7ae2-5f93-4a67-ae33-8b2f379471f0" />
+            <input type="hidden" name="utm_source" value="the-everyday-prize-list" />
+            <input type="hidden" name="utm_medium" value="landing-page" />
+            <input type="hidden" name="utm_campaign" value="daily-prize-list" />
+            <label for="subscribe-email-bottom" class="visually-hidden">Email address</label>
+            <input id="subscribe-email-bottom" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
+            <button type="submit" name="button">Subscribe free</button>
+          </form>
+          <small class="signup-note">Free at launch. No card required. Unsubscribe anytime.</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="shell">The Everyday Prize List · Every listing entry-verified · Unsubscribe anytime</div>
+  </footer>
+
+  <script>
+    (function () {
+      var forbiddenCopy = /sponsored\s+entry/i;
+      var chanceNote = /\s*\(\s*\d+\s+chances?\s*\)/gi;
+      var prizeGrabAttribution = /sponsored\s+entry\s+via\s+PrizeGrab/gi;
+      var forbiddenWording = /\bsponsored\s+entry\b/gi;
+      var rowSelector = ".email-preview-entry, .entry, li, tr, article";
+
+      function textNodesWithin(root) {
+        var nodes = [];
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        var node;
+        while ((node = walker.nextNode())) nodes.push(node);
+        return nodes;
+      }
+
+      function tidyText(value) {
+        return value
+          .replace(/\s+([,.;:])/g, "$1")
+          .replace(/[ \t]{2,}/g, " ");
+      }
+
+      function cleanPrizeGrabCopy(root) {
+        var affectedRows = [];
+
+        textNodesWithin(root).forEach(function (node) {
+          if (!forbiddenCopy.test(node.nodeValue)) return;
+          forbiddenCopy.lastIndex = 0;
+
+          var parent = node.parentElement;
+          var row = parent && parent.closest(rowSelector);
+          affectedRows.push(row || parent || root);
+
+          node.nodeValue = tidyText(
+            node.nodeValue
+              .replace(prizeGrabAttribution, "PrizeGrab")
+              .replace(forbiddenWording, "")
+              .replace(chanceNote, "")
+          );
+        });
+
+        affectedRows.forEach(function (row) {
+          textNodesWithin(row).forEach(function (node) {
+            node.nodeValue = tidyText(node.nodeValue.replace(chanceNote, ""));
+          });
+        });
+      }
+
+      function assertPrizeGrabCopy() {
+        if (forbiddenCopy.test(document.body.innerText)) {
+          forbiddenCopy.lastIndex = 0;
+          throw new Error("Forbidden PrizeGrab display wording remains on the page.");
+        }
+        forbiddenCopy.lastIndex = 0;
+      }
+
+      function enforcePrizeGrabCopy(root) {
+        cleanPrizeGrabCopy(root || document.body);
+        assertPrizeGrabCopy();
+      }
+
+      enforcePrizeGrabCopy(document.body);
+
+      new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+              enforcePrizeGrabCopy(node.parentElement || document.body);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              enforcePrizeGrabCopy(node);
+            }
+          });
+        });
+        assertPrizeGrabCopy();
+      }).observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 </html>
