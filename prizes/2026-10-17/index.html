@@ -388,6 +388,7 @@
     }
     .subscribe-form button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
     .subscribe-form button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .signup-done { margin: 0; padding: 14px 0; font-weight: 700; color: var(--green-dark); }
     .signup-note { display: block; margin-top: 11px; color: #35443e; font-size: 13px; }
     .privacy-link {
       color: var(--green-dark);
@@ -573,15 +574,12 @@
     <p>This is the full list from The Everyday Prize List for October 17, 2026. Many of these sweepstakes allow one entry every day. Get each new list by email the day it comes out.</p>
     <div class="signup-block">
           <p>Fresh sweepstakes links, checked and delivered daily.</p>
-          <form class="subscribe-form" action="https://subscribe-forms.beehiiv.com/api/submit" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List at the bottom of the page">
-            <input type="hidden" name="authenticity_token" value="vVv39hPdDOdut0LDaMFcg2RUI1EMoJvEMEYlUYw1pq5s5Goq0KJ7l0dI6K1_OtdcthqyvEkydcE-0-fXy2A_2A" />
-            <input type="hidden" name="form_id" value="9ffc7ae2-5f93-4a67-ae33-8b2f379471f0" />
-            <input type="hidden" name="utm_source" value="the-everyday-prize-list" />
-            <input type="hidden" name="utm_medium" value="landing-page" />
-            <input type="hidden" name="utm_campaign" value="daily-prize-list" />
+          <form class="subscribe-form" action="https://de54962f.sibforms.com/serve/MUIFAOU7GQXvWrjDO3mctFFMDEoTA702MkBB26iJ8jVRmmAB0ujHOqmMekw0Vqnnr4Ij9qcVcvnxqvoQo3elr-s1wE4BC3Fju23NccAw01n3s_qYqHcQ51QQD1Uxqzxiou_H-VFbVH1kRLYVVoZNz0vGx5fhQ_YsIMPk_RmxzLC3CXYHRa9HAVjN4EnT6ixP8DZvRgrDHiDGNE82-Q==" method="post" accept-charset="UTF-8" aria-label="Subscribe to The Everyday Prize List at the bottom of the page" onsubmit="event.preventDefault();var f=this;f.querySelector('button').disabled=true;fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){if(d&&d.success){f.outerHTML='<p class=&quot;signup-done&quot; role=&quot;status&quot;>You are in. Watch your inbox for the next list.</p>'}else{f.submit()}}).catch(function(){f.submit()})">
+            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="visually-hidden" />
+            <input type="hidden" name="locale" value="en" />
             <label for="subscribe-email-bottom" class="visually-hidden">Email address</label>
-            <input id="subscribe-email-bottom" name="form[email]" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
-            <button type="submit" name="button">Subscribe free</button>
+            <input id="subscribe-email-bottom" name="EMAIL" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe free</button>
           </form>
           <small class="signup-note">Free at launch. No card required. Unsubscribe anytime. <a class="privacy-link" href="https://www.coffeeshopoffice.com/privacy/">Privacy Policy</a></small>
         </div>
