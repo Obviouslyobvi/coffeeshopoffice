@@ -70,5 +70,43 @@
   "promotion_key": "tripadvisorandvisitorlandocommonground",
   "not_interested": "",
   "source": "gmail"
+ },
+ {
+  "wave": "backup-2026-10-20",
+  "row": "",
+  "name": "Fanta Spook the Wheel Halloween Game",
+  "sponsor": "The Coca-Cola Company",
+  "prize": "AMC movie tickets, Ghost Face mask, tote, beanie (instant win)",
+  "entry_url": "https://www.coca-cola.com/us/en/offerings/fanta/fanta-halloween",
+  "frequency": "daily",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "21",
+  "promotion_key": "fantaspookthewheelhalloweengame",
+  "not_interested": "",
+  "administrator": "Don Jagoda Associates, Inc.",
+  "source": "gmail Coca-Cola email 2026-10-19; rules https://www.coca-cola.com/us/en/legal/fanta-halloween"
+ },
+ {
+  "wave": "backup-2026-10-20",
+  "row": "",
+  "name": "Akko Mesh Gaming Mouse Giveaway",
+  "sponsor": "Akkogear.eu",
+  "prize": "Akko Mesh Carbon Fiber Gaming Mouse (2 winners)",
+  "entry_url": "https://gleam.io/LMJRX/akko-mesh-gaming-mouse-giveaway",
+  "frequency": "unknown",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "",
+  "promotion_key": "akkomeshgamingmouse",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "gmail Gleam email 2026-10-20; ends 2026-10-23"
  }
 ]
