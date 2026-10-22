@@ -146,5 +146,24 @@
     "not_interested": "",
     "administrator": "none named",
     "source": "https://www.maybelline.com/terms-of-use/maybe-a-maybelline-giveaway"
+  },
+  {
+    "wave": "backup-2026-10-22",
+    "row": "",
+    "name": "Brian Christopher Slots Sweepstakes (Carnival)",
+    "sponsor": "Carnival Cruise Line, a division of Carnival Corporation",
+    "prize": "Balcony cruise up to 8 nights for winner and guest, FunPlay credit, airfare credit (max ARV $7,260 each)",
+    "entry_url": "https://www.carnival.com/bcsweeps",
+    "frequency": "Four drawings (last 2027-01-04); free entry with VIFP number; ends 2026-12-31; age 21+",
+    "status": "PENDING",
+    "confirmation_or_reason": "",
+    "processed_date": "",
+    "max_entries_achieved": "",
+    "max_entries_date": "",
+    "prize_value_per_person": "7260",
+    "promotion_key": "brianchristopherslotssweepstakescarnival",
+    "not_interested": "",
+    "administrator": "teamDigital Promotions, Inc.",
+    "source": "https://www.carnival.com/bcsweeps ; rules https://www.carnival.com/en-us/terms-and-conditions/bcsweeps-2026"
   }
 ]
