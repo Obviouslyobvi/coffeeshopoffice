@@ -165,5 +165,24 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "https://www.ramseysolutions.com/company/policies/ramsey-cash-giveaway-official-rules"
+ },
+ {
+  "wave": "backup-2026-10-26",
+  "row": "",
+  "name": "AmericanTrucks 2026 $6,000 Mystery Giveaway",
+  "sponsor": "Turn 5, Inc.",
+  "prize": "$1,000 AmericanTrucks voucher (6 winners)",
+  "entry_url": "https://www.americantrucks.com/at-sweepstakes.html",
+  "frequency": "daily",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "1000",
+  "promotion_key": "americantrucks20266000mystery",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: americantrucks.com"
  }
 ]
