@@ -184,5 +184,24 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "web: americantrucks.com"
+ },
+ {
+  "wave": "backup-2026-10-27",
+  "row": "",
+  "name": "University Credit Union 75th Anniversary Giveaway",
+  "sponsor": "University Credit Union",
+  "prize": "Four $750 prizes",
+  "entry_url": "https://www.ucu.org/landing-pages/750-giveaway",
+  "frequency": "One entry per person; four drawings through 2026-12-31",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "750",
+  "promotion_key": "universitycreditunion75thanniversary",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: cdn.ucu.org official rules (ucu.org)"
  }
 ]
