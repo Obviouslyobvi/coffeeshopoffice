@@ -203,5 +203,24 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "web: cdn.ucu.org official rules (ucu.org)"
+ },
+ {
+  "wave": "backup-2026-10-29",
+  "row": "",
+  "name": "HGTV Home for the Holidays $5K Giveaway",
+  "sponsor": "HGTV (legal name not verified; rules page blocked)",
+  "prize": "$5,000 cash",
+  "entry_url": "https://www.hgtv.com/sweepstakes/home-for-the-holidays",
+  "frequency": "twice daily (once on HGTV.com, once on FoodNetwork.com); ends 2027-01-06",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "5000",
+  "promotion_key": "hgtvhomefortheholidays5k",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "email: HGTV newsletter; hgtv.com/sweepstakes"
  }
 ]
