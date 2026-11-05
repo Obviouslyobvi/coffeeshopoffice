@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <title>Claude Connector | The Everyday Prize List</title>
+  <style>
+    :root {
+      --ink: #12271f;
+      --muted: #52635c;
+      --green: #176b4b;
+      --paper: #f8f7f1;
+      --white: #ffffff;
+      --line: #d9ddd5;
+      --max: 760px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 48px 24px 80px; }
+    h1 { font-family: "Newsreader", Georgia, serif; font-size: 38px; line-height: 1.1; margin: 0 0 8px; }
+    .updated { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    h2 { font-family: "Newsreader", Georgia, serif; font-size: 24px; margin: 32px 0 8px; }
+    p, li { margin: 0 0 14px; }
+    ul { padding-left: 22px; }
+    a { color: var(--green); }
+    .back { display: inline-block; margin-top: 32px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>The Everyday Prize List connector for Claude</h1>
+    <p class="updated">Last updated: November 5, 2026</p>
+
+    <h2>What it does</h2>
+    <p>Ask Claude which sweepstakes you can enter today. The connector gives Claude the biggest prizes on today&rsquo;s Everyday Prize List, up to 10, with each sponsor&rsquo;s own entry link. The full list comes free by email every day.</p>
+
+    <h2>How to add it</h2>
+    <p>In Claude, open Settings, then Connectors. Choose Add custom connector and paste this address: <code>https://www.coffeeshopoffice.com/mcp</code>. No account or sign-in is needed.</p>
+
+    <h2>Tools</h2>
+    <p><strong>Today&rsquo;s top sweepstakes</strong> (get_todays_top_sweepstakes): returns up to 10 of today&rsquo;s biggest sweepstakes with prize value, sponsor, a 21+ flag and the entry link. Read only.</p>
+    <p><strong>Get the full daily list</strong> (get_full_list_signup): returns the signup link for the free daily email. Read only.</p>
+
+    <h2>Example prompts</h2>
+    <p>&ldquo;What sweepstakes can I enter today?&rdquo; &ldquo;Show me today&rsquo;s three biggest giveaways.&rdquo; &ldquo;How do I get the full prize list?&rdquo;</p>
+
+    <h2>Good to know</h2>
+    <p>Entering a sweepstakes is always your choice. Check each sweepstakes&rsquo; official rules before you enter. The connector does not enter sweepstakes for you.</p>
+
+    <h2>Privacy</h2>
+    <p>The connector does not ask for or store any personal information. See the <a href="/privacy/">Privacy Policy</a>.</p>
+
+    <a class="back" href="/prizes/">&larr; Back to The Everyday Prize List</a>
+  </main>
+</body>
+</html>

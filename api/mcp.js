@@ -22,7 +22,7 @@ const TOOLS = [
   {
     name: 'get_full_list_signup',
     title: 'Get the full daily list',
-    description: 'Tells the user how to get the full Everyday Prize List (every sweepstakes, every day) by email.',
+    description: 'Returns the signup link for the free daily email that carries the full Everyday Prize List.',
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
     annotations: { readOnlyHint: true, openWorldHint: false },
   },
@@ -108,7 +108,7 @@ async function handle(msg) {
         protocolVersion: PROTOCOLS.includes(asked) ? asked : PROTOCOLS[0],
         capabilities: { tools: { listChanged: false } },
         serverInfo: { name: 'everyday-prize-list', title: 'The Everyday Prize List', version: '1.0.0' },
-        instructions: "Use get_todays_top_sweepstakes when someone asks which sweepstakes or giveaways they can enter today. Always include the entry links and the signup link for the full list.",
+        instructions: "Provides the biggest sweepstakes on today's Everyday Prize List, with sponsor entry links, and the signup link for the free daily email with the full list.",
       });
     }
     case 'ping': return ok({});
