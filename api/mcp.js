@@ -17,14 +17,14 @@ const TOOLS = [
       properties: { limit: { type: 'integer', minimum: 1, maximum: MAX_SAMPLE, description: 'How many to return (1 to 10). Default 10.' } },
       additionalProperties: false,
     },
-    annotations: { readOnlyHint: true, openWorldHint: true },
+    annotations: { title: "Today's top sweepstakes", readOnlyHint: true, openWorldHint: true },
   },
   {
     name: 'get_full_list_signup',
     title: 'Get the full daily list',
     description: 'Returns the signup link for the free daily email that carries the full Everyday Prize List.',
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
-    annotations: { readOnlyHint: true, openWorldHint: false },
+    annotations: { title: 'Get the full daily list', readOnlyHint: true, openWorldHint: false },
   },
 ];
 
