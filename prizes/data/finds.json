@@ -1,24 +1,5 @@
 [
  {
-  "wave": "backup-2026-10-26",
-  "row": "",
-  "name": "AmericanTrucks 2026 $6,000 Mystery Giveaway",
-  "sponsor": "Turn 5, Inc.",
-  "prize": "$1,000 AmericanTrucks voucher (6 winners)",
-  "entry_url": "https://www.americantrucks.com/at-sweepstakes.html",
-  "frequency": "daily",
-  "status": "PENDING",
-  "confirmation_or_reason": "",
-  "processed_date": "",
-  "max_entries_achieved": "",
-  "max_entries_date": "",
-  "prize_value_per_person": "1000",
-  "promotion_key": "americantrucks20266000mystery",
-  "not_interested": "",
-  "administrator": "none named",
-  "source": "web: americantrucks.com"
- },
- {
   "wave": "backup-2026-10-27",
   "row": "",
   "name": "University Credit Union 75th Anniversary Giveaway",
@@ -3247,5 +3228,43 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "web: sweepsadvantage.com lead, gfuel.com"
+ },
+ {
+  "wave": "backup-2026-11-10",
+  "row": "",
+  "name": "Office Depot 12 Days of Giveaways",
+  "sponsor": "Office Depot, LLC",
+  "prize": "Office product prize packs, 12 sweepstakes (ARV $357 to $1,270 each)",
+  "entry_url": "https://www.officedepot.com/l/marketing/giveaways",
+  "frequency": "daily",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "1270",
+  "promotion_key": "officedepot12daysof",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: sweepsadvantage.com lead, officedepot.com rules"
+ },
+ {
+  "wave": "backup-2026-11-10",
+  "row": "",
+  "name": "Heineken Holiday Instant Win and Sweepstakes",
+  "sponsor": "HEINEKEN USA Inc.",
+  "prize": "Heineken x Victrola Journey prizes, instant win and grand prize drawing",
+  "entry_url": "https://www.heineken.com/us/en/promos/holiday",
+  "frequency": "daily",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "75",
+  "promotion_key": "heinekenholidayinstantwinand",
+  "not_interested": "",
+  "administrator": "Million Dollar Media",
+  "source": "web: sweepsadvantage.com lead, mdmgames.com rules"
  }
 ]
