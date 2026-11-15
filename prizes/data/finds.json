@@ -2354,24 +2354,5 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "web"
- },
- {
-  "wave": "backup-2026-11-15",
-  "row": "",
-  "name": "Food Network Enchanting Bakes and Magical Escapes Sweepstakes",
-  "sponsor": "Discovery Communications, LLC",
-  "prize": "Universal Orlando vacation for four (ARV $5,509.72)",
-  "entry_url": "https://www.foodnetwork.com/sponsored/sweepstakes/enchanting-bakes-and-magical-escapes-sweepstakes",
-  "frequency": "daily (ends 2026-12-09)",
-  "status": "PENDING",
-  "confirmation_or_reason": "",
-  "processed_date": "",
-  "max_entries_achieved": "",
-  "max_entries_date": "",
-  "prize_value_per_person": "5509",
-  "promotion_key": "foodnetworkenchantingbakesandmagicalescapes",
-  "not_interested": "",
-  "administrator": "Ritway, Inc.",
-  "source": "web"
  }
 ]
