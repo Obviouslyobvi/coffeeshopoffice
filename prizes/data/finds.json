@@ -1803,5 +1803,43 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "Gmail Prizes: USA TODAY / Second Street email"
+ },
+ {
+  "wave": "backup-2026-11-19",
+  "row": "",
+  "name": "Penguin Random House Borzoi Holiday Sweeps 2026",
+  "sponsor": "Penguin Random House LLC",
+  "prize": "1 Holiday Shopping Spree of Borzoi books (ARV $180), 10 winners",
+  "entry_url": "https://sites.prh.com/borzoiholidaysweeps2026",
+  "frequency": "once",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "180",
+  "promotion_key": "penguinrandomhouseborzoiholidaysweeps2026",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: sweeps advantage new list"
+ },
+ {
+  "wave": "backup-2026-11-19",
+  "row": "",
+  "name": "2026 Hidden Valley Ranch Holiday Sweepstakes",
+  "sponsor": "The Clorox Company",
+  "prize": "$500 Tango digital reward (40 instant winners)",
+  "entry_url": "https://www.hiddenvalley.com/holiday-dinner-game/",
+  "frequency": "daily",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "500",
+  "promotion_key": "2026hiddenvalleyranchholiday",
+  "not_interested": "",
+  "administrator": "CataBoom Technologies LLC",
+  "source": "web: ultracontest"
  }
 ]
