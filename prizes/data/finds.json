@@ -2050,5 +2050,43 @@
   "not_interested": "",
   "administrator": "none named",
   "source": "web: Sweepstakes Bible 2026-11-20"
+ },
+ {
+  "wave": "backup-2026-11-20",
+  "row": "",
+  "name": "Central Shades Free Order Giveaway",
+  "sponsor": "Central Shades LLC",
+  "prize": "Free window shades order, up to $5,000; 48 contiguous states and DC only",
+  "entry_url": "https://centralshades.com/pages/win-a-free-order",
+  "frequency": "once (ends 2026-11-30)",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "5000",
+  "promotion_key": "centralshadesfreeorder",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: Sweeps Advantage 2026-11-20"
+ },
+ {
+  "wave": "backup-2026-11-20",
+  "row": "",
+  "name": "Groovy Grove Pick Your Prize Giveaway",
+  "sponsor": "Erika Bias, doing business as The Groovy Grove",
+  "prize": "Pick-your-prize package from The Groovy Grove shop (ARV up to $122.97)",
+  "entry_url": "https://groovygrover.myshopify.com/pages/groovy-grove-giveaway",
+  "frequency": "once (ends 2026-11-30)",
+  "status": "PENDING",
+  "confirmation_or_reason": "",
+  "processed_date": "",
+  "max_entries_achieved": "",
+  "max_entries_date": "",
+  "prize_value_per_person": "122",
+  "promotion_key": "groovygrovepickyourprize",
+  "not_interested": "",
+  "administrator": "none named",
+  "source": "web: Sweeps Advantage 2026-11-20"
  }
 ]
